@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomPermission xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Allows users to update the Status field on S4 Sample Order and Enorica Order records, specifically when transitioning through &quot;In Process/Package Preparation&quot; and &quot;Completed&quot; stages. Assigned to Integration User and Super Admins via a permission set.</description>
+    <isLicensed>false</isLicensed>
+    <label>S4 and Enorica Sample Order Update</label>
+</CustomPermission>

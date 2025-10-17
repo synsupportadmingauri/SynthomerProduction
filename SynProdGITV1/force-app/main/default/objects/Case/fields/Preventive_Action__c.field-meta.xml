@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Preventive_Action__c</fullName>
+    <description>This field captures detailed descriptions of the actions taken to prevent the recurrence of an issue or to mitigate risks</description>
+    <inlineHelpText>Provide a detailed description of the preventive actions</inlineHelpText>
+    <label>Preventive Action</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

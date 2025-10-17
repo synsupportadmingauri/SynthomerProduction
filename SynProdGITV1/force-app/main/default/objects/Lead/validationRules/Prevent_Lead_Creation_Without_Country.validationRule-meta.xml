@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Lead_Creation_Without_Country</fullName>
+    <active>true</active>
+    <description>SS2-T37</description>
+    <errorConditionFormula>ISBLANK(Country)</errorConditionFormula>
+    <errorMessage>Lead cannot be saved without Country</errorMessage>
+</ValidationRule>

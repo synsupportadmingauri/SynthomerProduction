@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>SA Case Before Update Completion Dates</label>
+    <protected>false</protected>
+    <values>
+        <field>Data_Load_User__c</field>
+        <value xsi:type="xsd:string">Support_Admin</value>
+    </values>
+    <values>
+        <field>Flow_Name__c</field>
+        <value xsi:type="xsd:string">Case_Before_Update_Completion_Dates</value>
+    </values>
+    <values>
+        <field>Is_Bypass__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+</CustomMetadata>

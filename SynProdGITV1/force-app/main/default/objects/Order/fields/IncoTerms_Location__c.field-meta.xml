@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IncoTerms_Location__c</fullName>
+    <description>SSP-176 SS2-T109 Location of International Commercial Terms</description>
+    <externalId>false</externalId>
+    <label>IncoTerms Location</label>
+    <length>70</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

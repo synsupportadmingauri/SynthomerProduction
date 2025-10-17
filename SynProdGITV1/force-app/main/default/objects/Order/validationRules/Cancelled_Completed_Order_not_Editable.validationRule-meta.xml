@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cancelled_Completed_Order_not_Editable</fullName>
+    <active>true</active>
+    <description>SSP-176
+Cancelled or Completed Order cannot be edited</description>
+    <errorConditionFormula>AND(
+  OR(
+    ISPICKVAL(PRIORVALUE(Status), &apos;Completed&apos;),
+    ISPICKVAL(PRIORVALUE(Status), &apos;Cancelled&apos;)
+  ),
+  NOT(
+    OR(
+      $Permission.Integration_User,
+      $Profile.Name = &apos;System Administrator&apos;
+    )
+  ),
+  TEXT(Salesforce_Order_Type__c) &lt;&gt; &apos;ZOR&apos;
+)</errorConditionFormula>
+    <errorDisplayField>Status</errorDisplayField>
+    <errorMessage>Completed or Cancelled Order Cannot be Edited</errorMessage>
+</ValidationRule>

@@ -1,0 +1,760 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Approval_Chatter_Post_TSCA</name>
+        <label>Approval Chatter Post</label>
+        <locationX>578</locationX>
+        <locationY>350</locationY>
+        <actionName>chatterPost</actionName>
+        <actionType>chatterPost</actionType>
+        <connector>
+            <targetReference>Update_Order</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Log_Error_2</targetReference>
+        </faultConnector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>text</name>
+            <value>
+                <elementReference>orderDistributorApprovalMessage</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>subjectNameOrId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>visibility</name>
+            <value>
+                <stringValue>allUsers</stringValue>
+            </value>
+        </inputParameters>
+        <nameSegment>chatterPost</nameSegment>
+        <offset>0</offset>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <actionCalls>
+        <name>In_Approval_Chatter_Post</name>
+        <label>In Approval Chatter Post</label>
+        <locationX>50</locationX>
+        <locationY>350</locationY>
+        <actionName>chatterPost</actionName>
+        <actionType>chatterPost</actionType>
+        <connector>
+            <targetReference>Update_Order</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Log_Erro_InProgress</targetReference>
+        </faultConnector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>text</name>
+            <value>
+                <elementReference>orderInApprovalMessage</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>subjectNameOrId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>visibility</name>
+            <value>
+                <stringValue>allUsers</stringValue>
+            </value>
+        </inputParameters>
+        <nameSegment>chatterPost</nameSegment>
+        <offset>0</offset>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <actionCalls>
+        <name>Rejection_Chatter_Post</name>
+        <label>Rejection  Chatter Post</label>
+        <locationX>1106</locationX>
+        <locationY>566</locationY>
+        <actionName>chatterPost</actionName>
+        <actionType>chatterPost</actionType>
+        <connector>
+            <targetReference>Update_Order</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Log_Error_3</targetReference>
+        </faultConnector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>text</name>
+            <value>
+                <elementReference>orderRejectMessage</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>subjectNameOrId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>visibility</name>
+            <value>
+                <stringValue>allUsers</stringValue>
+            </value>
+        </inputParameters>
+        <nameSegment>chatterPost</nameSegment>
+        <offset>0</offset>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <apiVersion>63.0</apiVersion>
+    <assignments>
+        <name>Distributor_Approval_Status_Approved</name>
+        <label>Distributor  Approval Status - Approved</label>
+        <locationX>578</locationX>
+        <locationY>242</locationY>
+        <assignmentItems>
+            <assignToReference>Order.Distributor_Submission_Approval_Status__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Approved</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>OrderId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Order.Distributor_Submittor__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Distributor_Submittor</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Approval_Chatter_Post_TSCA</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Distributor_Approval_Status_In_Approval</name>
+        <label>Distributor Approval Status - In Approval</label>
+        <locationX>50</locationX>
+        <locationY>242</locationY>
+        <assignmentItems>
+            <assignToReference>Order.Distributor_Submission_Approval_Status__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>In Approval</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>In_Approval_Chatter_Post</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Distributor_Approval_Status_Rejected</name>
+        <label>Distributor Approval Status - Rejected</label>
+        <locationX>1106</locationX>
+        <locationY>458</locationY>
+        <assignmentItems>
+            <assignToReference>Order.Distributor_Submission_Approval_Status__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Rejected</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Order.Status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Draft</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Rejection_Chatter_Post</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Distributor_Approval_StatusNot_Needed</name>
+        <label>Distributor Approval Status - Not Needed</label>
+        <locationX>2162</locationX>
+        <locationY>242</locationY>
+        <assignmentItems>
+            <assignToReference>Order.Distributor_Submission_Approval_Status__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Not Needed</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Order</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Check_Distributor_Approval_Status</name>
+        <label>Check Distributor Approval Status</label>
+        <locationX>1238</locationX>
+        <locationY>134</locationY>
+        <defaultConnector>
+            <targetReference>Update_Order</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>In_Approval</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Distributor_Approval_Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>In Approval</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Distributor_Approval_Status_In_Approval</targetReference>
+            </connector>
+            <label>In Approval</label>
+        </rules>
+        <rules>
+            <name>Approved</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Distributor_Approval_Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Approved</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Distributor_Approval_Status_Approved</targetReference>
+            </connector>
+            <label>Approved</label>
+        </rules>
+        <rules>
+            <name>Rejected</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Distributor_Approval_Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Rejected</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Approval_Submission</targetReference>
+            </connector>
+            <label>Rejected</label>
+        </rules>
+        <rules>
+            <name>Not_Needed</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Distributor_Approval_Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Not Needed</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Distributor_Approval_StatusNot_Needed</targetReference>
+            </connector>
+            <label>Not Needed</label>
+        </rules>
+    </decisions>
+    <description>Autolaunched flow used in Distributor Orchestration</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>forMentionList</name>
+        <dataType>String</dataType>
+        <expression>MID({!mentionList}, 2, LEN({!mentionList}) - 2)</expression>
+    </formulas>
+    <formulas>
+        <description>formula created to tag Owner and created by in chatter post. 
+If both are same - tag owner. 
+else tag both</description>
+        <name>formula_ChatterMention_Order</name>
+        <dataType>String</dataType>
+        <expression>IF(
+  {!Order.OwnerId}= {!Order.CreatedById},
+   &quot;@[&quot; &amp; {!Order.OwnerId}&amp; &quot;]&quot;,
+   &quot;@[&quot; &amp; {!Order.OwnerId} &amp; &quot;] and @[&quot; &amp; {!Order.CreatedById} &amp; &quot;]&quot;
+)</expression>
+    </formulas>
+    <interviewLabel>Order - Distributor Approval - Approved/Rejected {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Order - Distributor Approval - Approved/Rejected</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Approval_Submission</name>
+        <label>Get Approval Submission</label>
+        <locationX>1106</locationX>
+        <locationY>242</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Approval_Submission_Detail</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Create_Log_Get_Approval_Submission</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>RelatedRecordId__NotFound</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>ApprovalSubmission</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Approval_Submission_Detail</name>
+        <label>Get Approval Submission Detail</label>
+        <locationX>1106</locationX>
+        <locationY>350</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Distributor_Approval_Status_Rejected</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Create_Log_Get_Approval_Submission_Detail</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>ApprovalSubmissionId__NotFound</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Approval_Submission.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>ApprovalSubmissionDetail</object>
+        <sortField>LastModifiedDate</sortField>
+        <sortOrder>Desc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Order</name>
+        <label>Update Order</label>
+        <locationX>1238</locationX>
+        <locationY>998</locationY>
+        <faultConnector>
+            <targetReference>Log_Error_4</targetReference>
+        </faultConnector>
+        <inputReference>Order</inputReference>
+    </recordUpdates>
+    <runInMode>SystemModeWithoutSharing</runInMode>
+    <start>
+        <locationX>1112</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_Distributor_Approval_Status</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <name>Create_Log_Get_Approval_Submission</name>
+        <label>Create Log</label>
+        <locationX>1898</locationX>
+        <locationY>350</locationY>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Distributor Approval - Approved/Rejected</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Get Approval Submission</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>OrderId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>Order.Name</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Error while fetching Get Approval Submission</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Create_Log_Get_Approval_Submission_Detail</name>
+        <label>Create Log</label>
+        <locationX>1634</locationX>
+        <locationY>458</locationY>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Distributor Approval - Approved/Rejected</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Get Approval Submission Detail</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>OrderId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>Order.Name</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Error while fetching Get Approval Submission Detail</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Log_Erro_InProgress</name>
+        <label>Log Error</label>
+        <locationX>314</locationX>
+        <locationY>458</locationY>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Sample Order TSA - Approved/Rejected  </stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>In Approval Chatter Post</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Error occurred while posting to chatter</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Log_Error_2</name>
+        <label>Log Error</label>
+        <locationX>842</locationX>
+        <locationY>458</locationY>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Sample Order TSA - Approved/Rejected  </stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Approval Chatter Post</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Error occurred while posting to chatter</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Log_Error_3</name>
+        <label>Log Error</label>
+        <locationX>1370</locationX>
+        <locationY>674</locationY>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Sample Order TSA - Approved/Rejected  </stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Rejection Chatter Post</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Error occurred while posting to chatter</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Log_Error_4</name>
+        <label>Log Error</label>
+        <locationX>2602</locationX>
+        <locationY>1106</locationY>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Sample Order TSA - Approved/Rejected  </stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Update Order</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Error occurred while updating the order</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <textTemplates>
+        <description>Post to Chatter whenever the  Approves</description>
+        <name>orderApprovalMessage</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Dear {!formula_ChatterMention_Order}, 
+Portal Sample Order -  {!Order.OrderNumber} has been Approved by Distributor Manager
+
+Request Details:
+Order Number: {!Order.OrderNumber}
+Ship To Name: {!Order.Ship_To_Account__r.Name}
+Requestor: {!Order.Owner:User.FirstName} {!Order.Owner:User.LastName}
+
+Best regards,  
+Your CRM Support Team
+
+The mySalesForce system automatically generated this message.</text>
+    </textTemplates>
+    <textTemplates>
+        <description>Post to Chatter whenever the Distributor Approves</description>
+        <name>orderDistributorApprovalMessage</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Dear {!formula_ChatterMention_Order}, 
+Distributor approval has been granted.
+
+Request Details:
+Order Number: {!Order.OrderNumber}
+Ship To Name: {!Order.Ship_To_Account__r.Name}
+Requestor: {!Order.Owner:User.FirstName} {!Order.Owner:User.LastName}
+
+Best regards,  
+Your CRM Support Team
+
+The mySalesForce system automatically generated this message.</text>
+    </textTemplates>
+    <textTemplates>
+        <name>orderInApprovalMessage</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hi  {!formula_ChatterMention_Order}, the Sample Order has been submitted to Distributor Manager.</text>
+    </textTemplates>
+    <textTemplates>
+        <description>Post to Chatter whenever the TSA Rejects</description>
+        <name>orderRejectMessage</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Dear @[{!Order.OwnerId}],
+
+The Sample Order {!Order.OrderNumber} has been rejected by the distribution manager with the following comments: 
+
+{!Get_Approval_Submission_Detail.Comments}
+
+Please note that the status of the order has been changed to {!Order.Status}, you can makes changes to the order again.
+
+Best regards,
+Your CRM Support Team</text>
+    </textTemplates>
+    <variables>
+        <name>Distributor_Approval_Status</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>Distributor_Submittor</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>mentionList</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>Order</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Order</objectType>
+    </variables>
+    <variables>
+        <name>OrderId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

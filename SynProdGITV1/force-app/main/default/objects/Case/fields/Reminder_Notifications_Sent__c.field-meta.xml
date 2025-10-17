@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reminder_Notifications_Sent__c</fullName>
+    <description>This field is used in the &quot;Case - Scheduled Notify Status Not Completed Over 40 Days&quot; flow to track which reminder notifications have been sent. It helps ensure notifications are not repeated and updates automatically based on the notification type triggered. This field is not visible to users.</description>
+    <label>Reminder Notifications Sent</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>40 Days</fullName>
+                <default>false</default>
+                <label>40 Days</label>
+            </value>
+            <value>
+                <fullName>50 Days</fullName>
+                <default>false</default>
+                <label>50 Days</label>
+            </value>
+            <value>
+                <fullName>60 Days</fullName>
+                <default>false</default>
+                <label>60 Days</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Role__c</fullName>
+    <description>Role of the service team member.</description>
+    <label>Role</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Site Manager</fullName>
+                <default>false</default>
+                <label>Site Manager</label>
+            </value>
+            <value>
+                <fullName>Production Manager</fullName>
+                <default>false</default>
+                <label>Production Manager</label>
+            </value>
+            <value>
+                <fullName>Process Improvement Team</fullName>
+                <default>false</default>
+                <label>Process Improvement Team</label>
+            </value>
+            <value>
+                <fullName>Technical Service Manager</fullName>
+                <default>false</default>
+                <label>Technical Service Manager</label>
+            </value>
+            <value>
+                <fullName>Site Quality Manager</fullName>
+                <default>false</default>
+                <label>Site Quality Manager</label>
+            </value>
+            <value>
+                <fullName>Supply Chain Manager</fullName>
+                <default>false</default>
+                <label>Supply Chain Manager</label>
+            </value>
+            <value>
+                <fullName>Technology Director</fullName>
+                <default>false</default>
+                <label>Technology Director</label>
+            </value>
+            <value>
+                <fullName>SYN Contract Owner</fullName>
+                <default>false</default>
+                <label>SYN Contract Owner</label>
+            </value>
+            <value>
+                <fullName>Supply Chain Primary Operational Contact</fullName>
+                <default>false</default>
+                <label>Supply Chain Primary Operational Contact</label>
+            </value>
+            <value>
+                <fullName>Procurement Responsible Person</fullName>
+                <default>false</default>
+                <label>Procurement Responsible Person</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

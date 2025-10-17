@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SamlSsoConfig xmlns="http://soap.sforce.com/2006/04/metadata">
+    <identityLocation>SubjectNameId</identityLocation>
+    <identityMapping>FederationId</identityMapping>
+    <issuer>https://sts.windows.net/ea35b673-54e2-43c2-929d-6f438f9625c4/</issuer>
+    <loginUrl>https://login.microsoftonline.com/ea35b673-54e2-43c2-929d-6f438f9625c4/saml2</loginUrl>
+    <name>Single Sign On</name>
+    <oauthTokenEndpoint>https://synthomer.my.salesforce.com/services/oauth2/token</oauthTokenEndpoint>
+    <redirectBinding>true</redirectBinding>
+    <requestSignatureMethod>1</requestSignatureMethod>
+    <requestSigningCertId>0P1J9000000oiMt</requestSigningCertId>
+    <salesforceLoginUrl>https://synthomer.my.salesforce.com</salesforceLoginUrl>
+    <samlEntityId>https://synthomer.my.salesforce.com</samlEntityId>
+    <samlVersion>SAML2_0</samlVersion>
+    <singleLogoutBinding>RedirectBinding</singleLogoutBinding>
+    <singleLogoutUrl>https://login.microsoftonline.com/ea35b673-54e2-43c2-929d-6f438f9625c4/saml2</singleLogoutUrl>
+    <useConfigRequestMethod>false</useConfigRequestMethod>
+    <useSameDigestAlgoForSigning>true</useSameDigestAlgoForSigning>
+    <userProvisioning>false</userProvisioning>
+    <validationCert>MIIC8DCCAdigAwIBAgIQfeJdSYn0fKxCrGvAA67AqTANBgkqhkiG9w0BAQsFADA0MTIwMAYDVQQDEylNaWNyb3NvZnQgQXp1cmUgRmVkZXJhdGVkIFNTTyBDZXJ0aWZpY2F0ZTAeFw0yNTA0MDQxMDU4NDFaFw0yODA0MDQxMDU4NDJaMDQxMjAwBgNVBAMTKU1pY3Jvc29mdCBBenVyZSBGZWRlcmF0ZWQgU1NPIENlcnRpZmljYXRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvWZUzOBsh8ZzdiObDLzKAUQJ4f9TO9P3VPTuVXTp30+rdN3ZS/4gOOcCpUxYlpxP/EjjIr6wC4ZMcjNs5G+pWAJid9OagPOx3sEaXo41DvRNV2k45YHbTbzWtv7Rhr43gyI34biZYXGAaIExTWx1/9BTV7fg9vig5YY3f/dhA3UgwihsRGXlG3aOY0Xy4hSTzKXecbF3VNRE/2ClxnKw68p0o2Vo9SLvF4nRV6zeHySNrJGqmLkpTara/d/9JRiOGtIJnk/cjw/X/+glQRBijHlu9EQGIg5JTpeHCgyTPTjCqEBg4d0wUY23PEk/uJeZJzcD09csK1oM6KGC4P/O9QIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQCF1cOQSzB0s1sNAJveLMiPZSftW0nKx7iWvgs9wHTN6iQVjrRA/n5oQNeDYOBGsVVbQZe9+28LTRTbfW9qesPk/x0K7cm9Oe2Rer0zERGwXf2f9pcYlsoAwA73CtwNqzDsvV0PiIliRNqiBSleb7EDbi5RJtmKgwOktfnBBgpKLDMp8C0TD6QHj9zJLc/pMYJorQE2mKCpoRq3FYGITdWlEcwwCpR+tT3ZaTMluChm0hy3t4aSLT8hFSiYehyKhgvSs87cWiVK7k1+3J+zIAUxF6W6OnIrWlH7L+gXenPfajB+XqpnCvJryV1tvbI9j6lUU/m4yNRx5NYPlLeRXOwg</validationCert>
+</SamlSsoConfig>

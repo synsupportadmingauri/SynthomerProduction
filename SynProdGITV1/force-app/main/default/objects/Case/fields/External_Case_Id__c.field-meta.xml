@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>External_Case_Id__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>Stores the external identifier for the case, often used to track or reference cases from external systems or partners.</description>
+    <externalId>true</externalId>
+    <inlineHelpText>Enter the external case ID that corresponds to this record. This helps link the case to an external tracking system.</inlineHelpText>
+    <label>External Case Id</label>
+    <length>20</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

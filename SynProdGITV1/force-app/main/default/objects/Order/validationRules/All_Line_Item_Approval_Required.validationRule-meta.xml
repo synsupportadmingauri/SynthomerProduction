@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Line_Item_Approval_Required</fullName>
+    <active>true</active>
+    <description>SSP-176
+All the Line Item needs to be approved in Order to Put Order in Completed/ Approved or In Progress Status</description>
+    <errorConditionFormula>TEXT(Salesforce_Order_Type__c)  &lt;&gt; &apos;ZOR&apos; &amp;&amp;
+Approved_Line_Items__c &lt;  Total_Items_Count__c 
+	&amp;&amp; (
+					TEXT(Status) =  &apos;Completed&apos;
+					|| TEXT(Status) =  &apos;In Process/Package Preparation&apos;
+					|| TEXT(Status) =  &apos;Approved&apos;
+	)
+	&amp;&amp; 
+$User.Username &lt;&gt; &apos;support.gauri@gauri.com.syn&apos;</errorConditionFormula>
+    <errorDisplayField>Status</errorDisplayField>
+    <errorMessage>For this Status of Order, All the Order Lines needs to be in either &quot;Approved&quot; Status or &quot;Not Needed&quot;</errorMessage>
+</ValidationRule>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Level --></label>
+    <name>Level__c</name>
+    <picklistValues>
+        <masterLabel>Application</masterLabel>
+        <translation><!-- Application --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Global Business Unit</masterLabel>
+        <translation><!-- Global Business Unit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Industry Segment</masterLabel>
+        <translation><!-- Industry Segment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Market Segment</masterLabel>
+        <translation><!-- Market Segment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reporting Sub Group</masterLabel>
+        <translation><!-- Reporting Sub Group --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

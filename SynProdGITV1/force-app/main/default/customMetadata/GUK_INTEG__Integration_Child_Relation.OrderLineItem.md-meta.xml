@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>OrderLineItem</label>
+    <protected>false</protected>
+    <values>
+        <field>GUK_INTEG__Integration_Interface__c</field>
+        <value xsi:type="xsd:string">S4_Sample_Order_Replication</value>
+    </values>
+    <values>
+        <field>GUK_INTEG__Parent_Placeholder__c</field>
+        <value xsi:type="xsd:string">OrderLineItems</value>
+    </values>
+    <values>
+        <field>GUK_INTEG__Payload_Structure2__c</field>
+        <value xsi:type="xsd:string">{
+&quot;SalesOrderItem&quot;: &quot;&lt;SalesOrderItem&gt;&quot;,
+&quot;SalesOrderItemCategory&quot;: &quot;&lt;SalesOrderItemCategory&gt;&quot;,
+&quot;PurchaseOrderByCustomer&quot;: &quot;&lt;PurchaseOrderByCustomerLineItem&gt;&quot;,
+&quot;Material&quot;: &quot;&lt;Material&gt;&quot;,
+&quot;RequestedQuantity&quot;: &quot;&lt;RequestedQuantity&gt;&quot;,
+&quot;RequestedQuantityUnit&quot;: &quot;&lt;RequestedQuantityUnit&gt;&quot;,
+&quot;MaterialGroup&quot;: &quot;&quot;,
+&quot;MaterialPricingGroup&quot;: &quot;&quot;,
+&quot;Batch&quot;: &quot;&lt;Batch&gt;&quot;,
+&quot;ProductionPlant&quot;: &quot;&lt;ProductionPlant&gt;&quot;,
+&quot;StorageLocation&quot;: &quot;&quot;,
+&quot;ShippingPoint&quot;: &quot;&quot;,
+&quot;ShippingType&quot;: &quot;&quot;,
+&quot;IncotermsClassification&quot;: &quot;&lt;IncotermsClassificationLineItem&gt;&quot;,
+&quot;IncotermsTransferLocation&quot;: &quot;&quot;,
+&quot;IncotermsLocation1&quot;: &quot;&lt;IncotermsLocation1LineItem&gt;&quot;,
+&quot;CustomerPaymentTerms&quot;: &quot;&lt;CustomerPaymentTermsLineItem&gt;&quot;,
+&quot;DeliveryGroup&quot;: &quot;&quot;,
+&quot;WBSElement&quot;: &quot;&quot;,
+&quot;to_PricingElement&quot;: {
+&quot;A_SalesOrderItemPrElementType&quot;: [
+{
+&quot;ConditionType&quot;: &quot;ZPR0&quot;,
+&quot;ConditionRateValue&quot;: &quot;&lt;ConditionRateValue&gt;&quot;
+}
+]
+}
+
+}</value>
+    </values>
+    <values>
+        <field>GUK_INTEG__Payload_Structure__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>

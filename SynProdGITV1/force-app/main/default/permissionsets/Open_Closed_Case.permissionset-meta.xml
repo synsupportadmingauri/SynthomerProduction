@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>Open_Closed_Case</name>
+    </customPermissions>
+    <description>Gives permission to open closed cases</description>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>AccountTeamMember.Industry_Segments__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Open Closed Case</label>
+</PermissionSet>

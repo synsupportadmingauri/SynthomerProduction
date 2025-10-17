@@ -1,0 +1,55 @@
+<template>
+    <lightning-card title="Plant Team Member(s)">
+
+
+        <template if:true={hasMembers}>
+            <lightning-datatable
+                key-field="Id"
+                data={pageMembers}
+                columns={columns}
+                hide-checkbox-column>
+            </lightning-datatable>
+
+
+            <div class="pagination-wrapper">
+
+                <div class="left-controls">
+                    <template if:true={showViewAll}>
+                        <button class="slds-button slds-button_neutral" onclick={handleViewAll}>
+                            View All
+                        </button>
+                    </template>
+                    <template if:true={showViewLess}>
+                        <button class="slds-button slds-button_neutral" onclick={handleViewLess}>
+                            View Less
+                        </button>
+                    </template>
+                </div>
+
+                <div class="pagination-controls">
+                    <template if:true={showPrevious}>
+                        <button type="button" class="pagination-btn prev-btn" onclick={handlePrevious}>
+                            Previous
+                        </button>
+                    </template>
+
+                    <span class="page-info">
+                        Page {pageNumber} of {totalPages}
+                    </span>
+
+                    <template if:true={showNext}>
+                        <button type="button" class="pagination-btn next-btn" onclick={handleNext}>
+                            Next
+                        </button>
+                    </template>
+                </div>
+            </div>
+        </template>
+
+        <template if:false={hasMembers}>
+            <p class="slds-p-around_medium slds-text-color_weak">
+                There are no members present in the Plant.
+            </p>
+        </template>
+    </lightning-card>
+</template>

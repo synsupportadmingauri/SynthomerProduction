@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Plant Team Data</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Plant Team Data</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- User and Employee cannot both be selected at the same time. --></errorMessage>
+        <name>Prevent_Both_User_and_Contact_Selected</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You must choose one: User or Employee. Selecting both is not allowed. --></errorMessage>
+        <name>Select_User_Or_Employee</name>
+    </validationRules>
+</CustomObjectTranslation>

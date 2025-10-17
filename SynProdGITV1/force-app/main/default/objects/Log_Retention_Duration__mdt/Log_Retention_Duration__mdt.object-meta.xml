@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>The number of days after which Log records will be deleted.</description>
+    <label>Log Retention Duration</label>
+    <pluralLabel>Log Retention Durations</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

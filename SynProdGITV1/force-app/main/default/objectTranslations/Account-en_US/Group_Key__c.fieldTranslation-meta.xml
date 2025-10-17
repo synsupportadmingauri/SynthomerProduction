@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- For account type Prospect - defaulted to first 10 characters of the name. For account type Customer - this will come from S4 Hana. --></help>
+    <label><!-- Group Key --></label>
+    <name>Group_Key__c</name>
+</CustomFieldTranslation>

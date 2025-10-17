@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_Data_to_External_System</fullName>
+    <availability>online</availability>
+    <description>Sync with SAP if failed</description>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>Send Data to External System</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <url>/flow/Order_Sample_order_Direct_Call_External_System_Or?recordId={!Order.Id}&amp;retURL=/{!Order.Id}</url>
+</WebLink>

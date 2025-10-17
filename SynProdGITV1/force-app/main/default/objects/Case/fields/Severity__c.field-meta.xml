@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Severity__c</fullName>
+    <description>Automatically classifies the case severity based on the total complaint cost rolled up from related complaint records: Very High (&gt;200K€), High (&gt;30K€), Medium (&gt;3K€), Low (&lt;3K€).</description>
+    <externalId>false</externalId>
+    <formula>IF( (Total_Cost__c/CURRENCYRATE(TEXT(CurrencyIsoCode))) * CURRENCYRATE(&apos;EUR&apos;)  &gt; 200000, &quot;Very High&quot;,
+  IF((Total_Cost__c/CURRENCYRATE(TEXT(CurrencyIsoCode))) * CURRENCYRATE(&apos;EUR&apos;) &gt; 30000, &quot;High&quot;,
+    IF((Total_Cost__c/CURRENCYRATE(TEXT(CurrencyIsoCode))) * CURRENCYRATE(&apos;EUR&apos;)  &gt; 3000, &quot;Medium&quot;, 
+      &quot;Low&quot;
+    )
+  )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Select the severity level of the issue to guide prioritization and response time.</inlineHelpText>
+    <label>Severity</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

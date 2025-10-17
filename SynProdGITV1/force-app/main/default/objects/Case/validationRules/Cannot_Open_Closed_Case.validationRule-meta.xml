@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_Open_Closed_Case</fullName>
+    <active>true</active>
+    <description>Block users from opening a closed case</description>
+    <errorConditionFormula>AND(ISCHANGED(Status ),ISPICKVAL(PRIORVALUE(Status), &apos;Completed&apos;),   NOT($Permission.Open_Closed_Case) )</errorConditionFormula>
+    <errorMessage>The case is closed, you cannot re-open it. Please raise a request to re-open it.</errorMessage>
+</ValidationRule>

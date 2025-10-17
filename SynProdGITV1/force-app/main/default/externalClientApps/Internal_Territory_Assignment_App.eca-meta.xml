@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExternalClientApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>Synthomer.salesforce@gauri.com</contactEmail>
+    <description>For territory auto assignment this will allow a inbound call from the same org.</description>
+    <distributionState>Local</distributionState>
+    <isProtected>false</isProtected>
+    <label>Internal Territory Assignment App</label>
+    <orgScopedExternalApp>00DJ9000000Ptxk:Internal_Territory_Assignment_App</orgScopedExternalApp>
+</ExternalClientApplication>

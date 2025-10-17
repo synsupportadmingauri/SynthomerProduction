@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Industry_Segment__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>SSP-288/SS2-T66 : Look up to custom Industry segment object with filter to select only Industry Segment
+Industry segment</description>
+    <inlineHelpText>Industry Segment relevant for the Sales Lead</inlineHelpText>
+    <label>Industry Segment</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Industry_Segment_Data__c.Level__c</field>
+            <operation>equals</operation>
+            <value>Industry Segment</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Industry_Segment_Data__c</referenceTo>
+    <relationshipLabel>Leads</relationshipLabel>
+    <relationshipName>Leads</relationshipName>
+    <required>true</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Lookup</type>
+</CustomField>

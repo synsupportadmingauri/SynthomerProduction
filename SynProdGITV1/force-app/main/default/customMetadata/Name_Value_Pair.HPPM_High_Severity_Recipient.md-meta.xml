@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>HPPM High Severity Recipient</label>
+    <protected>false</protected>
+    <values>
+        <field>Value__c</field>
+        <value xsi:type="xsd:string">fraser.kane@synthomer.com,stephane.hoffmann@synthomer.com,gareth.simpson@synthomer.com,justin.odoherty@synthomer.com,rob.tupker@synthomer.com, bart.weiland@synthomer.com,pauline.hale@synthomer.com</value>
+    </values>
+</CustomMetadata>

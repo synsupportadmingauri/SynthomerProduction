@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Territory2Rule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <booleanFilter>1 AND ( 2 OR 3 OR 4 )</booleanFilter>
+    <name>PRS Americas</name>
+    <objectType>Account</objectType>
+    <ruleItems>
+        <field>Account.BillingCountryCode</field>
+        <operation>equals</operation>
+        <value>AR,BO,BR,CL,CO,CR,DO,EC,SV,GT,GY,HN,MQ,NI,PA,PE,PR,SG,TT,UY,US,VE,CA,MX</value>
+    </ruleItems>
+    <ruleItems>
+        <field>Account.Industry_Segments__c</field>
+        <operation>contains</operation>
+        <value>EMO</value>
+    </ruleItems>
+    <ruleItems>
+        <field>Account.Industry_Segments__c</field>
+        <operation>contains</operation>
+        <value>REI</value>
+    </ruleItems>
+    <ruleItems>
+        <field>Account.Industry_Segments__c</field>
+        <operation>contains</operation>
+        <value>TIR</value>
+    </ruleItems>
+</Territory2Rule>

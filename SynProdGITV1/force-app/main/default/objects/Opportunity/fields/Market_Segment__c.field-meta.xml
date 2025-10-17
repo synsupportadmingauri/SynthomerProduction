@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Market_Segment__c</fullName>
+    <description>SSP-288/SS2-T66: Formula field to get corresponding &apos;Market Segment&apos; value from Custom Object &apos;Industry Segment&apos; using the Opportunity&apos;s &apos;Application&apos; field value selected by User</description>
+    <externalId>false</externalId>
+    <formula>Application__r.Parent__r.Name</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Auto-populated when you select an Application</inlineHelpText>
+    <label>Market Segment</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Evaluated_Sold_To_Party__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>This will be same as Account Name for below scenarios:
+a. Selected account type is Customer
+b. One of Account&apos;s Sales Areas matches with  select product(s)&apos; Sales Area 
+
+This will be replace with One-Time customer from Salesforce Order type dete.for below Scenarios:
+a. Selected account type is Prospect
+b. If Selected account type is Customer and  none of the Account&apos;s Sales Areas matches with  select product(s)&apos; Sales Area</description>
+    <inlineHelpText>Account Name or One-Time Account Name</inlineHelpText>
+    <label>Evaluated Sold-To Party</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Orders (Evaluated Sold-To Party)</relationshipLabel>
+    <relationshipName>Orders_Evaluated</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

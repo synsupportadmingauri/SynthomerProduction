@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Chatter_Post_7_Days_before_Close_Date</name>
+        <label>Chatter Post - 7 Days before Close Date</label>
+        <locationX>594</locationX>
+        <locationY>2040</locationY>
+        <actionName>chatterPost</actionName>
+        <actionType>chatterPost</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>text</name>
+            <value>
+                <elementReference>PostChatterMessage</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>subjectNameOrId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>chatterPost</nameSegment>
+        <offset>0</offset>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <actionCalls>
+        <name>Copy_1_of_Chatter_Post_7_Days_before_Close_Date</name>
+        <label>Copy 1 of Chatter Post - 7 Days before Close Date</label>
+        <locationX>946</locationX>
+        <locationY>2148</locationY>
+        <actionName>chatterPost</actionName>
+        <actionType>chatterPost</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>text</name>
+            <value>
+                <elementReference>PostChatterMessage</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>subjectNameOrId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>chatterPost</nameSegment>
+        <offset>0</offset>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <actionCalls>
+        <name>Notify_7_day_s_Before_of_Close_Date</name>
+        <label>Notify 7 day&apos;s Before of Close Date</label>
+        <locationX>594</locationX>
+        <locationY>1932</locationY>
+        <actionName>customNotificationAction</actionName>
+        <actionType>customNotificationAction</actionType>
+        <connector>
+            <targetReference>Chatter_Post_7_Days_before_Close_Date</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>customNotifTypeId</name>
+            <value>
+                <elementReference>Notification_Type.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recipientIds</name>
+            <value>
+                <elementReference>SalesTeamIds</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>title</name>
+            <value>
+                <elementReference>bipStartDate</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>body</name>
+            <value>
+                <elementReference>PostChatterMessage</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>targetId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>customNotificationAction</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <actionCalls>
+        <name>Notify_7_day_s_Before_of_Close_Date2</name>
+        <label>Notify 7 day&apos;s Before of Close Date</label>
+        <locationX>946</locationX>
+        <locationY>2040</locationY>
+        <actionName>customNotificationAction</actionName>
+        <actionType>customNotificationAction</actionType>
+        <connector>
+            <targetReference>Copy_1_of_Chatter_Post_7_Days_before_Close_Date</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>customNotifTypeId</name>
+            <value>
+                <elementReference>Notification_Type.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recipientIds</name>
+            <value>
+                <elementReference>SalesTeamIds</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>title</name>
+            <value>
+                <elementReference>bipStartDate</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>body</name>
+            <value>
+                <elementReference>PostChatterNotification</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>targetId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>customNotificationAction</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <apiVersion>63.0</apiVersion>
+    <assignments>
+        <name>Assign_Owner</name>
+        <label>Assign Owner</label>
+        <locationX>946</locationX>
+        <locationY>1524</locationY>
+        <assignmentItems>
+            <assignToReference>SalesTeamIds</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Get_user_Details2</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Team_Member_Ids</name>
+        <label>Assign Team Member Ids</label>
+        <locationX>858</locationX>
+        <locationY>1140</locationY>
+        <assignmentItems>
+            <assignToReference>SalesTeamIds</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Iterate_Over_Opportunity_Team_members.UserId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Iterate_Over_Opportunity_Team_members</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_User_Names</name>
+        <label>Assign User Names</label>
+        <locationX>682</locationX>
+        <locationY>1740</locationY>
+        <assignmentItems>
+            <assignToReference>UserNames</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Iterate_Over_Get_User_Details.Name</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Iterate_Over_Get_User_Details</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_User_Names2</name>
+        <label>Assign User Names</label>
+        <locationX>1034</locationX>
+        <locationY>1848</locationY>
+        <assignmentItems>
+            <assignToReference>UserNames</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Iterate_Over_Get_User_Details2.Name</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Iterate_Over_Get_User_Details2</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Check_User_for_flow_bypass</name>
+        <label>Check User for flow bypass</label>
+        <locationX>462</locationX>
+        <locationY>492</locationY>
+        <defaultConnector>
+            <targetReference>Get_Opportunity_Sales_Team</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>User can&apos;tbypass the Validation</defaultConnectorLabel>
+        <rules>
+            <name>User_can_bypass_the_Validation</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Bypass_Flows_User_related_Flow.Is_Bypass__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>User can bypass the Validation</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Is_Owner_In_Team</name>
+        <label>Is Owner In Team</label>
+        <locationX>770</locationX>
+        <locationY>1416</locationY>
+        <defaultConnector>
+            <targetReference>Assign_Owner</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not In Team</defaultConnectorLabel>
+        <rules>
+            <name>In_team</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>SalesTeamIds</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <elementReference>$Record.OwnerId</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_user_Details</targetReference>
+            </connector>
+            <label>In team</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checks whether the user is active or not.</description>
+        <name>Is_User_Active</name>
+        <label>Is User Active?</label>
+        <locationX>990</locationX>
+        <locationY>1032</locationY>
+        <defaultConnector>
+            <targetReference>Iterate_Over_Opportunity_Team_members</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Iterate_Over_Opportunity_Team_members.User.IsActive</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Team_Member_Ids</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>Note - If the flow API name has changed, please update the Get Bypass flows - User related flow element</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>bipStartDate</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Name} + &apos;: Close date is approaching&apos;</expression>
+    </formulas>
+    <formulas>
+        <name>FormulaForTeamIds</name>
+        <dataType>String</dataType>
+        <expression>&quot; @[&quot;+ {!Iterate_Over_Opportunity_Team_members.UserId} +&quot;] &quot;</expression>
+    </formulas>
+    <interviewLabel>Opportunity BIP Scheduler {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Opportunity BIP Scheduler</label>
+    <loops>
+        <name>Iterate_Over_Get_User_Details</name>
+        <label>Iterate Over Get User Details</label>
+        <locationX>594</locationX>
+        <locationY>1632</locationY>
+        <collectionReference>Get_user_Details</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Assign_User_Names</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Notify_7_day_s_Before_of_Close_Date</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <loops>
+        <name>Iterate_Over_Get_User_Details2</name>
+        <label>Iterate Over Get User Details</label>
+        <locationX>946</locationX>
+        <locationY>1740</locationY>
+        <collectionReference>Get_user_Details2</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Assign_User_Names2</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Notify_7_day_s_Before_of_Close_Date2</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <loops>
+        <name>Iterate_Over_Opportunity_Team_members</name>
+        <label>Iterate Over Opportunity Team members</label>
+        <locationX>770</locationX>
+        <locationY>924</locationY>
+        <collectionReference>Get_Opportunity_Sales_Team</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Is_User_Active</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Is_Owner_In_Team</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Get the bypass user-related flow - child of Bypass Flows - user</description>
+        <name>Get_Bypass_Flows_User_related_Flow</name>
+        <label>Get Bypass Flows - User related Flow</label>
+        <locationX>462</locationX>
+        <locationY>384</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_User_for_flow_bypass</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Data_Load_User__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Bypass_User.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Flow_Name__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Opportunity_BIP_Scheduler</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Bypass_Flows_User_related_Flow__mdt</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Get the current user details if he can bypass the validation</description>
+        <name>Get_Bypass_User</name>
+        <label>Get Bypass User</label>
+        <locationX>462</locationX>
+        <locationY>276</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Bypass_Flows_User_related_Flow</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Username__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$User.Username</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Active__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Bypass_Flows_User__mdt</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Opportunity_Sales_Team</name>
+        <label>Get Opportunity Team Members</label>
+        <locationX>770</locationX>
+        <locationY>600</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_User</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>OpportunityId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>OpportunityTeamMember</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_User</name>
+        <label>Get User</label>
+        <locationX>770</locationX>
+        <locationY>708</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Notification_Type</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>IsActive</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>User</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Get only the Active user (Email can be only sent to Active users)</description>
+        <name>Get_user_Details</name>
+        <label>Get user Details</label>
+        <locationX>594</locationX>
+        <locationY>1524</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Iterate_Over_Get_User_Details</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>In</operator>
+            <value>
+                <elementReference>SalesTeamIds</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>IsActive</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>User</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Get only the Active user (Email can be only sent to Active users)</description>
+        <name>Get_user_Details2</name>
+        <label>Get user Details</label>
+        <locationX>946</locationX>
+        <locationY>1632</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Iterate_Over_Get_User_Details2</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>In</operator>
+            <value>
+                <elementReference>SalesTeamIds</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>IsActive</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>User</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Notification_Type</name>
+        <label>Notification Type</label>
+        <locationX>770</locationX>
+        <locationY>816</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Iterate_Over_Opportunity_Team_members</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>MS_Team_Notification</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>CustomNotificationType</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <object>Opportunity</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <scheduledPaths>
+            <name>Scheduled_BIP_Start</name>
+            <connector>
+                <targetReference>Get_Bypass_User</targetReference>
+            </connector>
+            <label>Scheduled BIP Start</label>
+            <offsetNumber>-7</offsetNumber>
+            <offsetUnit>Days</offsetUnit>
+            <recordField>CloseDate</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>PostChatterMessage</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Dear colleague,
+{!UserNames}
+ Kindly note that the Close Date of the Opportunity : &quot;{!$Record.Name}&quot; is approaching.
+ Opportunity Details:
+ Name: {!$Record.Name}
+ Owner: {!Get_User.Name}
+ Account: {!$Record.Account.Name}
+ Best regards, 
+ Your CRM Support Team
+ 
+ The mySalesForce system automatically generated this message.</text>
+    </textTemplates>
+    <textTemplates>
+        <name>PostChatterNotification</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Dear colleague,
+{!UserNames}
+ Kindly note that the Close Date of Opportunity : &quot;{!$Record.Name}&quot; is approaching.
+ Opportunity Details:
+ Name: {!$Record.Name}
+ Owner: {!Get_User.Name}
+ Account: {!$Record.Account.Name}
+ Best regards,
+ Your CRM Support Team
+ 
+ The mySalesForce system automatically generated this message.</text>
+    </textTemplates>
+    <variables>
+        <name>mentionList</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>SalesTeamIds</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>UserNames</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

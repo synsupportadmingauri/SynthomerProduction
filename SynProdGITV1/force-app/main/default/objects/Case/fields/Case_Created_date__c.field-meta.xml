@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Created_date__c</fullName>
+    <description>Field to capture the case reported date if the case was created later on the system.</description>
+    <inlineHelpText>Please enter the date the complaint was received if the case was created later in the system.</inlineHelpText>
+    <label>Case Created date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

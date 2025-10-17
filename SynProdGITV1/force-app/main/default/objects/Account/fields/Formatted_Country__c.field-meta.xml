@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Formatted_Country__c</fullName>
+    <description>Displays the Billing Country in the format CountryCode - CountryName for Conga. Hidden on UI</description>
+    <externalId>false</externalId>
+    <formula>CASE(
+    TEXT(BillingCountryCode),
+    
+    &quot;AE&quot;, &quot;AE - Utd.Arab.Emir.&quot;,
+    &quot;BA&quot;, &quot;BA - Bosnia-Herz.&quot;,
+    &quot;BO&quot;, &quot;BO - Bolivia&quot;,
+    &quot;BY&quot;, &quot;BY - Rep. of Belarus&quot;,
+    &quot;CI&quot;, &quot;CI - Ivory Coast&quot;,
+    &quot;CN&quot;, &quot;CN - PR China&quot;,
+    &quot;DO&quot;, &quot;DO - Dominican Rep.&quot;,
+    &quot;GB&quot;, &quot;GB - Great Britain&quot;,
+    &quot;IR&quot;, &quot;IR - Iran&quot;,
+    &quot;KR&quot;, &quot;KR - South Korea&quot;,
+    &quot;MD&quot;, &quot;MD - Moldova&quot;,
+    &quot;MK&quot;, &quot;MK - Macedonia&quot;,
+    &quot;MO&quot;, &quot;MO - Macau&quot;,
+    &quot;RU&quot;, &quot;RU - Russian Fed.&quot;,
+    &quot;TT&quot;, &quot;TT - Trinidad,Tobago&quot;,
+    &quot;TW&quot;, &quot;TW - Taiwan&quot;,
+    &quot;TZ&quot;, &quot;TZ - Tanzania&quot;,
+    &quot;US&quot;, &quot;US - USA&quot;,
+
+    
+    TEXT(BillingCountryCode) &amp; &quot; - &quot; &amp; BillingCountry
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Formatted Country</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CRM_Id_Number__c</fullName>
+    <description>Auto number generated to be used in the CRM Id field. This field will not be displayed on the screen.</description>
+    <displayFormat>{00000000}</displayFormat>
+    <externalId>false</externalId>
+    <label>CRM Id Number</label>
+    <trackHistory>false</trackHistory>
+    <type>AutoNumber</type>
+</CustomField>

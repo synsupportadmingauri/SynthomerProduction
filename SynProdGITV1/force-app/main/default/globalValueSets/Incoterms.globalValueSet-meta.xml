@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>CFR</fullName>
+        <default>false</default>
+        <label>CFR	- Costs and Freight</label>
+    </customValue>
+    <customValue>
+        <fullName>CIF</fullName>
+        <default>false</default>
+        <label>CIF - Costs, Insurance &amp; Freight</label>
+    </customValue>
+    <customValue>
+        <fullName>CIP</fullName>
+        <default>false</default>
+        <label>CIP - Carriage and Insurance Paid to</label>
+    </customValue>
+    <customValue>
+        <fullName>CPT</fullName>
+        <default>false</default>
+        <label>CPT -Carriage Paid to</label>
+    </customValue>
+    <customValue>
+        <fullName>DAF</fullName>
+        <default>false</default>
+        <label>DAF	- Delivered at Frontier</label>
+    </customValue>
+    <customValue>
+        <fullName>DAP</fullName>
+        <default>false</default>
+        <label>DAP	- Delivered at Place</label>
+    </customValue>
+    <customValue>
+        <fullName>DAT</fullName>
+        <default>false</default>
+        <label>DAT	- Delivered at Terminal</label>
+    </customValue>
+    <customValue>
+        <fullName>DDP</fullName>
+        <default>false</default>
+        <label>DDP - Delivered Duty Paid</label>
+    </customValue>
+    <customValue>
+        <fullName>DDU</fullName>
+        <default>false</default>
+        <label>DDU - Delivered Duty Unpaid</label>
+    </customValue>
+    <customValue>
+        <fullName>DEQ</fullName>
+        <default>false</default>
+        <label>DEQ - Delivered ex Quay (duty paid)</label>
+    </customValue>
+    <customValue>
+        <fullName>DES</fullName>
+        <default>false</default>
+        <label>DES	- Delivered ex Ship</label>
+    </customValue>
+    <customValue>
+        <fullName>DPU</fullName>
+        <default>false</default>
+        <label>DPU - Delivered at Place-Unloaded</label>
+    </customValue>
+    <customValue>
+        <fullName>EXW</fullName>
+        <default>false</default>
+        <label>EXW - Ex Works</label>
+    </customValue>
+    <customValue>
+        <fullName>FAS</fullName>
+        <default>false</default>
+        <label>FAS - Free Alongside Ship</label>
+    </customValue>
+    <customValue>
+        <fullName>FCA</fullName>
+        <default>false</default>
+        <label>FCA - Free Carrier</label>
+    </customValue>
+    <customValue>
+        <fullName>FOB</fullName>
+        <default>false</default>
+        <label>FOB	- Free on Board</label>
+    </customValue>
+    <description>Defines the terms of delivery, cost responsibilities, and risk allocation between buyers and sellers</description>
+    <masterLabel>Incoterms</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

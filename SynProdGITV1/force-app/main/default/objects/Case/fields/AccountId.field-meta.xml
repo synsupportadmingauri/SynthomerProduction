@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AccountId</fullName>
+    <lookupFilter>
+        <active>true</active>
+        <errorMessage>Account Type Cannot be Ship-To, RHQ OR HQ</errorMessage>
+        <filterItems>
+            <field>Account.Type</field>
+            <operation>notEqual</operation>
+            <value>Ship-To, RHQ, HQ</value>
+        </filterItems>
+        <infoMessage>Account Type Cannot be Ship-To, RHQ OR HQ</infoMessage>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

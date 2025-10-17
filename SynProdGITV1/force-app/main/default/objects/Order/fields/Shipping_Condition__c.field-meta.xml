@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Shipping_Condition__c</fullName>
+    <description>SSP-176 SS2-T109 How the shipping of Order is done.</description>
+    <label>Shipping Condition</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>02</fullName>
+                <default>false</default>
+                <label>02- Pick-up</label>
+            </value>
+            <value>
+                <fullName>03</fullName>
+                <default>false</default>
+                <label>03- Immediately</label>
+            </value>
+            <value>
+                <fullName>04</fullName>
+                <default>false</default>
+                <label>04- Transport Service</label>
+            </value>
+            <value>
+                <fullName>CC</fullName>
+                <default>false</default>
+                <label>CC- Consi / Ret. Issue</label>
+            </value>
+            <value>
+                <fullName>RE</fullName>
+                <default>false</default>
+                <label>RE- Returns</label>
+            </value>
+            <value>
+                <fullName>ZA</fullName>
+                <default>false</default>
+                <label>ZA- Airfreight</label>
+            </value>
+            <value>
+                <fullName>ZB</fullName>
+                <default>false</default>
+                <label>ZB- Courier</label>
+            </value>
+            <value>
+                <fullName>ZC</fullName>
+                <default>false</default>
+                <label>ZC- Groupage</label>
+            </value>
+            <value>
+                <fullName>ZD</fullName>
+                <default>false</default>
+                <label>ZD- Rail</label>
+            </value>
+            <value>
+                <fullName>ZE</fullName>
+                <default>false</default>
+                <label>ZE- Road</label>
+            </value>
+            <value>
+                <fullName>ZF</fullName>
+                <default>false</default>
+                <label>ZF- Sea</label>
+            </value>
+            <value>
+                <fullName>ZG</fullName>
+                <default>false</default>
+                <label>ZG- Self-collection</label>
+            </value>
+            <value>
+                <fullName>ZH</fullName>
+                <default>false</default>
+                <label>ZH- Barge</label>
+            </value>
+            <value>
+                <fullName>ZI</fullName>
+                <default>false</default>
+                <label>ZI- Intermodal</label>
+            </value>
+            <value>
+                <fullName>ZL</fullName>
+                <default>false</default>
+                <label>ZL- LTL</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

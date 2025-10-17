@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Main Partner (do not change) --></help>
+    <label><!-- Main Partner --></label>
+    <name>Main_Partner__c</name>
+    <relationshipLabel><!-- Account Partners Data --></relationshipLabel>
+</CustomFieldTranslation>

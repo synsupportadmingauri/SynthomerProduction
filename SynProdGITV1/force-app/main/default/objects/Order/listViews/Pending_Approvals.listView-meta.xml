@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pending_Approvals</fullName>
+    <columns>ORDERS.ORDER_NUMBER</columns>
+    <columns>ORDERS.EFFECTIVE_DATE</columns>
+    <columns>ORDERS.STATUS</columns>
+    <columns>ORDER.SHIP_TO_CONTACT</columns>
+    <columns>ORDERS.LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ORDERS.STATUS</field>
+        <operation>equals</operation>
+        <value>Submitted/ In Approval</value>
+    </filters>
+    <filters>
+        <field>Distributor_Submission_Approval_Status__c</field>
+        <operation>equals</operation>
+        <value>In Approval</value>
+    </filters>
+    <label>Pending Approvals</label>
+    <sharedTo>
+        <group>Distribution_Managers</group>
+    </sharedTo>
+</ListView>

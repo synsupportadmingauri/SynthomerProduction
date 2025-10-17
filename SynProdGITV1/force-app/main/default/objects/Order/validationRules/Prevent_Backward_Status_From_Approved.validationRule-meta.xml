@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Backward_Status_From_Approved</fullName>
+    <active>true</active>
+    <description>User cannot move the status backward from Approved, In Process, Completed, or Canceled.</description>
+    <errorConditionFormula>AND(
+    ISCHANGED(Status),
+    NOT(TEXT(Salesforce_Order_Type__c) = &apos;ZOR&apos;),
+
+    IF(
+        TEXT(PRIORVALUE(Status)) = &quot;Approved&quot;,
+        OR(
+            ISPICKVAL(Status, &quot;Draft&quot;),
+            ISPICKVAL(Status, &quot;Submitted/ In Approval&quot;)
+        ),
+    IF(
+        TEXT(PRIORVALUE(Status)) = &quot;In Process/Package Preparation&quot;,
+        OR(
+            ISPICKVAL(Status, &quot;Draft&quot;),
+            ISPICKVAL(Status, &quot;Submitted/ In Approval&quot;),
+            ISPICKVAL(Status, &quot;Approved&quot;)
+        ),
+    IF(
+        TEXT(PRIORVALUE(Status)) = &quot;Completed&quot;,
+        OR(
+            ISPICKVAL(Status, &quot;Draft&quot;),
+            ISPICKVAL(Status, &quot;Submitted/ In Approval&quot;),
+            ISPICKVAL(Status, &quot;In Process/Package Preparation&quot;),
+            ISPICKVAL(Status, &quot;Approved&quot;)
+        ),
+    IF(
+        TEXT(PRIORVALUE(Status)) = &quot;Cancelled&quot;,
+        OR(
+            ISPICKVAL(Status, &quot;Draft&quot;),
+            ISPICKVAL(Status, &quot;Submitted/ In Approval&quot;),
+            ISPICKVAL(Status, &quot;In Process/Package Preparation&quot;),
+            ISPICKVAL(Status, &quot;Approved&quot;),
+            ISPICKVAL(Status, &quot;Completed&quot;)
+        ),
+    IF(
+        TEXT(PRIORVALUE(Status)) = &quot;Submitted/ In Approval&quot;,
+        OR(
+            ISPICKVAL(Status, &quot;Draft&quot;)
+        ),
+    false
+    ))))),
+
+    NOT(
+        OR(
+            $Permission.Integration_User,
+            $Profile.Name = &quot;System Administrator&quot;,
+            $Profile.Name = &quot;Automated Process&quot;
+        )
+    )
+)</errorConditionFormula>
+    <errorMessage>You cannot move the status backward</errorMessage>
+</ValidationRule>

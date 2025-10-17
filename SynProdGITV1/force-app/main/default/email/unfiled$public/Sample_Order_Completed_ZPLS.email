@@ -1,0 +1,77 @@
+<messaging:emailTemplate subject=" Sample Order {!relatedTo.OrderNumber} has been Completed"
+                         recipientType="User"
+                         relatedToType="Order">
+    <messaging:htmlEmailBody >
+        <html>
+        <head>
+            <style>
+                table {
+                    border-collapse: collapse;
+                    width: 100%;
+                    margin-top: 10px;
+                }
+                th, td {
+                    border: 1px solid #ccc;
+                    padding: 8px;
+                    text-align: left;
+                }
+                th {
+                    background-color: #f2f2f2;
+                }
+                body {
+                    font-family: Arial, sans-serif;
+                    font-size: 14px;
+                    color: #333333;
+                }
+            </style>
+        </head>
+        <body>
+            <p>Dear {!recipient.Name},</p>
+
+            <p>
+                Kindly be informed that the new Sample Order <strong>{!relatedTo.OrderNumber}</strong> has been sent for dispatching by your team.
+            </p>
+
+            <h3>Order Details</h3>
+            <p>
+                <strong>Order ID:</strong> {!relatedTo.OrderNumber} <br/>
+                <strong>SAP ID:</strong> {!relatedTo.SAP_Order_ID__c} <br/>
+                <strong>Ship To:</strong> {!relatedTo.Ship_To_Account__r.Name} <br/>
+                <strong>Owner:</strong> {!relatedTo.Owner.Name}
+            </p>
+
+            <h3>Products</h3>
+            <table>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Quantity</th>
+                    <th>Unit Price</th>
+                </tr>
+                <apex:repeat var="item" value="{!relatedTo.OrderItems}">
+                    <tr>
+                        <td>{!item.PricebookEntry.Name}</td>
+                           <td>{!item.Description}</td>
+                        <td>{!item.Quantity}</td>
+                        
+                    </tr>
+                </apex:repeat>
+            </table>
+<br></br>
+            
+           Link to Sample Order in mySalesForce: <a href="https://synthomer--maindev.sandbox.lightning.force.com/{!relatedTo.Id}">
+  {!relatedTo.OrderNumber}
+</a>
+
+
+            <p>
+                Best regards,<br/>
+                Your CRM Support Team
+            </p>
+
+            <p style="font-size: 12px; color: #999;">
+                The mySalesForce system automatically generated this message.
+            </p>
+        </body>
+        </html>
+    </messaging:htmlEmailBody>
+</messaging:emailTemplate>

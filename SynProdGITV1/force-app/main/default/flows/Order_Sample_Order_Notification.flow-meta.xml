@@ -1,0 +1,2310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Post to Chatter for ZCRM orders whenever the status = &apos;completed&apos;</description>
+        <name>Post_to_Chatter_ZCRM</name>
+        <label>Post to Chatter</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>chatterPost</actionName>
+        <actionType>chatterPost</actionType>
+        <connector>
+            <targetReference>Is_Ship_To_Contact_Empty_2</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Create_Log_Chatter_ZCRM</targetReference>
+        </faultConnector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>text</name>
+            <value>
+                <elementReference>templateChatter_ZCRM_Completed</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>subjectNameOrId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>chatterPost</nameSegment>
+        <offset>0</offset>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <actionCalls>
+        <name>Post_to_Chatter_ZPLS</name>
+        <label>Post to Chatter</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>chatterPost</actionName>
+        <actionType>chatterPost</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>text</name>
+            <value>
+                <elementReference>templateChatter_ZSLS_ZPLS_Completed</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>subjectNameOrId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>chatterPost</nameSegment>
+        <offset>0</offset>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <actionCalls>
+        <name>Post_to_Chatter_ZSLS</name>
+        <label>Post to Chatter</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>chatterPost</actionName>
+        <actionType>chatterPost</actionType>
+        <connector>
+            <targetReference>Is_Ship_To_Contact_Empty</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Create_Log_ZSLS</targetReference>
+        </faultConnector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>text</name>
+            <value>
+                <elementReference>templateChatter_ZSLS_ZPLS_Completed</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>subjectNameOrId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>chatterPost</nameSegment>
+        <offset>0</offset>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <actionCalls>
+        <description>Send Email to Plant Team Member whenever the status - &apos;In Approval&apos;</description>
+        <name>Send_Email_to_Plant_Team_Member_Enorica_InApproval</name>
+        <label>Send Email to Plant Team Member</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <faultConnector>
+            <targetReference>Create_Log_InApproval_Email</targetReference>
+        </faultConnector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddressesArray</name>
+            <value>
+                <elementReference>lstEmails</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <elementReference>orgEmailAddress</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>composeEmailContent</name>
+            <value>
+                <stringValue>True</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>New Lab Sample Order {!$Record.OrderNumber} has been submitted.</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <stringValue>&lt;p&gt;Dear Colleague,&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Kindly be informed that the new LAB Sample Order &lt;strong&gt;{!$Record.OrderNumber}&lt;/strong&gt; has been submitted.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Order Details&lt;/strong&gt;&lt;/p&gt;&lt;table class=&quot;ql-table-blob&quot; style=&quot;width: 100%; border: 1px solid rgb(179, 217, 255); border-collapse: collapse; font-family: Arial, sans-serif; font-size: 14px; color: rgb(51, 51, 51); white-space: pre;&quot;&gt;  &lt;tbody style=&quot;white-space: pre;&quot;&gt;    &lt;tr style=&quot;white-space: pre;&quot;&gt;      &lt;td style=&quot;padding: 8px; border: 1px solid #b3d9ff;&quot;&gt;&lt;strong&gt;Order ID:&lt;/strong&gt;&lt;/td&gt;      &lt;td style=&quot;padding: 8px; border: 1px solid #b3d9ff;&quot;&gt;{!$Record.OrderNumber}&lt;/td&gt;    &lt;/tr&gt;    &lt;tr style=&quot;white-space: pre;&quot;&gt;      &lt;td style=&quot;padding: 8px; border: 1px solid #b3d9ff;&quot;&gt;&lt;strong&gt;Ship To:&lt;/strong&gt;&lt;/td&gt;      &lt;td style=&quot;padding: 8px; border: 1px solid #b3d9ff;&quot;&gt;{!$Record.Ship_To_Account__r.Name}&lt;/td&gt;    &lt;/tr&gt;    &lt;tr style=&quot;white-space: pre;&quot;&gt;      &lt;td style=&quot;padding: 8px; border: 1px solid #b3d9ff;&quot;&gt;&lt;strong&gt;Product:&lt;/strong&gt;&lt;/td&gt;      &lt;td style=&quot;padding: 8px; border: 1px solid #b3d9ff;&quot;&gt;{!BulletDescriptions}&lt;/td&gt;    &lt;/tr&gt;    &lt;tr style=&quot;white-space: pre;&quot;&gt;      &lt;td style=&quot;padding: 8px; border: 1px solid #b3d9ff;&quot;&gt;&lt;strong&gt;Owner:&lt;/strong&gt;&lt;/td&gt;      &lt;td style=&quot;padding: 8px; border: 1px solid #b3d9ff;&quot;&gt;{!$Record.Owner:User.FirstName} {!$Record.Owner:User.LastName}&lt;/td&gt;    &lt;/tr&gt;  &lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Link to Sample Order in mySalesforce:&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;{!URLBase}/lightning/r/Order/{!$Record.Id}/view&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;color: rgb(0, 112, 210);&quot;&gt;  {!$Record.OrderNumber}&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Best regards,&lt;/p&gt;&lt;p&gt;Your CRM Support Team&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;This message was automatically generated by the mySalesforce system.&lt;/p&gt;</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>relatedRecordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>logEmailOnSend</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <actionCalls>
+        <name>Send_Email_to_Plant_Team_Members_S4</name>
+        <label>Send Email to Plant Team Members</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <faultConnector>
+            <targetReference>Create_Log_S4_InProcess_Package_Preparation</targetReference>
+        </faultConnector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+        </inputParameters>
+        <inputParameters>
+            <name>emailAddressesArray</name>
+            <value>
+                <elementReference>lstEmails</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <elementReference>orgEmailAddress</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>composeEmailContent</name>
+            <value>
+                <stringValue>True</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Sample Order {!$Record.OrderNumber} has been Approved</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <stringValue>&lt;p&gt;Dear Colleague,&lt;/p&gt;&lt;p&gt;Kindly be informed that the new Sample Order &lt;strong&gt;{!$Record.OrderNumber}&lt;/strong&gt; has been sent for dispatching by your team.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Order Details&lt;/strong&gt;&lt;/p&gt;&lt;table class=&quot;ql-table-blob&quot; style=&quot;width: 100%; border: 1px solid #b3d9ff; border-collapse: collapse; font-family: Arial, sans-serif; font-size: 14px;&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td style=&quot;padding: 8px; border: 1px solid #b3d9ff;&quot;&gt;&lt;strong&gt;Order ID:&lt;/strong&gt;&lt;/td&gt;&lt;td style=&quot;padding: 8px; border: 1px solid #b3d9ff;&quot;&gt;{!$Record.OrderNumber}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;padding: 8px; border: 1px solid #b3d9ff;&quot;&gt;&lt;strong&gt;SAP ID:&lt;/strong&gt;&lt;/td&gt;&lt;td style=&quot;padding: 8px; border: 1px solid #b3d9ff;&quot;&gt;{!$Record.SAP_Order_ID__c}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;padding: 8px; border: 1px solid #b3d9ff;&quot;&gt;&lt;strong&gt;Ship To:&lt;/strong&gt;&lt;/td&gt;&lt;td style=&quot;padding: 8px; border: 1px solid #b3d9ff;&quot;&gt;{!$Record.Ship_To_Account__r.Name}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;padding: 8px; border: 1px solid #b3d9ff; vertical-align: top;&quot;&gt;&lt;strong&gt;Products:&lt;/strong&gt;&lt;/td&gt;&lt;td style=&quot;padding: 8px; border: 1px solid #b3d9ff;&quot;&gt;{!BulletDescriptions}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;padding: 8px; border: 1px solid #b3d9ff;&quot;&gt;&lt;strong&gt;Owner:&lt;/strong&gt;&lt;/td&gt;&lt;td style=&quot;padding: 8px; border: 1px solid #b3d9ff;&quot;&gt;{!$Record.Owner:User.FirstName} {!$Record.Owner:User.LastName}&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;
+&lt;/table&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Link to Sample Order in mySalesforce:&lt;/strong&gt;&lt;/p&gt;&lt;p&gt; &lt;a href=&quot;{!URLBase}/lightning/r/Order/{!$Record.Id}/view&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;color: rgb(0, 112, 210);&quot;&gt; {!$Record.OrderNumber} &lt;/a&gt;&lt;/p&gt;&lt;p&gt;Best regards,&lt;/p&gt;&lt;p&gt; Your CRM Support Team&lt;/p&gt;&lt;p&gt;This is an automatically generated message from the mySalesforce system.&lt;/p&gt;</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>relatedRecordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>logEmailOnSend</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <actionCalls>
+        <name>Send_Email_to_Plant_Team_Members_ZCRM</name>
+        <label>Send Email to Plant Team Members</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <faultConnector>
+            <targetReference>Create_Log_ZCRM_Plant_Email</targetReference>
+        </faultConnector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+        </inputParameters>
+        <inputParameters>
+            <name>emailAddressesArray</name>
+            <value>
+                <elementReference>lstEmails</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <elementReference>orgEmailAddress</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>composeEmailContent</name>
+            <value>
+                <stringValue>True</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Sample Order {!$Record.OrderNumber} has been Approved</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <stringValue>&lt;p&gt;Dear Colleague,&lt;/p&gt;
+
+&lt;p&gt;Kindly note that the CRM sample request has been &lt;strong&gt;approved&lt;/strong&gt;. You can now start processing the order.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Request Details:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;table class=&quot;ql-table-blob&quot; style=&quot;width: 100%; border-collapse: collapse; font-family: Arial, sans-serif; font-size: 14px; color: rgb(51, 51, 51);&quot;&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;border: 1pt solid #b3d9ff; padding: 6pt;&quot;&gt;&lt;strong&gt;Order ID:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;border: 1pt solid #b3d9ff; padding: 6pt;&quot;&gt;{!$Record.OrderNumber}&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;border: 1pt solid #b3d9ff; padding: 6pt;&quot;&gt;&lt;strong&gt;Account:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;border: 1pt solid #b3d9ff; padding: 6pt;&quot;&gt;{!$Record.Account.Name}&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;border: 1pt solid #b3d9ff; padding: 6pt;&quot;&gt;&lt;strong&gt;Shipping Address:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;border: 1pt solid #b3d9ff; padding: 6pt;&quot;&gt;
+        {!$Record.ShippingStreet},&lt;br&gt;
+        {!$Record.ShippingCity},&lt;br&gt;
+        {!$Record.ShippingCountry},&lt;br&gt;
+        {!$Record.ShippingPostalCode}
+      &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;border: 1pt solid #b3d9ff; padding: 6pt;&quot;&gt;&lt;strong&gt;Owner:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;border: 1pt solid #b3d9ff; padding: 6pt;&quot;&gt;{!$Record.Owner:User.FirstName} {!$Record.Owner:User.LastName}&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;strong&gt;Order Items:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;table class=&quot;ql-table-blob&quot; style=&quot;width: 100%; border-collapse: collapse; font-family: Arial, sans-serif; font-size: 14px; color: rgb(51, 51, 51);&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&quot;background-color: rgb(240, 248, 255);&quot;&gt;
+      &lt;th style=&quot;border: 1pt solid #b3d9ff; padding: 8px;&quot;&gt;Products&lt;/th&gt;
+      &lt;th style=&quot;border: 1pt solid #b3d9ff; padding: 8px;&quot;&gt;Quantity&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;{!OrderItemTableRows}
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;strong&gt;Link to Sample Order in mySalesforce:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;{!URLBase}/lightning/r/Order/{!$Record.Id}/view&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;color: rgb(0, 112, 210);&quot;&gt;{!$Record.OrderNumber}&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Best regards,&lt;br&gt;Your CRM Support Team&lt;/p&gt;
+
+&lt;p&gt;The mySalesforce system automatically generated this message.&lt;/p&gt;
+</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>relatedRecordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>logEmailOnSend</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <actionCalls>
+        <description>Send Email to Ship to Contact for ZPLS and ZSLS</description>
+        <name>Send_Email_to_Ship_to_Contact</name>
+        <label>Send Email to Ship to Contact</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <faultConnector>
+            <targetReference>Create_Log_Ship_To_Email_1</targetReference>
+        </faultConnector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.ShipToContact.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailAddressesArray</name>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <elementReference>orgEmailAddress</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>composeEmailContent</name>
+            <value>
+                <stringValue>True</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Your Sample Request {!$Record.OrderNumber} has been processed</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <stringValue>&lt;p&gt;Dear {!$Record.ShipToContact.Salutation} {!$Record.ShipToContact.FirstName},&lt;/p&gt;&lt;p&gt;Synthomer has processed your request &lt;strong&gt;{!$Record.OrderNumber}&lt;/strong&gt; for the below Product Material Sample(s).&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Please find attached detailed information about the Order.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;The following Tracking Information is now available:&lt;/p&gt;&lt;table class=&quot;ql-table-blob&quot; style=&quot;width: 100%; margin-top: 10px; border: 1px solid rgb(204, 204, 204); border-spacing: 0px; white-space: pre;&quot;&gt;&lt;tbody style=&quot;white-space: pre;&quot;&gt;&lt;tr style=&quot;white-space: pre;&quot;&gt;&lt;th style=&quot;border: 1px solid #ccc; padding: 8px; background-color: #f2f2f2; text-align: center;&quot;&gt;Product Name&lt;/th&gt;&lt;th style=&quot;border: 1px solid #ccc; padding: 8px; background-color: #f2f2f2; text-align: center;&quot;&gt;Shipping Date&lt;/th&gt;&lt;th style=&quot;border: 1px solid #ccc; padding: 8px; background-color: #f2f2f2; text-align: left;&quot;&gt;Tracking URL&lt;/th&gt;&lt;/tr&gt;&lt;tr style=&quot;white-space: pre;&quot;&gt;&lt;td style=&quot;border: 1px solid #ccc; padding: 8px; text-align: left;&quot;&gt;{!BulletDescriptions}&lt;/td&gt;&lt;td style=&quot;border: 1px solid #ccc; padding: 8px;text-align: center;&quot;&gt;{!BulletShippingDate}&lt;/td&gt;&lt;td style=&quot;border: 1px solid #ccc; padding: 8px;&quot;&gt;{!BulletTrackingURL}&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;Regulatory and compliance information can be found via our website. As a member of the Chemical Industries Association and American Chemistry Council, Synthomer embraces the principles of Responsible Care, the chemical industry’s commitment to continual improvement in health, occupational, process and product safety, and environmental performance. We encourage safe and responsible material handling for employees, customers, the public, and for the environment.&lt;/p&gt;&lt;p&gt;If you have further questions, a Synthomer Polymer Expert would be glad to assist you.&lt;/p&gt;&lt;p&gt;Thank you for your interest.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;{!$Record.CreatedBy.FirstName} {!$Record.CreatedBy.LastName}&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Team Synthomer&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;{!$Label.Synthomer_Logo_Link}&quot; alt=&quot;Synthomer Logo&quot;&gt;&lt;/p&gt;&lt;p&gt;Synthomer takes data privacy seriously. Please read the Fair Processing Notice referred to in our Privacy Policy to learn more. &lt;/p&gt;&lt;p&gt;This message contains confidential information and is intended only for the individual named person. If you are not the named addressee you are not allowed to disseminate, distribute or copy this E-Mail. Please notify the sender immediately by E-Mail if you have received this E-Mail by mistake and delete this E-Mail from your system. E-Mail transmission cannot be guaranteed to be secure or error-free. The sender therefore does not accept liability for any errors or omissions in the contents of this message which arise as a result of E-Mail transmission. If verification is required please request a hard-copy version.&lt;/p&gt;</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>useLineBreaks</name>
+        </inputParameters>
+        <inputParameters>
+            <name>relatedRecordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>logEmailOnSend</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <actionCalls>
+        <description>Send Email to Ship to Contact for ZCRM</description>
+        <name>Send_Email_to_Ship_to_Contact_ZCRM</name>
+        <label>Send Email to Ship to Contact</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <faultConnector>
+            <targetReference>Create_Log_Ship_To_Email</targetReference>
+        </faultConnector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.ShipToContact.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailAddressesArray</name>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <elementReference>orgEmailAddress</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>composeEmailContent</name>
+            <value>
+                <stringValue>True</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Your Sample Request {!$Record.OrderNumber} has been processed</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <stringValue>&lt;p&gt;Dear {!$Record.ShipToContact.Salutation} {!$Record.ShipToContact.FirstName},&lt;/p&gt;&lt;p&gt;Synthomer has processed your request &lt;strong&gt;{!$Record.OrderNumber}&lt;/strong&gt; for the below Product Material Sample(s).&lt;br&gt;&lt;br&gt;Please find attached detailed information about the Order.&lt;br&gt;&lt;br&gt;The following Tracking Information is now available:&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Shipping Carrier:&lt;/strong&gt; {!$Record.Shipping_Carrier__c}&lt;/p&gt;&lt;table class=&quot;ql-table-blob&quot; style=&quot;width: 100%; margin-top: 10px; border: 1px solid rgb(204, 204, 204); border-spacing: 0px; white-space: pre;&quot;&gt;&lt;tbody style=&quot;white-space: pre;&quot;&gt;&lt;tr style=&quot;white-space: pre;&quot;&gt;&lt;th style=&quot;border: 1px solid #ccc; padding: 8px; background-color: #f2f2f2; text-align: center;&quot;&gt;Product Name&lt;/th&gt;&lt;th style=&quot;border: 1px solid #ccc; padding: 8px; background-color: #f2f2f2; text-align: center;&quot;&gt;Shipping Date&lt;/th&gt;&lt;th style=&quot;border: 1px solid #ccc; padding: 8px; background-color: #f2f2f2; text-align: left;&quot;&gt;Tracking Number&lt;/th&gt;&lt;/tr&gt;&lt;tr style=&quot;white-space: pre;&quot;&gt;&lt;td style=&quot;border: 1px solid #ccc; padding: 8px;&quot;&gt;{!BulletDescriptions}&lt;/td&gt;&lt;td style=&quot;border: 1px solid #ccc; padding: 8px; text-align: center;&quot;&gt;{!BulletShippingDate}&lt;/td&gt;&lt;td style=&quot;border: 1px solid #ccc; padding: 8px;&quot;&gt;{!BulletTrackingNumber}&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;Regulatory and compliance information can be found via our website. As a member of the Chemical Industries Association and American Chemistry Council, Synthomer embraces the principles of Responsible Care, the chemical industry’s commitment to continual improvement in health, occupational, process and product safety, and environmental performance. We encourage safe and responsible material handling for employees, customers, the public, and for the environment.&lt;/p&gt;&lt;p&gt;If you have further questions, a Synthomer Polymer Expert would be glad to assist you.&lt;/p&gt;&lt;p&gt;Thank you for your interest.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;{!$Record.CreatedBy.FirstName} {!$Record.CreatedBy.LastName}&lt;/strong&gt;&lt;br&gt;Team Synthomer&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;{!$Label.Synthomer_Logo_Link}&quot; alt=&quot;Synthomer Logo&quot; style=&quot;width: 150px; height: auto; display: inline-block; max-width: 150px;&quot; /&gt;&lt;/p&gt;&lt;div style=&quot;color: grey; font-size: 12px; line-height: 1.5;&quot;&gt;&lt;p&gt;Synthomer takes data privacy seriously. Please read the Fair Processing Notice referred to in our Privacy Policy to learn more. &lt;br&gt;This message contains confidential information and is intended only for the individual named person. If you are not the named addressee you are not allowed to disseminate, distribute or copy this E-Mail. Please notify the sender immediately by E-Mail if you have received this E-Mail by mistake and delete this E-Mail from your system. E-Mail transmission cannot be guaranteed to be secure or error-free. The sender therefore does not accept liability for any errors or omissions in the contents of this message which arise as a result of E-Mail transmission. If verification is required please request a hard-copy version.&lt;/p&gt;&lt;/div&gt;</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>relatedRecordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>logEmailOnSend</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <apiVersion>64.0</apiVersion>
+    <assignments>
+        <name>Append_Product_Details</name>
+        <label>Append Product Details</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>var_OLIDescriptions</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>{!Loop_on_OLI.Description} </stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>OrderItemShippingDate</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Loop_on_OLI.Shipping_Date__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>var_OLIShippingDate</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>OrderItemShippingDate</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>var_OLITrackingNumber</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Loop_on_OLI.Tracking_Number__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>var_OLITrackingURL</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Loop_on_OLI.TrackingURL__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>OrderItemTableRows</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>&lt;tr&gt;   &lt;td style=&quot;border: 1pt solid #b3d9ff; padding: 8px;&quot;&gt;{!Loop_on_OLI.Description}&lt;/td&gt;   &lt;td style=&quot;border: 1pt solid #b3d9ff; padding: 8px; text-align: center;&quot;&gt;{!Loop_on_OLI.Quantity}&lt;/td&gt; &lt;/tr&gt;</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Loop_on_OLI</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Assign Employee (Contact) Email in list of email</description>
+        <name>Assign_Contact_Email</name>
+        <label>Assign Contact Email</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>lstEmails</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Loop_Over_Get_Plant_Team.Employee__r.Email</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Loop_Over_Get_Plant_Team</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Assign User Email in list of email</description>
+        <name>Assign_User_Email</name>
+        <label>Assign User Email</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>lstEmails</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Loop_Over_Get_Plant_Team.User__r.Email</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Loop_Over_Get_Plant_Team</targetReference>
+        </connector>
+    </assignments>
+    <customErrors>
+        <name>Custom_Error_1</name>
+        <label>Custom Error</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <customErrorMessages>
+            <errorMessage>Error occurred while fetching OLI</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <customErrors>
+        <name>Custom_Error_2</name>
+        <label>Custom Error</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <customErrorMessages>
+            <errorMessage>Error occurred while fetching Plant Team Data.</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <customErrors>
+        <name>Custom_Error_InApproval_Email</name>
+        <label>Custom Error</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <customErrorMessages>
+            <errorMessage>Error occurred while sending an email.</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <customErrors>
+        <name>Custom_Error_Metadata</name>
+        <label>Custom Error</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <customErrorMessages>
+            <errorMessage>Error occurred while Org Wide Email Addresss</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <customErrors>
+        <name>Custom_Error_Posting_Chatter_ZCRM</name>
+        <label>Custom Error</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <customErrorMessages>
+            <errorMessage>Error occurred while posting on chatter.</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <customErrors>
+        <name>Custom_Error_S4</name>
+        <label>Custom Error</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <customErrorMessages>
+            <errorMessage>Error occurred while sending an email.</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <customErrors>
+        <name>Custom_Error_SendEmail_ShipTo</name>
+        <label>Custom Error</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <customErrorMessages>
+            <errorMessage>Error occurred while sending an email.</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <customErrors>
+        <name>Custom_Error_SendEmail_ZCRM_Plant</name>
+        <label>Custom Error</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <customErrorMessages>
+            <errorMessage>Error occurred while sending an email.</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <customErrors>
+        <name>Custom_Error_Ship_To_Error</name>
+        <label>Custom Error</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <customErrorMessages>
+            <errorMessage>Error occurred while sending an email.</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <customErrors>
+        <name>Custom_Error_ZSLS</name>
+        <label>Custom Error</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <customErrorMessages>
+            <errorMessage>Error occurred while posting on chatter.</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <decisions>
+        <description>Check if Contact is null or not.</description>
+        <name>Check_Contact</name>
+        <label>Check Contact</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Loop_Over_Get_Plant_Team</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Not_Null_Contact</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Loop_Over_Get_Plant_Team.Employee__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Loop_Over_Get_Plant_Team.Employee__r.Email</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Contact_Email</targetReference>
+            </connector>
+            <label>Not Null</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checks whether the order type is ZPLS, ZSLS OR ZCRM.</description>
+        <name>Check_Order_Type</name>
+        <label>Check Order Type</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>ZSLS_Enorica</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Salesforce_Order_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>ZSLS</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Post_to_Chatter_ZSLS</targetReference>
+            </connector>
+            <label>ZSLS - Enorica</label>
+        </rules>
+        <rules>
+            <name>ZPLS_S4_Sample_Order</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Salesforce_Order_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>ZPLS</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Post_to_Chatter_ZPLS</targetReference>
+            </connector>
+            <label>ZPLS - S4 Sample Order</label>
+        </rules>
+        <rules>
+            <name>ZCRM_CRM_Samples</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Salesforce_Order_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>ZCRM</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Post_to_Chatter_ZCRM</targetReference>
+            </connector>
+            <label>ZCRM - CRM Samples</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checks whether the order type is S4 or not</description>
+        <name>Check_Order_Type_S4</name>
+        <label>Check Order Type</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>S4_Sample_Order</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Salesforce_Order_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>ZPLS</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Is_Plant_Team_Members_Empty_S4</targetReference>
+            </connector>
+            <label>S4 - Sample Order</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check whether the Status = &apos;Completed&apos; or &apos;In Approval&apos;</description>
+        <name>Check_Status</name>
+        <label>Check Status</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Completed</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Completed</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_Order_Type</targetReference>
+            </connector>
+            <label>Completed</label>
+        </rules>
+        <rules>
+            <name>In_Approval</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Submitted/ In Approval</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Plant__r.Plant_ID__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>ENORICA_LAB</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Is_Plant_Team_Members_Empty_3</targetReference>
+            </connector>
+            <label>In Approval</label>
+        </rules>
+        <rules>
+            <name>Approved</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Approved</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_1_of_Check_Order_Type</targetReference>
+            </connector>
+            <label>Approved</label>
+        </rules>
+        <rules>
+            <name>In_Process_Package_Preparation</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>In Process/Package Preparation</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_Order_Type_S4</targetReference>
+            </connector>
+            <label>In Process/Package Preparation</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_User</name>
+        <label>Check User</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Check_Contact</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Null</defaultConnectorLabel>
+        <rules>
+            <name>Not_Null_User</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Loop_Over_Get_Plant_Team.User__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_User_Email</targetReference>
+            </connector>
+            <label>Not Null</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_User_for_Flow_Bypass</name>
+        <label>Check User for Flow Bypass</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Get_Org_Wide_Email_Address</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>User can&apos;t bypass the Validation</defaultConnectorLabel>
+        <rules>
+            <name>User_can_bypass_the_Validation</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Bypass_Flows_User_related_Flow.Is_Bypass__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>User can bypass the Validation</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checks whether the order type is ZPLS, ZSLS OR ZCRM.</description>
+        <name>Copy_1_of_Check_Order_Type</name>
+        <label>Check Order Type</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Copy_1_of_ZCRM_CRM_Samples</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Salesforce_Order_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>ZCRM</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_1_of_Is_Plant_Team_Members_Empty</targetReference>
+            </connector>
+            <label>ZCRM - CRM Samples</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checks whether Plant Team Members are empty or not, if empty then creates log record with type = Information</description>
+        <name>Copy_1_of_Is_Plant_Team_Members_Empty</name>
+        <label>Is Plant Team Members Empty</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Send_Email_to_Plant_Team_Members_ZCRM</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Copy_1_of_Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>lstEmails</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Create_Log_3</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checks whether Plant Team Members are empty or not, if empty then creates log record with type = Information</description>
+        <name>Is_Plant_Team_Members_Empty_3</name>
+        <label>Is Plant Team Members Empty</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Send_Email_to_Plant_Team_Member_Enorica_InApproval</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_5</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>lstEmails</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Create_Log_5</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checks whether Plant Team Members are empty or not, if empty then creates log record with type = Information</description>
+        <name>Is_Plant_Team_Members_Empty_S4</name>
+        <label>Is Plant Team Members Empty</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Send_Email_to_Plant_Team_Members_S4</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_S4</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>lstEmails</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Create_Log_S4</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checks whether Ship to Contact Email is present or not.</description>
+        <name>Is_Ship_To_Contact_Empty</name>
+        <label>Is Ship To Contact Empty?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Send_Email_to_Ship_to_Contact</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_2</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.ShipToContact.Email</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Create_Log_2</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checks whether Ship to Contact Email is present or not.</description>
+        <name>Is_Ship_To_Contact_Empty_2</name>
+        <label>Is Ship To Contact Empty?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Send_Email_to_Ship_to_Contact_ZCRM</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_4</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.ShipToContact.Email</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Create_Log_4</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>Order - Sample Order Notification - Refer CRM Sample Order Notification</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Display each product description clearly on a separate line.</description>
+        <name>BulletDescriptions</name>
+        <dataType>String</dataType>
+        <expression>IF(
+  ISBLANK({!var_OLIDescriptions}),
+  &quot;-&quot;,
+  SUBSTITUTE(
+    SUBSTITUTE(
+      SUBSTITUTE(
+        {!var_OLIDescriptions},
+        &quot;[&quot;, &quot;&quot;
+      ),
+      &quot;]&quot;, &quot;&quot;
+    ),
+    &quot;,&quot;, BR()
+  )
+)</expression>
+    </formulas>
+    <formulas>
+        <name>BulletShippingDate</name>
+        <dataType>String</dataType>
+        <expression>IF(
+  ISBLANK({!var_OLIShippingDate}),
+  &quot;-&quot;,
+  SUBSTITUTE(
+    SUBSTITUTE(
+      SUBSTITUTE(
+        SUBSTITUTE(
+          SUBSTITUTE(
+            SUBSTITUTE(
+              SUBSTITUTE(
+                SUBSTITUTE(
+                  SUBSTITUTE(
+                    &quot;[&quot; &amp; SUBSTITUTE(SUBSTITUTE(SUBSTITUTE({!var_OLIShippingDate}, &quot;,,&quot;, &quot;, ,&quot;), &quot;,,&quot;, &quot;, ,&quot;), &quot;,,&quot;, &quot;, ,&quot;) &amp; &quot;]&quot;,
+                    &quot;[,&quot;, &quot;-,&quot;
+                  ),
+                  &quot;,]&quot;, &quot;,-&quot;
+                ),
+                &quot;,,&quot;, &quot;,-,&quot;   /* for missed middle blanks */
+              ),
+              &quot;[&quot;, &quot;&quot;
+            ),
+            &quot;]&quot;, &quot;&quot;
+          ),
+          &quot;, ,&quot;, &quot;,-,&quot;
+        ),
+        &quot; ,&quot;, &quot;-,&quot;
+      ),
+      &quot;, &quot;, &quot;,-&quot;
+    ),
+    &quot;,&quot;, &quot;&lt;br&gt;&quot;
+  )
+)</expression>
+    </formulas>
+    <formulas>
+        <description>Display each tracking number clearly on a separate line.</description>
+        <name>BulletTrackingNumber</name>
+        <dataType>String</dataType>
+        <expression>IF(
+  ISBLANK({!var_OLITrackingNumber}),
+  &quot;-&quot;,
+  SUBSTITUTE(
+    SUBSTITUTE(
+      SUBSTITUTE(
+        SUBSTITUTE(
+          SUBSTITUTE(
+            SUBSTITUTE(
+              SUBSTITUTE(
+                SUBSTITUTE(
+                  SUBSTITUTE(
+                    &quot;[&quot; &amp; SUBSTITUTE(SUBSTITUTE(SUBSTITUTE({!var_OLITrackingNumber}, &quot;,,&quot;, &quot;, ,&quot;), &quot;,,&quot;, &quot;, ,&quot;), &quot;,,&quot;, &quot;, ,&quot;) &amp; &quot;]&quot;,
+                    &quot;[,&quot;, &quot;-,&quot;
+                  ),
+                  &quot;,]&quot;, &quot;,-&quot;
+                ),
+                &quot;,,&quot;, &quot;,-,&quot;   /* for missed middle blanks */
+              ),
+              &quot;[&quot;, &quot;&quot;
+            ),
+            &quot;]&quot;, &quot;&quot;
+          ),
+          &quot;, ,&quot;, &quot;,-,&quot;
+        ),
+        &quot; ,&quot;, &quot;-,&quot;
+      ),
+      &quot;, &quot;, &quot;,-&quot;
+    ),
+    &quot;,&quot;, &quot;&lt;br&gt;&quot;
+  )
+)</expression>
+    </formulas>
+    <formulas>
+        <name>BulletTrackingURL</name>
+        <dataType>String</dataType>
+        <expression>IF(
+  ISBLANK({!var_OLITrackingURL}), 
+  &quot;-&quot;,
+  SUBSTITUTE(
+    SUBSTITUTE(
+      SUBSTITUTE(
+        SUBSTITUTE(
+          SUBSTITUTE(
+            SUBSTITUTE(
+              SUBSTITUTE(
+                SUBSTITUTE(
+                  SUBSTITUTE(
+                    &quot;[&quot; &amp; SUBSTITUTE(SUBSTITUTE(SUBSTITUTE({!var_OLITrackingURL}, &quot;,,&quot;, &quot;, ,&quot;), &quot;,,&quot;, &quot;, ,&quot;), &quot;,,&quot;, &quot;, ,&quot;) &amp; &quot;]&quot;,
+                    &quot;[,&quot;, &quot;-,&quot;
+                  ),
+                  &quot;,]&quot;, &quot;,-&quot;
+                ),
+                &quot;,,&quot;, &quot;,-,&quot;   /* for missed middle blanks */
+              ),
+              &quot;[&quot;, &quot;&quot;
+            ),
+            &quot;]&quot;, &quot;&quot;
+          ),
+          &quot;, ,&quot;, &quot;,-,&quot;
+        ),
+        &quot; ,&quot;, &quot;-,&quot;
+      ),
+      &quot;, &quot;, &quot;,-&quot;
+    ),
+    &quot;,&quot;, &quot;&lt;br&gt;&quot;
+  )
+)</expression>
+    </formulas>
+    <formulas>
+        <description>formula created to tag Owner and created by in chatter post. 
+If both are same - tag owner. 
+else tag both</description>
+        <name>formula_ChatterMention</name>
+        <dataType>String</dataType>
+        <expression>IF(
+  {!$Record.OwnerId}= {!$Record.CreatedById},
+   &quot;@[&quot; &amp; {!$Record.OwnerId}&amp; &quot;]&quot;,
+   &quot;@[&quot; &amp; {!$Record.OwnerId} &amp; &quot;] and @[&quot; &amp; {!$Record.CreatedById} &amp; &quot;]&quot;
+)</expression>
+    </formulas>
+    <formulas>
+        <description>Link for the record</description>
+        <name>URLBase</name>
+        <dataType>String</dataType>
+        <expression>LEFT({!$Api.Enterprise_Server_URL_610}, FIND(&quot;/services&quot;, {!$Api.Enterprise_Server_URL_610}) - 1)</expression>
+    </formulas>
+    <interviewLabel>Order - Sample Order Notification {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Order - Sample Order Notification</label>
+    <loops>
+        <name>Loop_on_OLI</name>
+        <label>Loop on OLI</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <collectionReference>Get_All_OLI</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Append_Product_Details</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Get_Plant_Team_Data</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <loops>
+        <description>Loop Over Get Plant Team to collect the emails</description>
+        <name>Loop_Over_Get_Plant_Team</name>
+        <label>Loop Over Get Plant Team</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <collectionReference>Get_Plant_Team_Data</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Check_User</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Check_Status</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Fetch all OLI from Order</description>
+        <name>Get_All_OLI</name>
+        <label>Get All OLI</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Loop_on_OLI</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Create_Log_GetOLI</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>OrderId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>OrderItem</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Get the current user details if he can bypass the validation</description>
+        <name>Get_Bypass_Flows_User</name>
+        <label>Get Bypass Flows - User</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Bypass_Flows_User_related_Flow</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Username__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$User.Username</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Active__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Bypass_Flows_User__mdt</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Get the bypass user-related flow - child of Bypass Flows - user</description>
+        <name>Get_Bypass_Flows_User_related_Flow</name>
+        <label>Get Bypass Flows - User related Flow</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_User_for_Flow_Bypass</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Flow_Name__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Order_Sample_Order_Notification</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Data_Load_User__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Bypass_Flows_User.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Bypass_Flows_User_related_Flow__mdt</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Org_Wide_Email_Address</name>
+        <label>Get Org Wide Email Address</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_All_OLI</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Create_Log_Metadata</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Label</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>SenderOrgWideEmailAddress</stringValue>
+            </value>
+        </filters>
+        <object>Name_Value_Pair__mdt</object>
+        <outputAssignments>
+            <assignToReference>orgEmailAddress</assignToReference>
+            <field>Value__c</field>
+        </outputAssignments>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Plant_Team_Data</name>
+        <label>Get Plant Team Data</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Loop_Over_Get_Plant_Team</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Create_Log_Get_Plant</targetReference>
+        </faultConnector>
+        <filterLogic>1 AND (2 OR 3)</filterLogic>
+        <filters>
+            <field>Plant_ID__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Plant__r.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>User__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Employee__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Plant_Team_Data__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Bypass_Flows_User</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Salesforce_Order_Type__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>ZOR</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Status</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>Order</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <description>Creates Log record if the recipeint are empty.</description>
+        <name>Create_Log_2</name>
+        <label>Create Log</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Sample Order Notifications</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>ZPLS - S4 Sample Order</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Information</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>The Ship-to Contact Email is either missing or invalid.</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <description>Creates Log record if the recipeint are empty.</description>
+        <name>Create_Log_3</name>
+        <label>Create Log</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Sample Order Notifications</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>ZCRM - CRM Samples</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Information</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>There are currently no team members associated with this plant.</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <description>Creates Log record if the recipeint are empty.</description>
+        <name>Create_Log_4</name>
+        <label>Create Log</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Sample Order Notifications</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>ZCRM - CRM Samples</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Information</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>The Ship-to Contact Email is either missing or invalid.</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <description>Creates Log record if the recipeint are empty.</description>
+        <name>Create_Log_5</name>
+        <label>Create Log</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Sample Order Notifications</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>In Approval</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Information</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>There are currently no team members associated with this plant.</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Create_Log_Chatter_ZCRM</name>
+        <label>Create Log</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Custom_Error_Posting_Chatter_ZCRM</targetReference>
+        </connector>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Sample Order Notification</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Post to Chatter</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Error occurred while posting to chatter.</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Create_Log_Get_Plant</name>
+        <label>Create Log</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Custom_Error_2</targetReference>
+        </connector>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Sample Order Notification</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Get Plant Team Data</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Error occurred while fetching Plant Team Data</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Create_Log_GetOLI</name>
+        <label>Create Log</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Custom_Error_1</targetReference>
+        </connector>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Sample Order Notification</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Get All OLI</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Error occurred while fetching OLI</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Create_Log_InApproval_Email</name>
+        <label>Create Log</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Custom_Error_InApproval_Email</targetReference>
+        </connector>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Sample Order Notification</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Send Email to Plant Team Member</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Error occurred while sending an email. </stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Create_Log_Metadata</name>
+        <label>Create Log</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Custom_Error_Metadata</targetReference>
+        </connector>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Sample Order Notification</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Get All OLI</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Error occurred while Org Wide Email Addresss</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <description>Creates Log record if the recipeint are empty.</description>
+        <name>Create_Log_S4</name>
+        <label>Create Log</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Sample Order Notifications</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>ZCRM - CRM Samples</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Information</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>There are currently no team members associated with this plant.</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Create_Log_S4_InProcess_Package_Preparation</name>
+        <label>Create Log</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Custom_Error_S4</targetReference>
+        </connector>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Sample Order Notification</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Send Email to Plant Team Members</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Error occurred while sending an email. </stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Create_Log_Ship_To_Email</name>
+        <label>Create Log</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Custom_Error_SendEmail_ShipTo</targetReference>
+        </connector>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Sample Order Notification</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Send Email to Ship to Contact</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Error occurred while sending an email. </stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Create_Log_Ship_To_Email_1</name>
+        <label>Create Log</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Custom_Error_Ship_To_Error</targetReference>
+        </connector>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Sample Order Notification</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Send Email to Ship to Contact</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Error occurred while sending an Email. </stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Create_Log_ZCRM_Plant_Email</name>
+        <label>Create Log</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Custom_Error_SendEmail_ZCRM_Plant</targetReference>
+        </connector>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Sample Order Notification</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Send Email to Plant Team Members</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Error occurred while sending an email. </stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Create_Log_ZSLS</name>
+        <label>Create Log</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Custom_Error_ZSLS</targetReference>
+        </connector>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Sample Order Notification</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Post to Chatter</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Error occurred while posting on chatter.</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <textTemplates>
+        <description>Template for Chatter Post whenever salesforce order type is ZCRMand Order is completed</description>
+        <name>templateChatter_ZCRM_Completed</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Dear {!formula_ChatterMention}, 
+Kindly note that the customer sample request has been completed.
+
+Request Details:
+Order Number: {!$Record.OrderNumber}
+Account: {!$Record.Account.Name} 
+Products: 
+{!var_OLIDescriptions}
+Owner: {!$Record.Owner:User.FirstName}  {!$Record.Owner:User.LastName}
+Plan Shipment Date: {!$Record.Completed_Date__c}
+
+
+Best regards,
+Your CRM Support Team
+The mySalesforce system automatically generated this message.</text>
+    </textTemplates>
+    <textTemplates>
+        <description>Template for Chatter Post whenever salesforce order type is ZSLS and Order is completed</description>
+        <name>templateChatter_ZSLS_ZPLS_Completed</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Dear {!formula_ChatterMention}, 
+Kindly note that the customer sample request has been completed.
+
+Request Details:
+Order Number: {!$Record.OrderNumber}
+Account: {!$Record.Account.Name} 
+Owner: {!$Record.Owner:User.FirstName}  {!$Record.Owner:User.LastName}
+
+Best regards,
+Your CRM Support Team
+The mySalesforce system automatically generated this message.</text>
+    </textTemplates>
+    <variables>
+        <description>stores the email</description>
+        <name>lstEmails</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>OrderItemShippingDate</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>OrderItemTableRows</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Stores Org Email Address</description>
+        <name>orgEmailAddress</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>var_OLIDescriptions</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>var_OLIShippingDate</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>var_OLITrackingNumber</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>var_OLITrackingURL</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>var_ShippingCarrier</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>S4 Sample Order Replication</label>
+    <protected>false</protected>
+    <values>
+        <field>GUK_INTEG__Object_API_Name__c</field>
+        <value xsi:type="xsd:string">Order</value>
+    </values>
+    <values>
+        <field>GUK_INTEG__Payload_Template__c</field>
+        <value xsi:type="xsd:string">{
+&quot;A_SalesOrder&quot;: {
+&quot;A_SalesOrderType&quot;: [
+{
+&quot;SalesOrder&quot;: &quot;&quot;,
+&quot;SalesOrderType&quot;: &quot;&lt;S4OrderType&gt;&quot;,
+&quot;SalesOrganization&quot;: &quot;&lt;SalesOrganization&gt;&quot;,
+&quot;DistributionChannel&quot;: &quot;&lt;DistributionChannel&gt;&quot;,
+&quot;OrganizationDivision&quot;: &quot;&lt;OrganizationDivision&gt;&quot;,
+&quot;SoldToParty&quot;: &quot;&lt;SoldToParty&gt;&quot;,
+&quot;PurchaseOrderByCustomer&quot;: &quot;&lt;PurchaseOrderByCustomer&gt;&quot;,
+&quot;TransactionCurrency&quot;: &quot;&lt;TransactionCurrency&gt;&quot;,
+&quot;ShippingCondition&quot;: &quot;&lt;ShippingCondition&gt;&quot;,
+&quot;DeliveryBlockReason&quot;: &quot;&lt;DeliveryBlockReason&gt;&quot;,
+&quot;IncotermsClassification&quot;: &quot;&lt;IncotermsClassification&gt;&quot;,
+&quot;IncotermsLocation1&quot;: &quot;&lt;IncotermsLocation1&gt;&quot;,
+&quot;CustomerPaymentTerms&quot;: &quot;&lt;CustomerPaymentTerms&gt;&quot;,
+
+&quot;RequestedDeliveryDate&quot;: &quot;&lt;RequestedDeliveryDate&gt;&quot;,
+&quot;to_Partner&quot;: {
+&quot;A_SalesOrderHeaderPartnerType&quot;: [
+{
+&quot;PartnerFunction&quot;: &quot;AG&quot;,
+&quot;Customer&quot;: &quot;&lt;SoldToParty&gt;&quot;,
+&quot;to_Address&quot;: {
+&quot;A_SalesOrderPartnerAddressType&quot;: [
+{
+&quot;CorrespondenceLanguage&quot;: &quot;EN&quot;,
+&quot;OrganizationName1&quot;: &quot;&lt;OrganizationName1&gt;&quot;,
+&quot;Country&quot;: &quot;&lt;Sold_to_Country&gt;&quot;,
+&quot;PostalCode&quot;: &quot;&lt;Sold_to_Postal_Code&gt;&quot;,
+&quot;CityName&quot;: &quot;&lt;Sold_to_City&gt;&quot;,
+&quot;StreetName&quot;: &quot;&lt;Sold_to_Street&gt;&quot;,
+&quot;Region&quot;: &quot;&quot;
+}
+]
+}
+},
+{
+&quot;PartnerFunction&quot;: &quot;WE&quot;,
+&quot;Customer&quot;: &quot;&lt;ShipToParty&gt;&quot;,
+&quot;to_Address&quot;: {
+&quot;A_SalesOrderPartnerAddressType&quot;: [
+{
+&quot;CorrespondenceLanguage&quot;: &quot;EN&quot;,
+&quot;OrganizationName1&quot;: &quot;&lt;OrganizationName1&gt;&quot;,
+&quot;Country&quot;: &quot;&lt;Ship_to_Country&gt;&quot;,
+&quot;PostalCode&quot;: &quot;&lt;Ship_to_PostalCode&gt;&quot;,
+&quot;CityName&quot;: &quot;&lt;Ship_to_City&gt;&quot;,
+&quot;StreetName&quot;: &quot;&lt;Ship_to_Street&gt;&quot;,
+&quot;Region&quot;: &quot;&quot;
+}
+]
+}
+}
+]
+},
+&quot;to_Text&quot;: {
+&quot;A_SalesOrderTextType&quot;: [
+{
+&quot;Language&quot;: &quot;EN&quot;,
+&quot;LongTextID&quot;: &quot;TX01&quot;,
+&quot;LongText&quot;: &quot;&lt;Internal_Notes&gt;&quot;
+},
+{
+&quot;Language&quot;: &quot;EN&quot;,
+&quot;LongTextID&quot;: &quot;ZH06&quot;,
+&quot;LongText&quot;: &quot;&lt;Instruction_for_Warehouse&gt;&quot;
+},
+
+{
+                            &quot;Language&quot;: &quot;EN&quot;,
+                            &quot;LongTextID&quot;: &quot;ZSF1&quot;,
+                            &quot;LongText&quot;: &quot;&lt;S4IntContactDetails&gt;&quot;
+                        }
+]
+},
+&quot;to_Item&quot;: {
+&quot;A_SalesOrderItemType&quot;: [
+&lt;OrderLineItems&gt;
+]
+}
+}
+]
+}
+}</value>
+    </values>
+</CustomMetadata>

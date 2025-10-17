@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Internal UoM Code - will be used for sending and receiving the Order Item UoM for Order Interface --></help>
+    <label><!-- Internal UoM Code --></label>
+    <name>Internal_UoM_Code__c</name>
+</CustomFieldTranslation>

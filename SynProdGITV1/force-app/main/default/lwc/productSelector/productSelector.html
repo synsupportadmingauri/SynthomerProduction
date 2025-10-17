@@ -1,0 +1,295 @@
+<template>
+<lightning-card title={label.sampleProductSelectorLabel} icon-name="utility:search">
+<section >
+<div class="slds-p-horizontal_medium slds-p-vertical_small">
+    <div class="slds-grid slds-wrap slds-gutters slds-p-horizontal_medium slds-p-vertical_small">
+
+        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-p-bottom_small">
+            <lightning-input 
+                label={label.sampleProductNameLabel} 
+                value={productName} 
+                onchange={handleProductNameInput}
+                placeholder="Search Products..."
+                field-level-help={label.productNameHelpText}>
+            </lightning-input>
+            <template if:true={showProductDropdown}>
+                <div style="position:relative; z-index:1000;">
+                    <div class="slds-box slds-theme_shade slds-m-top_xx-small" 
+                    style="position: absolute; max-height: 100px; overflow-y: auto; width: 100%; box-shadow: 0 2px 6px rgba(0,0,0,0.2); border-radius: 4px;">
+                        <template for:each={productList} for:item="prod">
+                        <div key={prod}  
+                            data-name={prod}
+                            onclick={handleProductNameChange}
+                            style="padding:4px; cursor:pointer;">
+                            {prod}
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </template>
+        </div>
+    
+        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-p-bottom_small">
+            <lightning-input 
+                label={label.productCategoryLabel}
+                value={category} 
+                onchange={handleCategoryInput} 
+                field-level-help={label.productCategoryHelpText}
+                placeholder="Search Category...">
+            </lightning-input>
+    
+            <template if:true={showCategoryDropdown}>
+                <div style="position:relative; z-index:1000;">
+                    <div class="slds-box slds-theme_shade slds-m-top_xx-small" 
+                    style="position: absolute; max-height: 100px; overflow-y: auto; width: 100%; box-shadow: 0 2px 6px rgba(0,0,0,0.2); border-radius: 4px;">
+                        <template for:each={categoryList} for:item="cat">
+                        <div key={cat}  
+                            data-name={cat}
+                            onclick={handleCategorySelect}
+                            style="padding:4px; cursor:pointer;">
+                            {cat}
+                        </div>
+                    </template>
+                    </div>
+                </div>
+            </template>
+        </div>
+    
+        <!-- <div class="slds-col slds-size_1-of-2">
+            <lightning-input 
+                label={label.requiredQuantityLabel}
+                value={requiredQuantity} 
+                onchange={handleRequiredQuantity}>
+            </lightning-input>
+            <lightning-helptext content="Please enter the required quantity before searching for the product."></lightning-helptext>
+                </div> -->
+                <div class="slds-col slds-size_1-of-2">
+            <lightning-input 
+                label={label.requiredQuantityLabel}
+                value={requiredQuantity} 
+                onchange={handleRequiredQuantity}
+                field-level-help={label.requiredQuantityHelpText}>
+            </lightning-input>
+        </div>
+
+        <div class="slds-col slds-size_1-of-2">
+            <lightning-input 
+                label={label.unitOfMeasureLabel}
+                value={unitOfMeasure} 
+                onchange={handleUoMInput}
+                placeholder="Search UoM...">
+            </lightning-input>
+            <template if:true={showUnitOfMeasure}>
+                <div  style="position:relative; z-index:1000;">
+                    <div class="slds-box slds-theme_shade slds-m-top_xx-small" 
+                    style="position: absolute; max-height: 100px; overflow-y: auto; width: 100%; box-shadow: 0 2px 6px rgba(0,0,0,0.2); border-radius: 4px;">
+                    <template for:each={unitOfMeasureList} for:item="UoM">
+                        <div key={UoM.Id} 
+                            data-id={UoM.Id} 
+                            data-name={UoM.Name}
+                            onclick={handleUnitOfMeasure}
+                            style="padding:4px; cursor:pointer;">
+                            {UoM.Name}
+                        </div>
+                    </template>
+                </div>
+                </div>
+            </template>
+        </div>
+    
+        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-p-bottom_small" if:false={ispartneruser}>
+            <lightning-combobox 
+                label={label.regionLabel}
+                value={region}            
+                options={regionPicklist}
+                onchange={handleRegionChange}>
+            </lightning-combobox>
+        </div>
+    
+    </div>
+    
+
+    <div class="slds-m-top_small slds-m-bottom_small">
+        <lightning-button 
+            label="Search Products" 
+            icon-name="utility:search" 
+            onclick={handleUserSearch} 
+            class="slds-m-right_small">
+        </lightning-button>
+    
+        <lightning-button 
+            label="Clear Search" 
+            icon-name="utility:refresh" 
+            onclick={clearSearch}>
+        </lightning-button>
+    </div>
+    
+
+</div>
+
+
+
+<!-- Search Result Table -->
+<template if:true={visibleProducts.length}>
+    <div class="slds-box slds-m-around_medium">
+       
+
+        <h3 class="slds-text-heading_small slds-m-bottom_small"> <strong>Searched Result </strong> <span style="font-size:14px;">{displaySummary}</span> </h3>
+
+        <div class="slds-scrollable_x">
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered">
+                <thead>
+                    <tr class="slds-line-height_reset">
+                        <th scope="col"><div class="slds-truncate" title="Product Id">Product Id</div></th>
+                        <th scope="col"><div class="slds-truncate" title="Product Name">Product Name</div></th>
+                        <th scope="col"><div class="slds-truncate" title="Category">Product Category</div></th>
+                        <th scope="col"><div class="slds-truncate" title="Possible Quantity">Possible Quantity</div></th>
+                        <th scope="col"><div class="slds-truncate" title="Plant">Plant</div></th>
+                        <th scope="col"><div class="slds-truncate" title="Region">Region</div></th>
+                        <th scope="col"><div class="slds-truncate" title="Min">Min Quantity</div></th>
+                        <th scope="col"><div class="slds-truncate" title="Max">Max Quantity</div></th>
+                        <th scope="col"><div class="slds-truncate" title="Estimated Stock">Estimated Stock</div></th>
+                        <th scope="col"><div class="slds-truncate" title="Select">Action</div></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template for:each={visibleProducts} for:item="prod">
+                        <tr key={prod.Id}>
+                            <td><div class="slds-truncate" title={prod.Id}>{prod.ExternalProductId}</div></td>
+                            <td><div class="slds-truncate" title={prod.productName}>{prod.productName}</div></td>
+                            <td><div class="slds-truncate" title={prod.categoryName}>{prod.categoryName}</div></td>
+                            <td>
+                                <div class="slds-truncate" title={prod.possibleQuantity}>
+                                    <span style={prod.quantityClass}>
+                                    {prod.possibleQuantity}
+                                </span>
+                                </div>
+                            </td>
+                            <td><div class="slds-truncate" title={prod.plantName}>{prod.plantName}</div></td>
+                            <td><div class="slds-truncate" title={prod.regionName}>{prod.regionName}</div></td>
+                            <td>
+                                <div class="slds-truncate" title={prod.Min__c}>{prod.Min__c}</div>
+                            </td>
+                            <td>
+                                <div class="slds-truncate" title={prod.Max__c}>{prod.Max__c}</div>
+                            </td>
+                            <td><div class="slds-truncate" title={prod.estimatedStock}>
+                                <span style={prod.stockClass}> {prod.estimatedStock}</span>
+                            </div></td>
+                            <td>
+                                <lightning-input 
+                                    type="checkbox" 
+                                    data-id={prod.Id} 
+                                    onchange={handleRowCheckbox}>
+                                </lightning-input>
+                            </td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+        </div>
+        <div class="slds-grid slds-grid_align-end slds-p-around_small">
+            <div class="pagination-controls slds-button-group" role="group">
+                <template if:true={isFirstPage}>
+                <button  type="button" class="slds-button slds-button_neutral" onclick={handlePrev} >Previous</button>
+                </template>
+                <span class="slds-m-horizontal_small slds-align-middle"> Page {pageNumber} of {totalPages} </span>
+                <template if:true={isLastPage}>
+                <button  type="button" class="slds-button slds-button_brand" onclick={handleNext} >Next</button>
+                </template>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+    
+    
+</template>
+
+<!-- Selected Products Table -->
+<template if:true={selectedProducts.length}>
+    <div class="slds-box slds-m-around_medium" >
+        <h3 class="slds-text-heading_small slds-m-bottom_small">Selected Products</h3>
+    
+        <div class="slds-scrollable_x">
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered">
+                <thead>
+                    <tr class="slds-line-height_reset">
+                        <th scope="col"><div class="slds-truncate" title="Product Id">Product Id</div></th>
+                        <th scope="col"><div class="slds-truncate" title="Product Name">Product Name</div></th>
+                        <th scope="col"><div class="slds-truncate" title="Category">Product Category</div></th>
+                        <th scope="col"><div class="slds-truncate" title="Possible Quantity">Possible Quantity</div></th>
+                        <th scope="col"><div class="slds-truncate" title="Plant">Plant</div></th>
+                        <th scope="col"><div class="slds-truncate" title="Region">Region</div></th>
+                        <th scope="col"><div class="slds-truncate" title="Min">Min Quantity</div></th>
+                        <th scope="col"><div class="slds-truncate" title="Max">Max Quantity</div></th>
+                        <th scope="col"><div class="slds-truncate" title="Estimated Stock">Estimated Stock</div></th>
+                        <th scope="col"><div class="slds-truncate" title="Action">Action</div></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template for:each={visibleSelectedProducts} for:item="prod">
+                        <tr key={prod.Id}>
+                            <td><div class="slds-truncate" title={prod.Id}>{prod.ExternalProductId}</div></td>
+
+                            <td>
+                                <template if:true={prod.isDefaultProduct}>
+                                    <!-- Editable input when isDefaultProduct is true -->
+                                    <lightning-input 
+                                        value={prod.productName}
+                                        data-id={prod.Id}
+                                        type="text"
+                                        variant="label-hidden"
+                                        placeholder={prod.productName}
+                                        onchange={handleDefaultProductNameChange}>
+                                    </lightning-input>
+                                </template>
+                                <template if:false={prod.isDefaultProduct}>
+                                    <!-- Read-only text otherwise -->
+                                    <div class="slds-truncate" title={prod.productName}>{prod.productName}</div>
+                                </template>
+                            </td>
+
+                            <td><div class="slds-truncate" title={prod.categoryName}>{prod.categoryName}</div></td>
+                            <td><div class="slds-truncate" title={prod.possibleQuantity}>{prod.possibleQuantity}</div></td>
+                            <td><div class="slds-truncate" title={prod.plantName}>{prod.plantName}</div></td>
+                            <td><div class="slds-truncate" title={prod.regionName}>{prod.regionName}</div></td>
+                            <td><div class="slds-truncate" title={prod.Min__c}>{prod.Min__c}</div></td>
+                            <td><div class="slds-truncate" title={prod.Max__c}>{prod.Max__c}</div></td>
+                            <td><div class="slds-truncate" title={prod.estimatedStock}>{prod.estimatedStock}</div></td>
+                            <td>
+                                                            <lightning-button-icon 
+                                icon-name="utility:delete"
+                                alternative-text="Remove"
+                                onclick={handleRemove}
+                                data-id={prod.Id}
+                                variant="bare"
+                                class="slds-m-left_xx-small"
+                                disabled={prod.isDeleteDisabled}>
+                            </lightning-button-icon>
+
+                            </td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+        </div>
+        <div class="slds-grid slds-grid_align-end slds-p-around_small">
+            <div class="pagination-controls slds-button-group" role="group">
+                <template if:true={isFirstSelectedProductPage}>
+                <button  type="button" class="slds-button slds-button_neutral" onclick={handleSelectedPrev} >Previous</button>
+                </template>
+                <span class="slds-m-horizontal_small slds-align-middle"> Page {currentSelectedProductPage} of {totalSelectedProductPages} </span>
+                <template if:true={isLastSelectedProductPage}>
+                <button  type="button" class="slds-button slds-button_brand" onclick={handleSelectedNext} >Next</button>
+                </template>
+            </div>
+        </div>
+        
+    </div>
+    
+</template>        
+</section>
+</lightning-card>
+</template>

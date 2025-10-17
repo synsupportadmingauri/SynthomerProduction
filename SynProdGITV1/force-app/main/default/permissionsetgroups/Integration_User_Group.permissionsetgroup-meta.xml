@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Created to assign combined Integration permissions</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Integration User Group</label>
+    <permissionSets>Create_Edit_S4_HANA_ERP_Accounts</permissionSets>
+    <permissionSets>Create_Edit_S4_HANA_ERP_Order</permissionSets>
+    <permissionSets>Integration_User</permissionSets>
+    <permissionSets>Logging_Framework</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

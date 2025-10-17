@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This field automatically combines key values (Plant, Product, Category, Approver, Region) --></help>
+    <label><!-- Search Data --></label>
+    <name>Search_Data__c</name>
+</CustomFieldTranslation>

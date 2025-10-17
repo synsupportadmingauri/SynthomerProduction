@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approved_Line_Items__c</fullName>
+    <description>SSP-176 SS2-T109 This field will show number of Line Items on Order for which approval is done or not required.</description>
+    <inlineHelpText>Number of Line Items on Order for which approval is done or not required.</inlineHelpText>
+    <label>Approved Line Items</label>
+    <summaryFilterItems>
+        <field>OrderItem.Sample_Item_Approval_Status__c</field>
+        <operation>notContain</operation>
+        <value>In Approval, Rejected</value>
+    </summaryFilterItems>
+    <summaryForeignKey>OrderItem.OrderId</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

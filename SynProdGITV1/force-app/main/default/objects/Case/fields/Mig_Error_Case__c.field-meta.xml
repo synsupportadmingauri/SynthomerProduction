@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mig_Error_Case__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Set for all the Migrated Cases where the Migrated Closed date was not updated properly (184 cases in Prod)</description>
+    <inlineHelpText>Set for all the Migrated Cases where the Migrated Closed date was not updated properly (184 cases in Prod)</inlineHelpText>
+    <label>Mig Error Case</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

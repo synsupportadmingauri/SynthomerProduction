@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Prod_Rec</label>
+    <protected>false</protected>
+    <values>
+        <field>GUKC360_01__Base_URL__c</field>
+        <value xsi:type="xsd:string">https://l4961-iflmap.hcisbp.eu1.hana.ondemand.com/http</value>
+    </values>
+    <values>
+        <field>GUKC360_01__Is_Active__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>GUKC360_01__Password__c</field>
+        <value xsi:type="xsd:string">Jan.1111</value>
+    </values>
+    <values>
+        <field>GUKC360_01__Sap_Client__c</field>
+        <value xsi:type="xsd:string">200</value>
+    </values>
+    <values>
+        <field>GUKC360_01__Username__c</field>
+        <value xsi:type="xsd:string">S0018094374</value>
+    </values>
+</CustomMetadata>

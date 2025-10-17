@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Delivery Block --></label>
+    <name>Delivery_Block__c</name>
+    <picklistValues>
+        <masterLabel>00 - No Block</masterLabel>
+        <translation><!-- 00 - No Block --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>01- Missing Credit limit</masterLabel>
+        <translation><!-- 01- Missing Credit limit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>02-	Political Reasons</masterLabel>
+        <translation><!-- 02-	Political Reasons --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>03-	Bottleneck material</masterLabel>
+        <translation><!-- 03-	Bottleneck material --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>04-	No Export Documents</masterLabel>
+        <translation><!-- 04-	No Export Documents --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>05-	Check free of ch.dlv</masterLabel>
+        <translation><!-- 05-	Check free of ch.dlv --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>06-	No printing</masterLabel>
+        <translation><!-- 06-	No printing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>07-	Change in quantity</masterLabel>
+        <translation><!-- 07-	Change in quantity --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08-	Kanban Delivery</masterLabel>
+        <translation><!-- 08-	Kanban Delivery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>09-	JIT delivery (PDS)</masterLabel>
+        <translation><!-- 09-	JIT delivery (PDS) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>30-	Price Chg. Approval</masterLabel>
+        <translation><!-- 30-	Price Chg. Approval --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>50-	Check Shipping Data</masterLabel>
+        <translation><!-- 50-	Check Shipping Data --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>51-	Pricing Incomplete</masterLabel>
+        <translation><!-- 51-	Pricing Incomplete --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>52-	Check Payment Terms</masterLabel>
+        <translation><!-- 52-	Check Payment Terms --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>53-	Check Prepayment</masterLabel>
+        <translation><!-- 53-	Check Prepayment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Z1-	Material on Alloctn.</masterLabel>
+        <translation><!-- Z1-	Material on Alloctn. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Z2-	Sample order</masterLabel>
+        <translation><!-- Z2-	Sample order --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Z3-	Return Order</masterLabel>
+        <translation><!-- Z3-	Return Order --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Z4-	EHS Data Missing</masterLabel>
+        <translation><!-- Z4-	EHS Data Missing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Z5-	Quantity below MOQ</masterLabel>
+        <translation><!-- Z5-	Quantity below MOQ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Z6-	EKAER</masterLabel>
+        <translation><!-- Z6-	EKAER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Z7-	No EU VAT no. found</masterLabel>
+        <translation><!-- Z7-	No EU VAT no. found --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Z8-	3rd party Sales Orde</masterLabel>
+        <translation><!-- Z8-	3rd party Sales Orde --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Z9-	Consignment/ Credit</masterLabel>
+        <translation><!-- Z9-	Consignment/ Credit --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

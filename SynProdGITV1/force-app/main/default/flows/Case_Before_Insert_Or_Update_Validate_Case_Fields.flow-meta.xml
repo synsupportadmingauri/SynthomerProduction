@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>63.0</apiVersion>
+    <assignments>
+        <name>Assign_Case_Team_Member_Count</name>
+        <label>Assign Case Team Member Count</label>
+        <locationX>374</locationX>
+        <locationY>827</locationY>
+        <assignmentItems>
+            <assignToReference>NumberOfCaseTeamMembers</assignToReference>
+            <operator>AssignCount</operator>
+            <value>
+                <elementReference>CaseTeamMembers</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Is_There_An_Error</targetReference>
+        </connector>
+    </assignments>
+    <customErrors>
+        <name>Display_Error</name>
+        <label>Display Error</label>
+        <locationX>242</locationX>
+        <locationY>1043</locationY>
+        <customErrorMessages>
+            <errorMessage>{!ErrMessage}</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <decisions>
+        <name>Check_User_for_flow_bypass</name>
+        <label>Check User for flow bypass</label>
+        <locationX>176</locationX>
+        <locationY>503</locationY>
+        <defaultConnector>
+            <targetReference>Get_Case_Team_Member_Role</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>User can&apos;t bypass the Validation</defaultConnectorLabel>
+        <rules>
+            <name>User_can_bypass_the_Validation</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Bypass_Flows_User_related_Flow.Is_Bypass__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>User can bypass the Validation</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Is_There_An_Error</name>
+        <label>Is There An Error</label>
+        <locationX>374</locationX>
+        <locationY>935</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ErrorExists</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>ERR</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Display_Error</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>Case validation based on the stage of the case
+Note - If you are changing the flow API name please update the Get Bypass flow - user related flow element</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>checkQueue</name>
+        <dataType>Boolean</dataType>
+        <expression>BEGINS({!$Record.OwnerId}, &apos;00G&apos;)</expression>
+    </formulas>
+    <formulas>
+        <name>ErrMessage</name>
+        <dataType>String</dataType>
+        <expression>CASE({!StatusNumber}, 
+10, LEFT(TRIM({!txtStage0}), LEN(TRIM({!txtStage0})) - 1), 
+20, LEFT(TRIM({!txtStage10}), LEN(TRIM({!txtStage10})) - 1), 
+30, LEFT(TRIM({!txtStage20}), LEN(TRIM({!txtStage20})) - 1),
+40, LEFT(TRIM({!txtStage30}), LEN(TRIM({!txtStage30})) - 1),
+&apos;A mandatory field is not filled up.&apos;)</expression>
+    </formulas>
+    <formulas>
+        <name>ErrorExists</name>
+        <dataType>String</dataType>
+        <expression>CASE({!StatusNumber}, 
+10, IF(RIGHT(TRIM({!txtStage0}), 1) = &apos;:&apos; , &apos;&apos;, &apos;ERR&apos;), 
+20, IF(RIGHT(TRIM({!txtStage10}), 1) = &apos;:&apos; , &apos;&apos;, &apos;ERR&apos;), 
+30, IF(RIGHT(TRIM({!txtStage20}), 1) = &apos;:&apos; , &apos;&apos;, &apos;ERR&apos;),
+40, IF(RIGHT(TRIM({!txtStage30}), 1) = &apos;:&apos; , &apos;&apos;, &apos;ERR&apos;),
+&apos;&apos;)</expression>
+    </formulas>
+    <formulas>
+        <name>StatusNumber</name>
+        <dataType>Number</dataType>
+        <expression>CASE({!$Record.Status}, 
+&apos;Open&apos;, 0,
+&apos;Initial Review&apos;, 10,
+&apos;Investigation&apos;, 20,
+&apos;Customer Feedback&apos;, 30,
+&apos;Corrective Action Implementation&apos;, 40,
+&apos;Completed&apos;, 50,
+0
+)</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>txt3rdPartyComplaint</name>
+        <dataType>String</dataType>
+        <expression>IF(ISBLANK( TEXT ({!$Record.X3rd_Party_Complaint__c})), &apos;3rd Party Complaint, &apos;, &apos;&apos;)</expression>
+    </formulas>
+    <formulas>
+        <name>txt3rdPartyDetails</name>
+        <dataType>String</dataType>
+        <expression>IF(TEXT({!$Record.X3rd_Party_Complaint__c})=&apos;Yes&apos; &amp;&amp; (ISNULL({!$Record.X3rd_Party_Details__c}) || ISBLANK(TRIM({!$Record.X3rd_Party_Details__c}))), &apos;3rd Party Details, &apos;, &apos;&apos;)</expression>
+    </formulas>
+    <formulas>
+        <name>txtAccount</name>
+        <dataType>String</dataType>
+        <expression>IF(ISBLANK( {!$Record.AccountId}), &apos;Account, &apos;, &apos;&apos;)</expression>
+    </formulas>
+    <formulas>
+        <name>txtCaseOwner</name>
+        <dataType>String</dataType>
+        <expression>IF(LEFT({!$Record.OwnerId}, 3) = &apos;00G&apos;, &apos;Owner, &apos;, &apos;&apos;)</expression>
+    </formulas>
+    <formulas>
+        <name>txtCaseTeamMembers</name>
+        <dataType>String</dataType>
+        <expression>IF({!NumberOfCaseTeamMembers} = 0, &apos;Case Team Members, &apos;,  &apos;&apos;)</expression>
+    </formulas>
+    <formulas>
+        <name>txtCausedByPlant</name>
+        <dataType>String</dataType>
+        <expression>IF(ISBLANK( TEXT ({!$Record.Caused_By_Plant__c})), &apos;Caused By Plant, &apos;, &apos;&apos;)</expression>
+    </formulas>
+    <formulas>
+        <name>txtComplaintJustified</name>
+        <dataType>String</dataType>
+        <expression>IF(ISBLANK( TEXT ({!$Record.Complaint_Justified__c})), &apos;Complaint Justified, &apos;, &apos;&apos;)</expression>
+    </formulas>
+    <formulas>
+        <name>txtCorrectiveAction</name>
+        <dataType>String</dataType>
+        <expression>IF(TEXT ({!$Record.Complaint_Justified__c}) = &apos;Yes&apos;  &amp;&amp;    (ISNULL({!$Record.Corrective_Action__c}) || ISBLANK(TRIM({!$Record.Corrective_Action__c}))), &apos;Corrective Action, &apos;, &apos;&apos;)</expression>
+    </formulas>
+    <formulas>
+        <name>txtCustomerFeedback</name>
+        <dataType>String</dataType>
+        <expression>IF(ISNULL({!$Record.Customer_Feedback__c}) || ISBLANK(TRIM({!$Record.Customer_Feedback__c})), &apos;Customer Feedback, &apos;, &apos;&apos;)</expression>
+    </formulas>
+    <formulas>
+        <name>txtImmediateAction</name>
+        <dataType>String</dataType>
+        <expression>IF(ISNULL({!$Record.Immediate_Action__c}) || ISBLANK(TRIM({!$Record.Immediate_Action__c})), &apos;Immediate Action, &apos;, &apos;&apos;)</expression>
+    </formulas>
+    <formulas>
+        <name>txtNatureOfComplaint</name>
+        <dataType>String</dataType>
+        <expression>IF(ISBLANK( TEXT ({!$Record.Nature_of_Complaint__c})), &apos;Nature Of Complaint, &apos;, &apos;&apos;)</expression>
+    </formulas>
+    <formulas>
+        <name>txtPrimaryRootCause</name>
+        <dataType>String</dataType>
+        <expression>IF(TEXT ({!$Record.Complaint_Justified__c}) = &apos;Yes&apos;  &amp;&amp; ISBLANK( TEXT ({!$Record.Primary_Root_Cause__c})), &apos;Primary Root Cause, &apos;, &apos;&apos;)</expression>
+    </formulas>
+    <formulas>
+        <name>txtRepeatedComplaint</name>
+        <dataType>String</dataType>
+        <expression>IF(ISBLANK( TEXT ({!$Record.Repeated_Complaint__c})), &apos;Repeated Complaint, &apos;, &apos;&apos;)</expression>
+    </formulas>
+    <formulas>
+        <name>txtRootCauseAnalysis</name>
+        <dataType>String</dataType>
+        <expression>IF(ISNULL({!$Record.Root_Cause_Analysis__c}) || ISBLANK(TRIM({!$Record.Root_Cause_Analysis__c})), &apos;Root Cause Analysis, &apos;, &apos;&apos;)</expression>
+    </formulas>
+    <formulas>
+        <name>txtSecondaryRootCause</name>
+        <dataType>String</dataType>
+        <expression>IF(ISBLANK( TEXT ({!$Record.Secondary_Root_Cause__c})), &apos;Secondary Root Cause, &apos;, &apos;&apos;)</expression>
+    </formulas>
+    <formulas>
+        <name>txtStage0</name>
+        <dataType>String</dataType>
+        <expression>&apos;Please review and complete the following fields before you complete the current status: &apos; + {!txtCaseTeamMembers}</expression>
+    </formulas>
+    <formulas>
+        <name>txtStage10</name>
+        <dataType>String</dataType>
+        <expression>&apos;Please review and complete the following fields before you complete the current status: &apos; + {!txtCaseTeamMembers} + {!txtImmediateAction} + {!txtNatureOfComplaint} + {!txtCaseOwner} +  {!txtAccount}</expression>
+    </formulas>
+    <formulas>
+        <name>txtStage20</name>
+        <dataType>String</dataType>
+        <expression>&apos;Please review and complete the following fields before you complete the current status: &apos; + {!txtCaseTeamMembers} + {!txtImmediateAction} + {!txtNatureOfComplaint} + {!txtCaseOwner} + {!txtRootCauseAnalysis} + {!txtPrimaryRootCause} + {!txtComplaintJustified} + {!txtCorrectiveAction} + {!txtCausedByPlant} + {!txtRepeatedComplaint} + {!txt3rdPartyComplaint} + {!txt3rdPartyDetails} + {!txtAccount}</expression>
+    </formulas>
+    <formulas>
+        <name>txtStage30</name>
+        <dataType>String</dataType>
+        <expression>&apos;Please review and complete the following fields before you complete the current status: &apos; + {!txtCaseTeamMembers} + {!txtImmediateAction} + {!txtNatureOfComplaint} + {!txtCaseOwner} + {!txtRootCauseAnalysis} + {!txtPrimaryRootCause} + {!txtComplaintJustified} + {!txtCorrectiveAction} + {!txtCausedByPlant} + {!txtRepeatedComplaint} + {!txt3rdPartyComplaint} + {!txt3rdPartyDetails} + {!txtCustomerFeedback} + {!txtAccount}</expression>
+    </formulas>
+    <interviewLabel>Case - Before Insert Or Update Validate Case Fields {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Case - Before Insert Or Update Validate Case Fields</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Get the current user details if he can bypass the validation</description>
+        <name>Get_Bypass_Flows_User</name>
+        <label>Get Bypass Flows - User</label>
+        <locationX>176</locationX>
+        <locationY>287</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Bypass_Flows_User_related_Flow</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Username__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$User.Username</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Active__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Bypass_Flows_User__mdt</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Get the bypass user-related flow - child of Bypass Flows - user</description>
+        <name>Get_Bypass_Flows_User_related_Flow</name>
+        <label>Get Bypass Flows - User related Flow</label>
+        <locationX>176</locationX>
+        <locationY>395</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_User_for_flow_bypass</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Flow_Name__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Case_Before_Insert_Or_Update_Validate_Case_Fields</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Data_Load_User__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Bypass_Flows_User.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Bypass_Flows_User_related_Flow__mdt</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Case_Team_Member</name>
+        <label>Get Case Team Member</label>
+        <locationX>374</locationX>
+        <locationY>719</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Assign_Case_Team_Member_Count</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>ParentId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <object>CaseTeamMember</object>
+        <outputReference>CaseTeamMembers</outputReference>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>TeamRoleId</queriedFields>
+    </recordLookups>
+    <recordLookups>
+        <description>Get &apos;Commercial Caretaker&apos; Case Team Role</description>
+        <name>Get_Case_Team_Member_Role</name>
+        <label>Get Case Team Member Role</label>
+        <locationX>374</locationX>
+        <locationY>611</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Case_Team_Member</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Commercial Caretaker</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>CaseTeamRole</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Bypass_Flows_User</targetReference>
+        </connector>
+        <object>Case</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>CaseTeamMembers</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>CaseTeamMember</objectType>
+    </variables>
+    <variables>
+        <name>NumberOfCaseTeamMembers</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+</Flow>

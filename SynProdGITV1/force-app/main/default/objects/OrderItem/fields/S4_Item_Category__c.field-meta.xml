@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>S4_Item_Category__c</fullName>
+    <description>SSP-176 SS2-T109 Product Category in S4</description>
+    <label>S4 Item Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Item_Category</valueSetName>
+    </valueSet>
+</CustomField>

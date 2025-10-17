@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rating_Mandatory_When_Working</fullName>
+    <active>true</active>
+    <description>Rating is mandatory when the lead status is working or converted.</description>
+    <errorConditionFormula>AND( ISPICKVAL(Rating, &quot;&quot;), OR( ISPICKVAL(Status, &quot;Working&quot;) , ISPICKVAL(Status, &quot;Converted&quot;) ) )</errorConditionFormula>
+    <errorDisplayField>Rating</errorDisplayField>
+    <errorMessage>Please enter a value for the field Rating.</errorMessage>
+</ValidationRule>

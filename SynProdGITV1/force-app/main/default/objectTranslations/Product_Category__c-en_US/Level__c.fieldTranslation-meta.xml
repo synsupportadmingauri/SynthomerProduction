@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Level --></label>
+    <name>Level__c</name>
+    <picklistValues>
+        <masterLabel>1 - Product Hierarchy</masterLabel>
+        <translation><!-- 1 - Product Hierarchy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>2 - Chemical Group</masterLabel>
+        <translation><!-- 2 - Chemical Group --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>3 - Product</masterLabel>
+        <translation><!-- 3 - Product --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

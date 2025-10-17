@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Combination of Product ID, Salesforce Org ID and Distribution Channel --></help>
+    <label><!-- Product Sales Ext ID --></label>
+    <name>Product_Sales_Ext_ID__c</name>
+</CustomFieldTranslation>

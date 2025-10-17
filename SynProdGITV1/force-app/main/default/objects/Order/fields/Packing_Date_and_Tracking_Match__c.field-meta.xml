@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Packing_Date_and_Tracking_Match__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This flag is set to true if all Order Items under this Order have identical shipping dates and tracking numbers.</description>
+    <label>Packing Date and Tracking Match</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

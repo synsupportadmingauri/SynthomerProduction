@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>63.0</apiVersion>
+    <assignments>
+        <name>Update_Order_Product_External_ID</name>
+        <label>Update Order Product External ID</label>
+        <locationX>308</locationX>
+        <locationY>647</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Order_Product_External_ID__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Evaluate_Order_Product_Ext_ID</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Order_Product</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Check_User_for_flow_bypass</name>
+        <label>Check User for flow bypass</label>
+        <locationX>176</locationX>
+        <locationY>539</locationY>
+        <defaultConnector>
+            <targetReference>Update_Order_Product_External_ID</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>User can&apos;t bypass the Validation</defaultConnectorLabel>
+        <rules>
+            <name>User_can_bypass_the_Validation</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Bypass_Flows_User_related_Flow.Is_Bypass__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>User can bypass the Validation</label>
+        </rules>
+    </decisions>
+    <description>Update Order External ID only for Enorica and CRM Samples Orders.
+Combination of Salesforce Order ID and Order Product Number.
+Note - If the flow API name has changed, please update the Get Bypass flows - User related flow element</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>Evaluate_Order_Product_Ext_ID</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Order.OrderNumber}+&apos;_&apos;+ {!$Record.OrderItemNumber}</expression>
+    </formulas>
+    <interviewLabel>Order Product - After Save - Update Order Product External Id {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Order Product - After Save - Update Order Product External Id</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Get the bypass user-related flow - child of Bypass Flows - user</description>
+        <name>Get_Bypass_Flows_User_related_Flow</name>
+        <label>Get Bypass Flows - User related Flow</label>
+        <locationX>176</locationX>
+        <locationY>431</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_User_for_flow_bypass</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Create_Log_2</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Data_Load_User__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Bypass_User.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Flow_Name__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Order_Product_After_Save_Update_Order_Product_External_Id</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Bypass_Flows_User_related_Flow__mdt</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Get the current user details if he can bypass the validation</description>
+        <name>Get_Bypass_User</name>
+        <label>Get Bypass User</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Bypass_Flows_User_related_Flow</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Create_Log_1</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Username__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$User.Username</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Active__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Bypass_Flows_User__mdt</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Order_Product</name>
+        <label>Update Order Product</label>
+        <locationX>308</locationX>
+        <locationY>755</locationY>
+        <faultConnector>
+            <targetReference>Create_an_Error_log</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>Order_Product_External_ID__c</field>
+            <value>
+                <elementReference>Evaluate_Order_Product_Ext_ID</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Bypass_User</targetReference>
+        </connector>
+        <filterLogic>(1 OR 2) AND 3</filterLogic>
+        <filters>
+            <field>Salesforce_Order_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>ZSLS</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Salesforce_Order_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>ZCRM</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Order_Product_External_ID__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>OrderItem</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <name>Create_an_Error_log</name>
+        <label>Create an Error log</label>
+        <locationX>572</locationX>
+        <locationY>863</locationY>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order Product - After Save - Update Order Product External ID</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Update Order Product</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Error Occured while updating the OLI</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Create_Log_1</name>
+        <label>Create Log</label>
+        <locationX>1100</locationX>
+        <locationY>431</locationY>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order Product - After Save - Update Order Product External ID</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Get Bypass User</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Error while fetching bypass user</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Create_Log_2</name>
+        <label>Create Log</label>
+        <locationX>836</locationX>
+        <locationY>539</locationY>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order Product - After Save - Update Order Product External ID</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Get Bypass Flows</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Error Occured while fetching bypass flows </stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+</Flow>

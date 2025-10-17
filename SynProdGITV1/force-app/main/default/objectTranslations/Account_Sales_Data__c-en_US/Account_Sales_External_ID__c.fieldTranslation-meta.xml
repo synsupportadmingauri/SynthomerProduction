@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Combination of Customer ID, Sales Org, Distribution Channel and Division --></help>
+    <label><!-- Account Sales External ID --></label>
+    <name>Account_Sales_External_ID__c</name>
+</CustomFieldTranslation>

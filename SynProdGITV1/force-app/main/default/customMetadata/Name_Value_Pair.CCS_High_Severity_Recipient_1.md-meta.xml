@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>CCS High Severity Recipient 1</label>
+    <protected>false</protected>
+    <values>
+        <field>Value__c</field>
+        <value xsi:type="xsd:string">craig.barraclough@synthomer.com,Thiruvarudchelvan.Subramaniam@synthomer.com,David.Brookes@synthomer.com,Steve.Hodges@synthomer.com,uwe-peter.couhorn@synthomer.com</value>
+    </values>
+</CustomMetadata>

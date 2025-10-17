@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>SS2-T218 Ticket_Notif_007</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Case Notify Complaint Closure</name>
+    <style>none</style>
+    <subject>Notification of Customer Complaint Closure {!Case.CaseNumber} : {!Case.Subject}</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project_Type__c</fullName>
+    <description>PIMS Project Type</description>
+    <inlineHelpText>Tactical Project could include in scope FATS or product transfer projects</inlineHelpText>
+    <label>Project Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>IDL</fullName>
+                <default>false</default>
+                <label>IDL</label>
+            </value>
+            <value>
+                <fullName>Tactical Project</fullName>
+                <default>false</default>
+                <label>Tactical Project</label>
+            </value>
+            <value>
+                <fullName>Tech Service</fullName>
+                <default>false</default>
+                <label>Tech Service</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

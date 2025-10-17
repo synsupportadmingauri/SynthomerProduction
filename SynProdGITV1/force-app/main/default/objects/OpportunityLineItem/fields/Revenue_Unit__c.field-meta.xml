@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Revenue_Unit__c</fullName>
+    <description>Sales Price of the product per unit</description>
+    <inlineHelpText>Sales price per unit - this is the expected revenue per unit</inlineHelpText>
+    <label>Price / Tonne</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <type>Currency</type>
+</CustomField>

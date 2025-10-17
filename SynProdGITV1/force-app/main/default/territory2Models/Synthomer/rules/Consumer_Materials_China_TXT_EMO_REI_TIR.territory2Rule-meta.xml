@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Territory2Rule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <booleanFilter>(1 AND 2) OR (3 AND 4) OR (5 AND 6) OR (7 AND 8)</booleanFilter>
+    <name>Consumer Materials China - TXT EMO REI TIR</name>
+    <objectType>Account</objectType>
+    <ruleItems>
+        <field>Account.BillingCountryCode</field>
+        <operation>equals</operation>
+        <value>MY,CN</value>
+    </ruleItems>
+    <ruleItems>
+        <field>Account.Industry_Segments__c</field>
+        <operation>contains</operation>
+        <value>TXT</value>
+    </ruleItems>
+    <ruleItems>
+        <field>Account.BillingCountryCode</field>
+        <operation>equals</operation>
+        <value>LK,HK,MO,MY,MN,CN,TW,AU,KH,FJ,ID,JP,LA,MM,NP,NZ,PH,SG,KR,TH,VN</value>
+    </ruleItems>
+    <ruleItems>
+        <field>Account.Industry_Segments__c</field>
+        <operation>contains</operation>
+        <value>EMO</value>
+    </ruleItems>
+    <ruleItems>
+        <field>Account.BillingCountryCode</field>
+        <operation>equals</operation>
+        <value>SG,LK,HK,MO,MY,MN,CN,TW,AU,KH,FJ,ID,JP,LA,MM,NP,NZ,PH,KR,TH,VN</value>
+    </ruleItems>
+    <ruleItems>
+        <field>Account.Industry_Segments__c</field>
+        <operation>contains</operation>
+        <value>REI</value>
+    </ruleItems>
+    <ruleItems>
+        <field>Account.BillingCountryCode</field>
+        <operation>equals</operation>
+        <value>SG,LK,HK,MO,MY,MN,CN,TW,AU,KH,FJ,ID,JP,LA,MM,NP,NZ,PH,KR,TH,VN</value>
+    </ruleItems>
+    <ruleItems>
+        <field>Account.Industry_Segments__c</field>
+        <operation>contains</operation>
+        <value>TIR</value>
+    </ruleItems>
+</Territory2Rule>

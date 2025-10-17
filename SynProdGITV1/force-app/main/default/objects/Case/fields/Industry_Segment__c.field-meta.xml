@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Industry_Segment__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Links the record to a specific industry segment, providing insights into the sector or market group to which the record is related.</description>
+    <inlineHelpText>Select the relevant industry segment for this record.</inlineHelpText>
+    <label>Industry Segment</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Industry_Segment_Data__c.Level__c</field>
+            <operation>equals</operation>
+            <value>Industry Segment</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Industry_Segment_Data__c</referenceTo>
+    <relationshipLabel>Cases</relationshipLabel>
+    <relationshipName>Cases</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

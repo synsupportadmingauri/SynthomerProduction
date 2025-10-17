@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Enter the number of days required to process the order, from receipt to shipment or delivery. --></help>
+    <label><!-- Lead Time --></label>
+    <name>Lead_Time__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validity_From__c</fullName>
+    <description>The &quot;Quote Validity From&quot; date should be manually entered in the Quote, as it cannot default to the Quote Creation Date due to monthly pricing.</description>
+    <inlineHelpText>Enter the start date for quote validity. It should not default to the quote creation date due to monthly pricing</inlineHelpText>
+    <label>Validity From</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CRM_Id__c</fullName>
+    <description>CRM Id for CRM only fields - this value will be displayed only for Salesforce mastered account types - Competitor, Prospect, HQ and RHQ accounts.</description>
+    <externalId>false</externalId>
+    <formula>IF(  AND(OR(ISBLANK(TEXT(Type)),ISNULL(TEXT(Type))),  Is_Competitor__c ), 
+      &apos;COM-&apos; + CRM_Id_Number__c , 
+         
+CASE(TEXT(Type), 
+     &apos;Prospect&apos;, &apos;PRO-&apos; + CRM_Id_Number__c , 
+     &apos;HQ&apos;, &apos;HQ-&apos; + CRM_Id_Number__c,
+     &apos;RHQ&apos;, &apos;RHQ-&apos; + CRM_Id_Number__c,
+      CRM_Id_Number__c)  
+)</formula>
+    <inlineHelpText>Id for CRM mastered accounts - Prospect, Competitor, HQ and RHQ accounts.</inlineHelpText>
+    <label>CRM Id</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

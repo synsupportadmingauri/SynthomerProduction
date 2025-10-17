@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Data_Load_User__c</fullName>
+    <description>Parent Data load User</description>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Data Load User</label>
+    <referenceTo>Bypass_Flows_User__mdt</referenceTo>
+    <relationshipName>Data_Load_Flows</relationshipName>
+    <required>false</required>
+    <type>MetadataRelationship</type>
+    <unique>false</unique>
+</CustomField>

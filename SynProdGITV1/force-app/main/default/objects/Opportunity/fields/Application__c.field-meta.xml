@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Application__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>SSP-288/SS2-T66: Look up to custom Industry segment object with filter to select only Application from Industry Segment info date</description>
+    <inlineHelpText>Application relevant for the opportunity</inlineHelpText>
+    <label>Application</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Industry_Segment_Data__c.Level__c</field>
+            <operation>equals</operation>
+            <value>Application</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Industry_Segment_Data__c</referenceTo>
+    <relationshipLabel>Opportunities (Application)</relationshipLabel>
+    <relationshipName>Opportunity1</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cross_Selling__c</fullName>
+    <description>SS2-T22 &amp; SSP-292 - Identifies any cross selling opportunity</description>
+    <inlineHelpText>Select the relevant cross sell on the opportunity</inlineHelpText>
+    <label>Cross-Selling</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>OMNOVA</fullName>
+                <default>false</default>
+                <label>OMNOVA</label>
+            </value>
+            <value>
+                <fullName>AS to CCS</fullName>
+                <default>false</default>
+                <label>AS to CCS</label>
+            </value>
+            <value>
+                <fullName>AS to HPPM</fullName>
+                <default>false</default>
+                <label>AS to HPPM</label>
+            </value>
+            <value>
+                <fullName>HPPM to CCS</fullName>
+                <default>false</default>
+                <label>HPPM to CCS</label>
+            </value>
+            <value>
+                <fullName>HPPM to AS</fullName>
+                <default>false</default>
+                <label>HPPM to AS</label>
+            </value>
+            <value>
+                <fullName>CCS to AS</fullName>
+                <default>false</default>
+                <label>CCS to AS</label>
+            </value>
+            <value>
+                <fullName>CCS to HPPM</fullName>
+                <default>false</default>
+                <label>CCS to HPPM</label>
+            </value>
+            <value>
+                <fullName>AS Synergy</fullName>
+                <default>false</default>
+                <label>AS Synergy</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

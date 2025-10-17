@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Allow_Cancel_From_Draft_Only</fullName>
+    <active>true</active>
+    <description>Prevents users from changing the status to &quot;Cancelled&quot; unless the current status is &quot;Draft&quot;. This ensures only draft orders can be cancelled.</description>
+    <errorConditionFormula>AND(
+     NOT(TEXT(Salesforce_Order_Type__c) = &apos;ZOR&apos;),
+    NOT(TEXT(Salesforce_Order_Type__c) = &apos;ZCRM&apos;),
+    ISCHANGED(Status),
+
+    NOT(
+        OR(
+            $Permission.Integration_User,
+            $Profile.Name = &quot;System Administrator&quot;,
+            AND(
+                $User.FirstName = &quot;Automated&quot;,
+                $User.LastName = &quot;Process&quot;
+            ),
+												 $Permission.Bypass_Order_Cancellation_Validation 
+        )
+    ),
+
+    OR(
+        
+        AND(
+            ISPICKVAL(Status, &quot;Cancelled&quot;),
+            NOT(ISPICKVAL(PRIORVALUE(Status), &quot;Draft&quot;))
+        )
+  
+
+      
+    )
+)</errorConditionFormula>
+    <errorMessage>You can only cancel the Order when its status is &apos;Draft&apos;</errorMessage>
+</ValidationRule>

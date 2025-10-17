@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Shipping Condition --></label>
+    <name>Shipping_Condition__c</name>
+    <picklistValues>
+        <masterLabel>02-Pick-up</masterLabel>
+        <translation><!-- 02-Pick-up --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>03-Immediately</masterLabel>
+        <translation><!-- 03-Immediately --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>04-Transport Service</masterLabel>
+        <translation><!-- 04-Transport Service --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CC-Consi / Ret. Issue</masterLabel>
+        <translation><!-- CC-Consi / Ret. Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RE-Returns</masterLabel>
+        <translation><!-- RE-Returns --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZA-Airfreight</masterLabel>
+        <translation><!-- ZA-Airfreight --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZB-Courier</masterLabel>
+        <translation><!-- ZB-Courier --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZC-Groupage</masterLabel>
+        <translation><!-- ZC-Groupage --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZD-Rail</masterLabel>
+        <translation><!-- ZD-Rail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZE-Road</masterLabel>
+        <translation><!-- ZE-Road --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZF-Sea</masterLabel>
+        <translation><!-- ZF-Sea --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZG-Self-collection</masterLabel>
+        <translation><!-- ZG-Self-collection --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZH-Barge</masterLabel>
+        <translation><!-- ZH-Barge --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZI-Intermodal</masterLabel>
+        <translation><!-- ZI-Intermodal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZL-LTL</masterLabel>
+        <translation><!-- ZL-LTL --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IncoTerms_Lead_Time_Ship_To_Match__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicates whether all Quote Order Items have identical values for IncoTerms, Lead Time, and Ship-To. Returns TRUE if all values match across items; otherwise, returns FALSE.</description>
+    <label>IncoTerms, Lead Time &amp; Ship-To Match</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

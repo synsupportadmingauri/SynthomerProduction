@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+
+<body style="background-color:#ffffff; font-family: Arial, Helvetica, sans-serif; color:#222; margin:0; padding:0;">
+
+  <table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="margin:0; padding:0; border-collapse:collapse;">
+   
+          <tr>
+            <td style="padding:28px 24px; margin:0; padding:0;">
+
+               <p style="margin:0 0 16px 0; font-size:15px; line-height:1.5; color:#333;">Hi    {!Receiving_User.FirstName},</p>
+
+               <p style="margin:0 0 16px 0; font-size:15px; line-height:1.5; color:#333;">Welcome to Synthomer Distributor Portal!</p>
+
+               <p style="margin:0 0 16px 0; font-size:15px; line-height:1.5; color:#333;">To get started, please go to the <a href="{!Community_Url}" style="color:#053a63; font-weight:600; text-decoration:none;">
+  link
+</a> and create a password. Your username is {!Receiving_User.Username}</p>
+ 
+               <p style="margin:18px 0 0 0; font-size:14px; color:#333;">Thank you,<br>Synthomer     Plc</p>
+            </td>
+          </tr>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

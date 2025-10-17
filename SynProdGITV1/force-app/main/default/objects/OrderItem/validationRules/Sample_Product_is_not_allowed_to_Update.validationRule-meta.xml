@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sample_Product_is_not_allowed_to_Update</fullName>
+    <active>false</active>
+    <description>SSP-176 Below fields of Sample Product are not editable for some fields in all Statuses (except for Super admin and Integration User)</description>
+    <errorConditionFormula>NOT(ISNEW()) 
+&amp;&amp;  NOT(TEXT(Order.Salesforce_Order_Type__c) = &apos;ZOR&apos; )
+&amp;&amp;   NOT(TEXT(Order.Salesforce_Order_Type__c) = &apos;ZCRM&apos; )
+&amp;&amp; ( ISCHANGED(OrderId) 
+			  || ISCHANGED(OrderItemNumber) 
+			  || ISCHANGED(Product2Id) 
+			  || ISCHANGED(Description) 
+			  || ISCHANGED(ListPrice) 
+			  || ISCHANGED(Quantity) 
+			  || ISCHANGED(Quantity_UoM__c) 
+			  
+			  || ISCHANGED(UnitPrice) 
+			  || ISCHANGED(Plant__c) 
+			  || ISCHANGED(S4_Order_Type__c) 
+			  || ISCHANGED(Salesforce_Order_Type__c) 
+			  || ISCHANGED(S4_Item_Category__c) 
+			  || ISCHANGED(Sales_Organisation__c) 
+			  || ISCHANGED(Division__c) 
+			  || ISCHANGED(Distribution_Channel__c) 
+	)
+&amp;&amp; NOT($Permission.Integration_User )</errorConditionFormula>
+    <errorMessage>The Sample Order Product can only be edited from the &quot;Add/Edit Sample Product To Order&quot; button on the Order Header</errorMessage>
+</ValidationRule>

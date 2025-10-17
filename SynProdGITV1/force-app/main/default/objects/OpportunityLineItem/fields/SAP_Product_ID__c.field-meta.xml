@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SAP_Product_ID__c</fullName>
+    <description>SS2-T22 &amp; SSP-292 External Id to SAP system</description>
+    <externalId>false</externalId>
+    <formula>PricebookEntry.Product2.Product_Id__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>SAP Product ID</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

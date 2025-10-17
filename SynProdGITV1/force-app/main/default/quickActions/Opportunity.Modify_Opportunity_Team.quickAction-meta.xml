@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Allow users to manage Opportunity Team Members by adding or removing them using a button.</description>
+    <flowDefinition>Opportunity_Add_Opportunity_Team_Member</flowDefinition>
+    <label>Modify Opportunity Team</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>

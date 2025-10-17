@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <decisions>
+        <description>is Ship To Account?</description>
+        <name>is_Ship_To_Account</name>
+        <label>is Ship To Account</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>is_ShipTo</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Partner.Type</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Ship-To</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Partner_ShipTo_ID</targetReference>
+            </connector>
+            <label>is ShipTo</label>
+        </rules>
+        <rules>
+            <name>is_SoldTo</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Partner.Type</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Customer</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Partner_SoldTo_ID</targetReference>
+            </connector>
+            <label>is SoldTo</label>
+        </rules>
+    </decisions>
+    <description>Account Partners Data Ship-To Lookup Update</description>
+    <environments>Default</environments>
+    <interviewLabel>Account Partners Data Lookup Update {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Account Partners Data Lookup Update</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Get Ship-to Account</description>
+        <name>Get_Partner</name>
+        <label>Get Partner</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>is_Ship_To_Account</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>GUKC360_01__Customer_Id__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Related_Customer_ID__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Account</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <description>Update Parent Account</description>
+        <name>Update_Parent_Account</name>
+        <label>Update Parent Account</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>ParentId</field>
+            <value>
+                <elementReference>$Record.Main_Partner__r.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Account_Partner__r</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Update Partner ID</description>
+        <name>Update_Partner_ShipTo_ID</name>
+        <label>Update Partner ShipTo ID</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Parent_Account</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Account_Partner__c</field>
+            <value>
+                <elementReference>Get_Partner.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Update Partner ID</description>
+        <name>Update_Partner_SoldTo_ID</name>
+        <label>Update Partner SoldTo ID</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Account_Partner__c</field>
+            <value>
+                <elementReference>Get_Partner.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Partner</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Role__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Ship to</stringValue>
+            </value>
+        </filters>
+        <object>Account_Partners_Data__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

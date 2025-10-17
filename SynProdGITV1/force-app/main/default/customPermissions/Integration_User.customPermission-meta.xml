@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomPermission xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Used in Prevent_Backward_Status_From_Approved Validation on Order. 
+Added in Integration User Permission set, so that only the integration user can change it.</description>
+    <isLicensed>false</isLicensed>
+    <label>Integration User</label>
+</CustomPermission>

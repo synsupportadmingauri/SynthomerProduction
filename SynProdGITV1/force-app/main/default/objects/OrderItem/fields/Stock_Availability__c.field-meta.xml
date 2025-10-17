@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stock_Availability__c</fullName>
+    <description>SSP-176 SS2-T109 Status of Stock when the Product was added into Product</description>
+    <label>Stock Availability</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>OK</fullName>
+                <default>false</default>
+                <label>In Stock</label>
+            </value>
+            <value>
+                <fullName>NOK</fullName>
+                <default>false</default>
+                <label>Out of Stock</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

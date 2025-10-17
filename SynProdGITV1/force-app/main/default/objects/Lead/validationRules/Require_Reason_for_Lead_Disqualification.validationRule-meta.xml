@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Reason_for_Lead_Disqualification</fullName>
+    <active>true</active>
+    <description>SS2-T39</description>
+    <errorConditionFormula>AND(
+    ISPICKVAL(Status, &quot;Disqualified&quot;),
+    ISBLANK(TEXT(Lead_Disqualification_Reason__c))
+)</errorConditionFormula>
+    <errorMessage>Reason is mandatory for a &quot;Disqualified&quot; Lead</errorMessage>
+</ValidationRule>

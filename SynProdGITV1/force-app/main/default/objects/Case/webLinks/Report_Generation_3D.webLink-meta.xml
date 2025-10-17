@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Report_Generation_3D</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <hasMenubar>false</hasMenubar>
+    <hasScrollbars>false</hasScrollbars>
+    <hasToolbar>false</hasToolbar>
+    <height>600</height>
+    <isResizable>true</isResizable>
+    <linkType>url</linkType>
+    <masterLabel>3D Report</masterLabel>
+    <openType>newWindow</openType>
+    <position>none</position>
+    <protected>false</protected>
+    <showsLocation>false</showsLocation>
+    <showsStatus>false</showsStatus>
+    <url>/apex/APXTConga4__Conga_Composer?SolMgr=1
+&amp;serverUrl={!API.Partner_Server_URL_520}
+&amp;Id={!Case.Id}
+
+&amp;QueryId=[Report8D]0Q_0062AC826280%3Fpv0%3D{!Case.Id},
+[CaseTeamFromCase]0Q_0122AC008499%3Fpv0%3D{!Case.Id}
+
+&amp;TemplateId=0T_0032AC485244
+
+&amp;DEFAULTPDF=1
+&amp;DS7=11
+&amp;DS7Preview=1</url>
+    <width>900</width>
+</WebLink>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Delivery_Note__c</fullName>
+    <description>Reference number or details from the delivery note associated with the case. Used to trace the shipment or delivery linked to the reported issue.</description>
+    <inlineHelpText>Enter any relevant information about the delivery</inlineHelpText>
+    <label>Delivery Note</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

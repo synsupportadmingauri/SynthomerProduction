@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Not_Changeable_for_Customer_Type</fullName>
+    <active>true</active>
+    <description>Group Key is Not Changeable for Customer Type</description>
+    <errorConditionFormula>AND ( $Permission.ERP_Account_Creation_Update  = false, AND (AND (ISPICKVAL( Type , &quot;Customer&quot;)), ISCHANGED( Group_Key__c )))</errorConditionFormula>
+    <errorDisplayField>Group_Key__c</errorDisplayField>
+    <errorMessage>The Group Key cannot be changed for the &apos;Customer&apos; role. Please contact the Master Data Team.</errorMessage>
+</ValidationRule>

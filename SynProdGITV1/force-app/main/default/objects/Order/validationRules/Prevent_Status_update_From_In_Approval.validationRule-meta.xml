@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Status_update_From_In_Approval</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+OR(
+ISPICKVAL(Salesforce_Order_Type__c, &apos;ZPLS&apos;),
+ISPICKVAL(Salesforce_Order_Type__c, &apos;ZSLS&apos;)
+),
+
+ISCHANGED(Status),
+
+NOT(
+OR(
+$Permission.Integration_User,				
+$Profile.Name = &quot;System Administrator&quot;,
+AND($User.FirstName = &quot;Automated&quot;,  $User.LastName = &quot;Process&quot;)
+)
+),
+
+OR(
+ISPICKVAL(Status, &quot;Approved&quot;),
+ISPICKVAL(Status, &quot;In Process/Package Preparation&quot;),
+ISPICKVAL(Status, &quot;Completed&quot;)
+
+)
+
+)</errorConditionFormula>
+    <errorMessage>You cannot change Order Status once the Order is submitted for Approval.</errorMessage>
+</ValidationRule>

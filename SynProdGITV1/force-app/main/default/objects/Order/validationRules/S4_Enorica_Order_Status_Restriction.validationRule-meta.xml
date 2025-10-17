@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>S4_Enorica_Order_Status_Restriction</fullName>
+    <active>true</active>
+    <description>This rule  ensures that only users with the S4_and_Enorica_Sample_Order_Update permission set can update the Status to Approved, In Process/Package Preparation, Completed, or Cancelled for orders with Salesforce_Order_Type__c values &apos;ZSLS&apos; or &apos;ZPLS&apos;.</description>
+    <errorConditionFormula>AND(
+   OR(
+      ISPICKVAL(Status, &quot;Approved&quot;),
+      ISPICKVAL(Status, &quot;In Process/Package Preparation&quot;),
+      ISPICKVAL(Status, &quot;Completed&quot;),
+      ISPICKVAL(Status, &quot;Cancelled&quot;)
+   ),
+   NOT($Permission.S4_and_Enorica_Sample_Order_Update), 
+   OR(
+      TEXT(Salesforce_Order_Type__c) = &quot;ZSLS&quot;,
+      TEXT(Salesforce_Order_Type__c) = &quot;ZPLS&quot;
+   ),
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+$Profile.Name &lt;&gt; &quot;Automated Process&quot;
+)</errorConditionFormula>
+    <errorMessage>You must have the required permission to update the status to Approved, In Process/Package Preparation, Completed, or Cancelled for this order type</errorMessage>
+</ValidationRule>

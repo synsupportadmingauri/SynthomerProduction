@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Visit_Account__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>A lookup field that associates a specific Visit Account with a record</description>
+    <label>Visit Account</label>
+    <referenceTo>Visit_Account__c</referenceTo>
+    <relationshipLabel>Activities</relationshipLabel>
+    <relationshipName>Activities</relationshipName>
+    <required>false</required>
+    <type>Lookup</type>
+</CustomField>

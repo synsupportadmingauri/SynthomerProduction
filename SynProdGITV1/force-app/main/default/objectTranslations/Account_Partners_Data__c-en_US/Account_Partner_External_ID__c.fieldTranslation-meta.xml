@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Combination of Account Partner ID, Related S4 Customer ID and Role --></help>
+    <label><!-- Account Partner External ID --></label>
+    <name>Account_Partner_External_ID__c</name>
+</CustomFieldTranslation>

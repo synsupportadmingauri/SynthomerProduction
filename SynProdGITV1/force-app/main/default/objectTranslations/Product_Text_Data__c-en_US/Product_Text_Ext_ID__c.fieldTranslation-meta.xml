@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Combination of Language Key and Product ID/Product Cat ID --></help>
+    <label><!-- Product Text Ext ID --></label>
+    <name>Product_Text_Ext_ID__c</name>
+</CustomFieldTranslation>

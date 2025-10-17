@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>OPPORTUNITY_NAME</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT_NAME</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>AMOUNT</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>UNIT_PRICE</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Opportunity.Total_Volume__c</field>
+    </columns>
+    <columns>
+        <field>STAGE_NAME</field>
+    </columns>
+    <columns>
+        <field>CLOSE_DATE</field>
+    </columns>
+    <columns>
+        <field>FULL_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_ACTIVITY</field>
+    </columns>
+    <columns>
+        <field>AGE</field>
+    </columns>
+    <columns>
+        <field>CDF1</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Territory_L1__c</field>
+    </columns>
+    <currency>GBP</currency>
+    <customDetailFormulas>
+        <calculatedFormula>IF(
+  OR(AND(TEXT(STAGE_NAME) = &quot;Adoption&quot;, (CLOSE_DATE - TODAY()) &lt; 60),CLOSE_DATE &lt; TODAY()), &quot;🔴&quot;,
+  IF(
+    OR(AND(TEXT(STAGE_NAME) = &quot;Commercial&quot;, (CLOSE_DATE - TODAY()) &lt; 90),CLOSE_DATE &lt; TODAY()),  &quot;🔴&quot;,
+    IF(
+      OR(AND(TEXT(STAGE_NAME) = &quot;Operations&quot;, (CLOSE_DATE - TODAY()) &lt; 180),CLOSE_DATE &lt; TODAY()), &quot;🔴&quot;,
+      IF(
+        OR(AND(TEXT(STAGE_NAME) = &quot;Chemistry&quot;, (CLOSE_DATE - TODAY()) &lt; 360),CLOSE_DATE &lt; TODAY()), &quot;🔴&quot;,
+        IF(
+          OR(AND(TEXT(STAGE_NAME) = &quot;Qualify&quot;, (CLOSE_DATE - TODAY()) &lt; 450),CLOSE_DATE &lt; TODAY()), &quot;🔴&quot;,
+          &quot;🟢&quot;
+        )
+      )
+    )
+  )
+)</calculatedFormula>
+        <dataType>Text</dataType>
+        <developerName>CDF1</developerName>
+        <label>Risk Stage Check</label>
+        <scale>2</scale>
+    </customDetailFormulas>
+    <format>Tabular</format>
+    <name>Top 10 Opp by GM, Volume &amp; GM/Ton Leader</name>
+    <params>
+        <name>terr</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>open</name>
+        <value>open</value>
+    </params>
+    <params>
+        <name>probability</name>
+        <value>&gt;0</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>OpportunityProduct</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>UNIT_PRICE</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CLOSE_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

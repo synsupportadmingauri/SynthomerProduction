@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rejected_Sample_Orders</fullName>
+    <columns>ORDERS.ORDER_NUMBER</columns>
+    <columns>ORDER.NAME</columns>
+    <columns>ORDERS.EFFECTIVE_DATE</columns>
+    <columns>End_Customer__c</columns>
+    <columns>ORDERS.STATUS</columns>
+    <columns>ORDER.SHIPPING_COUNTRY</columns>
+    <columns>ORDER.SHIPPING_STATE</columns>
+    <columns>ORDER.SHIPPING_STREET</columns>
+    <columns>ORDER.SHIPPING_ZIP</columns>
+    <columns>ORDER.SHIP_TO_CONTACT</columns>
+    <columns>ORDERS.LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Distributor_Submission_Approval_Status__c</field>
+        <operation>equals</operation>
+        <value>Rejected</value>
+    </filters>
+    <label>Rejected Sample Orders</label>
+</ListView>

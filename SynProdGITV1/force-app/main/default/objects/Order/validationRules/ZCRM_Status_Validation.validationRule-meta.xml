@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZCRM_Status_Validation</fullName>
+    <active>true</active>
+    <description>ZCRM only allows status changes from Draft to Submitted/In Approval, Draft to Cancelled, and Approved to In Process/Package Preparation.</description>
+    <errorConditionFormula>AND(
+		ISPICKVAL( Salesforce_Order_Type__c, &quot;ZCRM&quot;),
+  ISCHANGED(Status),
+  OR(
+    AND(
+      ISPICKVAL(PRIORVALUE(Status), &quot;Draft&quot;),
+           ISPICKVAL(Status, &quot;Approved&quot;)),
+    
+    AND(
+      ISPICKVAL(PRIORVALUE(Status), &quot;Draft&quot;),
+      ISPICKVAL(Status, &quot;In Process/Package Preparation&quot;)),
+    
+    AND(OR(
+      ISPICKVAL(PRIORVALUE(Status), &quot;Draft&quot;),
+      ISPICKVAL(PRIORVALUE(Status), &quot;Approved&quot;)
+    ), ISPICKVAL(Status, &quot;Completed&quot;))
+  ),
+  $Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+  $Profile.Name &lt;&gt; &quot;Automated Process&quot;
+)</errorConditionFormula>
+    <errorMessage>The sample order can only be submitted for approval.</errorMessage>
+</ValidationRule>

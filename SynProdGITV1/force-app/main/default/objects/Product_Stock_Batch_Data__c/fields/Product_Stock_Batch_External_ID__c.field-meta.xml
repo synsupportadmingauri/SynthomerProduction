@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Stock_Batch_External_ID__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>Product Stock Batch External ID</description>
+    <externalId>true</externalId>
+    <inlineHelpText>Combination of Product Code, Enorica Plant and Batch Number</inlineHelpText>
+    <label>Product Stock Batch External ID</label>
+    <length>60</length>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

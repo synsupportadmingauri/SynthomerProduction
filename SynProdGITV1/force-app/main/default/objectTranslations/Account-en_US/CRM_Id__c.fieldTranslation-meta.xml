@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Id for CRM mastered accounts - Prospect, Competitor, HQ and RHQ accounts. --></help>
+    <label><!-- CRM Id --></label>
+    <name>CRM_Id__c</name>
+</CustomFieldTranslation>

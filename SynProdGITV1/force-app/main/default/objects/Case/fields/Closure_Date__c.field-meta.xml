@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Closure_Date__c</fullName>
+    <description>Closure Date</description>
+    <formula>IF(ISNULL(Date_Time_Closed__c),  ClosedDate ,Date_Time_Closed__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Closure Data (calculated)</inlineHelpText>
+    <label>Closure Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

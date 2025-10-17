@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <assignments>
+        <name>Assign_Order_KSA_Short_Address</name>
+        <label>Assign Order KSA Short Address</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.KSA_Short_Address__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Account.KSA_Short_Address__c</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>Check_Account_KSA_Short_Address_Empty_or_Not</name>
+        <label>Check Account KSA Short Address Empty or Not ?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Empty</defaultConnectorLabel>
+        <rules>
+            <name>Not_Empty</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Account.KSA_Short_Address__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Order_KSA_Short_Address</targetReference>
+            </connector>
+            <label>Not Empty</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_User_for_Flow_Bypass</name>
+        <label>Check User for Flow Bypass</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Check_Account_KSA_Short_Address_Empty_or_Not</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>User can&apos;t bypass the Validation</defaultConnectorLabel>
+        <rules>
+            <name>User_can_bypass_the_Validation</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Bypass_Flows_User_related_Flow.Is_Bypass__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>User can bypass the Validation</label>
+        </rules>
+    </decisions>
+    <description>SD1-T53</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Display each product description clearly on a separate line.</description>
+        <name>BulletDescriptions</name>
+        <dataType>String</dataType>
+        <expression>IF(
+  ISBLANK({!var_OLIDescriptions}),
+  &quot;-&quot;,
+  SUBSTITUTE(
+    SUBSTITUTE(
+      SUBSTITUTE(
+        {!var_OLIDescriptions},
+        &quot;[&quot;, &quot;&quot;
+      ),
+      &quot;]&quot;, &quot;&quot;
+    ),
+    &quot;,&quot;, BR()
+  )
+)</expression>
+    </formulas>
+    <formulas>
+        <name>BulletShippingDate</name>
+        <dataType>String</dataType>
+        <expression>IF(
+  ISBLANK({!var_OLIShippingDate}),
+  &quot;-&quot;,
+  SUBSTITUTE(
+    SUBSTITUTE(
+      SUBSTITUTE(
+        SUBSTITUTE(
+          SUBSTITUTE(
+            SUBSTITUTE(
+              SUBSTITUTE(
+                SUBSTITUTE(
+                  SUBSTITUTE(
+                    &quot;[&quot; &amp; SUBSTITUTE(SUBSTITUTE(SUBSTITUTE({!var_OLIShippingDate}, &quot;,,&quot;, &quot;, ,&quot;), &quot;,,&quot;, &quot;, ,&quot;), &quot;,,&quot;, &quot;, ,&quot;) &amp; &quot;]&quot;,
+                    &quot;[,&quot;, &quot;-,&quot;
+                  ),
+                  &quot;,]&quot;, &quot;,-&quot;
+                ),
+                &quot;,,&quot;, &quot;,-,&quot;   /* for missed middle blanks */
+              ),
+              &quot;[&quot;, &quot;&quot;
+            ),
+            &quot;]&quot;, &quot;&quot;
+          ),
+          &quot;, ,&quot;, &quot;,-,&quot;
+        ),
+        &quot; ,&quot;, &quot;-,&quot;
+      ),
+      &quot;, &quot;, &quot;,-&quot;
+    ),
+    &quot;,&quot;, &quot;&lt;br&gt;&quot;
+  )
+)</expression>
+    </formulas>
+    <formulas>
+        <description>Display each tracking number clearly on a separate line.</description>
+        <name>BulletTrackingNumber</name>
+        <dataType>String</dataType>
+        <expression>IF(
+  ISBLANK({!var_OLITrackingNumber}),
+  &quot;-&quot;,
+  SUBSTITUTE(
+    SUBSTITUTE(
+      SUBSTITUTE(
+        SUBSTITUTE(
+          SUBSTITUTE(
+            SUBSTITUTE(
+              SUBSTITUTE(
+                SUBSTITUTE(
+                  SUBSTITUTE(
+                    &quot;[&quot; &amp; SUBSTITUTE(SUBSTITUTE(SUBSTITUTE({!var_OLITrackingNumber}, &quot;,,&quot;, &quot;, ,&quot;), &quot;,,&quot;, &quot;, ,&quot;), &quot;,,&quot;, &quot;, ,&quot;) &amp; &quot;]&quot;,
+                    &quot;[,&quot;, &quot;-,&quot;
+                  ),
+                  &quot;,]&quot;, &quot;,-&quot;
+                ),
+                &quot;,,&quot;, &quot;,-,&quot;   /* for missed middle blanks */
+              ),
+              &quot;[&quot;, &quot;&quot;
+            ),
+            &quot;]&quot;, &quot;&quot;
+          ),
+          &quot;, ,&quot;, &quot;,-,&quot;
+        ),
+        &quot; ,&quot;, &quot;-,&quot;
+      ),
+      &quot;, &quot;, &quot;,-&quot;
+    ),
+    &quot;,&quot;, &quot;&lt;br&gt;&quot;
+  )
+)</expression>
+    </formulas>
+    <formulas>
+        <name>BulletTrackingURL</name>
+        <dataType>String</dataType>
+        <expression>IF(
+  ISBLANK({!var_OLITrackingURL}), 
+  &quot;-&quot;,
+  SUBSTITUTE(
+    SUBSTITUTE(
+      SUBSTITUTE(
+        SUBSTITUTE(
+          SUBSTITUTE(
+            SUBSTITUTE(
+              SUBSTITUTE(
+                SUBSTITUTE(
+                  SUBSTITUTE(
+                    &quot;[&quot; &amp; SUBSTITUTE(SUBSTITUTE(SUBSTITUTE({!var_OLITrackingURL}, &quot;,,&quot;, &quot;, ,&quot;), &quot;,,&quot;, &quot;, ,&quot;), &quot;,,&quot;, &quot;, ,&quot;) &amp; &quot;]&quot;,
+                    &quot;[,&quot;, &quot;-,&quot;
+                  ),
+                  &quot;,]&quot;, &quot;,-&quot;
+                ),
+                &quot;,,&quot;, &quot;,-,&quot;   /* for missed middle blanks */
+              ),
+              &quot;[&quot;, &quot;&quot;
+            ),
+            &quot;]&quot;, &quot;&quot;
+          ),
+          &quot;, ,&quot;, &quot;,-,&quot;
+        ),
+        &quot; ,&quot;, &quot;-,&quot;
+      ),
+      &quot;, &quot;, &quot;,-&quot;
+    ),
+    &quot;,&quot;, &quot;&lt;br&gt;&quot;
+  )
+)</expression>
+    </formulas>
+    <formulas>
+        <description>formula created to tag Owner and created by in chatter post. 
+If both are same - tag owner. 
+else tag both</description>
+        <name>formula_ChatterMention</name>
+        <dataType>String</dataType>
+        <expression>IF(
+  {!$Record.OwnerId}= {!$Record.CreatedById},
+   &quot;@[&quot; &amp; {!$Record.OwnerId}&amp; &quot;]&quot;,
+   &quot;@[&quot; &amp; {!$Record.OwnerId} &amp; &quot;] and @[&quot; &amp; {!$Record.CreatedById} &amp; &quot;]&quot;
+)</expression>
+    </formulas>
+    <formulas>
+        <description>Link for the record</description>
+        <name>URLBase</name>
+        <dataType>String</dataType>
+        <expression>LEFT({!$Api.Enterprise_Server_URL_610}, FIND(&quot;/services&quot;, {!$Api.Enterprise_Server_URL_610}) - 1)</expression>
+    </formulas>
+    <interviewLabel>Order - Before Insert : KSA Short Address {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Order - Before Insert : KSA Short Address</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Get the current user details if he can bypass the validation</description>
+        <name>Get_Bypass_Flows_User</name>
+        <label>Get Bypass Flows - User</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Bypass_Flows_User_related_Flow</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Username__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$User.Username</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Active__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Bypass_Flows_User__mdt</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Get the bypass user-related flow - child of Bypass Flows - user</description>
+        <name>Get_Bypass_Flows_User_related_Flow</name>
+        <label>Get Bypass Flows - User related Flow</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_User_for_Flow_Bypass</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Flow_Name__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Order_Before_Insert_KSA_Short_Address</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Data_Load_User__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Bypass_Flows_User.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Bypass_Flows_User_related_Flow__mdt</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Bypass_Flows_User</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Salesforce_Order_Type__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>ZOR</stringValue>
+            </value>
+        </filters>
+        <object>Order</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <description>Template for Chatter Post whenever salesforce order type is ZCRMand Order is completed</description>
+        <name>templateChatter_ZCRM_Completed</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Dear {!formula_ChatterMention}, 
+Kindly note that the customer sample request has been completed.
+
+Request Details:
+Order Number: {!$Record.OrderNumber}
+Account: {!$Record.Account.Name} 
+Products: 
+{!var_OLIDescriptions}
+Owner: {!$Record.Owner:User.FirstName}  {!$Record.Owner:User.LastName}
+Plan Shipment Date: {!$Record.Completed_Date__c}
+
+
+Best regards,
+Your CRM Support Team
+The mySalesforce system automatically generated this message.</text>
+    </textTemplates>
+    <textTemplates>
+        <description>Template for Chatter Post whenever salesforce order type is ZSLS and Order is completed</description>
+        <name>templateChatter_ZSLS_ZPLS_Completed</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Dear {!formula_ChatterMention}, 
+Kindly note that the customer sample request has been completed.
+
+Request Details:
+Order Number: {!$Record.OrderNumber}
+Account: {!$Record.Account.Name} 
+Owner: {!$Record.Owner:User.FirstName}  {!$Record.Owner:User.LastName}
+
+Best regards,
+Your CRM Support Team
+The mySalesforce system automatically generated this message.</text>
+    </textTemplates>
+    <variables>
+        <description>stores the email</description>
+        <name>lstEmails</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>OrderItemShippingDate</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>OrderItemTableRows</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Stores Org Email Address</description>
+        <name>orgEmailAddress</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>var_OLIDescriptions</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>var_OLIShippingDate</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>var_OLITrackingNumber</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>var_OLITrackingURL</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>var_ShippingCarrier</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

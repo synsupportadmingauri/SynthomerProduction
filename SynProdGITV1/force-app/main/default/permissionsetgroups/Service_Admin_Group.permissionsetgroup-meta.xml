@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Created to assing combined Service admin permissions</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Service Admin Group</label>
+    <permissionSets>APXTConga4__Composer_Administrator</permissionSets>
+    <permissionSets>Base_Service_User</permissionSets>
+    <permissionSets>Create_Edit_Employees</permissionSets>
+    <permissionSets>Edit_Completed_Case</permissionSets>
+    <permissionSets>Logging_Framework</permissionSets>
+    <permissionSets>Service_Admin</permissionSets>
+    <permissionSets>force__EinsteinActivityCaptureIncluded</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

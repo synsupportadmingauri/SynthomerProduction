@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Role --></label>
+    <name>Role__c</name>
+    <picklistValues>
+        <masterLabel>Process Improvement Team</masterLabel>
+        <translation><!-- Process Improvement Team --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Procurement Responsible Person</masterLabel>
+        <translation><!-- Procurement Responsible Person --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Production Manager</masterLabel>
+        <translation><!-- Production Manager --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SYN Contract Owner</masterLabel>
+        <translation><!-- SYN Contract Owner --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Site Manager</masterLabel>
+        <translation><!-- Site Manager --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Site Quality Manager</masterLabel>
+        <translation><!-- Site Quality Manager --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Supply Chain Manager</masterLabel>
+        <translation><!-- Supply Chain Manager --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Supply Chain Primary Operational Contact</masterLabel>
+        <translation><!-- Supply Chain Primary Operational Contact --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Technical Service Manager</masterLabel>
+        <translation><!-- Technical Service Manager --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Technology Director</masterLabel>
+        <translation><!-- Technology Director --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Visit_Location__c</fullName>
+    <description>This field ensures that the correct location is recorded for efficient planning, navigation, and follow-up.</description>
+    <label>Visit Location</label>
+    <type>Address</type>
+</CustomField>

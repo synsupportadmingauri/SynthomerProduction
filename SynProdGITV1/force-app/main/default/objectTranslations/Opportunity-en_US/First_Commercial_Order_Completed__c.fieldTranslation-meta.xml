@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Confirm if the first Commercial order is in place --></help>
+    <label><!-- First Commercial Order Completed --></label>
+    <name>First_Commercial_Order_Completed__c</name>
+</CustomFieldTranslation>

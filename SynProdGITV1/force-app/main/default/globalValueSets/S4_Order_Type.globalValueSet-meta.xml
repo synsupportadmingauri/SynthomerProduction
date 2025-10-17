@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>ZSAM</fullName>
+        <default>false</default>
+        <label>ZSAM - S4 Sample Order</label>
+    </customValue>
+    <customValue>
+        <fullName>ZBFD</fullName>
+        <default>false</default>
+        <label>ZBFD - S4 FoC Order</label>
+    </customValue>
+    <description>Order Type to be Used on Order, OLI, etc</description>
+    <masterLabel>S4 Order Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Group_Key__c</fullName>
+    <description>Identifies the grouping or classification of customers, accounts, or entities based on shared characteristics or business criteria, used for reporting, analysis, or segmentation</description>
+    <externalId>false</externalId>
+    <inlineHelpText>For account type Prospect - defaulted to first 10 characters of the name. For account type Customer - this will come from S4 Hana.</inlineHelpText>
+    <label>Group Key</label>
+    <length>10</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

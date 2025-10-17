@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>63.0</apiVersion>
+    <decisions>
+        <description>Checks if Approved or Rejected</description>
+        <name>Check_if_Approved_or_Rejected</name>
+        <label>Check if Approved or Rejected</label>
+        <locationX>182</locationX>
+        <locationY>611</locationY>
+        <defaultConnector>
+            <targetReference>Reject_OLI</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Rejected</defaultConnectorLabel>
+        <rules>
+            <name>Approved</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Approval.Outputs.approvalDecision</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Approve</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Status_to_Approved</targetReference>
+            </connector>
+            <label>Approved</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Status</name>
+        <label>Check Status</label>
+        <locationX>512</locationX>
+        <locationY>395</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>In_Approval</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Is_Approval_Needed.Outputs.outputSampleOrderItemStatus</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>In Approval</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Stage_2</targetReference>
+            </connector>
+            <label>In Approval</label>
+        </rules>
+        <rules>
+            <name>Not_Needed</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Is_Approval_Needed.Outputs.outputSampleOrderItemStatus</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Not Needed</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Stage_3</targetReference>
+            </connector>
+            <label>Not Needed</label>
+        </rules>
+    </decisions>
+    <description>Whenever the Sample Order Item status is changed to check, it triggers the orchestration. Checks whether OLI needs an Approval or not. If yes, send that to Approval Step. Everytime, any Status changed to check and if it is approved - check whether all OLI are approved or not needed if yes then update the ML Status to Check</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>OrgBaseURL</description>
+        <name>OrgBaseURL</name>
+        <dataType>String</dataType>
+        <expression> LEFT({!$Api.Enterprise_Server_URL_610}, FIND(&quot;/services&quot;, {!$Api.Enterprise_Server_URL_610}) - 1)</expression>
+    </formulas>
+    <interviewLabel>Order Product - Sample Order Product Approval Flow (Or) {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Order Product - Sample Order Product Approval Flow (Or)</label>
+    <orchestratedStages>
+        <name>Determine_Approval_Requirement_for_the_Sample_Item</name>
+        <label>Determine Approval Requirement for the Sample Item</label>
+        <locationX>512</locationX>
+        <locationY>287</locationY>
+        <connector>
+            <targetReference>Check_Status</targetReference>
+        </connector>
+        <exitConditionLogic>and</exitConditionLogic>
+        <stageSteps>
+            <description>Calls -</description>
+            <name>Is_Approval_Needed</name>
+            <actionName>Order_Product_Sample_Order_Product_Approved_Rejected</actionName>
+            <actionType>stepBackground</actionType>
+            <entryConditionLogic>and</entryConditionLogic>
+            <exitConditionLogic>and</exitConditionLogic>
+            <inputParameters>
+                <name>inputSampleOrderItemStatus</name>
+                <value>
+                    <stringValue>Check</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>strOLIId</name>
+                <value>
+                    <elementReference>$Record.Id</elementReference>
+                </value>
+            </inputParameters>
+            <label>Is Approval Needed?</label>
+            <requiresAsyncProcessing>false</requiresAsyncProcessing>
+            <runAsUser>false</runAsUser>
+            <stepSubtype>BackgroundStep</stepSubtype>
+        </stageSteps>
+    </orchestratedStages>
+    <orchestratedStages>
+        <description>Reject OLI and update Order Status to Draft</description>
+        <name>Reject_OLI</name>
+        <label>Reject OLI</label>
+        <locationX>314</locationX>
+        <locationY>719</locationY>
+        <exitConditionLogic>and</exitConditionLogic>
+        <stageSteps>
+            <description>Reject OLI and Status</description>
+            <name>Reject_OLI_1</name>
+            <actionName>Order_Product_Sample_Order_Product_Approved_Rejected</actionName>
+            <actionType>stepBackground</actionType>
+            <entryConditionLogic>and</entryConditionLogic>
+            <exitConditionLogic>and</exitConditionLogic>
+            <inputParameters>
+                <name>inputSampleOrderItemStatus</name>
+                <value>
+                    <stringValue>Rejected</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>strOLIId</name>
+                <value>
+                    <elementReference>$Record.Id</elementReference>
+                </value>
+            </inputParameters>
+            <label>Reject OLI</label>
+            <requiresAsyncProcessing>false</requiresAsyncProcessing>
+            <runAsUser>false</runAsUser>
+            <stepSubtype>BackgroundStep</stepSubtype>
+        </stageSteps>
+    </orchestratedStages>
+    <orchestratedStages>
+        <name>Stage_2</name>
+        <label>Stage 2</label>
+        <locationX>182</locationX>
+        <locationY>503</locationY>
+        <connector>
+            <targetReference>Check_if_Approved_or_Rejected</targetReference>
+        </connector>
+        <exitConditionLogic>and</exitConditionLogic>
+        <stageSteps>
+            <name>Get_Approval</name>
+            <actionName>standard_approvals__EvaluateApproval</actionName>
+            <actionType>stepApproval</actionType>
+            <assignees>
+                <assignee>
+                    <elementReference>$Record.Approver_Name__c</elementReference>
+                </assignee>
+                <assigneeType>Resource</assigneeType>
+            </assignees>
+            <entryConditionLogic>and</entryConditionLogic>
+            <exitConditionLogic>and</exitConditionLogic>
+            <inputParameters>
+                <name>ActionInput__RecordId</name>
+                <value>
+                    <elementReference>$Record.Id</elementReference>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>ActionInput__CustomEmailSubject</name>
+                <value>
+                    <elementReference>subject</elementReference>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>ActionInput__CustomEmailBody</name>
+                <value>
+                    <elementReference>body</elementReference>
+                </value>
+            </inputParameters>
+            <label>Get Approval</label>
+            <requiresAsyncProcessing>false</requiresAsyncProcessing>
+            <runAsUser>false</runAsUser>
+            <stepSubtype>ApprovalStep</stepSubtype>
+        </stageSteps>
+    </orchestratedStages>
+    <orchestratedStages>
+        <name>Stage_3</name>
+        <label>Stage 3</label>
+        <locationX>578</locationX>
+        <locationY>503</locationY>
+        <exitConditionLogic>and</exitConditionLogic>
+        <stageSteps>
+            <name>Update_to_Not_Needed</name>
+            <actionName>Order_Product_Sample_Order_Product_Approved_Rejected</actionName>
+            <actionType>stepBackground</actionType>
+            <entryConditionLogic>and</entryConditionLogic>
+            <exitConditionLogic>and</exitConditionLogic>
+            <inputParameters>
+                <name>inputSampleOrderItemStatus</name>
+                <value>
+                    <stringValue>Not Needed</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>strOLIId</name>
+                <value>
+                    <elementReference>$Record.Id</elementReference>
+                </value>
+            </inputParameters>
+            <label>Update to Not Needed</label>
+            <requiresAsyncProcessing>false</requiresAsyncProcessing>
+            <runAsUser>false</runAsUser>
+            <stepSubtype>BackgroundStep</stepSubtype>
+        </stageSteps>
+    </orchestratedStages>
+    <orchestratedStages>
+        <name>Update_Status_to_Approved</name>
+        <label>Update Status to Approved</label>
+        <locationX>50</locationX>
+        <locationY>719</locationY>
+        <exitConditionLogic>and</exitConditionLogic>
+        <stageSteps>
+            <description>Update OLI to Approved</description>
+            <name>Update_OLI_to_Approved</name>
+            <actionName>Order_Product_Sample_Order_Product_Approved_Rejected</actionName>
+            <actionType>stepBackground</actionType>
+            <entryConditionLogic>and</entryConditionLogic>
+            <exitConditionLogic>and</exitConditionLogic>
+            <inputParameters>
+                <name>inputSampleOrderItemStatus</name>
+                <value>
+                    <stringValue>Approved</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>strOLIId</name>
+                <value>
+                    <elementReference>$Record.Id</elementReference>
+                </value>
+            </inputParameters>
+            <label>Update OLI to Approved</label>
+            <requiresAsyncProcessing>false</requiresAsyncProcessing>
+            <runAsUser>false</runAsUser>
+            <stepSubtype>BackgroundStep</stepSubtype>
+        </stageSteps>
+    </orchestratedStages>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>ApprovalWorkflow</processType>
+    <runInMode>SystemModeWithoutSharing</runInMode>
+    <start>
+        <locationX>386</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Determine_Approval_Requirement_for_the_Sample_Item</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Sample_Item_Approval_Status__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Sample_Item_Approval_Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Check</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Salesforce_Order_Type__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>ZOR</stringValue>
+            </value>
+        </filters>
+        <object>OrderItem</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>body</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;Dear {!$Record.Approver__r.FirstName},&lt;/p&gt;&lt;p&gt;A new sample order has been sent to you for approval.&lt;/p&gt;&lt;p&gt;Request Details:&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Order Item Number: &lt;/strong&gt; &lt;a href=&quot;{!OrgBaseURL}/lightning/r/OrderItem/{!$Record.Id}/view&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;{!$Record.OrderItemNumber}&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Order Number: &lt;/strong&gt;{!$Record.Order.OrderNumber}  &lt;/p&gt;&lt;p&gt;&lt;strong&gt;Ship To: &lt;/strong&gt;   {!$Record.Order.Ship_To_Account__r.Name}&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Product: &lt;/strong&gt;  {!$Record.Description}&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;Quantity: &lt;/strong&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;{!$Record.Quantity} {!$Record.Quantity_UoM__r.Name}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Requestor&lt;/strong&gt;:  {!$Record.Order.Owner:User.FirstName} {!$Record.Order.Owner:User.LastName}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Best regards,  &lt;/p&gt;&lt;p&gt;Your CRM Support Team&lt;/p&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>subject</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Approve Sample Order Item Number: {!$Record.OrderItemNumber}</text>
+    </textTemplates>
+</Flow>

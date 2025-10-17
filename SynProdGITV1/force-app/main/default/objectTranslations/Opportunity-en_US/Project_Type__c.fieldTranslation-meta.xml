@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Tactical Project could include in scope FATS or product transfer projects --></help>
+    <label><!-- Project Type --></label>
+    <name>Project_Type__c</name>
+    <picklistValues>
+        <masterLabel>IDL</masterLabel>
+        <translation><!-- IDL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tactical Project</masterLabel>
+        <translation><!-- Tactical Project --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tech Service</masterLabel>
+        <translation><!-- Tech Service --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

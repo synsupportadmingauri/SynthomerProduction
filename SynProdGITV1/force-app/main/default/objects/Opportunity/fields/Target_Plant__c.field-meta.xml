@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Target_Plant__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>SS2-T22 &amp; SSP-292 To which plant this opportunity targets to</description>
+    <label>Target Plant</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Plant__c.Active_Flag__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </filterItems>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <referenceTo>Plant__c</referenceTo>
+    <relationshipLabel>Opportunities</relationshipLabel>
+    <relationshipName>Opportunities</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Lookup</type>
+</CustomField>

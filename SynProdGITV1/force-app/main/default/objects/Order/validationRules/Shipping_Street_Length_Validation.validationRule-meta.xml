@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Shipping_Street_Length_Validation</fullName>
+    <active>true</active>
+    <description>Shipping_Street_Length_Validation - it cannot be greater than 60 characters</description>
+    <errorConditionFormula>len(ShippingStreet) &gt; 60 &amp;&amp; $User.Username &lt;&gt; &apos;support.gauri@gauri.com.syn&apos;</errorConditionFormula>
+    <errorDisplayField>ShippingStreet</errorDisplayField>
+    <errorMessage>Shipping Street cannot be greater than 60 characters</errorMessage>
+</ValidationRule>

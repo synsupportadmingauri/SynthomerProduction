@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body style="font-family: Arial, sans-serif; font-size: 14px; color: #333;">
+    <p>Dear Colleague,</p>
+    <p> Kindly be informed that the new Customer Complaint ID: <strong>{!Case.CaseNumber}</strong> has been created by
+        <strong>{!Case.CreatedBy}</strong> in the responsibility of the <strong>{!Case.Plant__c}</strong> team. </p>
+    <p> <strong>Next Steps (Plant Team):</strong><br> Review the complaint and assign a complaint coordinator, document
+        containment actions, and update status to "<em>Initial Review Completed</em>" while continuing complaint
+        investigation. </p>
+    <h3>Ticket Details:</h3>
+    <table cellpadding="5" cellspacing="0" border="0" style="border-collapse: collapse;">
+        <tr>
+            <td><strong>Customer:</strong></td>
+            <td>{!Case.Account}</td>
+        </tr>
+        <tr>
+            <td><strong>Subject:</strong></td>
+            <td>{!Case.Subject}</td>
+        </tr>
+        <tr>
+            <td><strong>Product:</strong></td>
+            <td>{!Case.Product__c}</td>
+        </tr>
+        <tr>
+            <td><strong>Detailed Description:</strong></td>
+            <td>{!Case.Description}</td>
+        </tr>
+    </table>
+    <p>Best regards,</p>
+    <p>Your CRM Support Team</p>
+    <p> Link to Ticket in mySalesForce:<a href="{!Case.Link}" style="color: #1a73e8;">{!Case.Subject}</a> </p>
+    <p> The mySalesForce system automatically generated this message. </p>
+</body>
+
+</html>

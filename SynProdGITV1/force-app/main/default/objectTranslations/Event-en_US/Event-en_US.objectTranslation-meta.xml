@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Visit</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Visits</value>
+    </caseValues>
+    <layouts>
+        <layout>Event Layout</layout>
+        <sections>
+            <label><!-- Related To --></label>
+            <section>Related To</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Complete Visit --></label>
+        <name>Complete_Visit</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Create/Edit Outcome --></label>
+        <name>Create_Edit_Outcome</name>
+    </quickActions>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

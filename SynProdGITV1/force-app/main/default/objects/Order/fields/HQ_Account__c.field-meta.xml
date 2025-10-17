@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HQ_Account__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>SSP-176 SS2-T71 : This field will store HQ Account from Related Account</description>
+    <label>HQ Account</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Orders (HQ Account)</relationshipLabel>
+    <relationshipName>Orders2</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

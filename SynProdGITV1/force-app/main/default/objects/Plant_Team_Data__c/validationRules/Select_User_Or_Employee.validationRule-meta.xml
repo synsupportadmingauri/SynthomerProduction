@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Select_User_Or_Employee</fullName>
+    <active>true</active>
+    <description>User and Employee cannot both be selected at the same time.</description>
+    <errorConditionFormula>OR(
+ISBLANK(User__c) &amp;&amp; ISBLANK(Employee__c),  
+AND(
+    NOT(ISBLANK(User__c)),
+    NOT(ISBLANK(Employee__c))              
+)
+)</errorConditionFormula>
+    <errorMessage>You must choose one: User or Employee. Selecting both is not allowed.</errorMessage>
+</ValidationRule>

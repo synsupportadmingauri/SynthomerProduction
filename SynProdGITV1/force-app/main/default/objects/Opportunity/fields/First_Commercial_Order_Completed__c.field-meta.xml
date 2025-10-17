@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>First_Commercial_Order_Completed__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>SS2-T22 &amp; SSP-292 This will be check if the at least one Commercial order is placed. This order will bot be a Sample order</description>
+    <inlineHelpText>Confirm if the first Commercial order is in place</inlineHelpText>
+    <label>First Commercial Order Completed</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

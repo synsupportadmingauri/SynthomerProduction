@@ -1,0 +1,1165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Approval_chatter_post</name>
+        <label>Approval chatter post</label>
+        <locationX>1634</locationX>
+        <locationY>566</locationY>
+        <actionName>chatterPost</actionName>
+        <actionType>chatterPost</actionType>
+        <connector>
+            <targetReference>Update_Order</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Create_Error_Log</targetReference>
+        </faultConnector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>text</name>
+            <value>
+                <elementReference>orderApprovalChatterPost</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>subjectNameOrId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>chatterPost</nameSegment>
+        <offset>0</offset>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <actionCalls>
+        <name>Approval_chatter_post_Distributor_User</name>
+        <label>Approval chatter post</label>
+        <locationX>1106</locationX>
+        <locationY>566</locationY>
+        <actionName>chatterPost</actionName>
+        <actionType>chatterPost</actionType>
+        <connector>
+            <targetReference>Update_Order</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Create_Error_Log_Approval_Chatter_Post_for_DM</targetReference>
+        </faultConnector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>text</name>
+            <value>
+                <elementReference>orderApprovalChatterPostDM</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>subjectNameOrId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>chatterPost</nameSegment>
+        <offset>0</offset>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <actionCalls>
+        <name>Approval_chatter_post_Not_Needed</name>
+        <label>Approval chatter post</label>
+        <locationX>3746</locationX>
+        <locationY>566</locationY>
+        <actionName>chatterPost</actionName>
+        <actionType>chatterPost</actionType>
+        <connector>
+            <targetReference>Update_Order</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Create_Error_Log_Not_Needed</targetReference>
+        </faultConnector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>text</name>
+            <value>
+                <elementReference>orderNotNeededChatterPost</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>subjectNameOrId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>chatterPost</nameSegment>
+        <offset>0</offset>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <actionCalls>
+        <name>Approval_chatter_post_Not_Needed_DM</name>
+        <label>Approval chatter post</label>
+        <locationX>3218</locationX>
+        <locationY>566</locationY>
+        <actionName>chatterPost</actionName>
+        <actionType>chatterPost</actionType>
+        <connector>
+            <targetReference>Update_Order</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Create_Error_Log_Not_Needed_Chatter_Post</targetReference>
+        </faultConnector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>text</name>
+            <value>
+                <elementReference>orderNotNeededChatterPostDM</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>subjectNameOrId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>chatterPost</nameSegment>
+        <offset>0</offset>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <actionCalls>
+        <name>In_Approval_chatter_post</name>
+        <label>In Approval chatter post</label>
+        <locationX>578</locationX>
+        <locationY>566</locationY>
+        <actionName>chatterPost</actionName>
+        <actionType>chatterPost</actionType>
+        <connector>
+            <targetReference>Update_Order</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Create_Error_Log_InApproval</targetReference>
+        </faultConnector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>text</name>
+            <value>
+                <elementReference>orderInApprovalChatterPost</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>subjectNameOrId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>chatterPost</nameSegment>
+        <offset>0</offset>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <actionCalls>
+        <name>In_Approval_chatter_post_DM</name>
+        <label>In Approval chatter post</label>
+        <locationX>50</locationX>
+        <locationY>566</locationY>
+        <actionName>chatterPost</actionName>
+        <actionType>chatterPost</actionType>
+        <connector>
+            <targetReference>Update_Order</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Create_Error_Log_In_Approval</targetReference>
+        </faultConnector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>text</name>
+            <value>
+                <elementReference>orderInApprovalChatterPostDM</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>subjectNameOrId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>chatterPost</nameSegment>
+        <offset>0</offset>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <actionCalls>
+        <name>Rejected_chatter_post</name>
+        <label>Rejected chatter post</label>
+        <locationX>2690</locationX>
+        <locationY>566</locationY>
+        <actionName>chatterPost</actionName>
+        <actionType>chatterPost</actionType>
+        <connector>
+            <targetReference>Update_Order</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Create_Error_Log_2</targetReference>
+        </faultConnector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>text</name>
+            <value>
+                <elementReference>orderRejectMessage</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>subjectNameOrId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>chatterPost</nameSegment>
+        <offset>0</offset>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <actionCalls>
+        <name>Rejected_chatter_post_DM</name>
+        <label>Rejected chatter post</label>
+        <locationX>2162</locationX>
+        <locationY>566</locationY>
+        <actionName>chatterPost</actionName>
+        <actionType>chatterPost</actionType>
+        <connector>
+            <targetReference>Update_Order</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Create_Error_Log_Rejected_DM</targetReference>
+        </faultConnector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>text</name>
+            <value>
+                <elementReference>orderRejectMessageDM</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>subjectNameOrId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>chatterPost</nameSegment>
+        <offset>0</offset>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <apiVersion>63.0</apiVersion>
+    <assignments>
+        <name>ML_Approval_Status_Approved</name>
+        <label>ML Approval Status - Approved</label>
+        <locationX>1370</locationX>
+        <locationY>350</locationY>
+        <assignmentItems>
+            <assignToReference>Order.ML_Approval_Status__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>ML_Approval_Status</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Order.Status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Approved</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Order_Created_by_Distributor_User</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>ML_Approval_Status_In_Progress</name>
+        <label>ML Approval Status - In Progress</label>
+        <locationX>314</locationX>
+        <locationY>350</locationY>
+        <assignmentItems>
+            <assignToReference>Order.ML_Approval_Status__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>ML_Approval_Status</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Order_created_by_Distributor_User_In_Approval</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>ML_Approval_Status_Not_Needed</name>
+        <label>ML Approval Status - Not Needed</label>
+        <locationX>3482</locationX>
+        <locationY>350</locationY>
+        <assignmentItems>
+            <assignToReference>Order.ML_Approval_Status__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>ML_Approval_Status</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Order.Status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Approved</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Order_Created_by_Distributor_User_NotNeeded</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>ML_Approval_Status_Rejected</name>
+        <label>ML Approval Status - Rejected</label>
+        <locationX>2426</locationX>
+        <locationY>350</locationY>
+        <assignmentItems>
+            <assignToReference>Order.ML_Approval_Status__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>ML_Approval_Status</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Order.Status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Draft</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Order_Created_by_Distributor_User_Rejected</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Check_ML_Approval_Stauts</name>
+        <label>Check ML Approval Stauts</label>
+        <locationX>2294</locationX>
+        <locationY>242</locationY>
+        <defaultConnector>
+            <targetReference>Update_Order</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>In_Approval</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ML_Approval_Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>In Progress</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ML_Approval_Status_In_Progress</targetReference>
+            </connector>
+            <label>In Approval</label>
+        </rules>
+        <rules>
+            <name>Approved</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ML_Approval_Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Approved</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ML_Approval_Status_Approved</targetReference>
+            </connector>
+            <label>Approved</label>
+        </rules>
+        <rules>
+            <name>Rejected</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ML_Approval_Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Rejected</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ML_Approval_Status_Rejected</targetReference>
+            </connector>
+            <label>Rejected</label>
+        </rules>
+        <rules>
+            <name>Not_Needed</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ML_Approval_Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Not Needed</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ML_Approval_Status_Not_Needed</targetReference>
+            </connector>
+            <label>Not Needed</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Order_Created_by_Distributor_User</name>
+        <label>Order Created by Distributor User?</label>
+        <locationX>1370</locationX>
+        <locationY>458</locationY>
+        <defaultConnector>
+            <targetReference>Approval_chatter_post</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Approved</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Order.CreatedBy.Profile.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Synthomer Distributor User</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Approval_chatter_post_Distributor_User</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Order_created_by_Distributor_User_In_Approval</name>
+        <label>Order created by Distributor User?</label>
+        <locationX>314</locationX>
+        <locationY>458</locationY>
+        <defaultConnector>
+            <targetReference>In_Approval_chatter_post</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_In_Approval</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Order.CreatedBy.Profile.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Synthomer Distributor User</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>In_Approval_chatter_post_DM</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Order_Created_by_Distributor_User_NotNeeded</name>
+        <label>Order Created by Distributor User?</label>
+        <locationX>3482</locationX>
+        <locationY>458</locationY>
+        <defaultConnector>
+            <targetReference>Approval_chatter_post_Not_Needed</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Not_Needed</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Order.CreatedBy.Profile.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Synthomer Distributor User</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Approval_chatter_post_Not_Needed_DM</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Order_Created_by_Distributor_User_Rejected</name>
+        <label>Order Created by Distributor User?</label>
+        <locationX>2426</locationX>
+        <locationY>458</locationY>
+        <defaultConnector>
+            <targetReference>Rejected_chatter_post</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Rejected</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Order.CreatedBy.Profile.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Synthomer Distributor User</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Rejected_chatter_post_DM</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>Update the Order after the Marl Labs Approval Process</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>formula created to tag Owner and created by in chatter post. 
+If both are same - tag owner. 
+else tag both</description>
+        <name>formula_ChatterMention</name>
+        <dataType>String</dataType>
+        <expression>IF(
+{!Order.CreatedById} = {!Order.OwnerId},
+   &quot;@[&quot; &amp; {!Order.OwnerId}&amp; &quot;]&quot;,
+   &quot;@[&quot; &amp; {!Order.OwnerId} &amp; &quot;] and @[&quot; &amp; {!Order.CreatedById} &amp; &quot;]&quot;
+)</expression>
+    </formulas>
+    <interviewLabel>Order - Sample Order Marl Labs - Approved/Rejected {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Order - Sample Order Marl Labs - Approved/Rejected</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_User</name>
+        <label>Get User</label>
+        <locationX>2294</locationX>
+        <locationY>134</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_ML_Approval_Stauts</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Create_Error_Log_Get_user</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Username</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Order.Distributor_Submittor__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>User</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Order</name>
+        <label>Update Order</label>
+        <locationX>2294</locationX>
+        <locationY>1082</locationY>
+        <faultConnector>
+            <targetReference>Create_Error_Log_3</targetReference>
+        </faultConnector>
+        <inputReference>Order</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>2168</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_User</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <name>Create_Error_Log</name>
+        <label>Create Error Log</label>
+        <locationX>1898</locationX>
+        <locationY>674</locationY>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Sample Order Marl Labs - Approved/Rejected</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Approval Chatter Post</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Error occurred while posting on chatter</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Create_Error_Log_2</name>
+        <label>Create Error Log</label>
+        <locationX>2954</locationX>
+        <locationY>674</locationY>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Sample Order Marl Labs - Approved/Rejected</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Reject Chatter Post</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Error occurred while posting on chatter</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Create_Error_Log_3</name>
+        <label>Create Error Log</label>
+        <locationX>4450</locationX>
+        <locationY>1190</locationY>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Sample Order Marl Labs - Approved/Rejected</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Approval Chatter Post</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Error occurred while updating the Order</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Create_Error_Log_Approval_Chatter_Post_for_DM</name>
+        <label>Create Error Log</label>
+        <locationX>1370</locationX>
+        <locationY>674</locationY>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Sample Order Marl Labs - Approved/Rejected</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Approval Chatter Post</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Error occurred while posting on chatter</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Create_Error_Log_Get_user</name>
+        <label>Create Error Log</label>
+        <locationX>4714</locationX>
+        <locationY>242</locationY>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Sample Order Marl Labs - Approved/Rejected</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Get User</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Error occurred while fetching distributor submittor</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Create_Error_Log_In_Approval</name>
+        <label>Create Error Log</label>
+        <locationX>314</locationX>
+        <locationY>674</locationY>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Sample Order Marl Labs - Approved/Rejected</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>In Approval Chatter Post</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Error occurred while posting on chatter</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Create_Error_Log_InApproval</name>
+        <label>Create Error Log</label>
+        <locationX>842</locationX>
+        <locationY>674</locationY>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Sample Order Marl Labs - Approved/Rejected</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>In Approval Chatter Post</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Error occurred while posting on chatter</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Create_Error_Log_Not_Needed</name>
+        <label>Create Error Log</label>
+        <locationX>4010</locationX>
+        <locationY>674</locationY>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Sample Order Marl Labs - Approved/Rejected</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Approval Chatter Post</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Error occurred while posting on chatter</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Create_Error_Log_Not_Needed_Chatter_Post</name>
+        <label>Create Error Log</label>
+        <locationX>3482</locationX>
+        <locationY>674</locationY>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Sample Order Marl Labs - Approved/Rejected</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Approval Chatter Post</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Error occurred while posting on chatter</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Create_Error_Log_Rejected_DM</name>
+        <label>Create Error Log</label>
+        <locationX>2426</locationX>
+        <locationY>674</locationY>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Sample Order Marl Labs - Approved/Rejected</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Approval Chatter Post</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Error occurred while posting on chatter</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <textTemplates>
+        <name>orderApprovalChatterPost</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Dear {!formula_ChatterMention}, 
+Marl Lab approval has been granted.
+
+Request Details:
+Order Number: {!Order.OrderNumber}
+Ship To Name: {!Order.Ship_To_Account__r.Name}
+Requestor: {!Order.Owner:User.FirstName}
+
+Best regards,  
+Your CRM Support Team</text>
+    </textTemplates>
+    <textTemplates>
+        <name>orderApprovalChatterPostDM</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Dear @[{!Get_User.Id}],
+Marl Lab approval has been granted.
+
+Request Details:
+Order Number: {!Order.OrderNumber}
+Ship To Name: {!Order.Ship_To_Account__r.Name}
+Requestor: {!Get_User.FirstName} {!Get_User.LastName}
+
+Best regards,  
+Your CRM Support Team</text>
+    </textTemplates>
+    <textTemplates>
+        <name>orderInApprovalChatterPost</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>The Sample Order has been submitted for Marl Lab Approval.</text>
+    </textTemplates>
+    <textTemplates>
+        <name>orderInApprovalChatterPostDM</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hi @[{!Get_User.Id}],  the Sample Order has been submitted for Marl Lab Approval.</text>
+    </textTemplates>
+    <textTemplates>
+        <name>orderNotNeededChatterPost</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Dear {!formula_ChatterMention}, 
+Sample Order -  {!Order.OrderNumber} has been Approved. 
+
+Request Details:
+Order Number: {!Order.OrderNumber}
+Ship To Name: {!Order.Ship_To_Account__r.Name}
+Requestor: {!Order.Owner:User.FirstName} {!Order.Owner:User.LastName}
+
+Best regards,  
+Your CRM Support Team</text>
+    </textTemplates>
+    <textTemplates>
+        <name>orderNotNeededChatterPostDM</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Dear @[{!Get_User.Id}], 
+Sample Order -  {!Order.OrderNumber} has been Approved. 
+
+Request Details:
+Order Number: {!Order.OrderNumber}
+Ship To Name: {!Order.Ship_To_Account__r.Name}
+Requestor: {!Order.Owner:User.FirstName} {!Order.Owner:User.LastName}
+
+Best regards,  
+Your CRM Support Team</text>
+    </textTemplates>
+    <textTemplates>
+        <name>orderRejectMessage</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Dear @[{!Order.OwnerId}],
+Kindly be informed that the status of Sample Order {!Order.OrderNumber} has been changed to the status {!Order.Status}.  
+
+Best regards,
+Your CRM Support Team</text>
+    </textTemplates>
+    <textTemplates>
+        <name>orderRejectMessageDM</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Dear @[{!Get_User.Id}],
+Kindly be informed that the status of Sample Order {!Order.OrderNumber} has been changed to the status {!Order.Status}.  
+
+Best regards,
+Your CRM Support Team</text>
+    </textTemplates>
+    <variables>
+        <name>ML_Approval_Status</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>Order</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Order</objectType>
+    </variables>
+</Flow>

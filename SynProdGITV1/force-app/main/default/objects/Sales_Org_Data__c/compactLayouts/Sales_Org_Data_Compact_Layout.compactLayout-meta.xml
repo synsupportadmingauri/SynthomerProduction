@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Org_Data_Compact_Layout</fullName>
+    <fields>Sales_Org_ID__c</fields>
+    <fields>Name</fields>
+    <fields>Company_Name__c</fields>
+    <label>Sales Org Data Compact Layout</label>
+</CompactLayout>

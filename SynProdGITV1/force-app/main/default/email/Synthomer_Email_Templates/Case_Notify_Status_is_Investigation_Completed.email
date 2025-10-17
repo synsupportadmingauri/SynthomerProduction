@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body style="font-family: Arial, sans-serif; font-size: 14px; color: #333;">
+    <p>Dear Colleague,</p>
+    <p> Kindly be informed that the Customer Complaint ID: {!Case.CaseNumber} has been changed to a status
+        {!Case.Status} by {!Case.LastModifiedBy}. </p>
+    <p> <strong>Next Steps (Customer Caretaker/Customer Service): </strong><br> Send D1-D5 to customer per Account
+        Manager's direction and document customer feedback. Continue documenting costs related to the complaint and
+        update status to <em>Customer Feedback Documented</em>. </p>
+    <p>Best regards,</p>
+    <p>Your CRM Support Team</p>
+    <p> Link to Ticket in mySalesForce:<a href="{!Case.Link}" style="color: #1a73e8;">{!Case.Subject}</a> </p>
+    <p> The mySalesForce system automatically generated this message. </p>
+</body>
+
+</html>

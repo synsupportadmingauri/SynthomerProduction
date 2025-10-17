@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quantity_UoM__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>SSP-176 SS2-T109 Lookup to Unit of Measure Object</description>
+    <label>Quantity UoM</label>
+    <referenceTo>UoM_Std_Data__c</referenceTo>
+    <relationshipLabel>Order Products</relationshipLabel>
+    <relationshipName>Order_Products</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

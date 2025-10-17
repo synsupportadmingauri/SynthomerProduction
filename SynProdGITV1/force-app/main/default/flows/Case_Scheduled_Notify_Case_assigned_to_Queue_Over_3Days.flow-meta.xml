@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Chatter_Post_to_public_Group</name>
+        <label>Chatter Post to public Group</label>
+        <locationX>50</locationX>
+        <locationY>576</locationY>
+        <actionName>chatterPost</actionName>
+        <actionType>chatterPost</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>text</name>
+            <value>
+                <elementReference>CaseAssignedToQueueOver3Days</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>subjectNameOrId</name>
+            <value>
+                <elementReference>Get_Public_Group_Details.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>type</name>
+            <value>
+                <stringValue>Group</stringValue>
+            </value>
+        </inputParameters>
+        <nameSegment>chatterPost</nameSegment>
+        <offset>0</offset>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <apiVersion>63.0</apiVersion>
+    <decisions>
+        <name>Check_if_Case_is_Open_Status_over_3_Days</name>
+        <label>Check if Case is Open Status over 3 Days</label>
+        <locationX>380</locationX>
+        <locationY>252</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Case_is_Open_Status_Over_3Days</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ThreeWorkingDaysFormCaseCreatedDate</leftValueReference>
+                <operator>LessThan</operator>
+                <rightValue>
+                    <elementReference>Todaysdate</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Public_Group_Details</targetReference>
+            </connector>
+            <label>Case is Open Status Over 3Days</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Is_Public_Group_Found</name>
+        <label>Is Public Group Found</label>
+        <locationX>182</locationX>
+        <locationY>468</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Found</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Public_Group_Details</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Chatter_Post_to_public_Group</targetReference>
+            </connector>
+            <label>Yes Found</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>isQueue</name>
+        <dataType>Boolean</dataType>
+        <expression>CONTAINS({!$Record.OwnerId}, &apos;00G&apos;)</expression>
+    </formulas>
+    <formulas>
+        <name>ThreeWorkingDaysFormCaseCreatedDate</name>
+        <dataType>DateTime</dataType>
+        <expression>IF(MOD({!$Record.CreatedDate} - DATETIMEVALUE(TEXT(DATE(1900, 1, 6)) &amp; &quot; 00:00:00&quot;), 7) &gt; 3,{!$Record.CreatedDate} + 5,IF(MOD({!$Record.CreatedDate} - DATETIMEVALUE(TEXT(DATE(1900, 1, 6)) &amp; &quot; 00:00:00&quot;), 7) = 0,{!$Record.CreatedDate} + 4,{!$Record.CreatedDate} + 3))</expression>
+    </formulas>
+    <formulas>
+        <name>Todaysdate</name>
+        <dataType>DateTime</dataType>
+        <expression>NOW()</expression>
+    </formulas>
+    <interviewLabel>Case - Scheduled Notify Case assigned to Queue Over 3Days {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Case - Scheduled Notify Case in Open Status Over 3Days</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Public_Group_Details</name>
+        <label>Get Public Group Details</label>
+        <locationX>182</locationX>
+        <locationY>360</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Is_Public_Group_Found</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>MS Team</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>CollaborationGroup</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>254</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_if_Case_is_Open_Status_over_3_Days</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Status</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Open</stringValue>
+            </value>
+        </filters>
+        <object>Case</object>
+        <schedule>
+            <frequency>Daily</frequency>
+            <startDate>2025-05-20</startDate>
+            <startTime>15:00:00.000Z</startTime>
+        </schedule>
+        <triggerType>Scheduled</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>CaseAssignedToQueueOver3Days</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;Case {!$Record.CaseNumber} created on {!$Record.CreatedDate} still don&apos;t have complaint coordinator. Please review the case.&lt;/p&gt;</text>
+    </textTemplates>
+</Flow>

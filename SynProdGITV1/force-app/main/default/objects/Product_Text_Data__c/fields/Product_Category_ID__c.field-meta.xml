@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Category_ID__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Product Category ID</description>
+    <inlineHelpText>Either enter Product or Product Category</inlineHelpText>
+    <label>Product Category ID</label>
+    <referenceTo>Product_Category__c</referenceTo>
+    <relationshipLabel>Product Texts Data</relationshipLabel>
+    <relationshipName>Languages</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

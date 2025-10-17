@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>Share_Distribution_Manager</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Share distribution manager users with the partner users.</description>
+        <label>Share Distribution Manager</label>
+        <sharedTo>
+            <allPartnerUsers></allPartnerUsers>
+        </sharedTo>
+        <sharedFrom>
+            <group>Distribution_Managers</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

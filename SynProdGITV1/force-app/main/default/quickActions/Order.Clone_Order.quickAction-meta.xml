@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>T115 - Calls Clone and Order Line Items Screen Flow</description>
+    <flowDefinition>Order_Clone_Order_and_Line_Items</flowDefinition>
+    <label>Clone Order</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>

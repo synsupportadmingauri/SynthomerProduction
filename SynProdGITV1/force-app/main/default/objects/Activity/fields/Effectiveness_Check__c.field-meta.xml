@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Effectiveness_Check__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field is populated via a flow and is used in the record page&apos;s filter criteria to hide the Delete button from Sales users when the task type is &apos;Effectiveness Check&apos;.[Hidden from UI]</description>
+    <label>Effectiveness Check</label>
+    <type>Checkbox</type>
+</CustomField>

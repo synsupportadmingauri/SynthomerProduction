@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ready_For_Deletion__c</fullName>
+    <description>The filed checks if the record is ready for deletion based on the duration defined on the custom metadata type Log Retention Duration</description>
+    <formula>( TODAY() -  DATEVALUE(CreatedDate) ) &gt;  $CustomMetadata.Log_Retention_Duration__mdt.Log_Retention.Duration__c</formula>
+    <label>Ready For Deletion</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

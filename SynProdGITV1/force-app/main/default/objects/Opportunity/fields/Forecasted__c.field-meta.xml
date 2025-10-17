@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Forecasted__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>SS2-T22 &amp; SSP-292 This field will tell if the Opportunity is being considred in forcasting.</description>
+    <inlineHelpText>Confirm if forecasted in Arkieva</inlineHelpText>
+    <label>Forecasted?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

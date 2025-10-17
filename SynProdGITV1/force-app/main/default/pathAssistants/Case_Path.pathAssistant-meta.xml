@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Case</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>Case Path</masterLabel>
+    <pathAssistantSteps>
+        <picklistValueName>Completed</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;ol&gt;&lt;li&gt;Confirm implementation of corrective actions and identification of preventive actions.&lt;/li&gt;&lt;li&gt;Customer Caretaker: Verify 8D Report fields (D1-D8) are completed and send full 8D to customer (Henkel=Mandatory, Other Customers = If requested).&lt;/li&gt;&lt;li&gt;Continue documenting complaint costs (cleaning, disposal, analytical, rework, etc.).&lt;/li&gt;&lt;li&gt;Change status to &amp;quot;Completed&amp;quot;.&lt;/li&gt;&lt;/ol&gt;</info>
+        <picklistValueName>Corrective Action Implementation</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Customer Caretaker:&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Generate 5D Report and send to customer per Sales&amp;#39; direction. &lt;/li&gt;&lt;li&gt;Document customer feedback and attach evidence (if available).&lt;/li&gt;&lt;li&gt;Continue documenting complaint costs (compensation, return fees, claim)&lt;/li&gt;&lt;li&gt;Click &amp;quot;Mark Status as Complete&amp;quot; button.&lt;/li&gt;&lt;/ol&gt;</info>
+        <picklistValueName>Customer Feedback</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;ol&gt;&lt;li&gt;Review complaint (case) details and assign case owner.&lt;/li&gt;&lt;li&gt;Document team members that will be part of the investigation in the Case Team.&lt;/li&gt;&lt;li&gt;Ensure the complaint description is clear.&lt;/li&gt;&lt;li&gt;Document immediate (containment) actions.&lt;/li&gt;&lt;li&gt;Click &amp;quot;Mark Status as Complete&amp;quot; button and continue investigation.&lt;/li&gt;&lt;/ol&gt;</info>
+        <picklistValueName>Initial Review</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;ol&gt;&lt;li&gt;Customer Caretaker: Send 3D Report to customer(Henkel-Mandatory, Other Customers - If requested).&lt;/li&gt;&lt;li&gt;During the investigation, determine if the complaint is justified or not justified using the Synthomer guidance.&lt;/li&gt;&lt;li&gt;If justified, continue with full RCA. Select the primary root cause category. Continue to #5.&lt;/li&gt;&lt;li&gt;If not justified, stop any further investigation, document reason in RCA field, select No in &amp;quot;Complaint Justified&amp;quot; field.&lt;/li&gt;&lt;li&gt;Identify corrective actions, create in Lotus Notes, and document in Corrective Action text field.&lt;/li&gt;&lt;li&gt;If complaint is related to a 3rd party supplier/carrier/haulier, select &amp;quot;Yes&amp;quot; in the &amp;quot;3rd Party Complaint&amp;quot; field and initiate a supplier NC.&lt;/li&gt;&lt;li&gt;Complete remaining mandatory fields.&lt;/li&gt;&lt;li&gt;Click &amp;quot;Mark Status as Complete&amp;quot; button and continue implementation/execution of corrective actions and identification of preventive actions.&lt;/li&gt;&lt;/ol&gt;</info>
+        <picklistValueName>Investigation</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;ol&gt;&lt;li&gt;The problem description should be summarized clearly so that anyone reading it can quickly understand what is being complained about.&lt;/li&gt;&lt;li&gt;Add pictures, emails, and other evidence to the Files tab section to allow the case owner to start their investigation with as much information as possible.&lt;/li&gt;&lt;li&gt;Click &amp;quot;Mark Status as Complete&amp;quot; button to initiate notification of case creation&lt;span style=&quot;font-size: 13px;&quot;&gt;.&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;</info>
+        <picklistValueName>Open</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>__MASTER__</recordTypeName>
+</PathAssistant>

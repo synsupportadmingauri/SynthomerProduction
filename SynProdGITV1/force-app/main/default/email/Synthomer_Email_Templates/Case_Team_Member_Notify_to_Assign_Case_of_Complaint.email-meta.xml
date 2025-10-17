@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Ticket_Notif_003</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Case Team Member Notify to Assign Case of Complaint</name>
+    <style>none</style>
+    <subject>Notification of Customer Complaint {!Case.CaseNumber} : {!Case.Subject}</subject>
+    <textOnly>Dear Colleague,
+
+Kindly be informed that you have been assigned to the Customer Complaint ID: {!Case.CaseNumber} has been created by {!Case.CreatedBy} in the responsibility of the {!Case.Plant__c} team.
+
+Next Steps (Investigation Team):
+Support the complaint coordinator with investigating the complaint, identifying the root cause, and defining/executing the corrective action plan.
+
+Ticket Details:
+
+Customer:  {!Case.Account}
+Subject:  {!Case.Subject}
+Product:  {!Case.Product__c}
+Detailed Description:  {!Case.Description}
+
+Best regards,
+
+Your CRM Support Team
+
+Link to Ticket in mySalesForce:{!Case.Subject}
+
+The mySalesForce system automatically generated this message.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sample_Product_cannnot_be_edited_Submit</fullName>
+    <active>false</active>
+    <description>Once the Sample Order is submitted for Approval, it can&apos;t be edited</description>
+    <errorConditionFormula>NOT(TEXT(Salesforce_Order_Type__c) = &apos;ZOR&apos;)
+&amp;&amp; ( ISPICKVAL( Order.Status , &apos;In Process/Package Preparation&apos;)
+|| ISPICKVAL( Order.Status , &apos;Approved&apos;)
+|| ISPICKVAL( Order.Status , &apos;Completed&apos;)
+|| ISPICKVAL( Order.Status , &apos;Cancelled&apos;))
+&amp;&amp; ( ISCHANGED(Description)
+|| ISCHANGED(Quantity)
+|| ISCHANGED(Sample_Item_Approval_Status__c )
+|| ISCHANGED(Quantity_UoM__c )
+|| ISCHANGED(Approver__c )
+|| ISCHANGED(Plant__c )
+|| ISCHANGED(Salesforce_Order_Type__c )
+|| ISCHANGED(Sales_Organisation__c )
+|| ISCHANGED(S4_Order_Type__c )
+|| ISCHANGED(Distribution_Channel__c )
+|| ISCHANGED(S4_Item_Category__c )
+|| ISCHANGED(Division__c )
+|| ISCHANGED(Commodity__c )
+|| ISCHANGED(Country_Of_Origin__c )
+|| ISCHANGED(UnitPrice )
+|| ISCHANGED(Order_Product_External_ID__c )
+|| ISCHANGED(Sample_Master_Matrix_Data__c )
+)
+
+&amp;&amp; NOT($Permission.Integration_User )
+&amp;&amp; $User.Username &lt;&gt; &apos;support.gauri@gauri.com.syn&apos;</errorConditionFormula>
+    <errorMessage>Once Sample Order is Submitted for Approval, the Order Product cannot be edited</errorMessage>
+</ValidationRule>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Order_DM_External_ID__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>Used only for Data migration and replicated Enorica Sample order as External ID
+
+It will store the C4C Order Number for Migrated data:
+a. S4 (non-replicated) Sample order, 
+b. CRM Samples 
+c. Enorica Samples
+
+For S4 (replicated) sample order - it will be empty as Data migration of Replicated S4 Sample Order data to Salesforce is via interface</description>
+    <externalId>true</externalId>
+    <inlineHelpText>C4C Order Number</inlineHelpText>
+    <label>Order DM External ID</label>
+    <length>30</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

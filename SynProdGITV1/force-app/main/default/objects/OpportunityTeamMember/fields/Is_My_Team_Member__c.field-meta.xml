@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_My_Team_Member__c</fullName>
+    <description>Evaluates to true if the current user is a manager in the user hierarchy based on the manager field of user. Used in dashboards.</description>
+    <formula>IF(OR(User.ManagerId = $User.Id,User.Manager.ManagerId = $User.Id,User.Manager.Manager.ManagerId = $User.Id,User.Manager.Manager.Manager.ManagerId = $User.Id, User.Manager.Manager.Manager.Manager.ManagerId = $User.Id) ,
+			true,
+   false
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Is My Team Member</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

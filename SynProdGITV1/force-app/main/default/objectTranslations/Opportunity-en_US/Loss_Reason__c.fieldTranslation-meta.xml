@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Capture of the reason of loss --></help>
+    <label><!-- Loss Reason --></label>
+    <name>Loss_Reason__c</name>
+    <picklistValues>
+        <masterLabel>Customer - Demand Lost</masterLabel>
+        <translation><!-- Customer - Demand Lost --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer - End Product Cancelled</masterLabel>
+        <translation><!-- Customer - End Product Cancelled --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer - Geopolitics</masterLabel>
+        <translation><!-- Customer - Geopolitics --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer - Gvt. Regulations</masterLabel>
+        <translation><!-- Customer - Gvt. Regulations --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer - Supplier Structure</masterLabel>
+        <translation><!-- Customer - Supplier Structure --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Product - Development time</masterLabel>
+        <translation><!-- Product - Development time --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Product - Performance</masterLabel>
+        <translation><!-- Product - Performance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Product - SYN Product Mgt.</masterLabel>
+        <translation><!-- Product - SYN Product Mgt. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales - Payment Term</masterLabel>
+        <translation><!-- Sales - Payment Term --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales - Price</masterLabel>
+        <translation><!-- Sales - Price --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales - To Distribution</masterLabel>
+        <translation><!-- Sales - To Distribution --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Service - Priority Sales</masterLabel>
+        <translation><!-- Service - Priority Sales --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Service - Priority Tech.</masterLabel>
+        <translation><!-- Service - Priority Tech. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Service - SYN Logistics</masterLabel>
+        <translation><!-- Service - SYN Logistics --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Service - SYN Regulatory</masterLabel>
+        <translation><!-- Service - SYN Regulatory --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Service - SYN Supply Chain</masterLabel>
+        <translation><!-- Service - SYN Supply Chain --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

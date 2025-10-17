@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>63.0</apiVersion>
+    <assignments>
+        <description>Update the Product Category Text from Formula field</description>
+        <name>Update_the_Product_Category_Text</name>
+        <label>Update the Product Category Text</label>
+        <locationX>176</locationX>
+        <locationY>287</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Product_Category_Text__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>f_ProductcategoryInfo</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <description>a. Update Product Category Text from top Category node&apos; Name to last node&apos;s Name</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Formula for concatenating Parent Category name right from the top most node as per Level</description>
+        <name>f_ProductcategoryInfo</name>
+        <dataType>String</dataType>
+        <expression>CASE( {!$Record.Product_Category__r.Level__c},
+&quot;1 - Product Hierarchy&quot; , {!$Record.Product_Category__r.Name}, 
+&quot;2 - Chemical Group&quot;, {!$Record.Product_Category__r.Parent_Product_Category__r.Name} + &quot; - &quot; + {!$Record.Product_Category__r.Name},
+&quot;3 - Product&quot;, {!$Record.Product_Category__r.Parent_Product_Category__r.Parent_Product_Category__r.Name} + &quot; - &quot; + {!$Record.Product_Category__r.Parent_Product_Category__r.Name} + &quot; - &quot; + {!$Record.Product_Category__r.Name},
+&quot;&quot;)</expression>
+    </formulas>
+    <interviewLabel>Product-BeforeSave-ProductCategoryText {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Product-BeforeSave-ProductCategoryText</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_the_Product_Category_Text</targetReference>
+        </connector>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>Product_Category__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Id</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>Product2</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

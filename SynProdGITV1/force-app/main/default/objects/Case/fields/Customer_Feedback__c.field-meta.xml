@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Feedback__c</fullName>
+    <description>Captures the customer&apos;s comments or response related to the resolution of the case, used to evaluate service quality and improve future support.</description>
+    <inlineHelpText>Enter any feedback received from the customer about their experience with the case resolution.</inlineHelpText>
+    <label>Customer Feedback</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

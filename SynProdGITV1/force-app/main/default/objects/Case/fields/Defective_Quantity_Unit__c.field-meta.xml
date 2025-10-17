@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Defective_Quantity_Unit__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Specifies the unit of measurement for the quantity of defective items reported in the case</description>
+    <inlineHelpText>Links the defective quantity to the appropriate unit of measurement (UOM), such as pieces, kilograms, liters, etc.</inlineHelpText>
+    <label>Defective Quantity Unit</label>
+    <referenceTo>UoM_Std_Data__c</referenceTo>
+    <relationshipLabel>Cases</relationshipLabel>
+    <relationshipName>Cases</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

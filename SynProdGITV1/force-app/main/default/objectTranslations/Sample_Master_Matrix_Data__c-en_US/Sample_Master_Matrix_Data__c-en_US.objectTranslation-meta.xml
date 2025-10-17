@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Sample Master Matrix Data</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Sample Master Matrix Data</value>
+    </caseValues>
+    <layouts>
+        <layout>Portal - Sample Matrix Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Sample Master Matrix Data Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Sync_Matrix_Data --></label>
+        <name>Sync_Matrix_Data</name>
+    </webLinks>
+</CustomObjectTranslation>

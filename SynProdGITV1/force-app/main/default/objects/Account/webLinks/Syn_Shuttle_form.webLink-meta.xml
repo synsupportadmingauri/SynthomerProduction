@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Syn_Shuttle_form</fullName>
+    <availability>online</availability>
+    <description>SS2-T193 : Generate Syn Shuttle form</description>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>Syn Shuttle form</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <url>/apex/APXTConga4__Conga_Composer?SolMgr=1
+&amp;serverUrl={!API.Partner_Server_URL_520}
+&amp;Id={!Account.Id}
+&amp;TemplateId=0T_0012AC583347
+&amp;QueryId=[getAccIndSegment]0Q_0072AC815032,
+[getAccTeam]0Q_0092AC811486
+&amp;OFN=Syn_Shuttle_{!Account.Name}.xlsx
+&amp;OF=Excel
+&amp;DS7=11
+&amp;DS7Preview=1
+&amp;DS9=1</url>
+</WebLink>

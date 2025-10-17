@@ -1,0 +1,25 @@
+<!--
+  @description       : A banner to be used on experience cloud as a banner to enable creating sample orders.
+  @author            : gauri
+  @group             : 
+  @last modified on  : 09-26-2025
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+  <div class="banner" style={bannerStyle} onclick={handleClick}>
+    <p class="banner-text">{bannerText}</p>
+  </div>
+  <template if:true={isModalOpen}>
+    <section role="dialog" class="slds-modal slds-fade-in-open">
+      <div class="slds-modal__container">
+        <div class="slds-modal__content slds-p-around_medium">
+          <c-create-sample-order></c-create-sample-order>
+        </div>
+        <footer class="slds-modal__footer">
+          <button class="slds-button slds-button_neutral" onclick={handleClose}>Close</button>
+        </footer>
+      </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+  </template>
+</template>

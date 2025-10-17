@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Target_Close_Date__c</fullName>
+    <description>If the related Account&apos;s Group_Key__c matches the value stored in the custom metadata Henkle_Group_Key, the target date is calculated as Created Date + Henkel Case Close KPI Days (from custom metadata).
+Otherwise, it uses Created Date + Case Close KPI Days.</description>
+    <formula>IF(
+  CONTAINS(
+    Account.Group_Key__c,
+    $CustomMetadata.Name_Value_Pair__mdt.Henkel_Group_Key.Value__c
+  ),
+  CreatedDate + 
+    VALUE($CustomMetadata.Name_Value_Pair__mdt.Henkel_Case_Close_KPI_Days.Value__c),
+  CreatedDate + 
+    VALUE($CustomMetadata.Name_Value_Pair__mdt.Case_Close_KPI_Days.Value__c)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Target Close Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

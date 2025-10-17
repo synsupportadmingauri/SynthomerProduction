@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Territory2Rule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <name>Gloves Europe</name>
+    <objectType>Account</objectType>
+    <ruleItems>
+        <field>Account.BillingCountryCode</field>
+        <operation>equals</operation>
+        <value>AM,AZ,BA,BG,HR,CY,CZ,EE,HU,IL,KZ,LV,LT,MD,MK,PL,BY,RO,RU,RS,SK,SI,TR,UA,UZ,DZ,BH,EG,IQ,CI,JO,KW,LB,LY,MA,NL,OM,QA,SA,SD,TN,AE,YE,AO,CM,CD,DJ,GA,GH,GN,KE,ML,MU,MZ,NG,RW,SN,ZA,TZ,UG,AT,BE,DK,FI,FR,DE,GR,IE,IT,LU,MT,NO,PT,ES,SE,CH,GB,XK</value>
+    </ruleItems>
+    <ruleItems>
+        <field>Account.Industry_Segments__c</field>
+        <operation>contains</operation>
+        <value>GLO</value>
+    </ruleItems>
+</Territory2Rule>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Lead</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>Lead Path</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Lead_Disqualification_Reason__c</fieldNames>
+        <info>&lt;ul&gt;&lt;li&gt;Use this stage if the lead does not meet qualification criteria.&lt;/li&gt;&lt;li&gt;Common reasons for disqualification in the chemical industry:&lt;/li&gt;&lt;li&gt;Outside target geography or market&lt;/li&gt;&lt;li&gt;No relevant chemical application or industrial need&lt;/li&gt;&lt;li&gt;Academic or research-only inquiry&lt;/li&gt;&lt;li&gt;Invalid or unreachable contact&lt;/li&gt;&lt;li&gt;Duplicate lead entry&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Disqualified</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Name</fieldNames>
+        <fieldNames>Company</fieldNames>
+        <fieldNames>Email</fieldNames>
+        <fieldNames>Industry_Segment__c</fieldNames>
+        <fieldNames>LeadSource</fieldNames>
+        <info>&lt;ul&gt;&lt;li&gt;Create the lead even if some information is missing.&lt;/li&gt;&lt;li&gt;Focus on capturing available details.&lt;/li&gt;&lt;li&gt;Try to collect the following five data elements:&lt;ul&gt;&lt;li&gt;Company Name and Country&lt;/li&gt;&lt;li&gt;Contact Person Name and Email Address&lt;/li&gt;&lt;li&gt;Customer Interest/Problem and Industry Segment&lt;/li&gt;&lt;li&gt;Source (Exhibition, Web Form, LinkedIn, Personal Contact)&lt;/li&gt;&lt;li&gt;Rating (High, Medium, Low)&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;Full qualification is not required at this stage.&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>New</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Name</fieldNames>
+        <fieldNames>Company</fieldNames>
+        <fieldNames>LeadSource</fieldNames>
+        <fieldNames>Rating</fieldNames>
+        <fieldNames>Industry_Segment__c</fieldNames>
+        <info>&lt;ul&gt;&lt;li&gt;Follow up to complete all five data elements.&lt;/li&gt;&lt;li&gt;Clarify the customer’s needs and potential fit.&lt;/li&gt;&lt;li&gt;Confirm contact accuracy and industry relevance.&lt;/li&gt;&lt;li&gt;Update urgency and source based on lead interaction.&lt;/li&gt;&lt;li&gt;Goal: move lead to fully qualified status.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</info>
+        <picklistValueName>Working</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>__MASTER__</recordTypeName>
+</PathAssistant>

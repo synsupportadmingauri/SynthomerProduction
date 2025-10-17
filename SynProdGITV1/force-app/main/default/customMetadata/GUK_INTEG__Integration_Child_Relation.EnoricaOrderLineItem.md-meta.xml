@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>EnoricaOrderLineItem</label>
+    <protected>false</protected>
+    <values>
+        <field>GUK_INTEG__Integration_Interface__c</field>
+        <value xsi:type="xsd:string">Enorica_Sample_Order_Replication</value>
+    </values>
+    <values>
+        <field>GUK_INTEG__Parent_Placeholder__c</field>
+        <value xsi:type="xsd:string">EnoricaOrderLineItems</value>
+    </values>
+    <values>
+        <field>GUK_INTEG__Payload_Structure2__c</field>
+        <value xsi:type="xsd:string">{
+           &quot;ItemNumber&quot;: &quot;&lt;EnoSalesOrderItem&gt;&quot;,
+           &quot;Material&quot;: &quot;&lt;EnoMaterial&gt;&quot;,
+           &quot;MaterialDesciption&quot;: &quot;&lt;EnoMaterialDescription&gt;&quot;,
+           &quot;ItemDesciption&quot;: &quot;&lt;EnoItemDescription&gt;&quot;,
+           &quot;RequestedQuantityUnit&quot;: &quot;&lt;EnoRequestedQuantityUnit&gt;&quot;,
+           &quot;RequestedQuantity&quot;: &quot;&lt;EnoRequestedQuantity&gt;&quot;,
+           &quot;Batch&quot;: &quot;&lt;EnoBatch&gt;&quot;
+       }</value>
+    </values>
+    <values>
+        <field>GUK_INTEG__Payload_Structure__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>

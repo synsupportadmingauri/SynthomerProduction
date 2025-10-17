@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Text_Ext_ID__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>Combination of Language Key and Product ID/Product Cat ID</description>
+    <externalId>true</externalId>
+    <inlineHelpText>Combination of Language Key and Product ID/Product Cat ID</inlineHelpText>
+    <label>Product Text Ext ID</label>
+    <length>80</length>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

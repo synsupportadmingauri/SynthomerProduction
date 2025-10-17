@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prospect_Creation_Billing_Country_Mandat</fullName>
+    <active>true</active>
+    <description>Prevent Prospect Creation without Billing Country</description>
+    <errorConditionFormula>AND(
+    ISPICKVAL(Type, &quot;Prospect&quot;),
+    ISBLANK(BillingCountry)
+)</errorConditionFormula>
+    <errorMessage>Prospect cannot be saved without Billing Country</errorMessage>
+</ValidationRule>

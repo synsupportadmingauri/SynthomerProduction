@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Industry_Segment__c</fullName>
+    <description>SSP-288/SS2-T66: Master-Detail to custom Industry segment object</description>
+    <label>Industry Segment</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Industry_Segment_Data__c.Level__c</field>
+            <operation>equals</operation>
+            <value>Industry Segment</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Industry_Segment_Data__c</referenceTo>
+    <relationshipLabel>Account Industry Segments</relationshipLabel>
+    <relationshipName>Account_Industry_Segments</relationshipName>
+    <relationshipOrder>1</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

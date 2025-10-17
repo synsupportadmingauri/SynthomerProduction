@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Integration_User_create_Account</fullName>
+    <active>true</active>
+    <description>Prevent Integration User from creating HQ and RHQ Accounts</description>
+    <errorConditionFormula>AND( $Permission.Block_HQ_RHQ_Account_Creation,  OR(ISPICKVAL(Type, &apos;HQ&apos;),ISPICKVAL(Type, &apos;RHQ&apos;)))</errorConditionFormula>
+    <errorMessage>You cannot create Accounts of type HQ or RHQ</errorMessage>
+</ValidationRule>

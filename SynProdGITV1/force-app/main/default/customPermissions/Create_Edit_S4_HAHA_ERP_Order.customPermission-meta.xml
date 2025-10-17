@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomPermission xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>SSP-176 This permission will be used to control access of Order using Permission Set &quot;Create/Edit S4 HAHA ERP Order&quot;</description>
+    <isLicensed>false</isLicensed>
+    <label>Create/Edit S4 HAHA ERP Order</label>
+</CustomPermission>

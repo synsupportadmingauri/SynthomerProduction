@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- One-Time Customer ID Domestic --></label>
+    <name>One_Time_Customer_ID_Domestic__c</name>
+    <relationshipLabel><!-- Salesforce Order Type Determination (One-Time Customer ID Domestic) --></relationshipLabel>
+</CustomFieldTranslation>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Non_ZOR_cannot_be_edited_when_Submitted</fullName>
+    <active>true</active>
+    <description>SSP-176 Once Order is Submitted for Approval, it not canot be edited if its not a ZOR type</description>
+    <errorConditionFormula>NOT(TEXT(Salesforce_Order_Type__c) = &apos;ZOR&apos;)
+&amp;&amp; ISPICKVAL(Status, &apos;Submitted/ In Approval&apos;)
+&amp;&amp; ( ISCHANGED(AccountId)
+	|| ISCHANGED(BillingAddress)
+	|| ISCHANGED(OpportunityId )
+	|| ISCHANGED(TotalAmount )
+	|| ISCHANGED(CurrencyIsoCode  )
+	|| ISCHANGED(Name )
+	|| ISCHANGED(OrderNumber )
+	|| ISCHANGED(OwnerId )
+	|| ISCHANGED(EffectiveDate )
+	|| ISCHANGED(Plant__c  )
+	|| ISCHANGED(S4_Order_Type__c  )
+	|| ISCHANGED(Sales_Organisation__c  )
+	|| ISCHANGED(Division__c  )
+	|| ISCHANGED(Distribution_Channel__c  )
+	|| ISCHANGED(Pricebook2Id  )
+	|| ISCHANGED(Ship_To_Account__c  )
+	|| ISCHANGED(ShipToContactId  )
+	|| ISCHANGED(ShippingAddress  )
+	|| ISCHANGED(IncoTerms__c  )
+	|| ISCHANGED(IncoTerms_Location__c  )
+	|| ISCHANGED(SAP_Order_ID__c  )
+	|| ISCHANGED(Payment_Terms__c  )
+	|| ISCHANGED(Shipping_Condition__c  )
+	|| ISCHANGED(Delivery_Block__c  )
+	|| ISCHANGED(KSA_Short_Address__c  )
+	|| ISCHANGED(Shipping_Carrier__c  )
+	|| ISCHANGED(Shipment_Cost__c  )
+	|| ISCHANGED(TSCA_Approval_Needed__c  )
+	|| ISCHANGED(HQ_Account__c  )
+	|| ISCHANGED(RHQ_Account__c  )
+	|| ISCHANGED(End_Customer__c) 
+	|| ISCHANGED(Potential_Volume__c)
+	|| ISCHANGED(Application__c)
+	
+)
+&amp;&amp; $User.Username &lt;&gt; &apos;support.gauri@gauri.com.syn&apos;</errorConditionFormula>
+    <errorMessage>Once Sample Order is Submitted for Approval, it not canot be edited</errorMessage>
+</ValidationRule>

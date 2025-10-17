@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The originating method in the Class or or node in the Flow  (e.g. UpdateDivision ) --></help>
+    <label><!-- Source Method --></label>
+    <name>Source_Method__c</name>
+</CustomFieldTranslation>

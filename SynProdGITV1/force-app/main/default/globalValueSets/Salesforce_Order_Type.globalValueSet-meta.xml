@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>ZSLS</fullName>
+        <default>false</default>
+        <label>ZSLS - Enorica &amp; Lab Sample Order</label>
+    </customValue>
+    <customValue>
+        <fullName>ZPLS</fullName>
+        <default>false</default>
+        <label>ZPLS - S4 Sample Order</label>
+    </customValue>
+    <customValue>
+        <fullName>ZOR</fullName>
+        <default>false</default>
+        <label>ZOR - S4 Sales Order</label>
+    </customValue>
+    <customValue>
+        <fullName>ZCRM</fullName>
+        <default>false</default>
+        <label>ZCRM - CRM Samples</label>
+    </customValue>
+    <description>Order Type to be Used on Order, OLI, etc</description>
+    <masterLabel>Salesforce Order Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

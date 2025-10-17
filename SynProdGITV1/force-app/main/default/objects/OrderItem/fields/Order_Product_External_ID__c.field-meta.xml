@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Order_Product_External_ID__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>External ID for Order Item - 
+Combination of SF Order number/ERP Order number and SF Order Product Number/ERP Item Number
+External ID for Order Item -
+Sample Order - Auto-populated - Combination of Salesforce Order number and Order Product Number  (To be stored in ERP and referred to during the API call)
+For Commercial orders, ERP populates it with a combination of ERP Order number and Item Number</description>
+    <externalId>true</externalId>
+    <inlineHelpText>Combination of SF Order number/ERP Order number and SF Order Product Number/ERP Item Number
+Auto-populated for Sample Orders - SF Order number and SF Order Product number.
+For Commercial orders, ERP populates it with a combination of ERP Order number and Item Number.</inlineHelpText>
+    <label>Order Product External ID</label>
+    <length>30</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

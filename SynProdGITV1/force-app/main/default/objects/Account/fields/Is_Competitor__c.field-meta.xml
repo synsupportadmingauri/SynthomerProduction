@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Competitor__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Check box to identify if the account is a competitor.</description>
+    <inlineHelpText>Check this if the account is a Competitor.</inlineHelpText>
+    <label>Is Competitor?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Construction_Solutions_MEAI_Lead</fullName>
+    <filterScope>Queue</filterScope>
+    <label>Construction Solutions MEAI</label>
+    <queue>Construction_Solutions_MEAI</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

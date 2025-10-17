@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Site Type --></label>
+    <name>Site_Type__c</name>
+    <picklistValues>
+        <masterLabel>Syn Site</masterLabel>
+        <translation><!-- Syn Site --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Toll Site</masterLabel>
+        <translation><!-- Toll Site --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

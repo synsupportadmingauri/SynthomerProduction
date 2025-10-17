@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Close_KPI_Missed__c</fullName>
+    <description>This formula field checks whether the Close KPI has been missed based on the age of the record</description>
+    <formula>AND( NOT(ISPICKVAL( Status , &apos;Completed&apos;)),  NOT( Case_First_Closure_Completed__c ),
+TODAY()- DATEVALUE(CreatedDate) &gt;  IF( Account.Group_Key__c ==  $CustomMetadata.Name_Value_Pair__mdt.Henkel_Group_Key.Value__c , 
+VALUE($CustomMetadata.Name_Value_Pair__mdt.Henkel_Case_Close_KPI_Days.Value__c),  
+VALUE($CustomMetadata.Name_Value_Pair__mdt.Case_Close_KPI_Days.Value__c)))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Close KPI Missed</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

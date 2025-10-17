@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Secondary_Root_Cause__c</fullName>
+    <description>Captures additional contributing factors or secondary root causes related to the issue or complaint.</description>
+    <inlineHelpText>Select the secondary cause or contributing factor to the issue</inlineHelpText>
+    <label>Secondary Root Cause</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Act Of Nature</fullName>
+                <default>false</default>
+                <label>Act Of Nature</label>
+            </value>
+            <value>
+                <fullName>Capability</fullName>
+                <default>false</default>
+                <label>Capability</label>
+            </value>
+            <value>
+                <fullName>Communication</fullName>
+                <default>false</default>
+                <label>Communication</label>
+            </value>
+            <value>
+                <fullName>Communicable Disease</fullName>
+                <default>false</default>
+                <label>Communicable Disease</label>
+            </value>
+            <value>
+                <fullName>Defect</fullName>
+                <default>false</default>
+                <label>Defect</label>
+            </value>
+            <value>
+                <fullName>Human Element</fullName>
+                <default>false</default>
+                <label>Human Element</label>
+            </value>
+            <value>
+                <fullName>Inspection</fullName>
+                <default>false</default>
+                <label>Inspection</label>
+            </value>
+            <value>
+                <fullName>IT</fullName>
+                <default>false</default>
+                <label>IT</label>
+            </value>
+            <value>
+                <fullName>Knowledge</fullName>
+                <default>false</default>
+                <label>Knowledge</label>
+            </value>
+            <value>
+                <fullName>Material</fullName>
+                <default>false</default>
+                <label>Material</label>
+            </value>
+            <value>
+                <fullName>MoC</fullName>
+                <default>false</default>
+                <label>MoC</label>
+            </value>
+            <value>
+                <fullName>Practices</fullName>
+                <default>false</default>
+                <label>Practices</label>
+            </value>
+            <value>
+                <fullName>Recipes/Formulation</fullName>
+                <default>false</default>
+                <label>Recipes/Formulation</label>
+            </value>
+            <value>
+                <fullName>Third Party</fullName>
+                <default>false</default>
+                <label>Third Party</label>
+            </value>
+            <value>
+                <fullName>No Cause</fullName>
+                <default>false</default>
+                <label>No Cause</label>
+            </value>
+            <value>
+                <fullName>Equipment</fullName>
+                <default>false</default>
+                <label>Equipment</label>
+            </value>
+            <value>
+                <fullName>Inventory Management</fullName>
+                <default>false</default>
+                <label>Inventory Management</label>
+            </value>
+            <value>
+                <fullName>Regulatory/Environmental</fullName>
+                <default>false</default>
+                <label>Regulatory/Environmental</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

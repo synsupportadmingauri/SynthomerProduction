@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Product Category/Chem.Group --></label>
+    <lookupFilter>
+        <errorMessage><!-- Category does not exist or does not match a Chemical Group. --></errorMessage>
+    </lookupFilter>
+    <name>Product_Category__c</name>
+    <relationshipLabel><!-- Opportunity Product --></relationshipLabel>
+</CustomFieldTranslation>

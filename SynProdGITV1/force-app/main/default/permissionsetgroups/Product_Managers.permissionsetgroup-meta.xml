@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Created to assing combined product admin permissions</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Product Managers</label>
+    <permissionSets>Base_Sales_User</permissionSets>
+    <permissionSets>Create_Edit_Hierarchy_Accounts</permissionSets>
+    <permissionSets>Logging_Framework</permissionSets>
+    <permissionSets>Product_Maintenance</permissionSets>
+    <permissionSets>Syn_Action_Plans_Creator</permissionSets>
+    <permissionSets>Syn_Action_Plans_Template_Creator</permissionSets>
+    <permissionSets>Syn_Action_Plans_User</permissionSets>
+    <permissionSets>force__EinsteinActivityCaptureIncluded</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

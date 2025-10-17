@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Sales price per unit - this is the expected revenue per unit --></help>
+    <label><!-- Price / Tonne --></label>
+    <name>Revenue_Unit__c</name>
+</CustomFieldTranslation>

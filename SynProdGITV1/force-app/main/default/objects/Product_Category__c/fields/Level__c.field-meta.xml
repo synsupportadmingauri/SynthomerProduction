@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Level__c</fullName>
+    <label>Level</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1 - Product Hierarchy</fullName>
+                <default>false</default>
+                <label>1 - Product Hierarchy</label>
+            </value>
+            <value>
+                <fullName>2 - Chemical Group</fullName>
+                <default>false</default>
+                <label>2 - Chemical Group</label>
+            </value>
+            <value>
+                <fullName>3 - Product</fullName>
+                <default>false</default>
+                <label>3 - Product</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

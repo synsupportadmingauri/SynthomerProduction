@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZCRM_In_Approval_Validation</fullName>
+    <active>true</active>
+    <description>Sample order in approval validations</description>
+    <errorConditionFormula>AND(
+  ISCHANGED(Status),
+  ISPICKVAL(Salesforce_Order_Type__c, &quot;ZCRM&quot;), 
+  OR(
+    AND(
+      ISPICKVAL(PRIORVALUE(Status), &quot;Submitted/ In Approval&quot;),
+      ISPICKVAL(Status, &quot;Approved&quot;)
+    ),
+    AND(
+      ISPICKVAL(PRIORVALUE(Status), &quot;Submitted/ In Approval&quot;),
+      ISPICKVAL(Status, &quot;In Process/Package Preparation&quot;)
+    ),
+    AND(
+      ISPICKVAL(PRIORVALUE(Status), &quot;Submitted/ In Approval&quot;),
+      ISPICKVAL(Status, &quot;Completed&quot;)
+    ),
+    AND(
+      ISPICKVAL(PRIORVALUE(Status), &quot;Submitted/ In Approval&quot;),
+      ISPICKVAL(Status, &quot;Cancelled&quot;)
+    )
+  ),
+  $Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+  $Profile.Name &lt;&gt; &quot;Automated Process&quot;
+)</errorConditionFormula>
+    <errorMessage>You cannot change the Order Status once the Order is submitted for Approval.</errorMessage>
+</ValidationRule>

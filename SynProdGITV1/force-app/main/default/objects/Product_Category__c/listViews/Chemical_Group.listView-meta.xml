@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Chemical_Group</fullName>
+    <columns>NAME</columns>
+    <columns>Product_Category_ID__c</columns>
+    <columns>Parent_Product_Category__c</columns>
+    <columns>Level__c</columns>
+    <columns>Hierarchy_Info__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Level__c</field>
+        <operation>equals</operation>
+        <value>2 - Chemical Group</value>
+    </filters>
+    <label>Chemical Group</label>
+</ListView>

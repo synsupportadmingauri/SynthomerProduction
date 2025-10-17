@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Sampling Status --></label>
+    <name>Sampling_Status__c</name>
+    <picklistValues>
+        <masterLabel>01 - In Preparation</masterLabel>
+        <translation><!-- 01 - In Preparation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>02 - Active</masterLabel>
+        <translation><!-- 02 - Active --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>03 - Blocked</masterLabel>
+        <translation><!-- 03 - Blocked --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>04 - Obsolete</masterLabel>
+        <translation><!-- 04 - Obsolete --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Parent__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>SSP-288/SS2-T66 : Created this field for storing Industry Segment Parent</description>
+    <label>Parent</label>
+    <referenceTo>Industry_Segment_Data__c</referenceTo>
+    <relationshipLabel>Industry Segment Data</relationshipLabel>
+    <relationshipName>Industry_Segments_Data</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

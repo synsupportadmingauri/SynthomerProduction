@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cost_Type__c</fullName>
+    <description>Category of the cost incurred due to the complaint, such as logistics, quality, commercial, or production cost</description>
+    <label>Cost Type</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Investigation</fullName>
+                <default>false</default>
+                <label>Investigation</label>
+            </value>
+            <value>
+                <fullName>Outside Lab Analysis</fullName>
+                <default>false</default>
+                <label>Outside Lab Analysis</label>
+            </value>
+            <value>
+                <fullName>Equipment Calibration/Repair</fullName>
+                <default>false</default>
+                <label>Equipment Calibration/Repair</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Training Cost</fullName>
+                <default>false</default>
+                <label>Training Cost</label>
+            </value>
+            <value>
+                <fullName>Labour Cost</fullName>
+                <default>false</default>
+                <label>Labour Cost</label>
+            </value>
+            <value>
+                <fullName>3rd Party Support Cost</fullName>
+                <default>false</default>
+                <label>3rd Party Support Cost</label>
+            </value>
+            <value>
+                <fullName>Cleaning Cost</fullName>
+                <default>false</default>
+                <label>Cleaning Cost</label>
+            </value>
+            <value>
+                <fullName>Disposal Cost</fullName>
+                <default>false</default>
+                <label>Disposal Cost</label>
+            </value>
+            <value>
+                <fullName>Material Cost</fullName>
+                <default>false</default>
+                <label>Material Cost</label>
+            </value>
+            <value>
+                <fullName>Logistics Cost</fullName>
+                <default>false</default>
+                <label>Logistics Cost</label>
+            </value>
+            <value>
+                <fullName>Compensation</fullName>
+                <default>false</default>
+                <label>Compensation</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

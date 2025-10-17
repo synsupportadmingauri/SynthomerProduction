@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Cost__c</fullName>
+    <description>Addition of price of child object complaint cost&apos;s price field</description>
+    <inlineHelpText>Enter the complete cost incurred in resolving the case.</inlineHelpText>
+    <label>Total Cost</label>
+    <summarizedField>Complaint_Cost__c.Price__c</summarizedField>
+    <summaryForeignKey>Complaint_Cost__c.Case_Id__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

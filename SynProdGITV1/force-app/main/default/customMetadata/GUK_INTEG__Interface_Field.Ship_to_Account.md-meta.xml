@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Ship_to_Account</label>
+    <protected>false</protected>
+    <values>
+        <field>GUK_INTEG__Default_Value__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>GUK_INTEG__Field_API_Name__c</field>
+        <value xsi:type="xsd:string">GUKC360_01__Customer_Id__c</value>
+    </values>
+    <values>
+        <field>GUK_INTEG__Field_Type__c</field>
+        <value xsi:type="xsd:string">Parent Object Field</value>
+    </values>
+    <values>
+        <field>GUK_INTEG__Integration_Interface__c</field>
+        <value xsi:type="xsd:string">PG_S4_Sample_Order_Replication</value>
+    </values>
+    <values>
+        <field>GUK_INTEG__Outbound_Field_Name__c</field>
+        <value xsi:type="xsd:string">Ship_to_Account</value>
+    </values>
+    <values>
+        <field>GUK_INTEG__Output_Child_Relation__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>GUK_INTEG__Relationship_Name__c</field>
+        <value xsi:type="xsd:string">Ship_To_Account__r</value>
+    </values>
+</CustomMetadata>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body style="font-family: Arial, sans-serif; font-size: 14px; color: #333;">
+    <p>Dear Colleague,</p>
+    <p> Kindly be informed that the Customer Complaint ID: {!Case.CaseNumber} has been assessed as High/Very High
+        severity by {!Case.LastModifiedBy}. </p><br />
+    <p>Best regards,</p>
+    <p>Your CRM Support Team</p>
+    <p> Link to Ticket in mySalesForce:<a href="{!Case.Link}" style="color: #1a73e8;">{!Case.Subject}</a> </p>
+    <p> The mySalesForce system automatically generated this message. </p>
+</body>
+
+</html>

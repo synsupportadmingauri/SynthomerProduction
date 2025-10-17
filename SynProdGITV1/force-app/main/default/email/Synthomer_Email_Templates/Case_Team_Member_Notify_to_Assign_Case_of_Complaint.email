@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body style="font-family: Arial, sans-serif; font-size: 14px; color: #333;">
+    <p>Dear Colleague,</p>
+    <p>  Kindly be informed that you have been assigned to the Customer Complaint ID: {!Case.CaseNumber} has been created by {!Case.CreatedBy} in the responsibility of the {!Case.Plant__c} team. </p>
+
+    <p> <strong>Next Steps (Investigation Team): </strong><br> Support the complaint coordinator with investigating the complaint, identifying the root cause, and defining/executing the corrective action plan. </p>
+
+  <h3>Ticket Details:</h3>
+    <table cellpadding="5" cellspacing="0" border="0" style="border-collapse: collapse;">
+        <tr>
+            <td><strong>Customer:</strong></td>
+            <td>{!Case.Account}</td>
+        </tr>
+        <tr>
+            <td><strong>Subject:</strong></td>
+            <td>{!Case.Subject}</td>
+        </tr>
+        <tr>
+            <td><strong>Product:</strong></td>
+            <td>{!Case.Product__c}</td>
+        </tr>
+        <tr>
+            <td><strong>Detailed Description:</strong></td>
+            <td>{!Case.Description}</td>
+        </tr>
+    </table>
+
+
+    <p>Best regards,</p>
+    <p>Your CRM Support Team</p>
+    <p> Link to Ticket in mySalesForce:<a href="{!Case.Link}" style="color: #1a73e8;">{!Case.Subject}</a> </p>
+    <p> The mySalesForce system automatically generated this message. </p>
+</body>
+
+</html>

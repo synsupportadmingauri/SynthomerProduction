@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Territory2Rule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <name>Construction Solutions Europe North - CON</name>
+    <objectType>Account</objectType>
+    <ruleItems>
+        <field>Account.BillingCountryCode</field>
+        <operation>equals</operation>
+        <value>AT,AZ,BA,BG,CZ,DK,EE,FI,GE,DE,HU,IE,KZ,XK,LV,LT,LU,MD,NL,MK,NO,PL,BY,RO,RU,RS,SK,SI,SE,CH,TJ,UA,GB,UZ</value>
+    </ruleItems>
+    <ruleItems>
+        <field>Account.Industry_Segments__c</field>
+        <operation>contains</operation>
+        <value>CON</value>
+    </ruleItems>
+</Territory2Rule>

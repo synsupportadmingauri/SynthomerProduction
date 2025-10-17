@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>ZSAF</fullName>
+        <default>false</default>
+        <label>ZSAF</label>
+    </customValue>
+    <customValue>
+        <fullName>ZBXN</fullName>
+        <default>false</default>
+        <label>ZBXN</label>
+    </customValue>
+    <customValue>
+        <fullName>ZFTF</fullName>
+        <default>false</default>
+        <label>ZFTF</label>
+    </customValue>
+    <description>Global picklist for S4 Item Categories</description>
+    <masterLabel>Item Category</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

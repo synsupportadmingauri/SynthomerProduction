@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Pass record ID from Flow to LWC</description>
+    <isExposed>true</isExposed>
+    <lightningMessageFields>
+        <fieldName>recordId</fieldName>
+    </lightningMessageFields>
+    <masterLabel>Flow Record Channel</masterLabel>
+</LightningMessageChannel>

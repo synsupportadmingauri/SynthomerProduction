@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Brand A Permissions</label>
+    <protected>false</protected>
+    <values>
+        <field>GUKC360_01__Brand_Name__c</field>
+        <value xsi:type="xsd:string">All Transactional Data</value>
+    </values>
+    <values>
+        <field>GUKC360_01__Brand_Query_Parameter__c</field>
+        <value xsi:type="xsd:string">vkorg=Z002&amp;vtweg=Z0&amp;spart=Z0</value>
+    </values>
+    <values>
+        <field>GUKC360_01__Extra_Permission_Sets__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>GUKC360_01__Permission_Set_API_Name__c</field>
+        <value xsi:type="xsd:string">GC360_Brand_A_Permission_Set</value>
+    </values>
+</CustomMetadata>

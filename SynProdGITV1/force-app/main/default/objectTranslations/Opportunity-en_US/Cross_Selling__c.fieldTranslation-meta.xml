@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Select the relevant cross sell on the opportunity --></help>
+    <label><!-- Cross-Selling --></label>
+    <name>Cross_Selling__c</name>
+    <picklistValues>
+        <masterLabel>AS Synergy</masterLabel>
+        <translation><!-- AS Synergy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AS to CCS</masterLabel>
+        <translation><!-- AS to CCS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AS to HPPM</masterLabel>
+        <translation><!-- AS to HPPM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CCS to AS</masterLabel>
+        <translation><!-- CCS to AS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CCS to HPPM</masterLabel>
+        <translation><!-- CCS to HPPM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HPPM to AS</masterLabel>
+        <translation><!-- HPPM to AS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HPPM to CCS</masterLabel>
+        <translation><!-- HPPM to CCS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OMNOVA</masterLabel>
+        <translation><!-- OMNOVA --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- PKR Attribute --></label>
+    <name>PKR_Attribute__c</name>
+    <picklistValues>
+        <masterLabel>Keep</masterLabel>
+        <translation><!-- Keep --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Sampling</masterLabel>
+        <translation><!-- No Sampling --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Promote</masterLabel>
+        <translation><!-- Promote --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Replace</masterLabel>
+        <translation><!-- Replace --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Restricted</masterLabel>
+        <translation><!-- Restricted --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sub-Scale</masterLabel>
+        <translation><!-- Sub-Scale --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tolling</masterLabel>
+        <translation><!-- Tolling --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Withdrawn</masterLabel>
+        <translation><!-- Withdrawn --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

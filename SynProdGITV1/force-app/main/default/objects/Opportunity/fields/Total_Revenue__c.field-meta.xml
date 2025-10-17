@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Revenue__c</fullName>
+    <description>Roll up all sales prices of all products on the opportunity</description>
+    <inlineHelpText>Total revenue of the opportunity</inlineHelpText>
+    <label>Total Revenue</label>
+    <summarizedField>OpportunityLineItem.Revenue__c</summarizedField>
+    <summaryForeignKey>OpportunityLineItem.OpportunityId</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

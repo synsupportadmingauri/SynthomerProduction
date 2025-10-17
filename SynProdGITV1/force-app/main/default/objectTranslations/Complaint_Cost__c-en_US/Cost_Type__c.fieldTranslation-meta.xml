@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Cost Type --></label>
+    <name>Cost_Type__c</name>
+    <picklistValues>
+        <masterLabel>3rd Party Support Cost</masterLabel>
+        <translation><!-- 3rd Party Support Cost --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cleaning Cost</masterLabel>
+        <translation><!-- Cleaning Cost --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Compensation</masterLabel>
+        <translation><!-- Compensation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Disposal Cost</masterLabel>
+        <translation><!-- Disposal Cost --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Equipment Calibration/Repair</masterLabel>
+        <translation><!-- Equipment Calibration/Repair --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Investigation</masterLabel>
+        <translation><!-- Investigation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Labour Cost</masterLabel>
+        <translation><!-- Labour Cost --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Logistics Cost</masterLabel>
+        <translation><!-- Logistics Cost --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Material Cost</masterLabel>
+        <translation><!-- Material Cost --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outside Lab Analysis</masterLabel>
+        <translation><!-- Outside Lab Analysis --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Training Cost</masterLabel>
+        <translation><!-- Training Cost --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

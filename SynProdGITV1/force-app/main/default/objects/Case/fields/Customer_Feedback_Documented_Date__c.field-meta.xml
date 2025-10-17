@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Feedback_Documented_Date__c</fullName>
+    <description>SSP-176 This field will have the datetime at which Case was changed to &quot;Customer Feedback Documented&quot;</description>
+    <inlineHelpText>Captures the date when the customer feedback status of the complaint was completed.</inlineHelpText>
+    <label>Customer Feedback Documented Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

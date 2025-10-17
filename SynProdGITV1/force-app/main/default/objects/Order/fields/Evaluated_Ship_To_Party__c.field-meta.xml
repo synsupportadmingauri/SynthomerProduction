@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Evaluated_Ship_To_Party__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Field to store the shipping account name when the ship-to party account sales data does not matches with the plant sales data</description>
+    <inlineHelpText>Ship to Account Name or One-Time Account Name</inlineHelpText>
+    <label>Evaluated Ship-To Party</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Orders (Evaluated Ship-To Party)</relationshipLabel>
+    <relationshipName>Orders_Evaluated_Ship_to_Party</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

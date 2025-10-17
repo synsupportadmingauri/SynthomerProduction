@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Sample_Master_Matrix_Data__c$Plant_ID__c</field>
+    </columns>
+    <columns>
+        <field>Sample_Master_Matrix_Data__c$Product__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Sample_Master_Matrix_Data__c$Min__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Sample_Master_Matrix_Data__c$Max__c</field>
+    </columns>
+    <columns>
+        <field>Sample_Master_Matrix_Data__c$Unit__c</field>
+    </columns>
+    <columns>
+        <field>Sample_Master_Matrix_Data__c$Sampling_Status__c</field>
+    </columns>
+    <columns>
+        <field>Sample_Master_Matrix_Data__c$Approver__c</field>
+    </columns>
+    <currency>GBP</currency>
+    <description>Sample Matrix Report</description>
+    <filter>
+        <criteriaItems>
+            <column>Sample_Master_Matrix_Data__c$Plant_ID__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value></value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Sample Matrix Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Sample_Matrix_Report__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Sample_Master_Matrix_Data__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

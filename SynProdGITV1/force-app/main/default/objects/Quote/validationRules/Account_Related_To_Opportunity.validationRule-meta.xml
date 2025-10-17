@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Related_To_Opportunity</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    NOT(ISBLANK(OpportunityId)), NOT(ISBLANK(Account__r.Id )),
+    Account__r.Id &lt;&gt; Opportunity.AccountId
+)</errorConditionFormula>
+    <errorMessage>Opportunity must be related to an Account. Please select a valid Opportunity.</errorMessage>
+</ValidationRule>

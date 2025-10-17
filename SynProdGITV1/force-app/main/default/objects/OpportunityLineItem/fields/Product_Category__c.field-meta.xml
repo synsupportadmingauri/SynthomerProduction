@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Category__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>SS2-T22 &amp; SSP-292 Category of the Product.</description>
+    <label>Product Category/Chem.Group</label>
+    <lookupFilter>
+        <active>true</active>
+        <errorMessage>Category does not exist or does not match a Chemical Group.</errorMessage>
+        <filterItems>
+            <field>Product_Category__c.Level__c</field>
+            <operation>equals</operation>
+            <value>2 - Chemical Group</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Product_Category__c</referenceTo>
+    <relationshipLabel>Opportunity Product</relationshipLabel>
+    <relationshipName>Opportunity_Product</relationshipName>
+    <required>false</required>
+    <type>Lookup</type>
+</CustomField>

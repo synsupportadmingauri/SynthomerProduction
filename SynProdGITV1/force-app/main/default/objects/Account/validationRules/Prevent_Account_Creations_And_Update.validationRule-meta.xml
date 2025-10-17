@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Account_Creations_And_Update</fullName>
+    <active>true</active>
+    <description>SS2-T73 :Creation is blocked if account type is Customer and Ship-To
+Update is blocked if account type is Ship-To
+Update is blocked if account type is Customer and changed data is ERP/Sales relevant - integration relevant data,</description>
+    <errorConditionFormula>OR(
+	AND(
+	  ISNEW(),
+	  OR(
+		ISPICKVAL(Type, &quot;Customer&quot;),
+		ISPICKVAL(Type, &quot;Ship-To&quot;)
+	  ),
+	  NOT($Permission.ERP_Account_Creation_Update)
+	),
+
+	AND(
+	  NOT(ISNEW()),
+	  ISPICKVAL(Type, &quot;Ship-To&quot;),
+	  NOT($Permission.ERP_Account_Creation_Update)
+	) ,
+	
+	AND(
+	  NOT(ISNEW()),
+	  ISPICKVAL(Type, &quot;Customer&quot;),
+	  OR(
+		ISCHANGED(Name),
+		ISCHANGED(GUKC360_01__Customer_Id__c),
+		ISCHANGED(BillingAddress),
+		ISCHANGED(Website),
+		ISCHANGED(Group_Key__c),
+		ISCHANGED(VAT_Registration_ID__c),
+		ISCHANGED(Language__c)
+	  ),
+	  NOT($Permission.ERP_Account_Creation_Update)
+	)
+
+)</errorConditionFormula>
+    <errorMessage>You cannot update or create Customer or Ship-To account types in Salesforce. Customer and Ship-To accounts are mastered in S4, and should be updated in S4.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Commercial_Action__c</fullName>
+    <description>Specifies the commercial resolution or decision taken for the complaint, such as credit note, replacement, or no action.</description>
+    <inlineHelpText>Select the appropriate commercial action taken to resolve the case</inlineHelpText>
+    <label>Commercial Action</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Replacement Order</fullName>
+                <default>false</default>
+                <label>Replacement Order</label>
+            </value>
+            <value>
+                <fullName>Return Order</fullName>
+                <default>false</default>
+                <label>Return Order</label>
+            </value>
+            <value>
+                <fullName>Billing Adjustment</fullName>
+                <default>false</default>
+                <label>Billing Adjustment</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Has_Distributor_Manager__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This checkbox indicates whether the Account has at least one Account Team Member with the role “Distributor Manager.” It is used to enforce rules for Orders created from the Portal.</description>
+    <label>Has Distributor Manager</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

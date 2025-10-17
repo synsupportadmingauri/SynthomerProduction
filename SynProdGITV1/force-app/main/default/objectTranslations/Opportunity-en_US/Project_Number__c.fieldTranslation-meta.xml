@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>
+        <!-- PIMS (IDL or Tactical Project) - PIMS 4 digits
+LabDB (ex. 24AC1018-01) or Signals Notebook number: Using as link to records between SFDC and PIMS system -->
+    </help>
+    <label><!-- Project Number --></label>
+    <name>Project_Number__c</name>
+</CustomFieldTranslation>

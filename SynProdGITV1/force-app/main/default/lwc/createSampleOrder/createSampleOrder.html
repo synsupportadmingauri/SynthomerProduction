@@ -1,0 +1,101 @@
+<template>
+    <lightning-card title={label.createSampleOrder} icon-name="standard:orders">
+
+        <div class="order-container slds-m-around--medium slds-g-sizing-16" onkeydown={handleKeyDown}>    
+            <lightning-record-edit-form object-api-name="Order" onsuccess={handleSuccess} onsubmit={handleSubmit} onerror={handleError}>
+                <div if:true={isOrderCreationVisible}>
+    <lightning-messages> </lightning-messages>
+    <div class="slds-grid slds-wrap slds-p-around_small">
+        <!-- End Customer -->
+        <div class="slds-col slds-size_1-of-2 slds-p-right_small slds-p-bottom_small" if:true={isPartnerUser}>
+            <lightning-input-field name ="End_Customer__c" field-name="End_Customer__c" value={endCustomer} variant="label-stacked" onchange={handleFieldChange} required></lightning-input-field>
+        </div>
+
+        <!-- Additional Volume -->
+        <div class="slds-col slds-size_1-of-2 slds-p-bottom_small" if:true={isPartnerUser}>
+            <lightning-input-field name ="Potential_Volume__c" field-name="Potential_Volume__c" value={potentialVolume} variant="label-stacked" onchange={handleFieldChange} required></lightning-input-field>
+        </div>
+
+        <!-- Account -->
+        <div class="slds-col slds-size_1-of-2 slds-p-right_small slds-p-bottom_small" if:false={isPartnerUser}>
+            <lightning-input-field name ="AccountId" field-name="AccountId" value={accountId} id="accountField" variant="label-stacked" onchange={handleFieldChange}></lightning-input-field>
+        </div>
+
+        <!-- Opportunity -->
+        <div class="slds-col slds-size_1-of-2 slds-p-bottom_small" if:false={isPartnerUser}>
+            <lightning-combobox
+                name="OpportunityId"
+                label="Related Open Opportunity Name"
+                placeholder="Select an Opportunity"
+                value={opportunityId}
+                options={opportunityOptions}
+                onchange={handleOpportunityChange}>
+            </lightning-combobox>
+
+            <!-- Hidden field for form submission -->
+            <!-- <lightning-input type="hidden" name="OpportunityId" value={opportunityId}></lightning-input> -->
+        </div>
+
+        <!-- Contact -->
+        <div class="slds-col slds-size_1-of-2 slds-p-right_small slds-p-bottom_small">
+            <lightning-input-field name ="ShipToContactId" field-name="ShipToContactId" value={contactId} variant="label-stacked" onchange={handleFieldChange}></lightning-input-field>
+        </div>
+
+        <!-- Ship-To Account -->
+        <div class="slds-col slds-size_1-of-2 slds-p-bottom_small">
+            <lightning-input-field name ="Ship_To_Account__c" field-name="Ship_To_Account__c" value={shipToAccount} variant="label-stacked" onchange={handleFieldChange}></lightning-input-field>
+        </div>
+
+        <!-- Order Name --> <!-- SD1-T64+ 03/10/2025 Ankur O -->
+        <div class="slds-col slds-size_1-of-2 slds-p-right_small slds-p-bottom_small" if:true={isPartnerUser}>
+            <lightning-input-field name ="Name" field-name="Name" value={orderName} variant="label-stacked" onchange={handleFieldChange} ></lightning-input-field>
+        </div>
+
+        <!-- Application -->
+        <div class="slds-col slds-size_1-of-2 slds-p-bottom_small" if:true={isPartnerUser}>
+            <lightning-input-field name ="Application__c" field-name="Application__c" value={application} variant="label-stacked" onchange={handleFieldChange} required></lightning-input-field>
+        </div>
+
+
+        <template if:true={isPartnerUser}>
+        <div class="slds-col slds-size_1-of-2 slds-p-right_small slds-p-bottom_small" >
+        </div>
+       </template>
+
+        <!-- Select Products -->
+        <div class="slds-col slds-text-align_right">         
+            <lightning-button class="slds-m-right--small" variant="neutral" label="Select Sample Products" type="button" onclick={showProductSelector}></lightning-button>
+        </div> 
+    </div>
+</div>
+
+                
+                <div if:true={isProductSelectorVisible}>
+                    <!-- <c-product-selector onselectedproductschange={handleSelectedProductsChange}></c-product-selector> -->
+                    <c-product-selector
+                        accountregion={accountRegion}
+                        partneruser={isPartnerUser}
+                        onselectedproductschange={handleSelectedProductsChange}>
+                         
+                    </c-product-selector>
+                                        <div class="slds-col slds-text-align_right">         
+                               
+                        <div class="tooltip-wrapper">
+            <lightning-button 
+                variant="brand" 
+                label="Create Sample Order" 
+                type="submit" 
+                disabled={isSubmitting}>
+            </lightning-button>
+
+            <template if:true={isSubmitting}>
+        <lightning-helptext content={label.createSampleOrderHelpText}></lightning-helptext>
+    </template>
+        </div>
+                    </div> 
+                </div>
+            </lightning-record-edit-form>            
+        </div>
+
+    </lightning-card>
+</template>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Organisation__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>SSP-176 SS2-T109 Lookup to Sales Organisation</description>
+    <label>Sales Organisation</label>
+    <referenceTo>Sales_Org_Data__c</referenceTo>
+    <relationshipLabel>Orders</relationshipLabel>
+    <relationshipName>Orders</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

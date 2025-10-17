@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approver_Name__c</fullName>
+    <description>Holds the name of the approver to whom the record will be sent for approval in Flow Orchestration. The value is sourced from sample master data.[Not visible on layout]</description>
+    <externalId>false</externalId>
+    <label>Approver Name</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

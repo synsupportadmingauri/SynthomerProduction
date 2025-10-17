@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>OrganizationDivision</label>
+    <protected>false</protected>
+    <values>
+        <field>GUK_INTEG__Default_Value__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>GUK_INTEG__Field_API_Name__c</field>
+        <value xsi:type="xsd:string">Division__c</value>
+    </values>
+    <values>
+        <field>GUK_INTEG__Field_Type__c</field>
+        <value xsi:type="xsd:string">Current Object Field</value>
+    </values>
+    <values>
+        <field>GUK_INTEG__Integration_Interface__c</field>
+        <value xsi:type="xsd:string">S4_Sample_Order_Replication</value>
+    </values>
+    <values>
+        <field>GUK_INTEG__Outbound_Field_Name__c</field>
+        <value xsi:type="xsd:string">OrganizationDivision</value>
+    </values>
+    <values>
+        <field>GUK_INTEG__Output_Child_Relation__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>GUK_INTEG__Relationship_Name__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>

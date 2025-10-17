@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Defective_Quantity__c</fullName>
+    <description>Quantity of product reported as defective in the complaint, typically measured in the unit used for the order.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter the number of defective items associated with this case.</inlineHelpText>
+    <label>Defective Quantity</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

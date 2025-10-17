@@ -1,0 +1,50 @@
+.pagination-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.left-controls {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.pagination-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Prev Button: White BG with Blue border */
+.prev-btn {
+    padding: 0.4rem 1rem;
+    border: 1px solid #0d6efd; /* Blue border */
+    background: white;          /* White background */
+    color: #0d6efd;             /* Blue text */
+    border-radius: 20px 0 0 20px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+/* Page Info: No border, just text */
+.page-info {
+    padding: 0.4rem 0.8rem;
+    background: transparent;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #000000;
+    text-align: center;
+    min-width: 80px;
+}
+
+/* Next Button: Blue BG with White text */
+.next-btn {
+    padding: 0.4rem 1rem;
+    border: none;
+    background: #0d6efd; /* Blue background */
+    color: white;        /* White text */
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    font-weight: 500;
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Int_Contact_Details__c</fullName>
+    <description>Ship To Contact&apos;s First Last Name and Mobile or Phone number</description>
+    <externalId>false</externalId>
+    <formula>ShipToContact.FirstName &amp; &quot; &quot; + ShipToContact.LastName &amp; &quot; / &quot; &amp; IF(ISBLANK(ShipToContact.MobilePhone), ShipToContact.Phone, ShipToContact.MobilePhone) &amp; &quot; / &quot; +  ShipToContact.Email</formula>
+    <inlineHelpText>Ship To Contact&apos;s First Last Name and Mobile or Phone number</inlineHelpText>
+    <label>Int Contact Details</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

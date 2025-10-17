@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Industry_Segments__c</fullName>
+    <description>Industry Segments for which current User is related to</description>
+    <label>Industry Segments</label>
+    <required>false</required>
+    <type>TextArea</type>
+</CustomField>

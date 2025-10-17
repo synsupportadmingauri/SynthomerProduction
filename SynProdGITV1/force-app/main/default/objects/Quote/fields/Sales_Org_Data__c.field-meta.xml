@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Org_Data__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Select a related Sales Org Data record to represent a parent or associated organization within the hierarch</description>
+    <label>Sales Org Data</label>
+    <referenceTo>Sales_Org_Data__c</referenceTo>
+    <relationshipLabel>Quotes</relationshipLabel>
+    <relationshipName>Quotes</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

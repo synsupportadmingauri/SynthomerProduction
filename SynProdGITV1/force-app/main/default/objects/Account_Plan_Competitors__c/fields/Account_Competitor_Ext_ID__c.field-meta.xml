@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Competitor_Ext_ID__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>Account Competitor External ID - Customer ID 
+(this is non-mandatory as it will be only used for Data migration)</description>
+    <externalId>true</externalId>
+    <inlineHelpText>Account Competitor External ID - Customer ID</inlineHelpText>
+    <label>Account Competitor Ext ID</label>
+    <length>25</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

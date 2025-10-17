@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>OMNSample_Notif_004 - Completed to Customer</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Sample Order Status Completed Non CRM</name>
+    <style>none</style>
+    <subject>Your Synthomer Request {!Order.OrderNumber} has been processed</subject>
+    <textOnly>Dear #NAME# company,
+
+Synthomer has processed your request {!Order.OrderNumber} for a product material sample. Please find attachet the detail information about order.
+
+The following tracking information is now available:
+
+Shipping Carrier Tracking Number Shipping Date
+{!Order.Shipping_Carrier__c}  {!Order.OrderNumber}   {!Order.Completed_Date__c}
+
+Regulatory and compliance information can be found via our website. As a member of the Chemical Industries Association and American Chemistry Council, Synthomer embraces the principles of Responsible Care, the chemical industry’s commitment to continual improvement health, occupational, process and product safety and environmental performance. We encourage safe and responsible material handling for employees, customers, the public, and for the environment.
+
+If you have further questions, a Synthomer polymer expert would be glad to assist you.
+
+Thank you for your interest.
+
+{!Order.CreatedBy}
+
+Team Synthomer
+
+Synthomer Logo
+
+Synthomer takes data privacy seriously. Please read the Fair Processing Notice referred to in our Privacy Policy to learn more.
+
+This message contains confidential information and is intended only for the individual named person. If you are not the named addressee you are not allowed to disseminate, distribute or copy this E-Mail. Please notify the sender immediately by E-Mail if you have received this E-Mail by mistake and delete this E-Mail from your system. E-Mail transmission cannot be guaranteed to be secure or error-free. The sender therefore does not accept liability for any errors or omissions in the contents of this message which arise as a result of E-Mail transmission. If verification is required please request a hard-copy version.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

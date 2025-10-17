@@ -1,0 +1,53 @@
+<html>
+  <body>
+    <p>Dear #NAME# company,</p>
+
+    <p>
+      Synthomer has processed your request {!Order.OrderNumber} for a product material sample. Please find attachet the detail information about order.
+    </p>
+
+    <p>The following tracking information is now available:</p>
+
+    <table border="1" cellpadding="6" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+      <thead style="background-color: #f2f2f2;">
+        <tr>
+          <th>Shipping Carrier</th>
+          <th>Tracking Number</th>
+          <th>Shipping Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{!Order.Shipping_Carrier__c}</td>
+          <td> {!OrderItem.Tracking_Number__c} </td>
+          <td>{!OrderItem.Shipping_Date__c}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      Regulatory and compliance information can be found via our website. As a member of the Chemical Industries Association and American Chemistry Council, Synthomer embraces the principles of Responsible Care, the chemical industry’s commitment to continual improvement health, occupational, process and product safety and environmental performance. We encourage safe and responsible material handling for employees, customers, the public, and for the environment.
+    </p>
+
+    <p>If you have further questions, a Synthomer polymer expert would be glad to assist you.</p>
+
+    <p>Thank you for your interest.</p>
+
+    <p>{!Order.CreatedBy}</p>
+
+    <p>Team Synthomer</p>
+
+    <p><strong>Synthomer Logo</strong></p>
+
+    <hr />
+
+    <p>
+      Synthomer takes data privacy seriously. Please read the Fair Processing Notice 
+      referred to in our Privacy Policy to learn more.
+    </p>
+
+    <p>
+      This message contains confidential information and is intended only for the individual named person. If you are not the named addressee you are not allowed to disseminate, distribute or copy this E-Mail. Please notify the sender immediately by E-Mail if you have received this E-Mail by mistake and delete this E-Mail from your system. E-Mail transmission cannot be guaranteed to be secure or error-free. The sender therefore does not accept liability for any errors or omissions in the contents of this message which arise as a result of E-Mail transmission. If verification is required please request a hard-copy version.
+    </p>
+  </body>
+</html>

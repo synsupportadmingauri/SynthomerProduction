@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- ISO Code - this will be used in Material integration and migration --></help>
+    <label><!-- UOM Code --></label>
+    <name>UOM_Code__c</name>
+</CustomFieldTranslation>

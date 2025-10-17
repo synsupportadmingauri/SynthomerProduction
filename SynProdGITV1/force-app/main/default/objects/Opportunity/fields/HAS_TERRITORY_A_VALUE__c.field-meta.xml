@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HAS_TERRITORY_A_VALUE__c</fullName>
+    <description>SS2-T22 &amp; SSP-292 this is a Formula field used in Flow</description>
+    <formula>NOT(OR(ISBLANK(Territory2Id) , ISNULL(Territory2Id)))</formula>
+    <label>HAS_TERRITORY_A_VALUE</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

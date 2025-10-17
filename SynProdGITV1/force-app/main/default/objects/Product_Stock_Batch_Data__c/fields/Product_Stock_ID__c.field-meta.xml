@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Stock_ID__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Product Stock ID</label>
+    <referenceTo>Product_Stock_Data__c</referenceTo>
+    <relationshipLabel>Product Stock Batch Data</relationshipLabel>
+    <relationshipName>Product_Stock_Batch_Data</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

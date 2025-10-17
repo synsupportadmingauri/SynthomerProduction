@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Territory2Rule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <booleanFilter>(1 AND 2 ) OR (3 AND 4) OR ( 5 AND 6)</booleanFilter>
+    <name>Coatings MEAI</name>
+    <objectType>Account</objectType>
+    <ruleItems>
+        <field>Account.BillingCountryCode</field>
+        <operation>equals</operation>
+        <value>BD,NG,DZ,MU,MA,TN,AO,BH,CM,CD,DJ,EG,GA,GH,GN,IN,IQ,CI,JO,KE,KW,LB,LY,ML,MZ,OM,PK,QA,RW,SA,SN,ZA,SD,TZ,UG,AE,YE</value>
+    </ruleItems>
+    <ruleItems>
+        <field>Account.Industry_Segments__c</field>
+        <operation>contains</operation>
+        <value>POW</value>
+    </ruleItems>
+    <ruleItems>
+        <field>Account.BillingCountryCode</field>
+        <operation>equals</operation>
+        <value>BD,NG,DZ,MU,MA,TN,AO,BH,CM,CD,DJ,EG,GA,GH,GN,IN,IQ,CI,JO,KE,KW,LB,LY,ML,MZ,OM,PK,QA,RW,SA,SN,ZA,SD,TZ,UG,AE,YE</value>
+    </ruleItems>
+    <ruleItems>
+        <field>Account.Industry_Segments__c</field>
+        <operation>contains</operation>
+        <value>COA</value>
+    </ruleItems>
+    <ruleItems>
+        <field>Account.BillingCountryCode</field>
+        <operation>equals</operation>
+        <value>BD,NG,DZ,MU,MA,TN,BH,CM,CD,DJ,EG,GA,GH,GN,IN,IQ,CI,JO,KE,KW,LB,LY,ML,MZ,OM,PK,QA,RW,SA,SN,ZA,SD,TZ,UG,AE,YE</value>
+    </ruleItems>
+    <ruleItems>
+        <field>Account.Industry_Segments__c</field>
+        <operation>contains</operation>
+        <value>ADD</value>
+    </ruleItems>
+</Territory2Rule>

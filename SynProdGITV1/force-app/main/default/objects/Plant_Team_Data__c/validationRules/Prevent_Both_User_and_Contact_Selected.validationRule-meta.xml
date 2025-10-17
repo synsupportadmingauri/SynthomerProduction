@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Both_User_and_Contact_Selected</fullName>
+    <active>true</active>
+    <description>User and Employee cannot both be selected at the same time.</description>
+    <errorConditionFormula>AND(
+  NOT(ISBLANK(User__c)),
+  NOT(ISBLANK(Employee__c))
+)</errorConditionFormula>
+    <errorMessage>User and Employee cannot both be selected at the same time.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Prompt xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>Visit Creation Guide</masterLabel>
+    <promptVersions>
+        <actionButtonLabel>Video Guide</actionButtonLabel>
+        <actionButtonLink>https://isynthomer.sharepoint.com/:v:/r/teams/crmcommunity/Shared%20Documents/CRM%20Learning%20Library/06%20Visits%20(Events)/01%20Visit%20Management%20in%20mySalesforce.mp4?csf=1&amp;web=1&amp;e=nJfjaI</actionButtonLink>
+        <body>&lt;p&gt;If you need any help to create a visit, go to the training library.&lt;/p&gt;</body>
+        <customApplication>standard__LightningSales</customApplication>
+        <delayDays>1</delayDays>
+        <dismissButtonLabel>Dismiss</dismissButtonLabel>
+        <displayPosition>BottomLeft</displayPosition>
+        <displayType>FloatingPanel</displayType>
+        <experience>Lightning</experience>
+        <isPublished>true</isPublished>
+        <masterLabel>Visit Creation Guide</masterLabel>
+        <publishedDate>2025-07-10</publishedDate>
+        <shouldDisplayActionButton>true</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>true</shouldIgnoreGlobalDelay>
+        <startDate>2025-06-30</startDate>
+        <targetPageKey1>Event</targetPageKey1>
+        <targetPageKey2>home</targetPageKey2>
+        <targetPageType>standard__objectPage</targetPageType>
+        <timesToDisplay>1</timesToDisplay>
+        <title>Need help creating Visits?</title>
+        <uiFormulaRule>
+            <criteria>
+                <leftValue>{!$User.Profile.Key}</leftValue>
+                <operator>EQUAL</operator>
+                <rightValue>custom_synthomer standard user</rightValue>
+            </criteria>
+        </uiFormulaRule>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>SpecificProfiles</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+</Prompt>

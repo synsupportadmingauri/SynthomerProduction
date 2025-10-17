@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Open_Sample_Orders_Partner_Portal</fullName>
+    <columns>ORDERS.ORDER_NUMBER</columns>
+    <columns>ORDER.NAME</columns>
+    <columns>ORDERS.EFFECTIVE_DATE</columns>
+    <columns>End_Customer__c</columns>
+    <columns>ORDERS.STATUS</columns>
+    <columns>ORDER.SHIPPING_COUNTRY</columns>
+    <columns>ORDER.SHIPPING_STATE</columns>
+    <columns>ORDER.SHIPPING_STREET</columns>
+    <columns>ORDER.SHIPPING_ZIP</columns>
+    <columns>ORDER.SHIP_TO_CONTACT</columns>
+    <columns>ORDERS.LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Distributor_Submission_Approval_Status__c</field>
+        <operation>notEqual</operation>
+        <value>Approved,Rejected</value>
+    </filters>
+    <filters>
+        <field>ORDERS.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Completed,Cancelled</value>
+    </filters>
+    <label>All Open Sample Orders - Partner Portal</label>
+    <sharedTo>
+        <allPartnerUsers></allPartnerUsers>
+    </sharedTo>
+</ListView>

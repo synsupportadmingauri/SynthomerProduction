@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_product</fullName>
+    <fields>Name</fields>
+    <fields>Product2Id</fields>
+    <fields>Quantity</fields>
+    <fields>UnitPrice</fields>
+    <fields>ProductCode</fields>
+    <fields>Product_Category__c</fields>
+    <label>Opportunity product</label>
+</CompactLayout>

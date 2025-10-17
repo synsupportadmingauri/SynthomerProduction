@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <decisions>
+        <name>Is_ServiceTeamMemID1_full</name>
+        <label>Is ServiceTeamMemID1 full?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Update_Service_Team_1</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Yes</defaultConnectorLabel>
+        <rules>
+            <name>No</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>HasSpaceForUserId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Service_Team_2</targetReference>
+            </connector>
+            <label>No</label>
+        </rules>
+    </decisions>
+    <description>Populates the Service Team&apos;s ServiceTeamMemIds field with the User Id of the Service Team Member to enable list view display</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>HasSpaceForUserId</name>
+        <dataType>Boolean</dataType>
+        <expression>LEN({!$Record.Service_Team__r.ServiceTeamMemIDs1__c}) &gt;= 240</expression>
+    </formulas>
+    <formulas>
+        <description>Appends Service Team Member(User) Ids in Service Team MemIds</description>
+        <name>ServiceTeamMemIds1</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Service_Team__r.ServiceTeamMemIDs1__c}+{!$Record.User_Team_Member__c}+&apos;;&apos;</expression>
+    </formulas>
+    <formulas>
+        <name>ServiceTeamMemIDs2</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Service_Team__r.ServiceTeamMemIDs2__c}+{!$Record.User_Team_Member__c}+&apos;;&apos;</expression>
+    </formulas>
+    <interviewLabel>Service Team Member - After Insert/Update {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Service Team Member - After Insert/Update</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>Update ServiceTeamMemIDs</description>
+        <name>Update_Service_Team_1</name>
+        <label>Update Service Team</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>ServiceTeamMemIDs1__c</field>
+            <value>
+                <elementReference>ServiceTeamMemIds1</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Service_Team__r</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Update ServiceTeamMemIDs2</description>
+        <name>Update_Service_Team_2</name>
+        <label>Update Service Team</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>ServiceTeamMemIDs2__c</field>
+            <value>
+                <elementReference>ServiceTeamMemIDs2</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Service_Team__r</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Is_ServiceTeamMemID1_full</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>User_Team_Member__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>Service_Team_Member__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

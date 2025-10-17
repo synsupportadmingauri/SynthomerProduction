@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payment_Term__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>This field helps define the credit terms offered to customers and is used for billing and invoicing processes.</description>
+    <inlineHelpText>Payment term replicated from S4</inlineHelpText>
+    <label>Payment Term</label>
+    <referenceTo>Payment_Terms__c</referenceTo>
+    <relationshipLabel>Account Sales Data</relationshipLabel>
+    <relationshipName>Account_Sales_Data</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Sales_External_ID__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>Account Sales External ID - combination of Customer ID, Sales Org, Distribution Channel and Division</description>
+    <externalId>true</externalId>
+    <inlineHelpText>Combination of Customer ID, Sales Org, Distribution Channel and Division</inlineHelpText>
+    <label>Account Sales External ID</label>
+    <length>40</length>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_77856058</developerName>
+        <masterLabel>Business Unit</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>OpportunityLineItem.Product_Category__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>APO_Amorphous Polypropylenes/ G Types</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Poly Butadiene</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>OLEO_Oleic/ Linoleic/ Conjugated Fatty Acids</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Acrylic Monomers - EA</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Alkyd Resins</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>HSSBR_High Solid Styrene Butadiene</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>NBR_Acrylonitrile Butadiene</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>NBR_Acrylonitrile Butadiene Powder</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>PA_Pure Acrylic</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>SA_Styrene Acrylic</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>SA_Styrene Acrylic Powder</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>SB_Styrene Butadiene Powder</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>VA_Vinyl Acetate Homopolymer</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>VACO_Vinyl Acetate Acrylate</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>VTA_Vinyl Toluene Acrylate Powder</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>XSBR_Carboxylated Styrene Butadiene</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Redispersable Vinyl Acetate Powder</sourceValue>
+            </sourceValues>
+            <value>Polymers</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>HCR_Aliphatic Hydrocarbon Resins</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>HHCR_H-Series Aliphatic Resins/ Regalite</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>PMR_Pure Monomer Hydrocarbon Resins/ Regalrez</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>RES-OTH_Hydrocarbon Resin Based Dispersions/ Aromatic C9</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>ROS_Hydrogenated Rosin/ Rosin Esters</sourceValue>
+            </sourceValues>
+            <value>Resins</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>BEPD</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Compound</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>CR_PolyChloroprene Rubber</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Miscellaneous</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Polyester</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>PVAC</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>PVOH</sourceValue>
+            </sourceValues>
+            <value>Other</value>
+        </values>
+    </buckets>
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_39295507</developerName>
+        <masterLabel>Product Groups</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>OpportunityLineItem.Product_Category__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>HHCR_H-Series Aliphatic Resins/ Regalite</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>RES-OTH_Hydrocarbon Resin Based Dispersions/ Aromatic C9</sourceValue>
+            </sourceValues>
+            <value>HHCR</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>HCR_Aliphatic Hydrocarbon Resins</sourceValue>
+            </sourceValues>
+            <value>HCR</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>APO_Amorphous Polypropylenes/ G Types</sourceValue>
+            </sourceValues>
+            <value>APO</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>PMR_Pure Monomer Hydrocarbon Resins/ Regalrez</sourceValue>
+            </sourceValues>
+            <value>PMR</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Poly Butadiene</sourceValue>
+            </sourceValues>
+            <value>LPBD</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Acrylic Monomers - EA</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Alkyd Resins</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>CR_PolyChloroprene Rubber</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>HSSBR_High Solid Styrene Butadiene</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>NBR_Acrylonitrile Butadiene</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>NBR_Acrylonitrile Butadiene Powder</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>PA_Pure Acrylic</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Redispersable Vinyl Acetate Powder</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>SA_Styrene Acrylic</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>SA_Styrene Acrylic Powder</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>SB_Styrene Butadiene Powder</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>VA_Vinyl Acetate Homopolymer</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>VACO_Vinyl Acetate Acrylate</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>VTA_Vinyl Toluene Acrylate Powder</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>XSBR_Carboxylated Styrene Butadiene</sourceValue>
+            </sourceValues>
+            <value>EP</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>ROS_Hydrogenated Rosin/ Rosin Esters</sourceValue>
+            </sourceValues>
+            <value>ROS</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>OLEO_Oleic/ Linoleic/ Conjugated Fatty Acids</sourceValue>
+            </sourceValues>
+            <value>OLEO</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>BEPD</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Compound</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>PVAC</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>PVOH</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Polyester</sourceValue>
+            </sourceValues>
+            <value>OTH</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <aggregate>Sum</aggregate>
+            <axisBinding>y</axisBinding>
+            <column>Opportunity.Total_Volume__c</column>
+        </chartSummaries>
+        <chartType>HorizontalBar</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>FULL_NAME</groupingColumn>
+        <location>CHART_BOTTOM</location>
+        <showAxisLabels>false</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>true</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>OPPORTUNITY_NAME</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT_NAME</field>
+    </columns>
+    <columns>
+        <field>TYPE</field>
+    </columns>
+    <columns>
+        <field>STAGE_NAME</field>
+    </columns>
+    <columns>
+        <field>CLOSE_DATE</field>
+    </columns>
+    <columns>
+        <field>PRODUCT_NAME</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Opportunity.Total_Volume__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Territory_L2__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Application__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Opportunity.Total_Revenue__c.CONVERT</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>Opportunity.Industry_Segment__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Adhesive Solutions,Lithene</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FULL_NAME</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>pusey,niddodi,hamon,jefferis,sundaram,kopke,kohnen,ken berry,lacasa,cancelli</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FULL_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>EMEAI AS Open/Protect Opps - MDP</name>
+    <params>
+        <name>terr</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>open</name>
+        <value>open</value>
+    </params>
+    <params>
+        <name>probability</name>
+        <value>&gt;0</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>OpportunityProduct</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CLOSE_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

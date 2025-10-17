@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Age__c</fullName>
+    <description>Case age in days
+Consider Date_Time_Closed__c for the 184 Cases that have issue with incorrect ClosedDate</description>
+    <externalId>false</externalId>
+    <formula>IF( Mig_Error_Case__c , 
+			IF( IsClosed ,  CEILING(Date_Time_Closed__c -  CreatedDate) ,  CEILING(Now() - CreatedDate) ),
+			IF( IsClosed ,  CEILING(ClosedDate -  CreatedDate) ,  CEILING(Now() - CreatedDate) )
+		)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Displays the age of the case in days</inlineHelpText>
+    <label>Case Age</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

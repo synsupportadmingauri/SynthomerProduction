@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Industry_Segment_Application_Valid_Check</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF(
+								AND(
+												NOT(ISBLANK(Industry_Segment__c)),
+												NOT(ISBLANK(Application__c)),
+												(Application__r.Parent__r.Parent__r.Code__c !=  Industry_Segment__r.Code__c),
+												$User.Username &lt;&gt; &apos;support.gauri@gauri.com.syn&apos;
+								),
+								True,
+								False
+				)</errorConditionFormula>
+    <errorMessage>The combination of Industry Segment and Application must be valid</errorMessage>
+</ValidationRule>

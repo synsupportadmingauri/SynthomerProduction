@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Order_Number__c</fullName>
+    <description>If the complaint is not related CRM order then this field will be used to enter the ERP Order / Delivery Note Number//
+Use this field for non-S4 orders only. For S4 orders, use the &quot;S4 Order&quot; field.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Use this field for non-S4 orders only. For S4 orders, use the &quot;S4 Order&quot; field.</inlineHelpText>
+    <label>Order Number</label>
+    <length>128</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

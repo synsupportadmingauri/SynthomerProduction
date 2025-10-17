@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Can_Submit_for_Approval__c</fullName>
+    <description>This formula field determines whether an Order can be submitted for approval. It ensures that Orders created by users with a specific profile (e.g., Partner Community User) can only be submitted if the related Account has at least one Account Team Member with the role “Distributor Manager.”</description>
+    <formula>AND(
+    $Profile.Name = &quot;Partner Community User&quot;,
+    Account.Has_Distributor_Manager__c
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Can Submit for Approval</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

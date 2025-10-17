@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>Account Layout</layout>
+        <sections>
+            <label><!-- Account Summary --></label>
+            <section>Account Summary</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Portal - Account Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Child Account --></label>
+        <name>Child_Account</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Create Case --></label>
+        <name>Create_Case</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Create Sample Order --></label>
+        <name>Create_Sample_Order</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Modify Account Team --></label>
+        <name>Modify_Account_Team</name>
+    </quickActions>
+    <validationRules>
+        <errorMessage><!-- Billing Street cannot be greater than 60 characters --></errorMessage>
+        <name>Billing_Street_Length_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Group Key cannot be changed for the &apos;Customer&apos; role. Please contact the Master Data Team. --></errorMessage>
+        <name>Not_Changeable_for_Customer_Type</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You cannot update or create Customer or Ship-To account types in Salesforce. Customer and Ship-To accounts are mastered in S4, and should be updated in S4. --></errorMessage>
+        <name>Prevent_Account_Creations_And_Update</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You cannot create Accounts of type HQ or RHQ --></errorMessage>
+        <name>Prevent_Integration_User_create_Account</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Prospect cannot be saved without Billing Country --></errorMessage>
+        <name>Prospect_Creation_Billing_Country_Mandat</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Conga_Composer_OAuth --></label>
+        <name>APXTConga4__Conga_Composer_OAuth</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Mail_Merge --></label>
+        <name>APXTConga4__Conga_Mail_Merge</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleNews --></label>
+        <name>GoogleNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Action_Plan --></label>
+        <name>LabsActionPlans__Create_Action_Plan</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Action_Plans --></label>
+        <name>LabsActionPlans__Create_Action_Plans</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Syn_Shuttle_form --></label>
+        <name>Syn_Shuttle_form</name>
+    </webLinks>
+</CustomObjectTranslation>

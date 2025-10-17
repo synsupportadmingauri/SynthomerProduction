@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Stock_External_ID__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>External ID for Product Stock Data</description>
+    <externalId>true</externalId>
+    <inlineHelpText>Combination of Product Code and Enorica Plant</inlineHelpText>
+    <label>Product Stock External ID</label>
+    <length>40</length>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

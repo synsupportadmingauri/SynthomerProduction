@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body style="font-family: Arial, sans-serif; font-size: 14px; color: #333;">
+    <p>Dear Colleague,</p>
+    <p> Kindly be informed that the new Customer Complaint ID: <strong>{!Case.CaseNumber}</strong> has been created by
+        <strong>{!Case.CreatedBy}</strong> in the responsibility of the <strong>{!Case.Plant__c}</strong> team. </p>
+    <h3>Ticket Details:</h3>
+    <table cellpadding="5" cellspacing="0" border="0" style="border-collapse: collapse;">
+        <tr>
+            <td><strong>Customer:</strong></td>
+            <td>{!Case.Account}</td>
+        </tr>
+        <tr>
+            <td><strong>Subject:</strong></td>
+            <td>{!Case.Subject}</td>
+        </tr>
+        <tr>
+            <td><strong>Product:</strong></td>
+            <td>{!Case.Product__c}</td>
+        </tr>
+        <tr>
+            <td><strong>Detailed Description:</strong></td>
+            <td>{!Case.Description}</td>
+        </tr>
+    </table>
+    <p> <strong>CAUTION :</strong> Henkel is expecting a written acknowledgement of their complaint within 24 hours
+        after the reception of the complaint !</p>
+    <p> This first communication must include the description of all containment actions that have been taken (can be in
+        production, in transit, in stock, or at customer)<br> A written feedback on the identified root causes must be
+        given within 10 calendar days. The Corrective actions plan must be communicated within 14 calendar days (8D
+        report - D1 to D5 steps fully completed)</br> A final communication is expected within 30 days showing the
+        completion of the corrective actions (full 8D report to be sent)</p>
+    <p>Best regards,</p>
+    <p>Your CRM Support Team</p>
+    <p> Link to Ticket in mySalesForce:<a href="{!Case.Link}" style="color: #1a73e8;">{!Case.Subject}</a> </p><br>
+    <p> The mySalesForce system automatically generated this message. </p>
+</body>
+
+</html>

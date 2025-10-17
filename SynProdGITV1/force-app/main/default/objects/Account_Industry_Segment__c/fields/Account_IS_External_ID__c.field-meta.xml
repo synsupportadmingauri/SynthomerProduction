@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_IS_External_ID__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>Account Industry Segment External ID (Customer ID + IS Code)</description>
+    <externalId>true</externalId>
+    <inlineHelpText>Account Industry Segment External ID (Customer ID + IS Code)</inlineHelpText>
+    <label>Account IS External ID</label>
+    <length>25</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

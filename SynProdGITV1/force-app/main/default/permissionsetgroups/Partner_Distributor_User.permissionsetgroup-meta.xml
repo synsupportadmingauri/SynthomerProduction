@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Partner distributor users</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Partner Distributor User</label>
+    <permissionSets>Distributor_Community_User</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

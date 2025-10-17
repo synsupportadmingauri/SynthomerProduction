@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Complaint_Cost_External_Id__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>Complaint cost external id used for data migration</description>
+    <externalId>true</externalId>
+    <label>Complaint Cost External Id</label>
+    <length>80</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

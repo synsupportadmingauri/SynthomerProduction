@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Id__c</fullName>
+    <description>Reference to the associated Case record. Links the complaint cost entry to its related complaint for tracking and reporting</description>
+    <label>Case Id</label>
+    <referenceTo>Case</referenceTo>
+    <relationshipLabel>Complaint Cost</relationshipLabel>
+    <relationshipName>Complaint_Cost</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

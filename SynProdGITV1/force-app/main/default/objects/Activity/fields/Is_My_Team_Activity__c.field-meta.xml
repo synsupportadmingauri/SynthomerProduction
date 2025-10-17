@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_My_Team_Activity__c</fullName>
+    <description>Used for identifying if the activity belongs to a team member of the current user - through the manager relation. Used in reports / dashboards.</description>
+    <formula>IF(OR(Owner:User.ManagerId = $User.Id,
+Owner:User.Manager.ManagerId = $User.Id,Owner:User.Manager.Manager.ManagerId = $User.Id,
+Owner:User.Manager.Manager.Manager.ManagerId = $User.Id, 
+Owner:User.Manager.Manager.Manager.Manager.ManagerId = $User.Id,
+Owner:User.Id = $User.Id) ,
+true,
+ false
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Is My Team Activity</label>
+    <type>Checkbox</type>
+</CustomField>

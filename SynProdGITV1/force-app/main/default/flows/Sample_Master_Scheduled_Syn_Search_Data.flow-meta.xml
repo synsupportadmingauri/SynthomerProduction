@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Call the invocable method to update the Search Data field of the Sample Matrix object</description>
+        <name>SampleMatrixSearchDataUpdateInvocableCall</name>
+        <label>SampleMatrixSearchDataUpdateInvocableCall</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>Syn_SampleMatrixSearchDataUpdateInvoker</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <nameSegment>Syn_SampleMatrixSearchDataUpdateInvoker</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <apiVersion>64.0</apiVersion>
+    <description>This flow updates the Field - Sample Matrix Text by concatenating the Product Name, Plant Name, Product Category Name, Approver Name, and Region</description>
+    <environments>Default</environments>
+    <interviewLabel>Sample Master - Scheduled Syn Search Data {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Sample Master - Scheduled Syn Search Data</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>SampleMatrixSearchDataUpdateInvocableCall</targetReference>
+        </connector>
+        <schedule>
+            <frequency>Daily</frequency>
+            <startDate>2025-06-13</startDate>
+            <startTime>00:00:00.000Z</startTime>
+        </schedule>
+        <triggerType>Scheduled</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

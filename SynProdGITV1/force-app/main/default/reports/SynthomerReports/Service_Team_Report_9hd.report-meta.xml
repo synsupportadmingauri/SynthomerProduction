@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Service_Team__c$Service_Plant__c</field>
+    </columns>
+    <columns>
+        <field>Service_Team__c$Name</field>
+    </columns>
+    <columns>
+        <field>Service_Team__c$Site_Type__c</field>
+    </columns>
+    <columns>
+        <field>Service_Team__c.Service_Team_Members__r$Role__c</field>
+    </columns>
+    <columns>
+        <field>Service_Team__c.Service_Team_Members__r$User_Team_Member__c</field>
+    </columns>
+    <columns>
+        <field>Service_Team__c.Service_Team_Members__r$Employee_Team_Member__c</field>
+    </columns>
+    <currency>GBP</currency>
+    <description>Service Team Report</description>
+    <format>Tabular</format>
+    <name>Service Team Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Service_Team__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Service_Team__c$Service_Plant__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Service_Team__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CURRENT</interval>
+    </timeFrameFilter>
+</Report>

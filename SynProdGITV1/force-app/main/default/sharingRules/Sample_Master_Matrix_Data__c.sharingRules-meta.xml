@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Distributor_User_Access</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Show promote and keep records to the distributor user.</description>
+        <label>Distributor User Access</label>
+        <sharedTo>
+            <allPartnerUsers></allPartnerUsers>
+        </sharedTo>
+        <criteriaItems>
+            <field>PKR_Attribute__c</field>
+            <operation>equals</operation>
+            <value>Promote,Keep</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UOM_Code__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>ISO Code</description>
+    <externalId>true</externalId>
+    <inlineHelpText>ISO Code - this will be used in Material integration and migration</inlineHelpText>
+    <label>UOM Code</label>
+    <length>10</length>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

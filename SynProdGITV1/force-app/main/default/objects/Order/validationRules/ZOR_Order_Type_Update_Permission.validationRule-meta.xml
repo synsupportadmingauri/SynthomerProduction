@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZOR_Order_Type_Update_Permission</fullName>
+    <active>true</active>
+    <description>SSP-176
+ZOR Order can only be updated by user with Customer Permission &quot;Create_Edit_S4_HAHA_ERP_Order&quot;</description>
+    <errorConditionFormula>TEXT(Salesforce_Order_Type__c) = &apos;ZOR&apos; &amp;&amp; NOT($Permission.Create_Edit_S4_HAHA_ERP_Order)
+&amp;&amp; $User.Username &lt;&gt; &apos;support.gauri@gauri.com.syn&apos;</errorConditionFormula>
+    <errorMessage>You are not Allow to Update Order Type &quot;ZOR&quot;</errorMessage>
+</ValidationRule>

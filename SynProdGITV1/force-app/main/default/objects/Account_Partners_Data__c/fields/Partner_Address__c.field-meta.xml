@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_Address__c</fullName>
+    <description>Account Partner Address</description>
+    <externalId>false</externalId>
+    <formula>BLANKVALUE(Account_Partner__r.BillingStreet, &quot;&quot;) &amp; 
+IF(ISBLANK(Account_Partner__r.BillingCity), &quot;&quot;, &quot; / &quot; &amp; Account_Partner__r.BillingCity) &amp;
+IF(ISBLANK(Account_Partner__r.BillingCountry), &quot;&quot;, &quot; / &quot; &amp; Account_Partner__r.BillingCountry)</formula>
+    <inlineHelpText>Account Partner Address</inlineHelpText>
+    <label>Partner Address</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

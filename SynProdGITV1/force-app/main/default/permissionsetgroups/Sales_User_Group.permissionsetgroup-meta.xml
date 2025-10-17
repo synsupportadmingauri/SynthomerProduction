@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Created for Sales User to assign combined sales permissions</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Sales User</label>
+    <permissionSets>APXTConga4__Composer_User</permissionSets>
+    <permissionSets>Base_Sales_User</permissionSets>
+    <permissionSets>Create_Edit_Hierarchy_Accounts</permissionSets>
+    <permissionSets>Logging_Framework</permissionSets>
+    <permissionSets>Syn_Action_Plans_Creator</permissionSets>
+    <permissionSets>Syn_Action_Plans_Template_Creator</permissionSets>
+    <permissionSets>Syn_Action_Plans_User</permissionSets>
+    <permissionSets>force__EinsteinActivityCaptureIncluded</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

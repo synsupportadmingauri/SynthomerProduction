@@ -1,0 +1,105 @@
+<messaging:emailTemplate subject="Your Sample Request {!relatedTo.OrderNumber} Has Been Processed"
+                         recipientType="User"
+                         relatedToType="Order">
+    <messaging:htmlEmailBody >
+        <html>
+        <head>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    font-size: 14px;
+                    color: #333333;
+                }
+                table {
+                    border-collapse: collapse;
+                    width: 100%;
+                    margin: 20px 0;
+                }
+                th, td {
+                    border: 1px solid #ccc;
+                    padding: 8px;
+                    text-align: left;
+                }
+                th {
+                    background-color: #f2f2f2;
+                }
+                .footer {
+                    font-size: 12px;
+                    color: #999999;
+                    margin-top: 30px;
+                }
+            </style>
+        </head>
+        <body>
+            <p>Dear {!recipient.Name},</p>
+
+            <p>
+                Synthomer has processed your request <strong>{!relatedTo.OrderNumber}</strong> for a product material sample. Please find below the detailed order information.
+            </p>
+
+            <h3>Tracking Information:</h3>
+            <p><strong>Shipping Carrier:</strong> {!relatedTo.Shipping_Carrier__c}</p>
+
+            <table>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Tracking Number</th>
+                    <th>Shipping Date</th>
+                </tr>
+                <apex:repeat var="item" value="{!relatedTo.OrderItems}">
+                    <tr>
+                        <td>{!item.PricebookEntry.Name}</td>
+                        <td>{!item.Tracking_Number__c}</td>
+                        <td>{!TEXT(item.Shipping_Date__c)}</td>
+                    </tr>
+                </apex:repeat>
+            </table>
+
+            <p>
+                Regulatory and compliance information can be found via our website. As a member of the Chemical Industries Association and American Chemistry Council, Synthomer embraces the principles of Responsible Care, the chemical industry’s commitment to continual improvement health, occupational, process and product safety and environmental performance.  We encourage safe and responsible material handling for employees, customers, the public, and for the environment.            </p>
+
+            <p>
+                If you have further questions, a Synthomer polymer expert would be glad to assist you.
+            </p>
+
+            <p>
+                Thank you for your interest.
+            </p>
+
+            <p>
+                <strong>{!relatedTo.CreatedBy.Name}</strong><br/>
+                Team Synthomer
+            </p>
+
+     
+    <!--  <img src="{!$Label.Synthomer_Logo_Link}" alt="Synthomer Logo" style="width: 40%; height: auto;" /> --> 
+    <img 
+  src="{!$Label.Synthomer_Logo_Link}" 
+  alt="Synthomer Logo" 
+  style="width: 150px !important; height: auto !important; display: inline-block !important; max-width: 150px;" 
+/>
+
+
+
+
+            <p>
+  
+</p>
+
+
+
+            <div class="footer">
+                <p>
+                    Synthomer takes data privacy seriously. Please read the Fair Processing Notice referred to in our Privacy Policy to learn more.
+                </p>
+                <p>
+                    This message contains confidential information and is intended only for the individual named. If you are not the named addressee, you are not allowed to disseminate, distribute or copy this email. Please notify the sender immediately by email if you have received this email by mistake and delete it from your system.
+                </p>
+                <p>
+                    Email transmission cannot be guaranteed to be secure or error-free. The sender does not accept liability for any errors or omissions in the contents of this message arising from email transmission. If verification is required, please request a hard-copy version.
+                </p>
+            </div>
+        </body>
+        </html>
+    </messaging:htmlEmailBody>
+</messaging:emailTemplate>

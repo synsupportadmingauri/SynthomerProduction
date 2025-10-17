@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_Employee_Contact_Edit</fullName>
+    <active>true</active>
+    <description>SS2-T75</description>
+    <errorConditionFormula>AND(
+    $RecordType.Name = &quot;Employee&quot;,
+    NOT($Permission.Create_Edit_Employees)
+)</errorConditionFormula>
+    <errorMessage>You do not have permission to update Employee</errorMessage>
+</ValidationRule>

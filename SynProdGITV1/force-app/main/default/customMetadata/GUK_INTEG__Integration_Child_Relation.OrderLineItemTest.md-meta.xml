@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>OrderLineItemTest</label>
+    <protected>false</protected>
+    <values>
+        <field>GUK_INTEG__Integration_Interface__c</field>
+        <value xsi:type="xsd:string">Order_Test_Interface</value>
+    </values>
+    <values>
+        <field>GUK_INTEG__Parent_Placeholder__c</field>
+        <value xsi:type="xsd:string">OrderLineItemTest</value>
+    </values>
+    <values>
+        <field>GUK_INTEG__Payload_Structure2__c</field>
+        <value xsi:type="xsd:string">{&quot;Id&quot;:&quot;&lt;Id&gt;&quot;}</value>
+    </values>
+    <values>
+        <field>GUK_INTEG__Payload_Structure__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>

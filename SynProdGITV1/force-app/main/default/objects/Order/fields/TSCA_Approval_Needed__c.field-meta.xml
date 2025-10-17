@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TSCA_Approval_Needed__c</fullName>
+    <description>SSP-176  Will be set to true if Omnova TSA Approval is needed and will be used on the UI to control field visibilty and approval process</description>
+    <formula>OR(
+    TEXT(ShippingCountryCode) = &apos;US&apos;,
+    TEXT(Plant__r.Address__CountryCode__s) = &apos;US&apos;
+) &amp;&amp; TEXT(ShippingCountryCode) != TEXT(Plant__r.Address__CountryCode__s)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>TSCA approval is required when the order is being shipped to a different country than the plant location and either one of country is US</inlineHelpText>
+    <label>TSCA Approval Needed</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

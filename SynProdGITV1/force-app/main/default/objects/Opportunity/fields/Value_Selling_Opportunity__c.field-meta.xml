@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Value_Selling_Opportunity__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>SS2-T22 &amp; SSP-292 Identifies if the opportunity is a value selling opportunity</description>
+    <inlineHelpText>Confirm if opportunity is a value selling opportunity</inlineHelpText>
+    <label>Value Selling Opportunity</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

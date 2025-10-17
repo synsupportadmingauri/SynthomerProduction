@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Consist of following permission sets - 
+1. Base Sales User
+2. Syn Action Plans Creator
+3. Syn Action Plans Template Creator
+4. Action Plans User
+5. Syn Composer User
+6. Base Service User
+7. Create/Edit Employees
+8. Einstein Activity Capture Included</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Sales and Service Users</label>
+    <permissionSets>APXTConga4__Composer_User</permissionSets>
+    <permissionSets>Base_Sales_User</permissionSets>
+    <permissionSets>Base_Service_User</permissionSets>
+    <permissionSets>Create_Edit_Employees</permissionSets>
+    <permissionSets>Logging_Framework</permissionSets>
+    <permissionSets>Syn_Action_Plans_Creator</permissionSets>
+    <permissionSets>Syn_Action_Plans_Template_Creator</permissionSets>
+    <permissionSets>Syn_Action_Plans_User</permissionSets>
+    <permissionSets>force__EinsteinActivityCaptureIncluded</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

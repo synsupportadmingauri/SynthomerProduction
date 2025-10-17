@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SAP_Order_ID__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>SSP-176 SS2-T109 Id of Order in SAP</description>
+    <externalId>true</externalId>
+    <label>SAP Order ID</label>
+    <length>200</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

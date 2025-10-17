@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Construction_Solutions_EMEA_South_Lead</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>Industry_Segment__c</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>LEAD.UNREAD</columns>
+    <filterScope>Queue</filterScope>
+    <label>Construction Solutions Europe South</label>
+    <queue>Construction_Solutions_Europe_South</queue>
+    <sharedTo>
+        <territoryAndSubordinates>Synthomer.Coating_Construction_Solutions</territoryAndSubordinates>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomHelpMenuSection xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customHelpMenuItems>
+        <linkUrl>https://isynthomer.sharepoint.com/teams/crmcommunity/SitePages/Department.aspx</linkUrl>
+        <masterLabel>CRM Community</masterLabel>
+        <sortOrder>1</sortOrder>
+    </customHelpMenuItems>
+    <customHelpMenuItems>
+        <linkUrl>https://isynthomer.sharepoint.com/teams/crmcommunity/Shared%20Documents/Forms/AllItems.aspx?csf=1&amp;web=1&amp;e=uRE61X&amp;FolderCTID=0x012000A0C5F2771685684AA16739209EB7840F&amp;id=%2Fteams%2Fcrmcommunity%2FShared%20Documents%2FCRM%20Learning%20Library</linkUrl>
+        <masterLabel>mySalesforce Training Library</masterLabel>
+        <sortOrder>2</sortOrder>
+    </customHelpMenuItems>
+    <masterLabel>Internal Company Resources</masterLabel>
+</CustomHelpMenuSection>

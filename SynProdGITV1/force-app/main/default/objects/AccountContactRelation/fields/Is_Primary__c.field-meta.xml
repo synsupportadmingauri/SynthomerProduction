@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Primary__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicates whether this contact is the primary contact for the related Account.</description>
+    <inlineHelpText>Select this checkbox if this contact is the primary contact for the Account.</inlineHelpText>
+    <label>Is Primary</label>
+    <type>Checkbox</type>
+</CustomField>

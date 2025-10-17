@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_20562481</developerName>
+        <masterLabel>Territory Level 2</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>TERR2_NAME</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>AS Americas</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>AS North America</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>AS South America</sourceValue>
+            </sourceValues>
+            <value>AS Americas</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>AS Greater China</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>AS South East Asia</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>AS APAC</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>AS North East Asia</sourceValue>
+            </sourceValues>
+            <value>AS APAC</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>AS North Europe</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>AS South Europe</sourceValue>
+            </sourceValues>
+            <value>AS EMEAI</value>
+        </values>
+    </buckets>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>AMOUNT</field>
+    </columns>
+    <columns>
+        <field>BucketField_20562481</field>
+    </columns>
+    <currency>GBP</currency>
+    <filter>
+        <booleanFilter>1 OR 2 OR 3</booleanFilter>
+        <criteriaItems>
+            <column>Opportunity.Territory_L4__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Carpet</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Territory_L4__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Paper</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Territory_L4__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Foam</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>TERR2_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Copy of Leader - Total Pipeline Size in</name>
+    <params>
+        <name>terr</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>open</name>
+        <value>open</value>
+    </params>
+    <params>
+        <name>probability</name>
+        <value>&gt;0</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Opportunity</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>AMOUNT</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CLOSE_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Experience Cloud Custom Welcome Email</name>
+    <style>none</style>
+    <subject>Welcome To Synthomer Distributor Portal</subject>
+    <textOnly>Hi {!Receiving_User.FirstName},
+
+Welcome to Synthomer Distributor Portal!
+
+To get started, please go to the {!Community_Url} and create a password. Your username is  {!Receiving_User.Username}
+
+Thank You,
+Synthomer Plc</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

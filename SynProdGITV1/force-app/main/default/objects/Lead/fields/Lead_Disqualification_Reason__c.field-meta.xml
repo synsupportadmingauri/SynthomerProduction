@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Disqualification_Reason__c</fullName>
+    <description>SS2-T35 : This field for storing Lead Disqualification Reason if Lead is marked disqualified</description>
+    <inlineHelpText>Please select a reason for dis-qualifying the lead</inlineHelpText>
+    <label>Lead Disqualification Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Academic or research-only inquiry</fullName>
+                <default>false</default>
+                <label>Academic or research-only inquiry</label>
+            </value>
+            <value>
+                <fullName>Budget not available</fullName>
+                <default>false</default>
+                <label>Budget not available</label>
+            </value>
+            <value>
+                <fullName>Contact left the company</fullName>
+                <default>false</default>
+                <label>Contact left the company</label>
+            </value>
+            <value>
+                <fullName>Contact no longer interested or has changed their mind</fullName>
+                <default>false</default>
+                <label>Contact no longer interested or has changed their mind</label>
+            </value>
+            <value>
+                <fullName>Duplicate lead entry</fullName>
+                <default>false</default>
+                <label>Duplicate lead entry</label>
+            </value>
+            <value>
+                <fullName>Invalid or unreachable contact</fullName>
+                <default>false</default>
+                <label>Invalid or unreachable contact</label>
+            </value>
+            <value>
+                <fullName>Lead has moved to a competitor</fullName>
+                <default>false</default>
+                <label>Lead has moved to a competitor</label>
+            </value>
+            <value>
+                <fullName>No relevant chemical application or industrial need</fullName>
+                <default>false</default>
+                <label>No relevant chemical application or industrial need</label>
+            </value>
+            <value>
+                <fullName>Outside target geography or market</fullName>
+                <default>false</default>
+                <label>Outside target geography or market</label>
+            </value>
+            <value>
+                <fullName>Project cancelled or postponed indefinitely</fullName>
+                <default>false</default>
+                <label>Project cancelled or postponed indefinitely</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

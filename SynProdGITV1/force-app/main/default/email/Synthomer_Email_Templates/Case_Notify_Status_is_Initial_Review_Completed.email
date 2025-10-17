@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body style="font-family: Arial, sans-serif; font-size: 14px; color: #333;">
+    <p>Dear Colleague,</p>
+    <p> Kindly be informed that the Customer Complaint ID: {!Case.CaseNumber} has been changed to a status
+        {!Case.Status} by {!Case.LastModifiedBy}. </p>
+    <p> <strong>Next Steps (Complaint Coordinator & Investigation Team): </strong><br> During investigation, determine
+        if the complaint is justified (is the issue real for the customer?) or *not justified. If justified, continue
+        with full root cause analysis and identification/documentation of corrective actions. Update status to
+        "Investigation Completed" and continue implementation of corrective actions. </p>
+    <p>If complaint is not justified, stop further investigation and select "Not Justified" / reason to notify the
+        Customer Caretaker to communicate this to the customer. Complaints that are "not justified" are typically when a
+        customer is not cooperative with providing critical information like batch#, pictures, other evidence, or
+        sending a sample to be analyzed.</p>
+    <p>Best regards,</p>
+    <p>Your CRM Support Team</p>
+    <p> Link to Ticket in mySalesForce:<a href="{!Case.Link}" style="color: #1a73e8;">{!Case.Subject}</a> </p>
+    <p> The mySalesForce system automatically generated this message. </p>
+</body>
+
+</html>

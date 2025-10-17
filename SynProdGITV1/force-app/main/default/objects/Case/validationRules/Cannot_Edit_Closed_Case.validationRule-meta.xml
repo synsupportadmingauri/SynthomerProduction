@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_Edit_Closed_Case</fullName>
+    <active>true</active>
+    <description>Prevent users from editing Cases when Status is &quot;Completed&quot;,</description>
+    <errorConditionFormula>AND(
+    ISPICKVAL(Status, &quot;Completed&quot;),
+    OR(
+        ISCHANGED(Description),
+        ISCHANGED(Immediate_Action__c),
+        ISCHANGED(Root_Cause_Analysis__c),
+        ISCHANGED(Corrective_Action__c),
+        ISCHANGED(Corrective_Action_Implementation__c),
+        ISCHANGED(Preventive_Action__c),
+        ISCHANGED(Approvals_Congratulations__c),
+        ISCHANGED(Corrective_Action_Impl_Due_Date__c),
+        ISCHANGED(Corrective_Action_Impl_Status__c),
+        ISCHANGED(Preventive_Action_Due_Date__c),
+        ISCHANGED(Preventive_Action_Status__c)
+    )
+)</errorConditionFormula>
+    <errorMessage>This case has been marked as completed. Kindly raise a SynServ ticket to request its reopening should any modifications be necessary</errorMessage>
+</ValidationRule>

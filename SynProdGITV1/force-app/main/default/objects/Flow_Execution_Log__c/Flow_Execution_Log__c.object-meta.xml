@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>Log the flow execution date and time</description>
+    <enableFeeds>false</enableFeeds>
+    <label>Flow Execution Log</label>
+    <visibility>Public</visibility>
+</CustomObject>

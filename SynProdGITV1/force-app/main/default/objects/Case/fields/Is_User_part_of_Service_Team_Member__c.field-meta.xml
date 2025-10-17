@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_User_part_of_Service_Team_Member__c</fullName>
+    <description>Is Logged user part of Service team member</description>
+    <formula>OR(
+    FIND($User.Id, Service_Team__r.ServiceTeamMemIDs1__c &amp; &quot;;&quot;) &gt; 0,
+    FIND($User.Id, Service_Team__r.ServiceTeamMemIDs2__c &amp; &quot;;&quot;) &gt; 0
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Is User part of Service Team Member</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

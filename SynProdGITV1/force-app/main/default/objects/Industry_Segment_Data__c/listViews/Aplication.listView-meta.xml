@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Aplication</fullName>
+    <columns>NAME</columns>
+    <columns>Code__c</columns>
+    <columns>Level__c</columns>
+    <columns>Parent__c</columns>
+    <columns>Hierarchy_Info__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Level__c</field>
+        <operation>equals</operation>
+        <value>Application</value>
+    </filters>
+    <label>Aplication</label>
+</ListView>

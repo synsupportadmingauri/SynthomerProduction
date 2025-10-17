@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>SS2-T218 Ticket_Notif_004b</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Case Notify Status is Investigation Completed</name>
+    <style>none</style>
+    <subject>Notification of Customer Complaint {!Case.CaseNumber} : {!Case.Subject}</subject>
+    <textOnly>Dear Colleague,
+
+Kindly be informed that the Customer Complaint ID: {!Case.CaseNumber} has been changed to a status {!Case.Status} by {!Case.LastModifiedBy}.
+
+Next Steps (Customer Caretaker/Customer Service):
+Send D1-D5 to customer per Account Manager&apos;s direction and document customer feedback. Continue documenting costs related to the complaint and update status to Customer Feedback Documented.
+
+Best regards,
+
+Your CRM Support Team
+
+Link to Ticket in mySalesForce:{!Case.Subject}
+
+The mySalesForce system automatically generated this message.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

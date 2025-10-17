@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Closed_Duration__c</fullName>
+    <description>Shows Days for which case is in Closed.
+Consider Date_Time_Closed__c for the 184 Cases that have issue with incorrect ClosedDate</description>
+    <externalId>false</externalId>
+    <formula>IF( Mig_Error_Case__c , 
+			NOW() - Date_Time_Closed__c,
+			NOW() - ClosedDate
+		)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Case Closed Duration</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>
