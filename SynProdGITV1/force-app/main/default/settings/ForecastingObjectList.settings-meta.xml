@@ -70,12 +70,24 @@
             <label>Application</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6U</field>
+            <label>Quantity CY Impact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00NdP000000xG08</field>
             <label>First Commercial Order Completed</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6V</field>
+            <label>Revenue CY Impact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00NdP000000xG09</field>
             <label>Forecasted?</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6T</field>
+            <label>GM CY Impact</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NdP000000xG0C</field>
@@ -146,8 +158,16 @@
             <label>Value Selling Opportunity</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000001yHvD</field>
+            <label>Last Activity Check</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.NAME</field>
             <label>Opportunity Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP000001yHvE</field>
+            <label>Stage Risk</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>SYNCEDQUOTE.NAME</field>
@@ -156,6 +176,10 @@
         <forecastingObjectListLabelMappings>
             <field>00NdP000001kHN6</field>
             <label>Project Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP0000025dim</field>
+            <label>Approval Status</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.ISPRIORITYRECORD</field>
@@ -274,6 +298,10 @@
             <label>Is My Opportunity?</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002DfFW</field>
+            <label>Opportunity Link</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.QUANTITY</field>
             <label>Quantity</label>
         </forecastingObjectListLabelMappings>
@@ -351,6 +379,7 @@
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>00NdP000000xG07</field>
+            <field>00NdP0000025dim</field>
             <field>00NJ9000005v6vd</field>
             <field>00NdP000000xFy1</field>
             <field>00NJ9000005v6ve</field>
@@ -359,23 +388,29 @@
             <field>00NdP000000xG08</field>
             <field>00NdP000000xG09</field>
             <field>00NdP000000xG3I</field>
+            <field>00NdP000002Gj6T</field>
             <field>00NdP000000xFy2</field>
             <field>00NdP000000xG0A</field>
             <field>00NdP000000xG0B</field>
             <field>00NdP000001hVUb</field>
             <field>00NdP000001Z8oX</field>
+            <field>00NdP000001yHvD</field>
             <field>00NdP000001mnM2</field>
             <field>00NJ9000005v6vg</field>
             <field>00NdP000000xG3J</field>
             <field>00NdP000000xG0C</field>
             <field>00NdP000000xG0D</field>
+            <field>00NdP000002DfFW</field>
             <field>00NdP000000xG0E</field>
             <field>00NdP000001kHN5</field>
             <field>00NdP000001kHN6</field>
+            <field>00NdP000002Gj6U</field>
             <field>00NdP000000xG3K</field>
+            <field>00NdP000002Gj6V</field>
             <field>00NdP000000xG0F</field>
             <field>00NJ9000005v6vf</field>
             <field>00NdP000000xG0G</field>
+            <field>00NdP000001yHvE</field>
             <field>00NdP000000xG0H</field>
             <field>00NdP000001G2N5</field>
             <field>00NdP000001G2N6</field>
@@ -467,12 +502,24 @@
             <label>Application</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6U</field>
+            <label>Quantity CY Impact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00NdP000000xG08</field>
             <label>First Commercial Order Completed</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6V</field>
+            <label>Revenue CY Impact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00NdP000000xG09</field>
             <label>Forecasted?</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6T</field>
+            <label>GM CY Impact</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NdP000000xG0C</field>
@@ -543,8 +590,16 @@
             <label>Value Selling Opportunity</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000001yHvD</field>
+            <label>Last Activity Check</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.NAME</field>
             <label>Opportunity Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP000001yHvE</field>
+            <label>Stage Risk</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>SYNCEDQUOTE.NAME</field>
@@ -553,6 +608,10 @@
         <forecastingObjectListLabelMappings>
             <field>00NdP000001kHN6</field>
             <label>Project Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP0000025dim</field>
+            <label>Approval Status</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.ISPRIORITYRECORD</field>
@@ -671,6 +730,10 @@
             <label>Is My Opportunity?</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002DfFW</field>
+            <label>Opportunity Link</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.QUANTITY</field>
             <label>Quantity</label>
         </forecastingObjectListLabelMappings>
@@ -748,6 +811,7 @@
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>FORECASTEDMFJVALUE</field>
             <field>00NdP000000xG07</field>
+            <field>00NdP0000025dim</field>
             <field>00NJ9000005v6vd</field>
             <field>00NdP000000xFy1</field>
             <field>00NJ9000005v6ve</field>
@@ -756,23 +820,29 @@
             <field>00NdP000000xG08</field>
             <field>00NdP000000xG09</field>
             <field>00NdP000000xG3I</field>
+            <field>00NdP000002Gj6T</field>
             <field>00NdP000000xFy2</field>
             <field>00NdP000000xG0A</field>
             <field>00NdP000000xG0B</field>
             <field>00NdP000001hVUb</field>
             <field>00NdP000001Z8oX</field>
+            <field>00NdP000001yHvD</field>
             <field>00NdP000001mnM2</field>
             <field>00NJ9000005v6vg</field>
             <field>00NdP000000xG3J</field>
             <field>00NdP000000xG0C</field>
             <field>00NdP000000xG0D</field>
+            <field>00NdP000002DfFW</field>
             <field>00NdP000000xG0E</field>
             <field>00NdP000001kHN5</field>
             <field>00NdP000001kHN6</field>
+            <field>00NdP000002Gj6U</field>
             <field>00NdP000000xG3K</field>
+            <field>00NdP000002Gj6V</field>
             <field>00NdP000000xG0F</field>
             <field>00NJ9000005v6vf</field>
             <field>00NdP000000xG0G</field>
+            <field>00NdP000001yHvE</field>
             <field>00NdP000000xG0H</field>
             <field>00NdP000001G2N5</field>
             <field>00NdP000001G2N6</field>
@@ -864,12 +934,24 @@
             <label>Application</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6U</field>
+            <label>Quantity CY Impact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00NdP000000xG08</field>
             <label>First Commercial Order Completed</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6V</field>
+            <label>Revenue CY Impact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00NdP000000xG09</field>
             <label>Forecasted?</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6T</field>
+            <label>GM CY Impact</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NdP000000xG0C</field>
@@ -940,8 +1022,16 @@
             <label>Value Selling Opportunity</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000001yHvD</field>
+            <label>Last Activity Check</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.NAME</field>
             <label>Opportunity Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP000001yHvE</field>
+            <label>Stage Risk</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>SYNCEDQUOTE.NAME</field>
@@ -950,6 +1040,10 @@
         <forecastingObjectListLabelMappings>
             <field>00NdP000001kHN6</field>
             <label>Project Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP0000025dim</field>
+            <label>Approval Status</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.ISPRIORITYRECORD</field>
@@ -1068,6 +1162,10 @@
             <label>Is My Opportunity?</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002DfFW</field>
+            <label>Opportunity Link</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.QUANTITY</field>
             <label>Quantity</label>
         </forecastingObjectListLabelMappings>
@@ -1145,6 +1243,7 @@
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>FORECASTEDMFJVALUE</field>
             <field>00NdP000000xG07</field>
+            <field>00NdP0000025dim</field>
             <field>00NJ9000005v6vd</field>
             <field>00NdP000000xFy1</field>
             <field>00NJ9000005v6ve</field>
@@ -1153,23 +1252,29 @@
             <field>00NdP000000xG08</field>
             <field>00NdP000000xG09</field>
             <field>00NdP000000xG3I</field>
+            <field>00NdP000002Gj6T</field>
             <field>00NdP000000xFy2</field>
             <field>00NdP000000xG0A</field>
             <field>00NdP000000xG0B</field>
             <field>00NdP000001hVUb</field>
             <field>00NdP000001Z8oX</field>
+            <field>00NdP000001yHvD</field>
             <field>00NdP000001mnM2</field>
             <field>00NJ9000005v6vg</field>
             <field>00NdP000000xG3J</field>
             <field>00NdP000000xG0C</field>
             <field>00NdP000000xG0D</field>
+            <field>00NdP000002DfFW</field>
             <field>00NdP000000xG0E</field>
             <field>00NdP000001kHN5</field>
             <field>00NdP000001kHN6</field>
+            <field>00NdP000002Gj6U</field>
             <field>00NdP000000xG3K</field>
+            <field>00NdP000002Gj6V</field>
             <field>00NdP000000xG0F</field>
             <field>00NJ9000005v6vf</field>
             <field>00NdP000000xG0G</field>
+            <field>00NdP000001yHvE</field>
             <field>00NdP000000xG0H</field>
             <field>00NdP000001G2N5</field>
             <field>00NdP000001G2N6</field>
@@ -1261,12 +1366,24 @@
             <label>Application</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6U</field>
+            <label>Quantity CY Impact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00NdP000000xG08</field>
             <label>First Commercial Order Completed</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6V</field>
+            <label>Revenue CY Impact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00NdP000000xG09</field>
             <label>Forecasted?</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6T</field>
+            <label>GM CY Impact</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NdP000000xG0C</field>
@@ -1341,8 +1458,16 @@
             <label>Forecasted Amount</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000001yHvD</field>
+            <label>Last Activity Check</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.NAME</field>
             <label>Opportunity Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP000001yHvE</field>
+            <label>Stage Risk</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>SYNCEDQUOTE.NAME</field>
@@ -1351,6 +1476,10 @@
         <forecastingObjectListLabelMappings>
             <field>00NdP000001kHN6</field>
             <label>Project Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP0000025dim</field>
+            <label>Approval Status</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.ISPRIORITYRECORD</field>
@@ -1469,6 +1598,10 @@
             <label>Is My Opportunity?</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002DfFW</field>
+            <label>Opportunity Link</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.QUANTITY</field>
             <label>Quantity</label>
         </forecastingObjectListLabelMappings>
@@ -1547,6 +1680,7 @@
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>FORECASTEDMFJVALUE</field>
             <field>00NdP000000xG07</field>
+            <field>00NdP0000025dim</field>
             <field>00NJ9000005v6vd</field>
             <field>00NdP000000xFy1</field>
             <field>00NJ9000005v6ve</field>
@@ -1555,23 +1689,29 @@
             <field>00NdP000000xG08</field>
             <field>00NdP000000xG09</field>
             <field>00NdP000000xG3I</field>
+            <field>00NdP000002Gj6T</field>
             <field>00NdP000000xFy2</field>
             <field>00NdP000000xG0A</field>
             <field>00NdP000000xG0B</field>
             <field>00NdP000001hVUb</field>
             <field>00NdP000001Z8oX</field>
+            <field>00NdP000001yHvD</field>
             <field>00NdP000001mnM2</field>
             <field>00NJ9000005v6vg</field>
             <field>00NdP000000xG3J</field>
             <field>00NdP000000xG0C</field>
             <field>00NdP000000xG0D</field>
+            <field>00NdP000002DfFW</field>
             <field>00NdP000000xG0E</field>
             <field>00NdP000001kHN5</field>
             <field>00NdP000001kHN6</field>
+            <field>00NdP000002Gj6U</field>
             <field>00NdP000000xG3K</field>
+            <field>00NdP000002Gj6V</field>
             <field>00NdP000000xG0F</field>
             <field>00NJ9000005v6vf</field>
             <field>00NdP000000xG0G</field>
+            <field>00NdP000001yHvE</field>
             <field>00NdP000000xG0H</field>
             <field>00NdP000001G2N5</field>
             <field>00NdP000001G2N6</field>
@@ -1663,12 +1803,24 @@
             <label>Application</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6U</field>
+            <label>Quantity CY Impact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00NdP000000xG08</field>
             <label>First Commercial Order Completed</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6V</field>
+            <label>Revenue CY Impact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00NdP000000xG09</field>
             <label>Forecasted?</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6T</field>
+            <label>GM CY Impact</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NdP000000xG0C</field>
@@ -1739,8 +1891,16 @@
             <label>Value Selling Opportunity</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000001yHvD</field>
+            <label>Last Activity Check</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.NAME</field>
             <label>Opportunity Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP000001yHvE</field>
+            <label>Stage Risk</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>SYNCEDQUOTE.NAME</field>
@@ -1749,6 +1909,10 @@
         <forecastingObjectListLabelMappings>
             <field>00NdP000001kHN6</field>
             <label>Project Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP0000025dim</field>
+            <label>Approval Status</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.ISPRIORITYRECORD</field>
@@ -1867,6 +2031,10 @@
             <label>Is My Opportunity?</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002DfFW</field>
+            <label>Opportunity Link</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.QUANTITY</field>
             <label>Quantity</label>
         </forecastingObjectListLabelMappings>
@@ -1944,6 +2112,7 @@
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>FORECASTEDMFJVALUE</field>
             <field>00NdP000000xG07</field>
+            <field>00NdP0000025dim</field>
             <field>00NJ9000005v6vd</field>
             <field>00NdP000000xFy1</field>
             <field>00NJ9000005v6ve</field>
@@ -1952,23 +2121,29 @@
             <field>00NdP000000xG08</field>
             <field>00NdP000000xG09</field>
             <field>00NdP000000xG3I</field>
+            <field>00NdP000002Gj6T</field>
             <field>00NdP000000xFy2</field>
             <field>00NdP000000xG0A</field>
             <field>00NdP000000xG0B</field>
             <field>00NdP000001hVUb</field>
             <field>00NdP000001Z8oX</field>
+            <field>00NdP000001yHvD</field>
             <field>00NdP000001mnM2</field>
             <field>00NJ9000005v6vg</field>
             <field>00NdP000000xG3J</field>
             <field>00NdP000000xG0C</field>
             <field>00NdP000000xG0D</field>
+            <field>00NdP000002DfFW</field>
             <field>00NdP000000xG0E</field>
             <field>00NdP000001kHN5</field>
             <field>00NdP000001kHN6</field>
+            <field>00NdP000002Gj6U</field>
             <field>00NdP000000xG3K</field>
+            <field>00NdP000002Gj6V</field>
             <field>00NdP000000xG0F</field>
             <field>00NJ9000005v6vf</field>
             <field>00NdP000000xG0G</field>
+            <field>00NdP000001yHvE</field>
             <field>00NdP000000xG0H</field>
             <field>00NdP000001G2N5</field>
             <field>00NdP000001G2N6</field>
@@ -2060,12 +2235,24 @@
             <label>Application</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6U</field>
+            <label>Quantity CY Impact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00NdP000000xG08</field>
             <label>First Commercial Order Completed</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6V</field>
+            <label>Revenue CY Impact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00NdP000000xG09</field>
             <label>Forecasted?</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6T</field>
+            <label>GM CY Impact</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NdP000000xG0C</field>
@@ -2140,8 +2327,16 @@
             <label>Forecasted Amount</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000001yHvD</field>
+            <label>Last Activity Check</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.NAME</field>
             <label>Opportunity Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP000001yHvE</field>
+            <label>Stage Risk</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>SYNCEDQUOTE.NAME</field>
@@ -2150,6 +2345,10 @@
         <forecastingObjectListLabelMappings>
             <field>00NdP000001kHN6</field>
             <label>Project Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP0000025dim</field>
+            <label>Approval Status</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.ISPRIORITYRECORD</field>
@@ -2268,6 +2467,10 @@
             <label>Is My Opportunity?</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002DfFW</field>
+            <label>Opportunity Link</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.QUANTITY</field>
             <label>Quantity</label>
         </forecastingObjectListLabelMappings>
@@ -2346,6 +2549,7 @@
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>FORECASTEDMFJVALUE</field>
             <field>00NdP000000xG07</field>
+            <field>00NdP0000025dim</field>
             <field>00NJ9000005v6vd</field>
             <field>00NdP000000xFy1</field>
             <field>00NJ9000005v6ve</field>
@@ -2354,23 +2558,29 @@
             <field>00NdP000000xG08</field>
             <field>00NdP000000xG09</field>
             <field>00NdP000000xG3I</field>
+            <field>00NdP000002Gj6T</field>
             <field>00NdP000000xFy2</field>
             <field>00NdP000000xG0A</field>
             <field>00NdP000000xG0B</field>
             <field>00NdP000001hVUb</field>
             <field>00NdP000001Z8oX</field>
+            <field>00NdP000001yHvD</field>
             <field>00NdP000001mnM2</field>
             <field>00NJ9000005v6vg</field>
             <field>00NdP000000xG3J</field>
             <field>00NdP000000xG0C</field>
             <field>00NdP000000xG0D</field>
+            <field>00NdP000002DfFW</field>
             <field>00NdP000000xG0E</field>
             <field>00NdP000001kHN5</field>
             <field>00NdP000001kHN6</field>
+            <field>00NdP000002Gj6U</field>
             <field>00NdP000000xG3K</field>
+            <field>00NdP000002Gj6V</field>
             <field>00NdP000000xG0F</field>
             <field>00NJ9000005v6vf</field>
             <field>00NdP000000xG0G</field>
+            <field>00NdP000001yHvE</field>
             <field>00NdP000000xG0H</field>
             <field>00NdP000001G2N5</field>
             <field>00NdP000001G2N6</field>
@@ -2462,12 +2672,24 @@
             <label>Application</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6U</field>
+            <label>Quantity CY Impact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00NdP000000xG08</field>
             <label>First Commercial Order Completed</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6V</field>
+            <label>Revenue CY Impact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00NdP000000xG09</field>
             <label>Forecasted?</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6T</field>
+            <label>GM CY Impact</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NdP000000xG0C</field>
@@ -2538,8 +2760,16 @@
             <label>Value Selling Opportunity</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000001yHvD</field>
+            <label>Last Activity Check</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.NAME</field>
             <label>Opportunity Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP000001yHvE</field>
+            <label>Stage Risk</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>SYNCEDQUOTE.NAME</field>
@@ -2548,6 +2778,10 @@
         <forecastingObjectListLabelMappings>
             <field>00NdP000001kHN6</field>
             <label>Project Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP0000025dim</field>
+            <label>Approval Status</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.ISPRIORITYRECORD</field>
@@ -2666,6 +2900,10 @@
             <label>Is My Opportunity?</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002DfFW</field>
+            <label>Opportunity Link</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.QUANTITY</field>
             <label>Quantity</label>
         </forecastingObjectListLabelMappings>
@@ -2743,6 +2981,7 @@
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>FORECASTEDMFJVALUE</field>
             <field>00NdP000000xG07</field>
+            <field>00NdP0000025dim</field>
             <field>00NJ9000005v6vd</field>
             <field>00NdP000000xFy1</field>
             <field>00NJ9000005v6ve</field>
@@ -2751,23 +2990,29 @@
             <field>00NdP000000xG08</field>
             <field>00NdP000000xG09</field>
             <field>00NdP000000xG3I</field>
+            <field>00NdP000002Gj6T</field>
             <field>00NdP000000xFy2</field>
             <field>00NdP000000xG0A</field>
             <field>00NdP000000xG0B</field>
             <field>00NdP000001hVUb</field>
             <field>00NdP000001Z8oX</field>
+            <field>00NdP000001yHvD</field>
             <field>00NdP000001mnM2</field>
             <field>00NJ9000005v6vg</field>
             <field>00NdP000000xG3J</field>
             <field>00NdP000000xG0C</field>
             <field>00NdP000000xG0D</field>
+            <field>00NdP000002DfFW</field>
             <field>00NdP000000xG0E</field>
             <field>00NdP000001kHN5</field>
             <field>00NdP000001kHN6</field>
+            <field>00NdP000002Gj6U</field>
             <field>00NdP000000xG3K</field>
+            <field>00NdP000002Gj6V</field>
             <field>00NdP000000xG0F</field>
             <field>00NJ9000005v6vf</field>
             <field>00NdP000000xG0G</field>
+            <field>00NdP000001yHvE</field>
             <field>00NdP000000xG0H</field>
             <field>00NdP000001G2N5</field>
             <field>00NdP000001G2N6</field>
@@ -2859,12 +3104,24 @@
             <label>Application</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6U</field>
+            <label>Quantity CY Impact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00NdP000000xG08</field>
             <label>First Commercial Order Completed</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6V</field>
+            <label>Revenue CY Impact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00NdP000000xG09</field>
             <label>Forecasted?</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6T</field>
+            <label>GM CY Impact</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NdP000000xG0C</field>
@@ -2939,8 +3196,16 @@
             <label>Forecasted Amount</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000001yHvD</field>
+            <label>Last Activity Check</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.NAME</field>
             <label>Opportunity Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP000001yHvE</field>
+            <label>Stage Risk</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>SYNCEDQUOTE.NAME</field>
@@ -2949,6 +3214,10 @@
         <forecastingObjectListLabelMappings>
             <field>00NdP000001kHN6</field>
             <label>Project Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP0000025dim</field>
+            <label>Approval Status</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.ISPRIORITYRECORD</field>
@@ -3067,6 +3336,10 @@
             <label>Is My Opportunity?</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002DfFW</field>
+            <label>Opportunity Link</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.QUANTITY</field>
             <label>Quantity</label>
         </forecastingObjectListLabelMappings>
@@ -3145,6 +3418,7 @@
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>FORECASTEDMFJVALUE</field>
             <field>00NdP000000xG07</field>
+            <field>00NdP0000025dim</field>
             <field>00NJ9000005v6vd</field>
             <field>00NdP000000xFy1</field>
             <field>00NJ9000005v6ve</field>
@@ -3153,23 +3427,29 @@
             <field>00NdP000000xG08</field>
             <field>00NdP000000xG09</field>
             <field>00NdP000000xG3I</field>
+            <field>00NdP000002Gj6T</field>
             <field>00NdP000000xFy2</field>
             <field>00NdP000000xG0A</field>
             <field>00NdP000000xG0B</field>
             <field>00NdP000001hVUb</field>
             <field>00NdP000001Z8oX</field>
+            <field>00NdP000001yHvD</field>
             <field>00NdP000001mnM2</field>
             <field>00NJ9000005v6vg</field>
             <field>00NdP000000xG3J</field>
             <field>00NdP000000xG0C</field>
             <field>00NdP000000xG0D</field>
+            <field>00NdP000002DfFW</field>
             <field>00NdP000000xG0E</field>
             <field>00NdP000001kHN5</field>
             <field>00NdP000001kHN6</field>
+            <field>00NdP000002Gj6U</field>
             <field>00NdP000000xG3K</field>
+            <field>00NdP000002Gj6V</field>
             <field>00NdP000000xG0F</field>
             <field>00NJ9000005v6vf</field>
             <field>00NdP000000xG0G</field>
+            <field>00NdP000001yHvE</field>
             <field>00NdP000000xG0H</field>
             <field>00NdP000001G2N5</field>
             <field>00NdP000001G2N6</field>
@@ -3261,12 +3541,24 @@
             <label>Application</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6U</field>
+            <label>Quantity CY Impact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00NdP000000xG08</field>
             <label>First Commercial Order Completed</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6V</field>
+            <label>Revenue CY Impact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00NdP000000xG09</field>
             <label>Forecasted?</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6T</field>
+            <label>GM CY Impact</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NdP000000xG0C</field>
@@ -3337,8 +3629,16 @@
             <label>Value Selling Opportunity</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000001yHvD</field>
+            <label>Last Activity Check</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.NAME</field>
             <label>Opportunity Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP000001yHvE</field>
+            <label>Stage Risk</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>SYNCEDQUOTE.NAME</field>
@@ -3347,6 +3647,10 @@
         <forecastingObjectListLabelMappings>
             <field>00NdP000001kHN6</field>
             <label>Project Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP0000025dim</field>
+            <label>Approval Status</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.ISPRIORITYRECORD</field>
@@ -3465,6 +3769,10 @@
             <label>Is My Opportunity?</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002DfFW</field>
+            <label>Opportunity Link</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.QUANTITY</field>
             <label>Quantity</label>
         </forecastingObjectListLabelMappings>
@@ -3542,6 +3850,7 @@
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>FORECASTEDMFJVALUE</field>
             <field>00NdP000000xG07</field>
+            <field>00NdP0000025dim</field>
             <field>00NJ9000005v6vd</field>
             <field>00NdP000000xFy1</field>
             <field>00NJ9000005v6ve</field>
@@ -3550,23 +3859,29 @@
             <field>00NdP000000xG08</field>
             <field>00NdP000000xG09</field>
             <field>00NdP000000xG3I</field>
+            <field>00NdP000002Gj6T</field>
             <field>00NdP000000xFy2</field>
             <field>00NdP000000xG0A</field>
             <field>00NdP000000xG0B</field>
             <field>00NdP000001hVUb</field>
             <field>00NdP000001Z8oX</field>
+            <field>00NdP000001yHvD</field>
             <field>00NdP000001mnM2</field>
             <field>00NJ9000005v6vg</field>
             <field>00NdP000000xG3J</field>
             <field>00NdP000000xG0C</field>
             <field>00NdP000000xG0D</field>
+            <field>00NdP000002DfFW</field>
             <field>00NdP000000xG0E</field>
             <field>00NdP000001kHN5</field>
             <field>00NdP000001kHN6</field>
+            <field>00NdP000002Gj6U</field>
             <field>00NdP000000xG3K</field>
+            <field>00NdP000002Gj6V</field>
             <field>00NdP000000xG0F</field>
             <field>00NJ9000005v6vf</field>
             <field>00NdP000000xG0G</field>
+            <field>00NdP000001yHvE</field>
             <field>00NdP000000xG0H</field>
             <field>00NdP000001G2N5</field>
             <field>00NdP000001G2N6</field>
@@ -3658,12 +3973,24 @@
             <label>Application</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6U</field>
+            <label>Quantity CY Impact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00NdP000000xG08</field>
             <label>First Commercial Order Completed</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6V</field>
+            <label>Revenue CY Impact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00NdP000000xG09</field>
             <label>Forecasted?</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6T</field>
+            <label>GM CY Impact</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NdP000000xG0C</field>
@@ -3738,8 +4065,16 @@
             <label>Forecasted Amount</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000001yHvD</field>
+            <label>Last Activity Check</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.NAME</field>
             <label>Opportunity Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP000001yHvE</field>
+            <label>Stage Risk</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>SYNCEDQUOTE.NAME</field>
@@ -3748,6 +4083,10 @@
         <forecastingObjectListLabelMappings>
             <field>00NdP000001kHN6</field>
             <label>Project Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP0000025dim</field>
+            <label>Approval Status</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.ISPRIORITYRECORD</field>
@@ -3866,6 +4205,10 @@
             <label>Is My Opportunity?</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002DfFW</field>
+            <label>Opportunity Link</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.QUANTITY</field>
             <label>Quantity</label>
         </forecastingObjectListLabelMappings>
@@ -3944,6 +4287,7 @@
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>FORECASTEDMFJVALUE</field>
             <field>00NdP000000xG07</field>
+            <field>00NdP0000025dim</field>
             <field>00NJ9000005v6vd</field>
             <field>00NdP000000xFy1</field>
             <field>00NJ9000005v6ve</field>
@@ -3952,23 +4296,29 @@
             <field>00NdP000000xG08</field>
             <field>00NdP000000xG09</field>
             <field>00NdP000000xG3I</field>
+            <field>00NdP000002Gj6T</field>
             <field>00NdP000000xFy2</field>
             <field>00NdP000000xG0A</field>
             <field>00NdP000000xG0B</field>
             <field>00NdP000001hVUb</field>
             <field>00NdP000001Z8oX</field>
+            <field>00NdP000001yHvD</field>
             <field>00NdP000001mnM2</field>
             <field>00NJ9000005v6vg</field>
             <field>00NdP000000xG3J</field>
             <field>00NdP000000xG0C</field>
             <field>00NdP000000xG0D</field>
+            <field>00NdP000002DfFW</field>
             <field>00NdP000000xG0E</field>
             <field>00NdP000001kHN5</field>
             <field>00NdP000001kHN6</field>
+            <field>00NdP000002Gj6U</field>
             <field>00NdP000000xG3K</field>
+            <field>00NdP000002Gj6V</field>
             <field>00NdP000000xG0F</field>
             <field>00NJ9000005v6vf</field>
             <field>00NdP000000xG0G</field>
+            <field>00NdP000001yHvE</field>
             <field>00NdP000000xG0H</field>
             <field>00NdP000001G2N5</field>
             <field>00NdP000001G2N6</field>
@@ -4060,12 +4410,24 @@
             <label>Application</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6U</field>
+            <label>Quantity CY Impact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00NdP000000xG08</field>
             <label>First Commercial Order Completed</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6V</field>
+            <label>Revenue CY Impact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00NdP000000xG09</field>
             <label>Forecasted?</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6T</field>
+            <label>GM CY Impact</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NdP000000xG0C</field>
@@ -4136,8 +4498,16 @@
             <label>Value Selling Opportunity</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000001yHvD</field>
+            <label>Last Activity Check</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.NAME</field>
             <label>Opportunity Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP000001yHvE</field>
+            <label>Stage Risk</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>SYNCEDQUOTE.NAME</field>
@@ -4146,6 +4516,10 @@
         <forecastingObjectListLabelMappings>
             <field>00NdP000001kHN6</field>
             <label>Project Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP0000025dim</field>
+            <label>Approval Status</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.ISPRIORITYRECORD</field>
@@ -4264,6 +4638,10 @@
             <label>Is My Opportunity?</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002DfFW</field>
+            <label>Opportunity Link</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.QUANTITY</field>
             <label>Quantity</label>
         </forecastingObjectListLabelMappings>
@@ -4341,6 +4719,7 @@
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>FORECASTEDMFJVALUE</field>
             <field>00NdP000000xG07</field>
+            <field>00NdP0000025dim</field>
             <field>00NJ9000005v6vd</field>
             <field>00NdP000000xFy1</field>
             <field>00NJ9000005v6ve</field>
@@ -4349,23 +4728,29 @@
             <field>00NdP000000xG08</field>
             <field>00NdP000000xG09</field>
             <field>00NdP000000xG3I</field>
+            <field>00NdP000002Gj6T</field>
             <field>00NdP000000xFy2</field>
             <field>00NdP000000xG0A</field>
             <field>00NdP000000xG0B</field>
             <field>00NdP000001hVUb</field>
             <field>00NdP000001Z8oX</field>
+            <field>00NdP000001yHvD</field>
             <field>00NdP000001mnM2</field>
             <field>00NJ9000005v6vg</field>
             <field>00NdP000000xG3J</field>
             <field>00NdP000000xG0C</field>
             <field>00NdP000000xG0D</field>
+            <field>00NdP000002DfFW</field>
             <field>00NdP000000xG0E</field>
             <field>00NdP000001kHN5</field>
             <field>00NdP000001kHN6</field>
+            <field>00NdP000002Gj6U</field>
             <field>00NdP000000xG3K</field>
+            <field>00NdP000002Gj6V</field>
             <field>00NdP000000xG0F</field>
             <field>00NJ9000005v6vf</field>
             <field>00NdP000000xG0G</field>
+            <field>00NdP000001yHvE</field>
             <field>00NdP000000xG0H</field>
             <field>00NdP000001G2N5</field>
             <field>00NdP000001G2N6</field>
@@ -4457,12 +4842,24 @@
             <label>Application</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6U</field>
+            <label>Quantity CY Impact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00NdP000000xG08</field>
             <label>First Commercial Order Completed</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6V</field>
+            <label>Revenue CY Impact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00NdP000000xG09</field>
             <label>Forecasted?</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6T</field>
+            <label>GM CY Impact</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NdP000000xG0C</field>
@@ -4537,8 +4934,16 @@
             <label>Forecasted Amount</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000001yHvD</field>
+            <label>Last Activity Check</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.NAME</field>
             <label>Opportunity Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP000001yHvE</field>
+            <label>Stage Risk</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>SYNCEDQUOTE.NAME</field>
@@ -4547,6 +4952,10 @@
         <forecastingObjectListLabelMappings>
             <field>00NdP000001kHN6</field>
             <label>Project Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP0000025dim</field>
+            <label>Approval Status</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.ISPRIORITYRECORD</field>
@@ -4665,6 +5074,10 @@
             <label>Is My Opportunity?</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002DfFW</field>
+            <label>Opportunity Link</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.QUANTITY</field>
             <label>Quantity</label>
         </forecastingObjectListLabelMappings>
@@ -4743,6 +5156,7 @@
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>FORECASTEDMFJVALUE</field>
             <field>00NdP000000xG07</field>
+            <field>00NdP0000025dim</field>
             <field>00NJ9000005v6vd</field>
             <field>00NdP000000xFy1</field>
             <field>00NJ9000005v6ve</field>
@@ -4751,23 +5165,29 @@
             <field>00NdP000000xG08</field>
             <field>00NdP000000xG09</field>
             <field>00NdP000000xG3I</field>
+            <field>00NdP000002Gj6T</field>
             <field>00NdP000000xFy2</field>
             <field>00NdP000000xG0A</field>
             <field>00NdP000000xG0B</field>
             <field>00NdP000001hVUb</field>
             <field>00NdP000001Z8oX</field>
+            <field>00NdP000001yHvD</field>
             <field>00NdP000001mnM2</field>
             <field>00NJ9000005v6vg</field>
             <field>00NdP000000xG3J</field>
             <field>00NdP000000xG0C</field>
             <field>00NdP000000xG0D</field>
+            <field>00NdP000002DfFW</field>
             <field>00NdP000000xG0E</field>
             <field>00NdP000001kHN5</field>
             <field>00NdP000001kHN6</field>
+            <field>00NdP000002Gj6U</field>
             <field>00NdP000000xG3K</field>
+            <field>00NdP000002Gj6V</field>
             <field>00NdP000000xG0F</field>
             <field>00NJ9000005v6vf</field>
             <field>00NdP000000xG0G</field>
+            <field>00NdP000001yHvE</field>
             <field>00NdP000000xG0H</field>
             <field>00NdP000001G2N5</field>
             <field>00NdP000001G2N6</field>
@@ -4859,12 +5279,24 @@
             <label>Application</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6U</field>
+            <label>Quantity CY Impact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00NdP000000xG08</field>
             <label>First Commercial Order Completed</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6V</field>
+            <label>Revenue CY Impact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00NdP000000xG09</field>
             <label>Forecasted?</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6T</field>
+            <label>GM CY Impact</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NdP000000xG0C</field>
@@ -4935,8 +5367,16 @@
             <label>Value Selling Opportunity</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000001yHvD</field>
+            <label>Last Activity Check</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.NAME</field>
             <label>Opportunity Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP000001yHvE</field>
+            <label>Stage Risk</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>SYNCEDQUOTE.NAME</field>
@@ -4945,6 +5385,10 @@
         <forecastingObjectListLabelMappings>
             <field>00NdP000001kHN6</field>
             <label>Project Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP0000025dim</field>
+            <label>Approval Status</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.ISPRIORITYRECORD</field>
@@ -5063,6 +5507,10 @@
             <label>Is My Opportunity?</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002DfFW</field>
+            <label>Opportunity Link</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.QUANTITY</field>
             <label>Quantity</label>
         </forecastingObjectListLabelMappings>
@@ -5140,6 +5588,7 @@
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>FORECASTEDMFJVALUE</field>
             <field>00NdP000000xG07</field>
+            <field>00NdP0000025dim</field>
             <field>00NJ9000005v6vd</field>
             <field>00NdP000000xFy1</field>
             <field>00NJ9000005v6ve</field>
@@ -5148,23 +5597,29 @@
             <field>00NdP000000xG08</field>
             <field>00NdP000000xG09</field>
             <field>00NdP000000xG3I</field>
+            <field>00NdP000002Gj6T</field>
             <field>00NdP000000xFy2</field>
             <field>00NdP000000xG0A</field>
             <field>00NdP000000xG0B</field>
             <field>00NdP000001hVUb</field>
             <field>00NdP000001Z8oX</field>
+            <field>00NdP000001yHvD</field>
             <field>00NdP000001mnM2</field>
             <field>00NJ9000005v6vg</field>
             <field>00NdP000000xG3J</field>
             <field>00NdP000000xG0C</field>
             <field>00NdP000000xG0D</field>
+            <field>00NdP000002DfFW</field>
             <field>00NdP000000xG0E</field>
             <field>00NdP000001kHN5</field>
             <field>00NdP000001kHN6</field>
+            <field>00NdP000002Gj6U</field>
             <field>00NdP000000xG3K</field>
+            <field>00NdP000002Gj6V</field>
             <field>00NdP000000xG0F</field>
             <field>00NJ9000005v6vf</field>
             <field>00NdP000000xG0G</field>
+            <field>00NdP000001yHvE</field>
             <field>00NdP000000xG0H</field>
             <field>00NdP000001G2N5</field>
             <field>00NdP000001G2N6</field>
@@ -5256,12 +5711,24 @@
             <label>Application</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6U</field>
+            <label>Quantity CY Impact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00NdP000000xG08</field>
             <label>First Commercial Order Completed</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6V</field>
+            <label>Revenue CY Impact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00NdP000000xG09</field>
             <label>Forecasted?</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6T</field>
+            <label>GM CY Impact</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NdP000000xG0C</field>
@@ -5332,8 +5799,16 @@
             <label>Value Selling Opportunity</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000001yHvD</field>
+            <label>Last Activity Check</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.NAME</field>
             <label>Opportunity Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP000001yHvE</field>
+            <label>Stage Risk</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>SYNCEDQUOTE.NAME</field>
@@ -5342,6 +5817,10 @@
         <forecastingObjectListLabelMappings>
             <field>00NdP000001kHN6</field>
             <label>Project Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP0000025dim</field>
+            <label>Approval Status</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.ISPRIORITYRECORD</field>
@@ -5460,6 +5939,10 @@
             <label>Is My Opportunity?</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002DfFW</field>
+            <label>Opportunity Link</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.QUANTITY</field>
             <label>Quantity</label>
         </forecastingObjectListLabelMappings>
@@ -5538,6 +6021,7 @@
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>00NdP000000xG07</field>
+            <field>00NdP0000025dim</field>
             <field>00NJ9000005v6vd</field>
             <field>00NdP000000xFy1</field>
             <field>00NJ9000005v6ve</field>
@@ -5546,23 +6030,29 @@
             <field>00NdP000000xG08</field>
             <field>00NdP000000xG09</field>
             <field>00NdP000000xG3I</field>
+            <field>00NdP000002Gj6T</field>
             <field>00NdP000000xFy2</field>
             <field>00NdP000000xG0A</field>
             <field>00NdP000000xG0B</field>
             <field>00NdP000001hVUb</field>
             <field>00NdP000001Z8oX</field>
+            <field>00NdP000001yHvD</field>
             <field>00NdP000001mnM2</field>
             <field>00NJ9000005v6vg</field>
             <field>00NdP000000xG3J</field>
             <field>00NdP000000xG0C</field>
             <field>00NdP000000xG0D</field>
+            <field>00NdP000002DfFW</field>
             <field>00NdP000000xG0E</field>
             <field>00NdP000001kHN5</field>
             <field>00NdP000001kHN6</field>
+            <field>00NdP000002Gj6U</field>
             <field>00NdP000000xG3K</field>
+            <field>00NdP000002Gj6V</field>
             <field>00NdP000000xG0F</field>
             <field>00NJ9000005v6vf</field>
             <field>00NdP000000xG0G</field>
+            <field>00NdP000001yHvE</field>
             <field>00NdP000000xG0H</field>
             <field>00NdP000001G2N5</field>
             <field>00NdP000001G2N6</field>
@@ -5653,12 +6143,24 @@
             <label>Application</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6U</field>
+            <label>Quantity CY Impact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00NdP000000xG08</field>
             <label>First Commercial Order Completed</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6V</field>
+            <label>Revenue CY Impact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00NdP000000xG09</field>
             <label>Forecasted?</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6T</field>
+            <label>GM CY Impact</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NdP000000xG0C</field>
@@ -5733,8 +6235,16 @@
             <label>Forecasted Amount</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000001yHvD</field>
+            <label>Last Activity Check</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.NAME</field>
             <label>Opportunity Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP000001yHvE</field>
+            <label>Stage Risk</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>SYNCEDQUOTE.NAME</field>
@@ -5743,6 +6253,10 @@
         <forecastingObjectListLabelMappings>
             <field>00NdP000001kHN6</field>
             <label>Project Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP0000025dim</field>
+            <label>Approval Status</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.ISPRIORITYRECORD</field>
@@ -5861,6 +6375,10 @@
             <label>Is My Opportunity?</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002DfFW</field>
+            <label>Opportunity Link</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.QUANTITY</field>
             <label>Quantity</label>
         </forecastingObjectListLabelMappings>
@@ -5940,6 +6458,7 @@
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>00NdP000000xG07</field>
+            <field>00NdP0000025dim</field>
             <field>00NJ9000005v6vd</field>
             <field>00NdP000000xFy1</field>
             <field>00NJ9000005v6ve</field>
@@ -5948,23 +6467,29 @@
             <field>00NdP000000xG08</field>
             <field>00NdP000000xG09</field>
             <field>00NdP000000xG3I</field>
+            <field>00NdP000002Gj6T</field>
             <field>00NdP000000xFy2</field>
             <field>00NdP000000xG0A</field>
             <field>00NdP000000xG0B</field>
             <field>00NdP000001hVUb</field>
             <field>00NdP000001Z8oX</field>
+            <field>00NdP000001yHvD</field>
             <field>00NdP000001mnM2</field>
             <field>00NJ9000005v6vg</field>
             <field>00NdP000000xG3J</field>
             <field>00NdP000000xG0C</field>
             <field>00NdP000000xG0D</field>
+            <field>00NdP000002DfFW</field>
             <field>00NdP000000xG0E</field>
             <field>00NdP000001kHN5</field>
             <field>00NdP000001kHN6</field>
+            <field>00NdP000002Gj6U</field>
             <field>00NdP000000xG3K</field>
+            <field>00NdP000002Gj6V</field>
             <field>00NdP000000xG0F</field>
             <field>00NJ9000005v6vf</field>
             <field>00NdP000000xG0G</field>
+            <field>00NdP000001yHvE</field>
             <field>00NdP000000xG0H</field>
             <field>00NdP000001G2N5</field>
             <field>00NdP000001G2N6</field>
@@ -6055,12 +6580,24 @@
             <label>Application</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6U</field>
+            <label>Quantity CY Impact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00NdP000000xG08</field>
             <label>First Commercial Order Completed</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6V</field>
+            <label>Revenue CY Impact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00NdP000000xG09</field>
             <label>Forecasted?</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6T</field>
+            <label>GM CY Impact</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NdP000000xG0C</field>
@@ -6135,8 +6672,16 @@
             <label>Forecasted Amount</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000001yHvD</field>
+            <label>Last Activity Check</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.NAME</field>
             <label>Opportunity Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP000001yHvE</field>
+            <label>Stage Risk</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>SYNCEDQUOTE.NAME</field>
@@ -6145,6 +6690,10 @@
         <forecastingObjectListLabelMappings>
             <field>00NdP000001kHN6</field>
             <label>Project Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP0000025dim</field>
+            <label>Approval Status</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.ISPRIORITYRECORD</field>
@@ -6263,6 +6812,10 @@
             <label>Is My Opportunity?</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002DfFW</field>
+            <label>Opportunity Link</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.QUANTITY</field>
             <label>Quantity</label>
         </forecastingObjectListLabelMappings>
@@ -6342,6 +6895,7 @@
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>00NdP000000xG07</field>
+            <field>00NdP0000025dim</field>
             <field>00NJ9000005v6vd</field>
             <field>00NdP000000xFy1</field>
             <field>00NJ9000005v6ve</field>
@@ -6350,23 +6904,29 @@
             <field>00NdP000000xG08</field>
             <field>00NdP000000xG09</field>
             <field>00NdP000000xG3I</field>
+            <field>00NdP000002Gj6T</field>
             <field>00NdP000000xFy2</field>
             <field>00NdP000000xG0A</field>
             <field>00NdP000000xG0B</field>
             <field>00NdP000001hVUb</field>
             <field>00NdP000001Z8oX</field>
+            <field>00NdP000001yHvD</field>
             <field>00NdP000001mnM2</field>
             <field>00NJ9000005v6vg</field>
             <field>00NdP000000xG3J</field>
             <field>00NdP000000xG0C</field>
             <field>00NdP000000xG0D</field>
+            <field>00NdP000002DfFW</field>
             <field>00NdP000000xG0E</field>
             <field>00NdP000001kHN5</field>
             <field>00NdP000001kHN6</field>
+            <field>00NdP000002Gj6U</field>
             <field>00NdP000000xG3K</field>
+            <field>00NdP000002Gj6V</field>
             <field>00NdP000000xG0F</field>
             <field>00NJ9000005v6vf</field>
             <field>00NdP000000xG0G</field>
+            <field>00NdP000001yHvE</field>
             <field>00NdP000000xG0H</field>
             <field>00NdP000001G2N5</field>
             <field>00NdP000001G2N6</field>
@@ -6457,12 +7017,24 @@
             <label>Application</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6U</field>
+            <label>Quantity CY Impact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00NdP000000xG08</field>
             <label>First Commercial Order Completed</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6V</field>
+            <label>Revenue CY Impact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00NdP000000xG09</field>
             <label>Forecasted?</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6T</field>
+            <label>GM CY Impact</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NdP000000xG0C</field>
@@ -6533,8 +7105,16 @@
             <label>Value Selling Opportunity</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000001yHvD</field>
+            <label>Last Activity Check</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.NAME</field>
             <label>Opportunity Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP000001yHvE</field>
+            <label>Stage Risk</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>SYNCEDQUOTE.NAME</field>
@@ -6543,6 +7123,10 @@
         <forecastingObjectListLabelMappings>
             <field>00NdP000001kHN6</field>
             <label>Project Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP0000025dim</field>
+            <label>Approval Status</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.ISPRIORITYRECORD</field>
@@ -6661,6 +7245,10 @@
             <label>Is My Opportunity?</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002DfFW</field>
+            <label>Opportunity Link</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.QUANTITY</field>
             <label>Quantity</label>
         </forecastingObjectListLabelMappings>
@@ -6739,6 +7327,7 @@
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>00NdP000000xG07</field>
+            <field>00NdP0000025dim</field>
             <field>00NJ9000005v6vd</field>
             <field>00NdP000000xFy1</field>
             <field>00NJ9000005v6ve</field>
@@ -6747,23 +7336,29 @@
             <field>00NdP000000xG08</field>
             <field>00NdP000000xG09</field>
             <field>00NdP000000xG3I</field>
+            <field>00NdP000002Gj6T</field>
             <field>00NdP000000xFy2</field>
             <field>00NdP000000xG0A</field>
             <field>00NdP000000xG0B</field>
             <field>00NdP000001hVUb</field>
             <field>00NdP000001Z8oX</field>
+            <field>00NdP000001yHvD</field>
             <field>00NdP000001mnM2</field>
             <field>00NJ9000005v6vg</field>
             <field>00NdP000000xG3J</field>
             <field>00NdP000000xG0C</field>
             <field>00NdP000000xG0D</field>
+            <field>00NdP000002DfFW</field>
             <field>00NdP000000xG0E</field>
             <field>00NdP000001kHN5</field>
             <field>00NdP000001kHN6</field>
+            <field>00NdP000002Gj6U</field>
             <field>00NdP000000xG3K</field>
+            <field>00NdP000002Gj6V</field>
             <field>00NdP000000xG0F</field>
             <field>00NJ9000005v6vf</field>
             <field>00NdP000000xG0G</field>
+            <field>00NdP000001yHvE</field>
             <field>00NdP000000xG0H</field>
             <field>00NdP000001G2N5</field>
             <field>00NdP000001G2N6</field>
@@ -6854,12 +7449,24 @@
             <label>Application</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6U</field>
+            <label>Quantity CY Impact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00NdP000000xG08</field>
             <label>First Commercial Order Completed</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6V</field>
+            <label>Revenue CY Impact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00NdP000000xG09</field>
             <label>Forecasted?</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6T</field>
+            <label>GM CY Impact</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NdP000000xG0C</field>
@@ -6934,8 +7541,16 @@
             <label>Forecasted Amount</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000001yHvD</field>
+            <label>Last Activity Check</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.NAME</field>
             <label>Opportunity Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP000001yHvE</field>
+            <label>Stage Risk</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>SYNCEDQUOTE.NAME</field>
@@ -6944,6 +7559,10 @@
         <forecastingObjectListLabelMappings>
             <field>00NdP000001kHN6</field>
             <label>Project Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP0000025dim</field>
+            <label>Approval Status</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.ISPRIORITYRECORD</field>
@@ -7062,6 +7681,10 @@
             <label>Is My Opportunity?</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002DfFW</field>
+            <label>Opportunity Link</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.QUANTITY</field>
             <label>Quantity</label>
         </forecastingObjectListLabelMappings>
@@ -7141,6 +7764,7 @@
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>00NdP000000xG07</field>
+            <field>00NdP0000025dim</field>
             <field>00NJ9000005v6vd</field>
             <field>00NdP000000xFy1</field>
             <field>00NJ9000005v6ve</field>
@@ -7149,23 +7773,29 @@
             <field>00NdP000000xG08</field>
             <field>00NdP000000xG09</field>
             <field>00NdP000000xG3I</field>
+            <field>00NdP000002Gj6T</field>
             <field>00NdP000000xFy2</field>
             <field>00NdP000000xG0A</field>
             <field>00NdP000000xG0B</field>
             <field>00NdP000001hVUb</field>
             <field>00NdP000001Z8oX</field>
+            <field>00NdP000001yHvD</field>
             <field>00NdP000001mnM2</field>
             <field>00NJ9000005v6vg</field>
             <field>00NdP000000xG3J</field>
             <field>00NdP000000xG0C</field>
             <field>00NdP000000xG0D</field>
+            <field>00NdP000002DfFW</field>
             <field>00NdP000000xG0E</field>
             <field>00NdP000001kHN5</field>
             <field>00NdP000001kHN6</field>
+            <field>00NdP000002Gj6U</field>
             <field>00NdP000000xG3K</field>
+            <field>00NdP000002Gj6V</field>
             <field>00NdP000000xG0F</field>
             <field>00NJ9000005v6vf</field>
             <field>00NdP000000xG0G</field>
+            <field>00NdP000001yHvE</field>
             <field>00NdP000000xG0H</field>
             <field>00NdP000001G2N5</field>
             <field>00NdP000001G2N6</field>
@@ -7256,12 +7886,24 @@
             <label>Application</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6U</field>
+            <label>Quantity CY Impact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00NdP000000xG08</field>
             <label>First Commercial Order Completed</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6V</field>
+            <label>Revenue CY Impact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00NdP000000xG09</field>
             <label>Forecasted?</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6T</field>
+            <label>GM CY Impact</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NdP000000xG0C</field>
@@ -7332,8 +7974,16 @@
             <label>Value Selling Opportunity</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000001yHvD</field>
+            <label>Last Activity Check</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.NAME</field>
             <label>Opportunity Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP000001yHvE</field>
+            <label>Stage Risk</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>SYNCEDQUOTE.NAME</field>
@@ -7342,6 +7992,10 @@
         <forecastingObjectListLabelMappings>
             <field>00NdP000001kHN6</field>
             <label>Project Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP0000025dim</field>
+            <label>Approval Status</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.ISPRIORITYRECORD</field>
@@ -7460,6 +8114,10 @@
             <label>Is My Opportunity?</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002DfFW</field>
+            <label>Opportunity Link</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.QUANTITY</field>
             <label>Quantity</label>
         </forecastingObjectListLabelMappings>
@@ -7538,6 +8196,7 @@
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>00NdP000000xG07</field>
+            <field>00NdP0000025dim</field>
             <field>00NJ9000005v6vd</field>
             <field>00NdP000000xFy1</field>
             <field>00NJ9000005v6ve</field>
@@ -7546,23 +8205,29 @@
             <field>00NdP000000xG08</field>
             <field>00NdP000000xG09</field>
             <field>00NdP000000xG3I</field>
+            <field>00NdP000002Gj6T</field>
             <field>00NdP000000xFy2</field>
             <field>00NdP000000xG0A</field>
             <field>00NdP000000xG0B</field>
             <field>00NdP000001hVUb</field>
             <field>00NdP000001Z8oX</field>
+            <field>00NdP000001yHvD</field>
             <field>00NdP000001mnM2</field>
             <field>00NJ9000005v6vg</field>
             <field>00NdP000000xG3J</field>
             <field>00NdP000000xG0C</field>
             <field>00NdP000000xG0D</field>
+            <field>00NdP000002DfFW</field>
             <field>00NdP000000xG0E</field>
             <field>00NdP000001kHN5</field>
             <field>00NdP000001kHN6</field>
+            <field>00NdP000002Gj6U</field>
             <field>00NdP000000xG3K</field>
+            <field>00NdP000002Gj6V</field>
             <field>00NdP000000xG0F</field>
             <field>00NJ9000005v6vf</field>
             <field>00NdP000000xG0G</field>
+            <field>00NdP000001yHvE</field>
             <field>00NdP000000xG0H</field>
             <field>00NdP000001G2N5</field>
             <field>00NdP000001G2N6</field>
@@ -7653,12 +8318,24 @@
             <label>Application</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6U</field>
+            <label>Quantity CY Impact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00NdP000000xG08</field>
             <label>First Commercial Order Completed</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6V</field>
+            <label>Revenue CY Impact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00NdP000000xG09</field>
             <label>Forecasted?</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6T</field>
+            <label>GM CY Impact</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NdP000000xG0C</field>
@@ -7729,8 +8406,16 @@
             <label>Value Selling Opportunity</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000001yHvD</field>
+            <label>Last Activity Check</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.NAME</field>
             <label>Opportunity Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP000001yHvE</field>
+            <label>Stage Risk</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>SYNCEDQUOTE.NAME</field>
@@ -7739,6 +8424,10 @@
         <forecastingObjectListLabelMappings>
             <field>00NdP000001kHN6</field>
             <label>Project Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP0000025dim</field>
+            <label>Approval Status</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.ISPRIORITYRECORD</field>
@@ -7857,6 +8546,10 @@
             <label>Is My Opportunity?</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002DfFW</field>
+            <label>Opportunity Link</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.QUANTITY</field>
             <label>Quantity</label>
         </forecastingObjectListLabelMappings>
@@ -7935,6 +8628,7 @@
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>00NdP000000xG07</field>
+            <field>00NdP0000025dim</field>
             <field>00NJ9000005v6vd</field>
             <field>00NdP000000xFy1</field>
             <field>00NJ9000005v6ve</field>
@@ -7943,23 +8637,29 @@
             <field>00NdP000000xG08</field>
             <field>00NdP000000xG09</field>
             <field>00NdP000000xG3I</field>
+            <field>00NdP000002Gj6T</field>
             <field>00NdP000000xFy2</field>
             <field>00NdP000000xG0A</field>
             <field>00NdP000000xG0B</field>
             <field>00NdP000001hVUb</field>
             <field>00NdP000001Z8oX</field>
+            <field>00NdP000001yHvD</field>
             <field>00NdP000001mnM2</field>
             <field>00NJ9000005v6vg</field>
             <field>00NdP000000xG3J</field>
             <field>00NdP000000xG0C</field>
             <field>00NdP000000xG0D</field>
+            <field>00NdP000002DfFW</field>
             <field>00NdP000000xG0E</field>
             <field>00NdP000001kHN5</field>
             <field>00NdP000001kHN6</field>
+            <field>00NdP000002Gj6U</field>
             <field>00NdP000000xG3K</field>
+            <field>00NdP000002Gj6V</field>
             <field>00NdP000000xG0F</field>
             <field>00NJ9000005v6vf</field>
             <field>00NdP000000xG0G</field>
+            <field>00NdP000001yHvE</field>
             <field>00NdP000000xG0H</field>
             <field>00NdP000001G2N5</field>
             <field>00NdP000001G2N6</field>
@@ -8050,12 +8750,24 @@
             <label>Application</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6U</field>
+            <label>Quantity CY Impact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00NdP000000xG08</field>
             <label>First Commercial Order Completed</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6V</field>
+            <label>Revenue CY Impact</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>00NdP000000xG09</field>
             <label>Forecasted?</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP000002Gj6T</field>
+            <label>GM CY Impact</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>00NdP000000xG0C</field>
@@ -8126,8 +8838,16 @@
             <label>Value Selling Opportunity</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000001yHvD</field>
+            <label>Last Activity Check</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.NAME</field>
             <label>Opportunity Name</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP000001yHvE</field>
+            <label>Stage Risk</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>SYNCEDQUOTE.NAME</field>
@@ -8136,6 +8856,10 @@
         <forecastingObjectListLabelMappings>
             <field>00NdP000001kHN6</field>
             <label>Project Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NdP0000025dim</field>
+            <label>Approval Status</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.ISPRIORITYRECORD</field>
@@ -8254,6 +8978,10 @@
             <label>Is My Opportunity?</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
+            <field>00NdP000002DfFW</field>
+            <label>Opportunity Link</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.QUANTITY</field>
             <label>Quantity</label>
         </forecastingObjectListLabelMappings>
@@ -8332,6 +9060,7 @@
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>00NdP000000xG07</field>
+            <field>00NdP0000025dim</field>
             <field>00NJ9000005v6vd</field>
             <field>00NdP000000xFy1</field>
             <field>00NJ9000005v6ve</field>
@@ -8340,23 +9069,29 @@
             <field>00NdP000000xG08</field>
             <field>00NdP000000xG09</field>
             <field>00NdP000000xG3I</field>
+            <field>00NdP000002Gj6T</field>
             <field>00NdP000000xFy2</field>
             <field>00NdP000000xG0A</field>
             <field>00NdP000000xG0B</field>
             <field>00NdP000001hVUb</field>
             <field>00NdP000001Z8oX</field>
+            <field>00NdP000001yHvD</field>
             <field>00NdP000001mnM2</field>
             <field>00NJ9000005v6vg</field>
             <field>00NdP000000xG3J</field>
             <field>00NdP000000xG0C</field>
             <field>00NdP000000xG0D</field>
+            <field>00NdP000002DfFW</field>
             <field>00NdP000000xG0E</field>
             <field>00NdP000001kHN5</field>
             <field>00NdP000001kHN6</field>
+            <field>00NdP000002Gj6U</field>
             <field>00NdP000000xG3K</field>
+            <field>00NdP000002Gj6V</field>
             <field>00NdP000000xG0F</field>
             <field>00NJ9000005v6vf</field>
             <field>00NdP000000xG0G</field>
+            <field>00NdP000001yHvE</field>
             <field>00NdP000000xG0H</field>
             <field>00NdP000001G2N5</field>
             <field>00NdP000001G2N6</field>

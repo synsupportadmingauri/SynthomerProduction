@@ -7,7 +7,12 @@
     <columns>ACCOUNT.TYPE</columns>
     <columns>ACCOUNT.URL</columns>
     <filterScope>Mine</filterScope>
-    <label>My Accounts</label>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Z01</value>
+    </filters>
+    <label>My Active Accounts</label>
     <sharedTo>
         <allInternalUsers></allInternalUsers>
     </sharedTo>

@@ -8,11 +8,11 @@
     </columns>
     <columns>
         <aggregateTypes>Sum</aggregateTypes>
-        <field>AMOUNT</field>
+        <field>AMOUNT.CONVERT</field>
     </columns>
     <columns>
         <aggregateTypes>Sum</aggregateTypes>
-        <field>UNIT_PRICE</field>
+        <field>UNIT_PRICE.CONVERT</field>
     </columns>
     <columns>
         <aggregateTypes>Sum</aggregateTypes>
@@ -28,38 +28,36 @@
         <field>FULL_NAME</field>
     </columns>
     <columns>
-        <field>LAST_ACTIVITY</field>
-    </columns>
-    <columns>
         <field>AGE</field>
-    </columns>
-    <columns>
-        <field>CDF1</field>
     </columns>
     <columns>
         <field>Opportunity.Territory_L1__c</field>
     </columns>
-    <currency>GBP</currency>
+    <columns>
+        <field>Opportunity.Stage_Risk_Ind__c</field>
+    </columns>
+    <columns>
+        <field>LAST_STAGE_CHANGE_DATE</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Last_Activity_Ind__c</field>
+    </columns>
+    <columns>
+        <field>LAST_ACTIVITY</field>
+    </columns>
+    <columns>
+        <field>LAST_UPDATE</field>
+    </columns>
+    <columns>
+        <field>CDF1</field>
+    </columns>
     <customDetailFormulas>
-        <calculatedFormula>IF(
-  OR(AND(TEXT(STAGE_NAME) = &quot;Adoption&quot;, (CLOSE_DATE - TODAY()) &lt; 60),CLOSE_DATE &lt; TODAY()), &quot;🔴&quot;,
-  IF(
-    OR(AND(TEXT(STAGE_NAME) = &quot;Commercial&quot;, (CLOSE_DATE - TODAY()) &lt; 90),CLOSE_DATE &lt; TODAY()),  &quot;🔴&quot;,
-    IF(
-      OR(AND(TEXT(STAGE_NAME) = &quot;Operations&quot;, (CLOSE_DATE - TODAY()) &lt; 180),CLOSE_DATE &lt; TODAY()), &quot;🔴&quot;,
-      IF(
-        OR(AND(TEXT(STAGE_NAME) = &quot;Chemistry&quot;, (CLOSE_DATE - TODAY()) &lt; 360),CLOSE_DATE &lt; TODAY()), &quot;🔴&quot;,
-        IF(
-          OR(AND(TEXT(STAGE_NAME) = &quot;Qualify&quot;, (CLOSE_DATE - TODAY()) &lt; 450),CLOSE_DATE &lt; TODAY()), &quot;🔴&quot;,
-          &quot;🟢&quot;
-        )
-      )
-    )
-  )
-)</calculatedFormula>
+        <calculatedFormula>IF(AND(Opportunity.Last_Activity_Ind__c= &quot;🔴&quot; , Opportunity.Stage_Risk_Ind__c = &quot;🔴&quot;),&quot;🔴&quot; ,
+    IF(AND(Opportunity.Last_Activity_Ind__c= &quot;🟢&quot; , Opportunity.Stage_Risk_Ind__c = &quot;🟢&quot;),&quot;🟢&quot; , &quot;🟡&quot;))</calculatedFormula>
         <dataType>Text</dataType>
+        <description>Health Check</description>
         <developerName>CDF1</developerName>
-        <label>Risk Stage Check</label>
+        <label>Health Check</label>
         <scale>2</scale>
     </customDetailFormulas>
     <format>Tabular</format>
@@ -85,8 +83,6 @@
     <showDetails>true</showDetails>
     <showGrandTotal>true</showGrandTotal>
     <showSubTotals>true</showSubTotals>
-    <sortColumn>UNIT_PRICE</sortColumn>
-    <sortOrder>Desc</sortOrder>
     <timeFrameFilter>
         <dateColumn>CLOSE_DATE</dateColumn>
         <interval>INTERVAL_CUSTOM</interval>

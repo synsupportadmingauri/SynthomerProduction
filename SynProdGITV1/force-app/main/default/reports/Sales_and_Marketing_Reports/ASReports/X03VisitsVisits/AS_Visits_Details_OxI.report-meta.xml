@@ -27,13 +27,16 @@
         <titleSize>18</titleSize>
     </chart>
     <columns>
+        <field>Account$Segmentation__c</field>
+    </columns>
+    <columns>
         <field>Account$Name</field>
     </columns>
     <columns>
         <field>Account.Activities$Subject</field>
     </columns>
     <columns>
-        <field>Account$Channel__c</field>
+        <field>Account.Activities$ActivityDate</field>
     </columns>
     <currency>USD</currency>
     <filter>
@@ -50,20 +53,6 @@
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>0</value>
-        </criteriaItems>
-        <criteriaItems>
-            <column>Account.Activities$Visit_Location__CountryCode__s</column>
-            <columnToColumn>false</columnToColumn>
-            <isUnlocked>false</isUnlocked>
-            <operator>equals</operator>
-            <value>US</value>
-        </criteriaItems>
-        <criteriaItems>
-            <column>Account.Activities$Owner</column>
-            <columnToColumn>false</columnToColumn>
-            <isUnlocked>false</isUnlocked>
-            <operator>equals</operator>
-            <value>Quyen Nguyen</value>
         </criteriaItems>
         <criteriaItems>
             <column>Account.Activities$Subject</column>
@@ -87,6 +76,11 @@
         <field>Account.Activities$Owner</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account$Channel__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
     <name>AS/ Visits/ Details</name>
     <params>
         <name>co</name>
@@ -97,7 +91,7 @@
     <showDetails>true</showDetails>
     <showGrandTotal>true</showGrandTotal>
     <showSubTotals>true</showSubTotals>
-    <sortColumn>Account.Activities$Subject</sortColumn>
+    <sortColumn>Account.Activities$ActivityDate</sortColumn>
     <sortOrder>Desc</sortOrder>
     <timeFrameFilter>
         <dateColumn>Account$CreatedDate</dateColumn>

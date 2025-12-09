@@ -51,6 +51,19 @@
         <aggregateTypes>Sum</aggregateTypes>
         <field>Opportunity.Total_Revenue__c.CONVERT</field>
     </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>FISCAL_YEAR</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>TYPE</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Industry_Segment__c</field>
+    </columns>
     <currency>GBP</currency>
     <filter>
         <criteriaItems>

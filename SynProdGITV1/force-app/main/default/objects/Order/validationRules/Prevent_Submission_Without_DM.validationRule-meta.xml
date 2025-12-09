@@ -4,9 +4,10 @@
     <active>true</active>
     <description>Prevents an Order from being submitted for approval if the related Account does not have an Account Team Member with the role “Distributor Manager.” This rule applies specifically to Orders created by users with the Partner Community User Profile</description>
     <errorConditionFormula>AND(
-    ISPICKVAL(Status, &quot;Submitted/ In Approval&quot;),
-				 CreatedBy.Profile.Name =&quot;Synthomer Distributor User&quot;,
-				NOT( Account.Has_Distributor_Manager__c )
+  ISPICKVAL(Status, &quot;Submitted/ In Approval&quot;),
+		/*CreatedBy.Profile.Name =&quot;Synthomer Distributor User&quot;,*/ 
+		ISPICKVAL(CreatedBy.UserType, &quot;PowerPartner&quot;),
+		NOT( Account.Has_Distributor_Manager__c )
 				
    )</errorConditionFormula>
     <errorMessage>Distributor Manager is missing. Please add an Account Team Member with role ‘Distributor Manager’ before submitting for approval. Contact your system admin if you need assistance.</errorMessage>

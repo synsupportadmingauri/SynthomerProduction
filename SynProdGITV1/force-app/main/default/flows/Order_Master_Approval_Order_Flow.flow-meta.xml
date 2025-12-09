@@ -5,7 +5,7 @@
         <name>Add_OLI_to_Collection</name>
         <label>Add OLI to Collection</label>
         <locationX>858</locationX>
-        <locationY>1187</locationY>
+        <locationY>1295</locationY>
         <assignmentItems>
             <assignToReference>collectionOLIs</assignToReference>
             <operator>Add</operator>
@@ -22,7 +22,7 @@
         <name>Increase_Count</name>
         <label>Increase Count</label>
         <locationX>1166</locationX>
-        <locationY>1787</locationY>
+        <locationY>1895</locationY>
         <assignmentItems>
             <assignToReference>count</assignToReference>
             <operator>Add</operator>
@@ -39,7 +39,7 @@
         <name>Update_Status</name>
         <label>Update Status</label>
         <locationX>858</locationX>
-        <locationY>1079</locationY>
+        <locationY>1187</locationY>
         <assignmentItems>
             <assignToReference>Loop_through_OLI.Sample_Item_Approval_Status__c</assignToReference>
             <operator>Assign</operator>
@@ -56,7 +56,7 @@
         <name>Check_Count</name>
         <label>Check Count</label>
         <locationX>1078</locationX>
-        <locationY>2063</locationY>
+        <locationY>2171</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Update_to_Check</name>
@@ -79,7 +79,7 @@
         <name>Check_Status</name>
         <label>Check Status</label>
         <locationX>990</locationX>
-        <locationY>971</locationY>
+        <locationY>1079</locationY>
         <defaultConnector>
             <targetReference>Loop_through_OLI</targetReference>
         </defaultConnector>
@@ -112,7 +112,7 @@
         <name>Check_Status_1</name>
         <label>Check Status</label>
         <locationX>1298</locationX>
-        <locationY>1679</locationY>
+        <locationY>1787</locationY>
         <defaultConnector>
             <targetReference>Check_for_TSA</targetReference>
         </defaultConnector>
@@ -146,7 +146,7 @@
         <locationX>176</locationX>
         <locationY>539</locationY>
         <defaultConnector>
-            <targetReference>Get_OLI</targetReference>
+            <targetReference>Update_Running_User</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>User can&apos;t bypass the Validation</defaultConnectorLabel>
         <rules>
@@ -168,7 +168,7 @@ If empty, meaning no OLI needs to be update.</description>
         <name>Is_Collection_Empty</name>
         <label>Is Collection Empty?</label>
         <locationX>770</locationX>
-        <locationY>1463</locationY>
+        <locationY>1571</locationY>
         <defaultConnector>
             <targetReference>Check_for_TSA</targetReference>
         </defaultConnector>
@@ -194,7 +194,7 @@ If empty, meaning no OLI needs to be update.</description>
         <name>Is_OLI_Empty</name>
         <label>Is OLI Empty?</label>
         <locationX>462</locationX>
-        <locationY>755</locationY>
+        <locationY>863</locationY>
         <defaultConnector>
             <targetReference>Loop_through_OLI</targetReference>
         </defaultConnector>
@@ -224,7 +224,7 @@ a. Set the &quot;ML Approval Status&quot; - &quot;Check&quot;</description>
         <name>Check_for_TSA</name>
         <label>Check for TSA</label>
         <locationX>1078</locationX>
-        <locationY>1571</locationY>
+        <locationY>1679</locationY>
         <collectionReference>Get_OLI</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -239,7 +239,7 @@ a. Set the &quot;ML Approval Status&quot; - &quot;Check&quot;</description>
         <name>Loop_through_OLI</name>
         <label>Loop through OLI</label>
         <locationX>770</locationX>
-        <locationY>863</locationY>
+        <locationY>971</locationY>
         <collectionReference>Get_OLI</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -331,7 +331,7 @@ a. Set the &quot;ML Approval Status&quot; - &quot;Check&quot;</description>
         <name>Get_OLI</name>
         <label>Get OLI</label>
         <locationX>462</locationX>
-        <locationY>647</locationY>
+        <locationY>755</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Is_OLI_Empty</targetReference>
@@ -353,18 +353,34 @@ a. Set the &quot;ML Approval Status&quot; - &quot;Check&quot;</description>
         <name>Update_OLI</name>
         <label>Update OLI</label>
         <locationX>462</locationX>
-        <locationY>1571</locationY>
+        <locationY>1679</locationY>
         <inputReference>collectionOLIs</inputReference>
     </recordUpdates>
     <recordUpdates>
         <name>Update_Order</name>
         <label>Update Order</label>
         <locationX>946</locationX>
-        <locationY>2171</locationY>
+        <locationY>2279</locationY>
         <inputAssignments>
             <field>TSCA_Approval_Status__c</field>
             <value>
                 <stringValue>Check</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Running_User</name>
+        <label>Update Running User</label>
+        <locationX>462</locationX>
+        <locationY>647</locationY>
+        <connector>
+            <targetReference>Get_OLI</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Running_User_for_Approval__c</field>
+            <value>
+                <elementReference>$User.Username</elementReference>
             </value>
         </inputAssignments>
         <inputReference>$Record</inputReference>
@@ -375,7 +391,7 @@ a. Set the &quot;ML Approval Status&quot; - &quot;Check&quot;</description>
         <connector>
             <targetReference>Get_Bypass_Flows_User</targetReference>
         </connector>
-        <filterLogic>( 1 AND 2 AND 3 AND 4 ) or (5 AND 6 AND 7 AND 3)</filterLogic>
+        <filterLogic>( 1 AND 2 AND 3 AND 4 ) or (5 AND 6 AND 7 AND 3) OR ( 3 AND 5 AND 6  AND 1 AND 2)</filterLogic>
         <filters>
             <field>Status</field>
             <operator>IsChanged</operator>
@@ -455,5 +471,12 @@ count variable is created to check all the OLI are whether Approved or Not Neede
         <isInput>false</isInput>
         <isOutput>false</isOutput>
         <scale>0</scale>
+    </variables>
+    <variables>
+        <name>RunningUser</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
     </variables>
 </Flow>

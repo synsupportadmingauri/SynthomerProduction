@@ -169,7 +169,7 @@ export default class CreateSampleOrder extends NavigationMixin(LightningElement)
             this.shipToAccount = event.target.value;
         } else if(event.target.name === 'End_Customer__c') {
             this.endCustomer = event.target.value;
-        } else if(event.target.name === 'Potential_Volume__c') {
+        } else if(event.target.name === 'Potential_Volume1__c') {
             this.potentialVolume = event.target.value;
         } else if(event.target.name === 'Application__c') {
             this.application = event.target.value;
@@ -265,7 +265,7 @@ validateContact() {
         fields.isShipToContactRelated = this.isShipToContactRelated;
 
         fields.End_Customer__c = this.endCustomer;
-        fields.Potential_Volume__c = this.potentialVolume;
+        fields.Potential_Volume1__c = this.potentialVolume;
         fields.Application__c = this.application;
         fields.Name = this.orderName;                                                       // SD1-T64+ 03/10/2025 Ankur O                  
 

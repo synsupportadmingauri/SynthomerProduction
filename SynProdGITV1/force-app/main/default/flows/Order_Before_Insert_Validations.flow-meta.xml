@@ -48,6 +48,45 @@
         </customErrorMessages>
     </customErrors>
     <customErrors>
+        <name>Custom_Error_Application</name>
+        <label>Custom Error</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_for_ZCRM</targetReference>
+        </connector>
+        <customErrorMessages>
+            <errorMessage>Please verify that the Application has been entered.</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <customErrors>
+        <name>Custom_Error_End_Customer</name>
+        <label>Custom Error</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_for_ZCRM</targetReference>
+        </connector>
+        <customErrorMessages>
+            <errorMessage>Please verify that the End Customer has been entered.</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <customErrors>
+        <name>Custom_Error_PotentialVolume</name>
+        <label>Custom Error</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_for_ZCRM</targetReference>
+        </connector>
+        <customErrorMessages>
+            <errorMessage>Please verify that the Potential Volume has been entered.</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <customErrors>
         <name>Delivery_Block_Required</name>
         <label>Delivery Block Required</label>
         <locationX>0</locationX>
@@ -745,7 +784,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Check_for_ZCRM</targetReference>
+                <targetReference>Is_Order_Created_From_Portal</targetReference>
             </connector>
             <label>Not Draft Cancelled_ZOR</label>
         </rules>
@@ -772,6 +811,85 @@
             <label>User can bypass the Validation</label>
         </rules>
     </decisions>
+    <decisions>
+        <description>Checks whether the order is created from portal or not</description>
+        <name>Is_Order_Created_From_Portal</name>
+        <label>Is Order Created From Portal?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Check_for_ZCRM</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Created_From_Portal__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Portal_Fields_Empty</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check Potential Volume, Application and End Customer</description>
+        <name>Portal_Fields_Empty</name>
+        <label>Portal Fields Empty?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Check_for_ZCRM</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Potential_Volume</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Potential_Volume1__c</leftValueReference>
+                <operator>EqualTo</operator>
+            </conditions>
+            <connector>
+                <targetReference>Custom_Error_PotentialVolume</targetReference>
+            </connector>
+            <label>Potential Volume</label>
+        </rules>
+        <rules>
+            <name>End_Customer</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.End_Customer__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Custom_Error_End_Customer</targetReference>
+            </connector>
+            <label>End Customer</label>
+        </rules>
+        <rules>
+            <name>Application</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Application__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Custom_Error_Application</targetReference>
+            </connector>
+            <label>Application</label>
+        </rules>
+    </decisions>
     <description>SS2-T118 Validations on the Order Object</description>
     <environments>Default</environments>
     <formulas>
@@ -780,7 +898,7 @@
         <expression>LEFT({!ErrorMessage}, LEN({!ErrorMessage}) - 1)</expression>
     </formulas>
     <interviewLabel>Order Before Insert - Validations {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>Order Before Insert / Update - Validations</label>
+    <label>Order After Insert / Update - Validations</label>
     <loops>
         <name>Iterate_Order_Products</name>
         <label>Iterate Order Products</label>
@@ -824,6 +942,9 @@
         <connector>
             <targetReference>Get_Bypass_Flows_User_related_Flow</targetReference>
         </connector>
+        <faultConnector>
+            <targetReference>Create_Log</targetReference>
+        </faultConnector>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Username__c</field>
@@ -853,6 +974,9 @@
         <connector>
             <targetReference>Check_User_for_Flow_Bypass</targetReference>
         </connector>
+        <faultConnector>
+            <targetReference>Create_Log_2</targetReference>
+        </faultConnector>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Flow_Name__c</field>
@@ -881,6 +1005,9 @@
         <connector>
             <targetReference>Iterate_Order_Products</targetReference>
         </connector>
+        <faultConnector>
+            <targetReference>Create_Log_Order_Product</targetReference>
+        </faultConnector>
         <filterLogic>and</filterLogic>
         <filters>
             <field>OrderId</field>
@@ -901,9 +1028,156 @@
         </connector>
         <object>Order</object>
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
-        <triggerType>RecordBeforeSave</triggerType>
+        <triggerType>RecordAfterSave</triggerType>
     </start>
     <status>Active</status>
+    <subflows>
+        <name>Create_Log</name>
+        <label>Create Log</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order Before Insert / Update - Validations</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Get Bypass flows - User</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>$Record.OrderNumber</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Error while fetching User</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Create_Log_2</name>
+        <label>Create Log</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order Before Insert / Update - Validations</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Get Bypass flows - User Related Flow</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>$Record.OrderNumber</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Error while fetching User related flows</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Create_Log_Order_Product</name>
+        <label>Create Log</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order Before Insert / Update - Validations</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Get Order Products</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>$Record.OrderNumber</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Error while fetching Order Products</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
     <variables>
         <name>ErrorMessage</name>
         <dataType>String</dataType>

@@ -7,7 +7,7 @@
         <locationX>638</locationX>
         <locationY>719</locationY>
         <assignmentItems>
-            <assignToReference>VarCaseFields.Customer_Feedback_Documented_Date__c</assignToReference>
+            <assignToReference>$Record.Customer_Feedback_Documented_Date__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>$Flow.CurrentDateTime</elementReference>
@@ -20,7 +20,7 @@
         <locationX>110</locationX>
         <locationY>719</locationY>
         <assignmentItems>
-            <assignToReference>VarCaseFields.Initial_Review_Completed_Date__c</assignToReference>
+            <assignToReference>$Record.Initial_Review_Completed_Date__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>$Flow.CurrentDateTime</elementReference>
@@ -33,7 +33,7 @@
         <locationX>374</locationX>
         <locationY>719</locationY>
         <assignmentItems>
-            <assignToReference>VarCaseFields.Investigation_Completed_Date__c</assignToReference>
+            <assignToReference>$Record.Investigation_Completed_Date__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>$Flow.CurrentDateTime</elementReference>

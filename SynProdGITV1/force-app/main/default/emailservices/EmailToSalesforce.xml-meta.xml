@@ -75,6 +75,27 @@
         <runAsUser>mark.arigo@synthomer.com</runAsUser>
     </emailServicesAddresses>
     <emailServicesAddresses>
+        <authorizedSenders>carsten.haardt@synthomer.com</authorizedSenders>
+        <developerName>emailtosalesforce107</developerName>
+        <isActive>true</isActive>
+        <localPart>emailtosalesforce</localPart>
+        <runAsUser>carsten.haardt@synthomer.com</runAsUser>
+    </emailServicesAddresses>
+    <emailServicesAddresses>
+        <authorizedSenders>lauren.norman@synthomer.com</authorizedSenders>
+        <developerName>emailtosalesforce108</developerName>
+        <isActive>true</isActive>
+        <localPart>emailtosalesforce</localPart>
+        <runAsUser>lauren.norman@synthomer.com</runAsUser>
+    </emailServicesAddresses>
+    <emailServicesAddresses>
+        <authorizedSenders>bjoern.faehrmann@synthomer.com</authorizedSenders>
+        <developerName>emailtosalesforce109</developerName>
+        <isActive>true</isActive>
+        <localPart>emailtosalesforce</localPart>
+        <runAsUser>bjoern.faehrmann@synthomer.com</runAsUser>
+    </emailServicesAddresses>
+    <emailServicesAddresses>
         <authorizedSenders>norbert.effertz@synthomer.com.invalid</authorizedSenders>
         <developerName>emailtosalesforce11</developerName>
         <isActive>true</isActive>
@@ -82,11 +103,130 @@
         <runAsUser>norbert.effertz@synthomer.com</runAsUser>
     </emailServicesAddresses>
     <emailServicesAddresses>
+        <authorizedSenders>vanita.sun@synthomer.com</authorizedSenders>
+        <developerName>emailtosalesforce110</developerName>
+        <isActive>true</isActive>
+        <localPart>emailtosalesforce</localPart>
+        <runAsUser>vanita.sun@synthomer.com</runAsUser>
+    </emailServicesAddresses>
+    <emailServicesAddresses>
+        <authorizedSenders>david.totte@synthomer.com</authorizedSenders>
+        <developerName>emailtosalesforce111</developerName>
+        <isActive>true</isActive>
+        <localPart>emailtosalesforce</localPart>
+        <runAsUser>david.totte@synthomer.com</runAsUser>
+    </emailServicesAddresses>
+    <emailServicesAddresses>
+        <authorizedSenders>martin.sweeney@synthomer.com.invalid</authorizedSenders>
+        <developerName>emailtosalesforce112</developerName>
+        <isActive>true</isActive>
+        <localPart>emailtosalesforce</localPart>
+        <runAsUser>martin.sweeney@synthomer.com</runAsUser>
+    </emailServicesAddresses>
+    <emailServicesAddresses>
+        <authorizedSenders>peihuan.tan@synthomer.com</authorizedSenders>
+        <developerName>emailtosalesforce113</developerName>
+        <isActive>true</isActive>
+        <localPart>emailtosalesforce</localPart>
+        <runAsUser>peihuan.tan@synthomer.com</runAsUser>
+    </emailServicesAddresses>
+    <emailServicesAddresses>
+        <authorizedSenders>matt.malouf@synthomer.com.invalid</authorizedSenders>
+        <developerName>emailtosalesforce114</developerName>
+        <isActive>true</isActive>
+        <localPart>emailtosalesforce</localPart>
+        <runAsUser>matt.malouf@synthomer.com</runAsUser>
+    </emailServicesAddresses>
+    <emailServicesAddresses>
+        <authorizedSenders>lukas.jongkind@synthomer.com</authorizedSenders>
+        <developerName>emailtosalesforce115</developerName>
+        <isActive>true</isActive>
+        <localPart>emailtosalesforce</localPart>
+        <runAsUser>lukas.jongkind@synthomer.com</runAsUser>
+    </emailServicesAddresses>
+    <emailServicesAddresses>
+        <authorizedSenders>sikpeng.chua@synthomer.com</authorizedSenders>
+        <developerName>emailtosalesforce116</developerName>
+        <isActive>true</isActive>
+        <localPart>emailtosalesforce</localPart>
+        <runAsUser>sikpeng.chua@synthomer.com</runAsUser>
+    </emailServicesAddresses>
+    <emailServicesAddresses>
+        <authorizedSenders>chunkiat.cheong@synthomer.com.invalid</authorizedSenders>
+        <developerName>emailtosalesforce117</developerName>
+        <isActive>true</isActive>
+        <localPart>emailtosalesforce</localPart>
+        <runAsUser>chunkiat.cheong@synthomer.com</runAsUser>
+    </emailServicesAddresses>
+    <emailServicesAddresses>
+        <authorizedSenders>azrifarhan.mahammadhanif@synthomer.com</authorizedSenders>
+        <developerName>emailtosalesforce118</developerName>
+        <isActive>true</isActive>
+        <localPart>emailtosalesforce</localPart>
+        <runAsUser>azrifarhan.mahammadhanif@synthomer.com</runAsUser>
+    </emailServicesAddresses>
+    <emailServicesAddresses>
+        <authorizedSenders>muhammadazrin.berhan@synthomer.com</authorizedSenders>
+        <developerName>emailtosalesforce119</developerName>
+        <isActive>true</isActive>
+        <localPart>emailtosalesforce</localPart>
+        <runAsUser>muhammadazrin.berhan@synthomer.com</runAsUser>
+    </emailServicesAddresses>
+    <emailServicesAddresses>
         <authorizedSenders>heike.roemermann@synthomer.com</authorizedSenders>
         <developerName>emailtosalesforce12</developerName>
         <isActive>true</isActive>
         <localPart>emailtosalesforce</localPart>
         <runAsUser>heike.roemermann@synthomer.com</runAsUser>
+    </emailServicesAddresses>
+    <emailServicesAddresses>
+        <authorizedSenders>keeguan.lim@synthomer.com</authorizedSenders>
+        <developerName>emailtosalesforce120</developerName>
+        <isActive>true</isActive>
+        <localPart>emailtosalesforce</localPart>
+        <runAsUser>keeguan.lim@synthomer.com</runAsUser>
+    </emailServicesAddresses>
+    <emailServicesAddresses>
+        <authorizedSenders>luan.gaviao@synthomer.com</authorizedSenders>
+        <developerName>emailtosalesforce121</developerName>
+        <isActive>true</isActive>
+        <localPart>emailtosalesforce</localPart>
+        <runAsUser>luan.gaviao@synthomer.com</runAsUser>
+    </emailServicesAddresses>
+    <emailServicesAddresses>
+        <authorizedSenders>manuela.bongiovanni@synthomer.com</authorizedSenders>
+        <developerName>emailtosalesforce122</developerName>
+        <isActive>true</isActive>
+        <localPart>emailtosalesforce</localPart>
+        <runAsUser>manuela.bongiovanni@synthomer.com</runAsUser>
+    </emailServicesAddresses>
+    <emailServicesAddresses>
+        <authorizedSenders>petra.martanova@synthomer.com</authorizedSenders>
+        <developerName>emailtosalesforce123</developerName>
+        <isActive>true</isActive>
+        <localPart>emailtosalesforce</localPart>
+        <runAsUser>petra.martanova@synthomer.com</runAsUser>
+    </emailServicesAddresses>
+    <emailServicesAddresses>
+        <authorizedSenders>jean-luc.montanari@synthomer.com</authorizedSenders>
+        <developerName>emailtosalesforce124</developerName>
+        <isActive>true</isActive>
+        <localPart>emailtosalesforce</localPart>
+        <runAsUser>jean-luc.montanari@synthomer.com</runAsUser>
+    </emailServicesAddresses>
+    <emailServicesAddresses>
+        <authorizedSenders>simona.vlnasova@synthomer.com</authorizedSenders>
+        <developerName>emailtosalesforce125</developerName>
+        <isActive>true</isActive>
+        <localPart>emailtosalesforce</localPart>
+        <runAsUser>simona.vlnasova@synthomer.com</runAsUser>
+    </emailServicesAddresses>
+    <emailServicesAddresses>
+        <authorizedSenders>sebastien.lochner@synthomer.com.invalid</authorizedSenders>
+        <developerName>emailtosalesforce126</developerName>
+        <isActive>true</isActive>
+        <localPart>emailtosalesforce</localPart>
+        <runAsUser>sebastien.lochner@synthomer.com</runAsUser>
     </emailServicesAddresses>
     <emailServicesAddresses>
         <authorizedSenders>joe.isaac@synthomer.com</authorizedSenders>

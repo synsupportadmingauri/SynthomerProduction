@@ -8,15 +8,17 @@
             <axisBinding>y</axisBinding>
             <column>RowCount</column>
         </chartSummaries>
-        <chartType>VerticalColumn</chartType>
+        <chartType>VerticalColumnStacked</chartType>
         <enableHoverLabels>false</enableHoverLabels>
         <expandOthers>true</expandOthers>
         <groupingColumn>ORDER_CREATED_DATE</groupingColumn>
+        <legendPosition>Right</legendPosition>
         <location>CHART_BOTTOM</location>
+        <secondaryGroupingColumn>ORDER_STATUS</secondaryGroupingColumn>
         <showAxisLabels>false</showAxisLabels>
         <showPercentage>false</showPercentage>
         <showTotal>false</showTotal>
-        <showValues>true</showValues>
+        <showValues>false</showValues>
         <size>Medium</size>
         <summaryAxisRange>Auto</summaryAxisRange>
         <textColor>#000000</textColor>
@@ -40,9 +42,6 @@
         <field>ORDER_TYPE</field>
     </columns>
     <columns>
-        <field>ORDER_STATUS</field>
-    </columns>
-    <columns>
         <field>ORDER_TOTAL_AMOUNT</field>
     </columns>
     <columns>
@@ -55,7 +54,7 @@
             <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>greaterOrEqual</operator>
-            <value>7/14/2025 12:00 AM</value>
+            <value>LAST_90_DAYS</value>
         </criteriaItems>
         <criteriaItems>
             <column>ORDER_CREATEDBY</column>
@@ -65,7 +64,12 @@
             <value>Integration</value>
         </criteriaItems>
     </filter>
-    <format>Summary</format>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>ORDER_STATUS</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
     <groupingsDown>
         <dateGranularity>Week</dateGranularity>
         <field>ORDER_CREATED_DATE</field>

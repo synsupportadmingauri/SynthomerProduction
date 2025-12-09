@@ -340,6 +340,11 @@
             <field>Top_Parent_Account__c</field>
             <table>Account</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Status__c</field>
+            <table>Account</table>
+        </columns>
         <masterLabel>Accounts</masterLabel>
     </sections>
     <sections>
@@ -658,6 +663,39 @@
             <field>Is_My_Team_Activity__c</field>
             <table>Account.Activities</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Effectiveness_Check_Method__c</field>
+            <table>Account.Activities</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Effective_Check_Results__c</field>
+            <table>Account.Activities</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Product_Category__c</field>
+            <table>Account.Activities</table>
+        </columns>
         <masterLabel>Activities</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Visit_Outcome__c.Pre_call_Preparation__c</field>
+            <table>Account.Activities</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Visit_Outcome__c.Outcome__c</field>
+            <table>Account.Activities</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Visit_Outcome__c.Call_Content_Minutes__c</field>
+            <table>Account.Activities</table>
+        </columns>
+        <masterLabel>Visit Outcome</masterLabel>
     </sections>
 </ReportType>

@@ -5,5 +5,6 @@
     <fields>Visit_Location__c</fields>
     <fields>StartDateTime</fields>
     <fields>EndDateTime</fields>
+    <fields>Industry_Segment__c</fields>
     <label>Visit Compact Layout</label>
 </CompactLayout>

@@ -8,17 +8,11 @@
     </columns>
     <columns>
         <aggregateTypes>Sum</aggregateTypes>
-        <field>AMOUNT</field>
+        <field>AMOUNT.CONVERT</field>
     </columns>
     <columns>
         <aggregateTypes>Sum</aggregateTypes>
-        <field>EXP_AMOUNT</field>
-    </columns>
-    <columns>
-        <field>STAGE_NAME</field>
-    </columns>
-    <columns>
-        <field>FULL_NAME</field>
+        <field>EXP_AMOUNT.CONVERT</field>
     </columns>
     <filter>
         <booleanFilter>1 OR 2</booleanFilter>
@@ -65,8 +59,6 @@
     <showDetails>false</showDetails>
     <showGrandTotal>true</showGrandTotal>
     <showSubTotals>false</showSubTotals>
-    <sortColumn>EXP_AMOUNT</sortColumn>
-    <sortOrder>Asc</sortOrder>
     <timeFrameFilter>
         <dateColumn>CLOSE_DATE</dateColumn>
         <interval>INTERVAL_CUSTOM</interval>

@@ -80,7 +80,7 @@
         <inputAssignments>
             <field>Subject</field>
             <value>
-                <stringValue>Effectiveness Check</stringValue>
+                <stringValue>Effectiveness Check  - {!$Record.CaseNumber}</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>

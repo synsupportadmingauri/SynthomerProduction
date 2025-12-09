@@ -17,28 +17,28 @@
             <column>ActivityDate</column>
             <isUnlocked>false</isUnlocked>
             <operator>greaterThan</operator>
-            <value>TODAY</value>
+            <value>LAST_N_DAYS:180</value>
         </criteriaItems>
         <operation>without</operation>
         <primaryTableColumn>Account$Id</primaryTableColumn>
         <relatedTable>Activity</relatedTable>
         <relatedTableJoinColumn>Account</relatedTableJoinColumn>
     </crossFilters>
-    <currency>GBP</currency>
     <filter>
+        <booleanFilter>1 OR 2</booleanFilter>
         <criteriaItems>
-            <column>Account.Activities$HQ_Account_Id__c</column>
+            <column>Account$Parent</column>
             <columnToColumn>false</columnToColumn>
-            <isUnlocked>false</isUnlocked>
+            <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
             <value></value>
         </criteriaItems>
         <criteriaItems>
-            <column>Account.Activities$RHQ_Account_Id__c</column>
+            <column>Account$Type</column>
             <columnToColumn>false</columnToColumn>
-            <isUnlocked>false</isUnlocked>
-            <operator>notEqual</operator>
-            <value></value>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>RHQ,HQ</value>
         </criteriaItems>
     </filter>
     <format>Tabular</format>

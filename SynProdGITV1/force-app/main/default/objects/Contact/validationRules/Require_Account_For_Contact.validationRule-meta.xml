@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Account_For_Contact</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    RecordType.DeveloperName &lt;&gt; &quot;Employee&quot;,
+    ISBLANK(AccountId)
+)</errorConditionFormula>
+    <errorMessage>Please link this contact to an Account.</errorMessage>
+</ValidationRule>

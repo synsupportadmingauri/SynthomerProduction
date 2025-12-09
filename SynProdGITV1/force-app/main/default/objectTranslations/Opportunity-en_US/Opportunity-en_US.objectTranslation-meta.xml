@@ -12,6 +12,21 @@
         <errorMessage><!-- The combination of Industry Segment and Application must be valid --></errorMessage>
         <name>Industry_Segment_Application_Valid_Check</name>
     </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please assign an Approval Manager before moving to the Adoption stage. --></errorMessage>
+        <name>Manager_Required_For_Adoption_Stage</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>
+            <!-- This Opportunity is in the approval process.
+Please wait until the approval is complete or contact your Salesforce Administrator if an update is required. -->
+        </errorMessage>
+        <name>Prevent_Edit_When_In_Approval</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- This Opportunity is not approved yet — you cannot close it. --></errorMessage>
+        <name>Prevent_Opportunity_Closure_Without_Appr</name>
+    </validationRules>
     <webLinks>
         <label><!-- Conga_Composer_OAuth --></label>
         <name>APXTConga4__Conga_Composer_OAuth</name>

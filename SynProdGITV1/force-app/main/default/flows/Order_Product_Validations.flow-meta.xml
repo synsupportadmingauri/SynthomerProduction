@@ -71,9 +71,6 @@
         <label>Custom Error</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
-        <connector>
-            <targetReference>Proforma_Invoice_fields_Check</targetReference>
-        </connector>
         <customErrorMessages>
             <errorMessage>Once Sample Order is Submitted for Approval, the Order Product cannot be edited</errorMessage>
             <isFieldError>false</isFieldError>
@@ -121,6 +118,13 @@
             </conditions>
             <conditions>
                 <leftValueReference>$Record.Quantity_UoM__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.UnitPrice</leftValueReference>
                 <operator>IsChanged</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
@@ -273,7 +277,7 @@
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Changed_3</name>
-            <conditionLogic>(1 OR 2 OR 3 OR 4 OR 5 OR 6 OR 7 OR 8 OR 9 OR 10 OR 11 OR 12 OR 13) AND 14</conditionLogic>
+            <conditionLogic>(1 OR 2 OR 3 OR 4 OR 5 OR 6 OR 7 OR 8 OR 9 OR 10 OR 11 OR 12 ) AND 13</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.Description</leftValueReference>
                 <operator>IsChanged</operator>
@@ -339,13 +343,6 @@
             </conditions>
             <conditions>
                 <leftValueReference>$Record.Division__c</leftValueReference>
-                <operator>IsChanged</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.UnitPrice</leftValueReference>
                 <operator>IsChanged</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>

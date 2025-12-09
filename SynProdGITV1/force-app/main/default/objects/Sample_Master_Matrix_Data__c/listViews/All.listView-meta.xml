@@ -15,5 +15,9 @@
     <columns>CREATED_DATE</columns>
     <columns>CREATEDBY_USER</columns>
     <filterScope>Everything</filterScope>
+    <filters>
+        <field>Plant_ID__c</field>
+        <operation>contains</operation>
+    </filters>
     <label>All</label>
 </ListView>

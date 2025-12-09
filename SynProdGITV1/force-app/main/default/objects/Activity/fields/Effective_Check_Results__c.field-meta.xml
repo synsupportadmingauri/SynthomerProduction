@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Effective_Check_Results__c</fullName>
+    <description>Captures the outcome or findings from verifying the effectiveness of the complaint treatment.
+This field is mandatory only for Effectiveness Check (EC) tasks to ensure proper documentation of the results.
+It can be ignored for all other task types.</description>
+    <inlineHelpText>Describe the results of the effectiveness check. Required only if the task type is Effectiveness Check.</inlineHelpText>
+    <label>Effective Check Results</label>
+    <required>false</required>
+    <type>TextArea</type>
+</CustomField>

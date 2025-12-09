@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Opportunity_Closure_Without_Appr</fullName>
+    <active>true</active>
+    <description>Prevents users from setting the Opportunity Stage = Closed Won if the Approval Status is not Approved.
+This ensures that only Opportunities that have gone through and passed the approval process can be closed as won.</description>
+    <errorConditionFormula>AND(
+    ISPICKVAL(StageName, &quot;Closed Won&quot;),
+    NOT(ISPICKVAL(Approval_Status__c, &quot;Approved&quot;))
+)</errorConditionFormula>
+    <errorMessage>This Opportunity is not approved yet — you cannot close it.</errorMessage>
+</ValidationRule>

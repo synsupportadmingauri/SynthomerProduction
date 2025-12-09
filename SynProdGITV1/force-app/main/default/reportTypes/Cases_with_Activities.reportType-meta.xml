@@ -490,6 +490,21 @@
             <field>Closure_Date__c</field>
             <table>Case</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Created_Month__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Case_Created_Month__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Case_Created_Year__c</field>
+            <table>Case</table>
+        </columns>
         <masterLabel>Cases</masterLabel>
     </sections>
     <sections>
@@ -811,6 +826,21 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Is_My_Team_Activity__c</field>
+            <table>Case.Activities</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Effectiveness_Check_Method__c</field>
+            <table>Case.Activities</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Effective_Check_Results__c</field>
+            <table>Case.Activities</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Product_Category__c</field>
             <table>Case.Activities</table>
         </columns>
         <masterLabel>Activities</masterLabel>

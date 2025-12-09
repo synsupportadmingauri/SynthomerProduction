@@ -13,21 +13,23 @@
     <columns>
         <field>CLOSE_DATE</field>
     </columns>
-    <columns>
-        <field>PROBABILITY</field>
-    </columns>
-    <currency>GBP</currency>
+    <currency>EUR</currency>
     <customDetailFormulas>
         <calculatedFormula>IF(
-  OR(AND(TEXT(STAGE_NAME) = &quot;Adoption&quot;, (CLOSE_DATE - TODAY()) &lt; 60),CLOSE_DATE &lt; TODAY()), &quot;🔴&quot;,
+  OR(AND(TEXT(STAGE_NAME) = &quot;Adoption&quot;, (CLOSE_DATE - TODAY()) &gt; 30),CLOSE_DATE &lt; TODAY()),
+  &quot;🔴&quot;,
   IF(
-    OR(AND(TEXT(STAGE_NAME) = &quot;Commercial&quot;, (CLOSE_DATE - TODAY()) &lt; 90),CLOSE_DATE &lt; TODAY()),  &quot;🔴&quot;,
+    OR(AND(TEXT(STAGE_NAME) = &quot;Commercial&quot;, (CLOSE_DATE - TODAY()) &gt; 90),CLOSE_DATE &lt; TODAY()),
+    &quot;🔴&quot;,
     IF(
-      OR(AND(TEXT(STAGE_NAME) = &quot;Operations&quot;, (CLOSE_DATE - TODAY()) &lt; 180),CLOSE_DATE &lt; TODAY()), &quot;🔴&quot;,
+      OR(AND(TEXT(STAGE_NAME) = &quot;Operations&quot;, (CLOSE_DATE - TODAY()) &gt; 180),CLOSE_DATE &lt; TODAY()),
+      &quot;🔴&quot;,
       IF(
-        OR(AND(TEXT(STAGE_NAME) = &quot;Chemistry&quot;, (CLOSE_DATE - TODAY()) &lt; 360),CLOSE_DATE &lt; TODAY()), &quot;🔴&quot;,
+        OR(AND(TEXT(STAGE_NAME) = &quot;Chemistry&quot;, (CLOSE_DATE - TODAY()) &gt; 360),CLOSE_DATE &lt; TODAY()),
+        &quot;🔴&quot;,
         IF(
-          OR(AND(TEXT(STAGE_NAME) = &quot;Qualify&quot;, (CLOSE_DATE - TODAY()) &lt; 450),CLOSE_DATE &lt; TODAY()), &quot;🔴&quot;,
+          OR(AND(TEXT(STAGE_NAME) = &quot;Qualify&quot;, (CLOSE_DATE - TODAY()) &gt; 450),CLOSE_DATE &lt; TODAY()),
+          &quot;🔴&quot;,
           &quot;🟢&quot;
         )
       )
@@ -42,7 +44,7 @@
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
-        <field>CDF1</field>
+        <field>Opportunity.Stage_Risk_Ind__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
     <name>%Opportunites at risk(red and green)-Ind</name>

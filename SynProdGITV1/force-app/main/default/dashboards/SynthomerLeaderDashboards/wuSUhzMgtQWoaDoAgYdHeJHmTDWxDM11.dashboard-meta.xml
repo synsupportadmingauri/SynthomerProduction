@@ -10,11 +10,7 @@
     <dashboardFilters>
         <dashboardFilterOptions>
             <operator>equals</operator>
-            <values>European HQ - RPM Group</values>
-        </dashboardFilterOptions>
-        <dashboardFilterOptions>
-            <operator>equals</operator>
-            <values>HQ - Roehm</values>
+            <values>HQ - Ahlstrom</values>
         </dashboardFilterOptions>
         <dashboardFilterOptions>
             <operator>equals</operator>
@@ -98,15 +94,27 @@
         </dashboardFilterOptions>
         <dashboardFilterOptions>
             <operator>equals</operator>
+            <values>HQ - Indorama</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
             <values>HQ - Johns Manville</values>
         </dashboardFilterOptions>
         <dashboardFilterOptions>
             <operator>equals</operator>
-            <values>HQ - Jotun (Intumescents)</values>
+            <values>HQ - Jotun (Intumsecents)</values>
         </dashboardFilterOptions>
         <dashboardFilterOptions>
             <operator>equals</operator>
             <values>HQ - Kerakoll</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>HQ - Kordsa</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>HQ – Magnera</values>
         </dashboardFilterOptions>
         <dashboardFilterOptions>
             <operator>equals</operator>
@@ -132,6 +140,9 @@
             <operator>equals</operator>
             <values>HQ - Owens Corning</values>
         </dashboardFilterOptions>
+        <name>Account Hierarchy L1 A-O</name>
+    </dashboardFilters>
+    <dashboardFilters>
         <dashboardFilterOptions>
             <operator>equals</operator>
             <values>HQ - Pirelli</values>
@@ -143,6 +154,10 @@
         <dashboardFilterOptions>
             <operator>equals</operator>
             <values>HQ - Procter &amp; Gamble Switzerland Sarl</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>HQ - RPM Group</values>
         </dashboardFilterOptions>
         <dashboardFilterOptions>
             <operator>equals</operator>
@@ -158,15 +173,15 @@
         </dashboardFilterOptions>
         <dashboardFilterOptions>
             <operator>equals</operator>
-            <values>HQ - Sherwin Williams</values>
-        </dashboardFilterOptions>
-        <dashboardFilterOptions>
-            <operator>equals</operator>
             <values>HQ - Schlumberger</values>
         </dashboardFilterOptions>
         <dashboardFilterOptions>
             <operator>equals</operator>
             <values>HQ - Schoeller</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>HQ - Sherwin Williams</values>
         </dashboardFilterOptions>
         <dashboardFilterOptions>
             <operator>equals</operator>
@@ -208,7 +223,7 @@
             <operator>equals</operator>
             <values>HQ - WWRC</values>
         </dashboardFilterOptions>
-        <name>HQ Account</name>
+        <name>Account Hierarchy L1 P-Z</name>
     </dashboardFilters>
     <dashboardFilters>
         <dashboardFilterOptions>
@@ -229,15 +244,15 @@
         </dashboardFilterOptions>
         <dashboardFilterOptions>
             <operator>equals</operator>
-            <values>RHQ - Arkema/Bostik AMERICAS</values>
+            <values>RHQ - Arkema Bostik AMERICAS</values>
         </dashboardFilterOptions>
         <dashboardFilterOptions>
             <operator>equals</operator>
-            <values>RHQ - Arkema/Bostik ASIA</values>
+            <values>RHQ - Arkema Bostik ASIA</values>
         </dashboardFilterOptions>
         <dashboardFilterOptions>
             <operator>equals</operator>
-            <values>RHQ - Arkema/Bostik EUROPE</values>
+            <values>RHQ - Arkema Bostik EUROPE</values>
         </dashboardFilterOptions>
         <dashboardFilterOptions>
             <operator>equals</operator>
@@ -379,48 +394,72 @@
             <operator>equals</operator>
             <values>RHQ - Sika MENA</values>
         </dashboardFilterOptions>
-        <name>RHQ Account</name>
+        <name>Account Hierarchy L2</name>
     </dashboardFilters>
     <dashboardGridLayout>
         <dashboardGridComponents>
-            <colSpan>4</colSpan>
+            <colSpan>2</colSpan>
             <columnIndex>0</columnIndex>
             <dashboardComponent>
                 <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
-                <chartAxisRange>Auto</chartAxisRange>
                 <chartSummary>
-                    <axisBinding>y</axisBinding>
-                    <column>RowCount</column>
+                    <aggregate>Sum</aggregate>
+                    <column>AMOUNT</column>
                 </chartSummary>
-                <componentType>Bar</componentType>
+                <componentType>Metric</componentType>
                 <dashboardFilterColumns>
-                    <column>Opportunity.HQ_Account__c</column>
+                    <column>Account.Top_Parent_Account__c</column>
                 </dashboardFilterColumns>
                 <dashboardFilterColumns>
-                    <column>Opportunity.RHQ_Account__c</column>
+                    <column>Account.Top_Parent_Account__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>PARENT_NAME</column>
                 </dashboardFilterColumns>
                 <decimalPrecision>-1</decimalPrecision>
                 <displayUnits>Auto</displayUnits>
-                <drillEnabled>false</drillEnabled>
-                <drillToDetailEnabled>false</drillToDetailEnabled>
-                <enableHover>false</enableHover>
-                <expandOthers>false</expandOthers>
-                <groupingColumn>STAGE_NAME</groupingColumn>
-                <groupingSortProperties>
-                    <groupingSorts>
-                        <groupingLevel>g1</groupingLevel>
-                        <sortOrder>a</sortOrder>
-                    </groupingSorts>
-                </groupingSortProperties>
-                <header>Opportunities per Stage</header>
-                <legendPosition>Bottom</legendPosition>
+                <groupingSortProperties/>
+                <header>Total Pipeline Size GM</header>
+                <indicatorBreakpoint1>33.0</indicatorBreakpoint1>
+                <indicatorBreakpoint2>67.0</indicatorBreakpoint2>
+                <indicatorHighColor>#00716B</indicatorHighColor>
+                <indicatorLowColor>#C23934</indicatorLowColor>
+                <indicatorMiddleColor>#CA8501</indicatorMiddleColor>
+                <report>MyKeyAccountsAccountHierarchy/GM_per_Stage_Hierarchy_Cf2</report>
+                <showRange>false</showRange>
+            </dashboardComponent>
+            <rowIndex>0</rowIndex>
+            <rowSpan>8</rowSpan>
+        </dashboardGridComponents>
+        <dashboardGridComponents>
+            <colSpan>2</colSpan>
+            <columnIndex>2</columnIndex>
+            <dashboardComponent>
+                <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+                <chartSummary>
+                    <column>RowCount</column>
+                </chartSummary>
+                <componentType>Metric</componentType>
+                <dashboardFilterColumns>
+                    <column>Account.Top_Parent_Account__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>Account.Top_Parent_Account__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>PARENT_NAME</column>
+                </dashboardFilterColumns>
+                <decimalPrecision>-1</decimalPrecision>
+                <displayUnits>Auto</displayUnits>
+                <groupingSortProperties/>
+                <header>Total Pipeline Size No Opps</header>
+                <indicatorBreakpoint1>33.0</indicatorBreakpoint1>
+                <indicatorBreakpoint2>67.0</indicatorBreakpoint2>
+                <indicatorHighColor>#00716B</indicatorHighColor>
+                <indicatorLowColor>#C23934</indicatorLowColor>
+                <indicatorMiddleColor>#CA8501</indicatorMiddleColor>
                 <report>MyKeyAccountsAccountHierarchy/Opportunities_per_Stage_Hierarchy_nUl</report>
-                <showPercentage>false</showPercentage>
-                <showPicturesOnCharts>false</showPicturesOnCharts>
-                <showValues>true</showValues>
-                <sortBy>RowLabelAscending</sortBy>
-                <title>Funnel &amp; Pipeline Overview</title>
-                <useReportChart>false</useReportChart>
+                <showRange>false</showRange>
             </dashboardComponent>
             <rowIndex>0</rowIndex>
             <rowSpan>8</rowSpan>
@@ -432,16 +471,18 @@
                 <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
                 <chartAxisRange>Auto</chartAxisRange>
                 <chartSummary>
-                    <aggregate>Sum</aggregate>
                     <axisBinding>y</axisBinding>
-                    <column>AMOUNT</column>
+                    <column>RowCount</column>
                 </chartSummary>
                 <componentType>Bar</componentType>
                 <dashboardFilterColumns>
-                    <column>Opportunity.HQ_Account__c</column>
+                    <column>Account.Top_Parent_Account__c</column>
                 </dashboardFilterColumns>
                 <dashboardFilterColumns>
-                    <column>Opportunity.RHQ_Account__c</column>
+                    <column>Account.Top_Parent_Account__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>PARENT_NAME</column>
                 </dashboardFilterColumns>
                 <decimalPrecision>-1</decimalPrecision>
                 <displayUnits>Auto</displayUnits>
@@ -456,9 +497,9 @@
                         <sortOrder>a</sortOrder>
                     </groupingSorts>
                 </groupingSortProperties>
-                <header>GM per Stage</header>
+                <header>Opportunities Count by Stage</header>
                 <legendPosition>Bottom</legendPosition>
-                <report>MyKeyAccountsAccountHierarchy/GM_per_Stage_Hierarchy_Cf2</report>
+                <report>MyKeyAccountsAccountHierarchy/Opportunities_per_Stage_Hierarchy_nUl</report>
                 <showPercentage>false</showPercentage>
                 <showPicturesOnCharts>false</showPicturesOnCharts>
                 <showValues>true</showValues>
@@ -478,14 +519,17 @@
                 <chartSummary>
                     <aggregate>Sum</aggregate>
                     <axisBinding>y</axisBinding>
-                    <column>EXP_AMOUNT</column>
+                    <column>AMOUNT</column>
                 </chartSummary>
-                <componentType>BarGrouped</componentType>
+                <componentType>Bar</componentType>
                 <dashboardFilterColumns>
-                    <column>Opportunity.HQ_Account__c</column>
+                    <column>Account.Top_Parent_Account__c</column>
                 </dashboardFilterColumns>
                 <dashboardFilterColumns>
-                    <column>Opportunity.RHQ_Account__c</column>
+                    <column>Account.Top_Parent_Account__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>PARENT_NAME</column>
                 </dashboardFilterColumns>
                 <decimalPrecision>-1</decimalPrecision>
                 <displayUnits>Auto</displayUnits>
@@ -493,22 +537,18 @@
                 <drillToDetailEnabled>false</drillToDetailEnabled>
                 <enableHover>false</enableHover>
                 <expandOthers>false</expandOthers>
-                <groupingColumn>ACCOUNT_NAME</groupingColumn>
                 <groupingColumn>STAGE_NAME</groupingColumn>
                 <groupingSortProperties>
                     <groupingSorts>
                         <groupingLevel>g1</groupingLevel>
                         <sortOrder>a</sortOrder>
                     </groupingSorts>
-                    <groupingSorts>
-                        <groupingLevel>g2</groupingLevel>
-                        <sortOrder>a</sortOrder>
-                    </groupingSorts>
                 </groupingSortProperties>
-                <header>Weighted GM for Key Account pipeline</header>
-                <legendPosition>Right</legendPosition>
-                <report>MyKeyAccountsAccountHierarchy/Weighted_GM_for_Key_Account_pipeline_Hie_3GM</report>
+                <header>Gross Margin Value by Stage</header>
+                <legendPosition>Bottom</legendPosition>
+                <report>MyKeyAccountsAccountHierarchy/GM_per_Stage_Hierarchy_Cf2</report>
                 <showPercentage>false</showPercentage>
+                <showPicturesOnCharts>false</showPicturesOnCharts>
                 <showValues>true</showValues>
                 <sortBy>RowLabelAscending</sortBy>
                 <title>Funnel &amp; Pipeline Overview</title>
@@ -518,7 +558,7 @@
             <rowSpan>8</rowSpan>
         </dashboardGridComponents>
         <dashboardGridComponents>
-            <colSpan>5</colSpan>
+            <colSpan>4</colSpan>
             <columnIndex>0</columnIndex>
             <dashboardComponent>
                 <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
@@ -530,10 +570,13 @@
                 </chartSummary>
                 <componentType>Donut</componentType>
                 <dashboardFilterColumns>
-                    <column>Opportunity.HQ_Account__c</column>
+                    <column>Account.Top_Parent_Account__c</column>
                 </dashboardFilterColumns>
                 <dashboardFilterColumns>
-                    <column>Opportunity.RHQ_Account__c</column>
+                    <column>Account.Top_Parent_Account__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>PARENT_NAME</column>
                 </dashboardFilterColumns>
                 <decimalPrecision>-1</decimalPrecision>
                 <displayUnits>Auto</displayUnits>
@@ -562,22 +605,25 @@
             <rowSpan>8</rowSpan>
         </dashboardGridComponents>
         <dashboardGridComponents>
-            <colSpan>7</colSpan>
-            <columnIndex>5</columnIndex>
+            <colSpan>4</colSpan>
+            <columnIndex>4</columnIndex>
             <dashboardComponent>
                 <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
                 <chartAxisRange>Auto</chartAxisRange>
                 <chartSummary>
                     <aggregate>Sum</aggregate>
                     <axisBinding>y</axisBinding>
-                    <column>AMOUNT</column>
+                    <column>EXP_AMOUNT</column>
                 </chartSummary>
                 <componentType>BarGrouped</componentType>
                 <dashboardFilterColumns>
-                    <column>Opportunity.HQ_Account__c</column>
+                    <column>Account.Top_Parent_Account__c</column>
                 </dashboardFilterColumns>
                 <dashboardFilterColumns>
-                    <column>Opportunity.RHQ_Account__c</column>
+                    <column>Account.Top_Parent_Account__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>PARENT_NAME</column>
                 </dashboardFilterColumns>
                 <decimalPrecision>-1</decimalPrecision>
                 <displayUnits>Auto</displayUnits>
@@ -586,7 +632,7 @@
                 <enableHover>false</enableHover>
                 <expandOthers>false</expandOthers>
                 <groupingColumn>ACCOUNT_NAME</groupingColumn>
-                <groupingColumn>CREATED_DATE</groupingColumn>
+                <groupingColumn>STAGE_NAME</groupingColumn>
                 <groupingSortProperties>
                     <groupingSorts>
                         <groupingLevel>g1</groupingLevel>
@@ -597,9 +643,9 @@
                         <sortOrder>a</sortOrder>
                     </groupingSorts>
                 </groupingSortProperties>
-                <header>New opportunities Added (30 Days)</header>
+                <header>Weighted Gross Margin by Stage of Associated Entity</header>
                 <legendPosition>Right</legendPosition>
-                <report>MyKeyAccountsAccountHierarchy/New_opportunities_Added_30_Days_Hie_FKN</report>
+                <report>MyKeyAccountsAccountHierarchy/Weighted_GM_for_Key_Account_pipeline_Hie_3GM</report>
                 <showPercentage>false</showPercentage>
                 <showValues>true</showValues>
                 <sortBy>RowLabelAscending</sortBy>
@@ -611,146 +657,18 @@
         </dashboardGridComponents>
         <dashboardGridComponents>
             <colSpan>4</colSpan>
-            <columnIndex>0</columnIndex>
-            <dashboardComponent>
-                <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
-                <chartAxisRange>Auto</chartAxisRange>
-                <chartSummary>
-                    <aggregate>Sum</aggregate>
-                    <axisBinding>y</axisBinding>
-                    <column>AMOUNT</column>
-                </chartSummary>
-                <componentType>Funnel</componentType>
-                <dashboardFilterColumns>
-                    <column>Opportunity.HQ_Account__c</column>
-                </dashboardFilterColumns>
-                <dashboardFilterColumns>
-                    <column>Opportunity.RHQ_Account__c</column>
-                </dashboardFilterColumns>
-                <decimalPrecision>-1</decimalPrecision>
-                <displayUnits>Auto</displayUnits>
-                <drillEnabled>false</drillEnabled>
-                <drillToDetailEnabled>false</drillToDetailEnabled>
-                <enableHover>false</enableHover>
-                <expandOthers>false</expandOthers>
-                <groupingColumn>STAGE_NAME</groupingColumn>
-                <groupingSortProperties>
-                    <groupingSorts>
-                        <groupingLevel>g1</groupingLevel>
-                        <sortOrder>a</sortOrder>
-                    </groupingSorts>
-                </groupingSortProperties>
-                <header>Opp with No Stage Change</header>
-                <legendPosition>Right</legendPosition>
-                <report>MyKeyAccountsAccountHierarchy/Opp_with_No_Stage_Change_Hierarchy_yAl</report>
-                <showPercentage>true</showPercentage>
-                <showValues>true</showValues>
-                <sortBy>RowLabelAscending</sortBy>
-                <title>Risk &amp; Deal Movement</title>
-                <useReportChart>false</useReportChart>
-            </dashboardComponent>
-            <rowIndex>16</rowIndex>
-            <rowSpan>8</rowSpan>
-        </dashboardGridComponents>
-        <dashboardGridComponents>
-            <colSpan>4</colSpan>
-            <columnIndex>4</columnIndex>
-            <dashboardComponent>
-                <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
-                <chartAxisRange>Auto</chartAxisRange>
-                <chartSummary>
-                    <aggregate>Sum</aggregate>
-                    <axisBinding>y</axisBinding>
-                    <column>AMOUNT</column>
-                </chartSummary>
-                <componentType>Donut</componentType>
-                <dashboardFilterColumns>
-                    <column>Opportunity.HQ_Account__c</column>
-                </dashboardFilterColumns>
-                <dashboardFilterColumns>
-                    <column>Opportunity.RHQ_Account__c</column>
-                </dashboardFilterColumns>
-                <decimalPrecision>-1</decimalPrecision>
-                <displayUnits>Auto</displayUnits>
-                <drillEnabled>false</drillEnabled>
-                <drillToDetailEnabled>false</drillToDetailEnabled>
-                <enableHover>false</enableHover>
-                <expandOthers>false</expandOthers>
-                <groupingColumn>STAGE_NAME</groupingColumn>
-                <groupingSortProperties>
-                    <groupingSorts>
-                        <groupingLevel>g1</groupingLevel>
-                        <sortOrder>a</sortOrder>
-                    </groupingSorts>
-                </groupingSortProperties>
-                <header>Opp in the same stage &gt;180 days</header>
-                <legendPosition>Right</legendPosition>
-                <report>MyKeyAccountsAccountHierarchy/Opp_in_the_same_stage_180_days_Hierar_jjh</report>
-                <showPercentage>true</showPercentage>
-                <showTotal>true</showTotal>
-                <showValues>true</showValues>
-                <sortBy>RowLabelAscending</sortBy>
-                <title>Risk &amp; Deal Movement</title>
-                <useReportChart>false</useReportChart>
-            </dashboardComponent>
-            <rowIndex>16</rowIndex>
-            <rowSpan>8</rowSpan>
-        </dashboardGridComponents>
-        <dashboardGridComponents>
-            <colSpan>4</colSpan>
             <columnIndex>8</columnIndex>
-            <dashboardComponent>
-                <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
-                <chartAxisRange>Auto</chartAxisRange>
-                <chartSummary>
-                    <aggregate>Sum</aggregate>
-                    <axisBinding>y</axisBinding>
-                    <column>AMOUNT</column>
-                </chartSummary>
-                <componentType>Bar</componentType>
-                <dashboardFilterColumns>
-                    <column>Opportunity.HQ_Account__c</column>
-                </dashboardFilterColumns>
-                <dashboardFilterColumns>
-                    <column>Opportunity.RHQ_Account__c</column>
-                </dashboardFilterColumns>
-                <decimalPrecision>-1</decimalPrecision>
-                <displayUnits>Auto</displayUnits>
-                <drillEnabled>false</drillEnabled>
-                <drillToDetailEnabled>false</drillToDetailEnabled>
-                <enableHover>false</enableHover>
-                <expandOthers>false</expandOthers>
-                <groupingColumn>STAGE_NAME</groupingColumn>
-                <groupingSortProperties>
-                    <groupingSorts>
-                        <groupingLevel>g1</groupingLevel>
-                        <sortOrder>a</sortOrder>
-                    </groupingSorts>
-                </groupingSortProperties>
-                <header>Opp with early stages-Close next 30 days</header>
-                <legendPosition>Bottom</legendPosition>
-                <report>MyKeyAccountsAccountHierarchy/Opp_with_early_stagesClose_next_30d_Hie_5HS</report>
-                <showPercentage>false</showPercentage>
-                <showPicturesOnCharts>false</showPicturesOnCharts>
-                <showValues>true</showValues>
-                <sortBy>RowLabelAscending</sortBy>
-                <title>Risk &amp; Deal Movement</title>
-                <useReportChart>false</useReportChart>
-            </dashboardComponent>
-            <rowIndex>16</rowIndex>
-            <rowSpan>8</rowSpan>
-        </dashboardGridComponents>
-        <dashboardGridComponents>
-            <colSpan>4</colSpan>
-            <columnIndex>0</columnIndex>
             <dashboardComponent>
                 <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
                 <componentType>FlexTable</componentType>
                 <dashboardFilterColumns>
-                    <column>Opportunity.HQ_Account__c</column>
+                    <column>Account.Top_Parent_Account__c</column>
                 </dashboardFilterColumns>
                 <dashboardFilterColumns>
-                    <column>Opportunity.RHQ_Account__c</column>
+                    <column>Account.Top_Parent_Account__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>PARENT_NAME</column>
                 </dashboardFilterColumns>
                 <flexComponentProperties>
                     <decimalPrecision>-1</decimalPrecision>
@@ -791,24 +709,27 @@
                     <hideChatterPhotos>true</hideChatterPhotos>
                 </flexComponentProperties>
                 <groupingSortProperties/>
-                <header>Top 10 Opportunity by Weighted GM</header>
+                <header>Top 10 Opportunities by Weighted Gross Margin</header>
                 <report>MyKeyAccountsAccountHierarchy/Top_10_Opportunity_by_Weighted_GM_Hie_GXg</report>
                 <title>Risk &amp; Deal Movement</title>
             </dashboardComponent>
-            <rowIndex>24</rowIndex>
+            <rowIndex>8</rowIndex>
             <rowSpan>8</rowSpan>
         </dashboardGridComponents>
         <dashboardGridComponents>
             <colSpan>4</colSpan>
-            <columnIndex>4</columnIndex>
+            <columnIndex>0</columnIndex>
             <dashboardComponent>
                 <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
                 <componentType>FlexTable</componentType>
                 <dashboardFilterColumns>
-                    <column>Opportunity.HQ_Account__c</column>
+                    <column>Account.Top_Parent_Account__c</column>
                 </dashboardFilterColumns>
                 <dashboardFilterColumns>
-                    <column>Opportunity.RHQ_Account__c</column>
+                    <column>Account.Top_Parent_Account__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>PARENT_NAME</column>
                 </dashboardFilterColumns>
                 <flexComponentProperties>
                     <decimalPrecision>-1</decimalPrecision>
@@ -849,11 +770,58 @@
                     <hideChatterPhotos>true</hideChatterPhotos>
                 </flexComponentProperties>
                 <groupingSortProperties/>
-                <header>Top 10 GM Opportunity close in 90 days</header>
+                <header>Top 10 Opportunities to close in 90 day (GM)s</header>
                 <report>MyKeyAccountsAccountHierarchy/Top_10_GM_Opportunity_close_in_90_d_Hie_Xxr</report>
                 <title>Risk &amp; Deal Movement</title>
             </dashboardComponent>
-            <rowIndex>24</rowIndex>
+            <rowIndex>16</rowIndex>
+            <rowSpan>8</rowSpan>
+        </dashboardGridComponents>
+        <dashboardGridComponents>
+            <colSpan>4</colSpan>
+            <columnIndex>4</columnIndex>
+            <dashboardComponent>
+                <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+                <chartAxisRange>Auto</chartAxisRange>
+                <chartSummary>
+                    <aggregate>Sum</aggregate>
+                    <axisBinding>y</axisBinding>
+                    <column>AMOUNT</column>
+                </chartSummary>
+                <componentType>Bar</componentType>
+                <dashboardFilterColumns>
+                    <column>Account.Top_Parent_Account__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>Account.Top_Parent_Account__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>PARENT_NAME</column>
+                </dashboardFilterColumns>
+                <decimalPrecision>-1</decimalPrecision>
+                <displayUnits>Auto</displayUnits>
+                <drillEnabled>false</drillEnabled>
+                <drillToDetailEnabled>false</drillToDetailEnabled>
+                <enableHover>false</enableHover>
+                <expandOthers>false</expandOthers>
+                <groupingColumn>CLOSE_DATE</groupingColumn>
+                <groupingSortProperties>
+                    <groupingSorts>
+                        <groupingLevel>g1</groupingLevel>
+                        <sortOrder>a</sortOrder>
+                    </groupingSorts>
+                </groupingSortProperties>
+                <header>Gross Margin Delivery Forecast by Close Date</header>
+                <legendPosition>Bottom</legendPosition>
+                <report>MyKeyAccountsAccountHierarchy/GM_of_open_opportunities_Hierarchy_1Ew</report>
+                <showPercentage>false</showPercentage>
+                <showPicturesOnCharts>false</showPicturesOnCharts>
+                <showValues>true</showValues>
+                <sortBy>RowLabelAscending</sortBy>
+                <title>Pipeline Forecast &amp; Dynamics</title>
+                <useReportChart>false</useReportChart>
+            </dashboardComponent>
+            <rowIndex>16</rowIndex>
             <rowSpan>8</rowSpan>
         </dashboardGridComponents>
         <dashboardGridComponents>
@@ -867,56 +835,15 @@
                     <axisBinding>y</axisBinding>
                     <column>EXP_AMOUNT</column>
                 </chartSummary>
-                <componentType>Donut</componentType>
-                <dashboardFilterColumns>
-                    <column>Opportunity.HQ_Account__c</column>
-                </dashboardFilterColumns>
-                <dashboardFilterColumns>
-                    <column>Opportunity.RHQ_Account__c</column>
-                </dashboardFilterColumns>
-                <decimalPrecision>-1</decimalPrecision>
-                <displayUnits>Auto</displayUnits>
-                <drillEnabled>false</drillEnabled>
-                <drillToDetailEnabled>false</drillToDetailEnabled>
-                <enableHover>false</enableHover>
-                <expandOthers>false</expandOthers>
-                <groupingColumn>CDF1</groupingColumn>
-                <groupingSortProperties>
-                    <groupingSorts>
-                        <groupingLevel>g1</groupingLevel>
-                        <sortOrder>a</sortOrder>
-                    </groupingSorts>
-                </groupingSortProperties>
-                <header>Weighted GM – Closures (30/90/365 days)</header>
-                <legendPosition>Right</legendPosition>
-                <report>MyKeyAccountsAccountHierarchy/Weighted_GM_Closures_3090365_d_Hie_tuo</report>
-                <showPercentage>false</showPercentage>
-                <showTotal>true</showTotal>
-                <showValues>true</showValues>
-                <sortBy>RowLabelAscending</sortBy>
-                <title>Near-Term Forecast</title>
-                <useReportChart>false</useReportChart>
-            </dashboardComponent>
-            <rowIndex>24</rowIndex>
-            <rowSpan>8</rowSpan>
-        </dashboardGridComponents>
-        <dashboardGridComponents>
-            <colSpan>4</colSpan>
-            <columnIndex>0</columnIndex>
-            <dashboardComponent>
-                <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
-                <chartAxisRange>Auto</chartAxisRange>
-                <chartSummary>
-                    <aggregate>Sum</aggregate>
-                    <axisBinding>y</axisBinding>
-                    <column>EXP_AMOUNT</column>
-                </chartSummary>
                 <componentType>Bar</componentType>
                 <dashboardFilterColumns>
-                    <column>Opportunity.HQ_Account__c</column>
+                    <column>Account.Top_Parent_Account__c</column>
                 </dashboardFilterColumns>
                 <dashboardFilterColumns>
-                    <column>Opportunity.RHQ_Account__c</column>
+                    <column>Account.Top_Parent_Account__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>PARENT_NAME</column>
                 </dashboardFilterColumns>
                 <decimalPrecision>-1</decimalPrecision>
                 <displayUnits>Auto</displayUnits>
@@ -931,7 +858,7 @@
                         <sortOrder>a</sortOrder>
                     </groupingSorts>
                 </groupingSortProperties>
-                <header>Expected revenue from key accounts</header>
+                <header>Expected Gross Margin from associated Key Account Entities</header>
                 <legendPosition>Bottom</legendPosition>
                 <report>MyKeyAccountsAccountHierarchy/Expected_revenue_from_key_accounts_Hie_cdY</report>
                 <showPercentage>false</showPercentage>
@@ -941,7 +868,54 @@
                 <title>Near-Term Forecast</title>
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
-            <rowIndex>32</rowIndex>
+            <rowIndex>16</rowIndex>
+            <rowSpan>8</rowSpan>
+        </dashboardGridComponents>
+        <dashboardGridComponents>
+            <colSpan>4</colSpan>
+            <columnIndex>0</columnIndex>
+            <dashboardComponent>
+                <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+                <chartAxisRange>Auto</chartAxisRange>
+                <chartSummary>
+                    <aggregate>Sum</aggregate>
+                    <axisBinding>y</axisBinding>
+                    <column>AMOUNT</column>
+                </chartSummary>
+                <componentType>Bar</componentType>
+                <dashboardFilterColumns>
+                    <column>Account.Top_Parent_Account__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>Account.Top_Parent_Account__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>PARENT_NAME</column>
+                </dashboardFilterColumns>
+                <decimalPrecision>-1</decimalPrecision>
+                <displayUnits>Auto</displayUnits>
+                <drillEnabled>false</drillEnabled>
+                <drillToDetailEnabled>false</drillToDetailEnabled>
+                <enableHover>false</enableHover>
+                <expandOthers>false</expandOthers>
+                <groupingColumn>STAGE_NAME</groupingColumn>
+                <groupingSortProperties>
+                    <groupingSorts>
+                        <groupingLevel>g1</groupingLevel>
+                        <sortOrder>a</sortOrder>
+                    </groupingSorts>
+                </groupingSortProperties>
+                <header>Pipeline Gross Margin Inflow &amp; Stage Movement Last 30 days</header>
+                <legendPosition>Bottom</legendPosition>
+                <report>MyKeyAccountsAccountHierarchy/New_Stage_Entries_30_Days_Hierarchy_eSh</report>
+                <showPercentage>false</showPercentage>
+                <showPicturesOnCharts>false</showPicturesOnCharts>
+                <showValues>true</showValues>
+                <sortBy>RowLabelAscending</sortBy>
+                <title>Pipeline Dynamics</title>
+                <useReportChart>false</useReportChart>
+            </dashboardComponent>
+            <rowIndex>24</rowIndex>
             <rowSpan>8</rowSpan>
         </dashboardGridComponents>
         <dashboardGridComponents>
@@ -951,12 +925,109 @@
                 <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
                 <chartAxisRange>Auto</chartAxisRange>
                 <chartSummary>
+                    <aggregate>Sum</aggregate>
+                    <axisBinding>y</axisBinding>
+                    <column>AMOUNT</column>
+                </chartSummary>
+                <componentType>Bar</componentType>
+                <dashboardFilterColumns>
+                    <column>Account.Top_Parent_Account__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>Account.Top_Parent_Account__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>PARENT_NAME</column>
+                </dashboardFilterColumns>
+                <decimalPrecision>-1</decimalPrecision>
+                <displayUnits>Auto</displayUnits>
+                <drillEnabled>false</drillEnabled>
+                <drillToDetailEnabled>false</drillToDetailEnabled>
+                <enableHover>false</enableHover>
+                <expandOthers>false</expandOthers>
+                <groupingColumn>OpportunityLineItem.Product_Category__c</groupingColumn>
+                <groupingSortProperties>
+                    <groupingSorts>
+                        <groupingLevel>g1</groupingLevel>
+                        <sortOrder>a</sortOrder>
+                    </groupingSorts>
+                </groupingSortProperties>
+                <header>Open Pipeline Gross Margin By Product Group</header>
+                <legendPosition>Bottom</legendPosition>
+                <report>MyKeyAccountsAccountHierarchy/Pipeline_GM_by_product_group_Hierarchy_asH</report>
+                <showPercentage>false</showPercentage>
+                <showPicturesOnCharts>false</showPicturesOnCharts>
+                <showValues>true</showValues>
+                <sortBy>RowLabelAscending</sortBy>
+                <title>Pipeline By Product Group</title>
+                <useReportChart>false</useReportChart>
+            </dashboardComponent>
+            <rowIndex>24</rowIndex>
+            <rowSpan>8</rowSpan>
+        </dashboardGridComponents>
+        <dashboardGridComponents>
+            <colSpan>4</colSpan>
+            <columnIndex>8</columnIndex>
+            <dashboardComponent>
+                <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+                <chartAxisRange>Auto</chartAxisRange>
+                <chartSummary>
+                    <aggregate>Maximum</aggregate>
+                    <axisBinding>y</axisBinding>
+                    <column>AMOUNT</column>
+                </chartSummary>
+                <componentType>Bar</componentType>
+                <dashboardFilterColumns>
+                    <column>Account.Top_Parent_Account__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>Account.Top_Parent_Account__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>PARENT_NAME</column>
+                </dashboardFilterColumns>
+                <decimalPrecision>-1</decimalPrecision>
+                <displayUnits>Auto</displayUnits>
+                <drillEnabled>false</drillEnabled>
+                <drillToDetailEnabled>false</drillToDetailEnabled>
+                <enableHover>false</enableHover>
+                <expandOthers>false</expandOthers>
+                <groupingColumn>OpportunityLineItem.Product_Category__c</groupingColumn>
+                <groupingSortProperties>
+                    <groupingSorts>
+                        <groupingLevel>g1</groupingLevel>
+                        <sortOrder>a</sortOrder>
+                    </groupingSorts>
+                </groupingSortProperties>
+                <header>Won Pipeline Gross Margin By Product Group</header>
+                <legendPosition>Bottom</legendPosition>
+                <report>MyKeyAccountsAccountHierarchy/Top_product_groups_by_GM_or_volume_Hie_lxn</report>
+                <showPercentage>false</showPercentage>
+                <showPicturesOnCharts>false</showPicturesOnCharts>
+                <showValues>true</showValues>
+                <sortBy>RowLabelAscending</sortBy>
+                <title>Pipeline By Product Group</title>
+                <useReportChart>false</useReportChart>
+            </dashboardComponent>
+            <rowIndex>24</rowIndex>
+            <rowSpan>8</rowSpan>
+        </dashboardGridComponents>
+        <dashboardGridComponents>
+            <colSpan>6</colSpan>
+            <columnIndex>0</columnIndex>
+            <dashboardComponent>
+                <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+                <chartAxisRange>Auto</chartAxisRange>
+                <chartSummary>
                     <axisBinding>y</axisBinding>
                     <column>RowCount</column>
                 </chartSummary>
                 <componentType>BarGrouped</componentType>
                 <dashboardFilterColumns>
-                    <column>Account$Name</column>
+                    <column>Account$Top_Parent_Account__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>Account$Top_Parent_Account__c</column>
                 </dashboardFilterColumns>
                 <dashboardFilterColumns>
                     <column>Account$Name</column>
@@ -979,7 +1050,7 @@
                         <sortOrder>a</sortOrder>
                     </groupingSorts>
                 </groupingSortProperties>
-                <header>Visit count per account (past 12 months)</header>
+                <header>Visit count per Key Account Entity YTD</header>
                 <legendPosition>Right</legendPosition>
                 <report>MyKeyAccountsAccountHierarchy/Visit_count_per_accountpast_12_mon_Hie_YuW</report>
                 <showPercentage>false</showPercentage>
@@ -992,55 +1063,16 @@
             <rowSpan>8</rowSpan>
         </dashboardGridComponents>
         <dashboardGridComponents>
-            <colSpan>4</colSpan>
-            <columnIndex>8</columnIndex>
-            <dashboardComponent>
-                <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
-                <chartAxisRange>Auto</chartAxisRange>
-                <chartSummary>
-                    <axisBinding>y</axisBinding>
-                    <column>RowCount</column>
-                </chartSummary>
-                <componentType>Funnel</componentType>
-                <dashboardFilterColumns>
-                    <column>Account$Name</column>
-                </dashboardFilterColumns>
-                <dashboardFilterColumns>
-                    <column>Account$Name</column>
-                </dashboardFilterColumns>
-                <decimalPrecision>-1</decimalPrecision>
-                <displayUnits>Auto</displayUnits>
-                <drillEnabled>false</drillEnabled>
-                <drillToDetailEnabled>false</drillToDetailEnabled>
-                <enableHover>false</enableHover>
-                <expandOthers>false</expandOthers>
-                <groupingColumn>Account$Name</groupingColumn>
-                <groupingSortProperties>
-                    <groupingSorts>
-                        <groupingLevel>g1</groupingLevel>
-                        <sortOrder>a</sortOrder>
-                    </groupingSorts>
-                </groupingSortProperties>
-                <header>Strategic Acc - Inactive from 45 Days</header>
-                <legendPosition>Right</legendPosition>
-                <report>MyKeyAccountsAccountHierarchy/Strategic_AccInactive_from_45_Days_Hie_cT2</report>
-                <showPercentage>true</showPercentage>
-                <showValues>true</showValues>
-                <sortBy>RowLabelAscending</sortBy>
-                <title>Engagement Tracking</title>
-                <useReportChart>false</useReportChart>
-            </dashboardComponent>
-            <rowIndex>32</rowIndex>
-            <rowSpan>8</rowSpan>
-        </dashboardGridComponents>
-        <dashboardGridComponents>
-            <colSpan>4</colSpan>
-            <columnIndex>0</columnIndex>
+            <colSpan>6</colSpan>
+            <columnIndex>6</columnIndex>
             <dashboardComponent>
                 <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
                 <componentType>FlexTable</componentType>
                 <dashboardFilterColumns>
-                    <column>Account$Name</column>
+                    <column>Account$Top_Parent_Account__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>Account$Top_Parent_Account__c</column>
                 </dashboardFilterColumns>
                 <dashboardFilterColumns>
                     <column>Account$Name</column>
@@ -1078,106 +1110,15 @@
                     <hideChatterPhotos>true</hideChatterPhotos>
                 </flexComponentProperties>
                 <groupingSortProperties/>
-                <header>Accounts without future activity</header>
+                <header>Accounts without Activities for over 180 Days</header>
                 <report>MyKeyAccountsAccountHierarchy/Accounts_without_future_activity_Hie_0aI</report>
                 <title>Engagement Tracking</title>
             </dashboardComponent>
-            <rowIndex>40</rowIndex>
+            <rowIndex>32</rowIndex>
             <rowSpan>8</rowSpan>
         </dashboardGridComponents>
         <dashboardGridComponents>
-            <colSpan>4</colSpan>
-            <columnIndex>4</columnIndex>
-            <dashboardComponent>
-                <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
-                <chartAxisRange>Auto</chartAxisRange>
-                <chartSummary>
-                    <axisBinding>y</axisBinding>
-                    <column>RowCount</column>
-                </chartSummary>
-                <componentType>Bar</componentType>
-                <dashboardFilterColumns>
-                    <column>Account$Name</column>
-                </dashboardFilterColumns>
-                <dashboardFilterColumns>
-                    <column>Account$Name</column>
-                </dashboardFilterColumns>
-                <decimalPrecision>-1</decimalPrecision>
-                <displayUnits>Auto</displayUnits>
-                <drillEnabled>false</drillEnabled>
-                <drillToDetailEnabled>false</drillToDetailEnabled>
-                <enableHover>false</enableHover>
-                <expandOthers>false</expandOthers>
-                <groupingColumn>Account$Name</groupingColumn>
-                <groupingSortProperties>
-                    <groupingSorts>
-                        <groupingLevel>g1</groupingLevel>
-                        <sortOrder>a</sortOrder>
-                    </groupingSorts>
-                </groupingSortProperties>
-                <header>Open Visits Aged &gt;30 Days</header>
-                <legendPosition>Bottom</legendPosition>
-                <report>MyKeyAccountsAccountHierarchy/Open_Visits_Aged_30_Days_Hierarchy_ute</report>
-                <showPercentage>false</showPercentage>
-                <showPicturesOnCharts>false</showPicturesOnCharts>
-                <showValues>true</showValues>
-                <sortBy>RowLabelAscending</sortBy>
-                <title>Engagement Tracking</title>
-                <useReportChart>false</useReportChart>
-            </dashboardComponent>
-            <rowIndex>40</rowIndex>
-            <rowSpan>8</rowSpan>
-        </dashboardGridComponents>
-        <dashboardGridComponents>
-            <colSpan>4</colSpan>
-            <columnIndex>8</columnIndex>
-            <dashboardComponent>
-                <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
-                <chartAxisRange>Auto</chartAxisRange>
-                <chartSummary>
-                    <aggregate>Maximum</aggregate>
-                    <axisBinding>y</axisBinding>
-                    <column>AMOUNT</column>
-                </chartSummary>
-                <componentType>BarStacked</componentType>
-                <dashboardFilterColumns>
-                    <column>Opportunity.HQ_Account__c</column>
-                </dashboardFilterColumns>
-                <dashboardFilterColumns>
-                    <column>Opportunity.RHQ_Account__c</column>
-                </dashboardFilterColumns>
-                <decimalPrecision>-1</decimalPrecision>
-                <displayUnits>Auto</displayUnits>
-                <drillEnabled>false</drillEnabled>
-                <drillToDetailEnabled>false</drillToDetailEnabled>
-                <enableHover>false</enableHover>
-                <expandOthers>false</expandOthers>
-                <groupingColumn>ACCOUNT_NAME</groupingColumn>
-                <groupingColumn>FAMILY</groupingColumn>
-                <groupingSortProperties>
-                    <groupingSorts>
-                        <groupingLevel>g1</groupingLevel>
-                        <sortOrder>a</sortOrder>
-                    </groupingSorts>
-                    <groupingSorts>
-                        <groupingLevel>g2</groupingLevel>
-                        <sortOrder>a</sortOrder>
-                    </groupingSorts>
-                </groupingSortProperties>
-                <header>Top product groups by GM or volume</header>
-                <legendPosition>Right</legendPosition>
-                <report>MyKeyAccountsAccountHierarchy/Top_product_groups_by_GM_or_volume_Hie_lxn</report>
-                <showPercentage>false</showPercentage>
-                <showValues>false</showValues>
-                <sortBy>RowLabelAscending</sortBy>
-                <title>Product Mix &amp; Innovation Adoption</title>
-                <useReportChart>false</useReportChart>
-            </dashboardComponent>
-            <rowIndex>40</rowIndex>
-            <rowSpan>8</rowSpan>
-        </dashboardGridComponents>
-        <dashboardGridComponents>
-            <colSpan>4</colSpan>
+            <colSpan>6</colSpan>
             <columnIndex>0</columnIndex>
             <dashboardComponent>
                 <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
@@ -1185,14 +1126,17 @@
                 <chartSummary>
                     <aggregate>Sum</aggregate>
                     <axisBinding>y</axisBinding>
-                    <column>AMOUNT</column>
+                    <column>AMOUNT.CONVERT</column>
                 </chartSummary>
-                <componentType>Bar</componentType>
+                <componentType>Column</componentType>
                 <dashboardFilterColumns>
-                    <column>Opportunity.HQ_Account__c</column>
+                    <column>Account.Top_Parent_Account__c</column>
                 </dashboardFilterColumns>
                 <dashboardFilterColumns>
-                    <column>Opportunity.RHQ_Account__c</column>
+                    <column>Account.Top_Parent_Account__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>PARENT_NAME</column>
                 </dashboardFilterColumns>
                 <decimalPrecision>-1</decimalPrecision>
                 <displayUnits>Auto</displayUnits>
@@ -1200,141 +1144,93 @@
                 <drillToDetailEnabled>false</drillToDetailEnabled>
                 <enableHover>false</enableHover>
                 <expandOthers>false</expandOthers>
-                <groupingColumn>FAMILY</groupingColumn>
+                <groupingColumn>Opportunity.Stage_Risk_Ind__c</groupingColumn>
                 <groupingSortProperties>
                     <groupingSorts>
                         <groupingLevel>g1</groupingLevel>
                         <sortOrder>a</sortOrder>
                     </groupingSorts>
                 </groupingSortProperties>
-                <header>Pipeline GM by product group</header>
+                <header>Opportunity Health Tracker - Stage Risk</header>
                 <legendPosition>Bottom</legendPosition>
-                <report>MyKeyAccountsAccountHierarchy/Pipeline_GM_by_product_group_Hierarchy_asH</report>
+                <report>MyKeyAccountsAccountHierarchy/Opportunites_at_riskred_green_hiera_ePi</report>
                 <showPercentage>false</showPercentage>
-                <showPicturesOnCharts>false</showPicturesOnCharts>
                 <showValues>true</showValues>
                 <sortBy>RowLabelAscending</sortBy>
-                <title>Product Mix &amp; Innovation Adoption</title>
+                <title>Stalled Opportunities</title>
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
-            <rowIndex>48</rowIndex>
+            <rowIndex>40</rowIndex>
             <rowSpan>8</rowSpan>
         </dashboardGridComponents>
         <dashboardGridComponents>
-            <colSpan>4</colSpan>
-            <columnIndex>4</columnIndex>
+            <colSpan>6</colSpan>
+            <columnIndex>6</columnIndex>
             <dashboardComponent>
                 <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
-                <componentType>FlexTable</componentType>
+                <chartSummary>
+                    <column>RowCount</column>
+                </chartSummary>
+                <componentType>Metric</componentType>
                 <dashboardFilterColumns>
-                    <column>Opportunity.HQ_Account__c</column>
+                    <column>Account.Top_Parent_Account__c</column>
                 </dashboardFilterColumns>
                 <dashboardFilterColumns>
-                    <column>Opportunity.RHQ_Account__c</column>
+                    <column>Account.Top_Parent_Account__c</column>
                 </dashboardFilterColumns>
-                <flexComponentProperties>
-                    <decimalPrecision>-1</decimalPrecision>
-                    <flexTableColumn>
-                        <reportColumn>PRODUCT_NAME</reportColumn>
-                        <showSubTotal>false</showSubTotal>
-                        <showTotal>false</showTotal>
-                        <type>detail</type>
-                    </flexTableColumn>
-                    <flexTableColumn>
-                        <reportColumn>FAMILY</reportColumn>
-                        <showSubTotal>false</showSubTotal>
-                        <showTotal>false</showTotal>
-                        <type>detail</type>
-                    </flexTableColumn>
-                    <flexTableColumn>
-                        <reportColumn>OPPORTUNITY_NAME</reportColumn>
-                        <showSubTotal>false</showSubTotal>
-                        <showTotal>false</showTotal>
-                        <type>detail</type>
-                    </flexTableColumn>
-                    <flexTableColumn>
-                        <reportColumn>ACCOUNT_NAME</reportColumn>
-                        <showSubTotal>false</showSubTotal>
-                        <showTotal>false</showTotal>
-                        <type>detail</type>
-                    </flexTableColumn>
-                    <flexTableColumn>
-                        <reportColumn>CLOSE_DATE</reportColumn>
-                        <showSubTotal>false</showSubTotal>
-                        <showTotal>false</showTotal>
-                        <type>detail</type>
-                    </flexTableColumn>
-                    <flexTableSortInfo>
-                        <sortColumn>PRODUCT_NAME</sortColumn>
-                        <sortOrder>1</sortOrder>
-                    </flexTableSortInfo>
-                    <hideChatterPhotos>true</hideChatterPhotos>
-                </flexComponentProperties>
+                <dashboardFilterColumns>
+                    <column>PARENT_NAME</column>
+                </dashboardFilterColumns>
+                <decimalPrecision>-1</decimalPrecision>
+                <displayUnits>Auto</displayUnits>
                 <groupingSortProperties/>
-                <header>Opportunities tagged with new products</header>
-                <report>MyKeyAccountsAccountHierarchy/Opp_tagged_with_new_products_Hierarchy_jsH</report>
-                <title>Product Mix &amp; Innovation Adoption</title>
+                <header>No Stage Change in the Last 180 days</header>
+                <indicatorBreakpoint1>33.0</indicatorBreakpoint1>
+                <indicatorBreakpoint2>67.0</indicatorBreakpoint2>
+                <indicatorHighColor>#00716B</indicatorHighColor>
+                <indicatorLowColor>#C23934</indicatorLowColor>
+                <indicatorMiddleColor>#CA8501</indicatorMiddleColor>
+                <metricLabel>Stalled Opportunities</metricLabel>
+                <report>MyKeyAccountsAccountHierarchy/Inactive_OppNo_stg_change_in_180d_hie_njt</report>
+                <showRange>false</showRange>
             </dashboardComponent>
-            <rowIndex>48</rowIndex>
-            <rowSpan>8</rowSpan>
+            <rowIndex>40</rowIndex>
+            <rowSpan>4</rowSpan>
         </dashboardGridComponents>
         <dashboardGridComponents>
-            <colSpan>4</colSpan>
-            <columnIndex>8</columnIndex>
+            <colSpan>6</colSpan>
+            <columnIndex>6</columnIndex>
             <dashboardComponent>
                 <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
-                <componentType>FlexTable</componentType>
+                <chartSummary>
+                    <aggregate>Sum</aggregate>
+                    <column>AMOUNT</column>
+                </chartSummary>
+                <componentType>Metric</componentType>
                 <dashboardFilterColumns>
-                    <column>Opportunity.HQ_Account__c</column>
+                    <column>Account.Top_Parent_Account__c</column>
                 </dashboardFilterColumns>
                 <dashboardFilterColumns>
-                    <column>Opportunity.RHQ_Account__c</column>
+                    <column>Account.Top_Parent_Account__c</column>
                 </dashboardFilterColumns>
-                <flexComponentProperties>
-                    <decimalPrecision>-1</decimalPrecision>
-                    <flexTableColumn>
-                        <reportColumn>OPPORTUNITY_NAME</reportColumn>
-                        <showSubTotal>false</showSubTotal>
-                        <showTotal>false</showTotal>
-                        <type>detail</type>
-                    </flexTableColumn>
-                    <flexTableColumn>
-                        <reportColumn>ACCOUNT_NAME</reportColumn>
-                        <showSubTotal>false</showSubTotal>
-                        <showTotal>false</showTotal>
-                        <type>detail</type>
-                    </flexTableColumn>
-                    <flexTableColumn>
-                        <reportColumn>PRODUCT_NAME</reportColumn>
-                        <showSubTotal>false</showSubTotal>
-                        <showTotal>false</showTotal>
-                        <type>detail</type>
-                    </flexTableColumn>
-                    <flexTableColumn>
-                        <reportColumn>FAMILY</reportColumn>
-                        <showSubTotal>false</showSubTotal>
-                        <showTotal>false</showTotal>
-                        <type>detail</type>
-                    </flexTableColumn>
-                    <flexTableColumn>
-                        <reportColumn>CLOSE_DATE</reportColumn>
-                        <showSubTotal>false</showSubTotal>
-                        <showTotal>false</showTotal>
-                        <type>detail</type>
-                    </flexTableColumn>
-                    <flexTableSortInfo>
-                        <sortColumn>OPPORTUNITY_NAME</sortColumn>
-                        <sortOrder>1</sortOrder>
-                    </flexTableSortInfo>
-                    <hideChatterPhotos>true</hideChatterPhotos>
-                </flexComponentProperties>
+                <dashboardFilterColumns>
+                    <column>PARENT_NAME</column>
+                </dashboardFilterColumns>
+                <decimalPrecision>-1</decimalPrecision>
+                <displayUnits>Auto</displayUnits>
                 <groupingSortProperties/>
-                <header>GM contribution from new products in pip</header>
-                <report>MyKeyAccountsAccountHierarchy/GM_contributionnew_products_in_pip_Hie_H4A</report>
-                <title>Product Mix &amp; Innovation Adoption</title>
+                <header>No Stage Change in Last 180 Days Gross Margin</header>
+                <indicatorBreakpoint1>33.0</indicatorBreakpoint1>
+                <indicatorBreakpoint2>67.0</indicatorBreakpoint2>
+                <indicatorHighColor>#00716B</indicatorHighColor>
+                <indicatorLowColor>#C23934</indicatorLowColor>
+                <indicatorMiddleColor>#CA8501</indicatorMiddleColor>
+                <metricLabel>Stalled Opportunities</metricLabel>
+                <report>MyKeyAccountsAccountHierarchy/Inactive_OppNo_stg_change_in_180d_hie_njt</report>
+                <showRange>false</showRange>
             </dashboardComponent>
-            <rowIndex>48</rowIndex>
-            <rowSpan>8</rowSpan>
+            <rowIndex>44</rowIndex>
+            <rowSpan>4</rowSpan>
         </dashboardGridComponents>
         <numberOfColumns>12</numberOfColumns>
         <rowHeight>36</rowHeight>
@@ -1342,9 +1238,9 @@
     <dashboardType>SpecifiedUser</dashboardType>
     <isGridLayout>true</isGridLayout>
     <owner>support.gauri@gauri.com.syn</owner>
-    <runningUser>synthomer.admin@synthomer.com</runningUser>
+    <runningUser>boyai.pukhrambam@gauri.com.syn</runningUser>
     <textColor>#000000</textColor>
-    <title>My Key Accounts - Account Hierarchy</title>
+    <title>Archived My Key Accounts - Account Hierarchy</title>
     <titleColor>#000000</titleColor>
     <titleSize>12</titleSize>
 </Dashboard>

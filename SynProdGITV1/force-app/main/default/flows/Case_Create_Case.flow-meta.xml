@@ -1895,7 +1895,11 @@
                     <fieldText>Product Batch Number</fieldText>
                     <fieldType>InputField</fieldType>
                     <inputsOnNextNavToAssocScrn>ResetValues</inputsOnNextNavToAssocScrn>
-                    <isRequired>true</isRequired>
+                    <isRequired>false</isRequired>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;&lt;span style=&quot;color: rgb(255, 0, 0); font-size: 11.36px;&quot;&gt;Product Batch Number is mandatory for Complaint Category “Product”, please add it.&lt;/span&gt;&lt;/p&gt;</errorMessage>
+                        <formulaExpression>NOT(AND({!Complaint_Category} = &apos;Product&apos;, ISBLANK({!Product_Batch_Number})))</formulaExpression>
+                    </validationRule>
                 </fields>
                 <fields>
                     <name>Delivery_Order_Number1</name>
@@ -2263,7 +2267,11 @@
                     <fieldText>Product Batch Number</fieldText>
                     <fieldType>InputField</fieldType>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-                    <isRequired>true</isRequired>
+                    <isRequired>false</isRequired>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 11.36px; color: rgb(255, 0, 0);&quot;&gt;Product Batch Number is mandatory for Complaint Category “Product”, please add it.&lt;/span&gt;&lt;/p&gt;</errorMessage>
+                        <formulaExpression>NOT(AND({!Complaint_Category_From_Order} = &apos;Product&apos;, ISBLANK({!Product_Batch_NumberFromOrder1})))</formulaExpression>
+                    </validationRule>
                 </fields>
                 <fields>
                     <name>Delivery_Order_Number2</name>

@@ -98,7 +98,7 @@
         <field>AMOUNT.CONVERT</field>
     </columns>
     <columns>
-        <field>Opportunity.Loss_Reason__c</field>
+        <field>Opportunity.Project_Type__c</field>
     </columns>
     <currency>EUR</currency>
     <filter>
@@ -121,7 +121,14 @@
             <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
-            <value>Product - Performance</value>
+            <value>Product - Performance,Service - Priority Tech.</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Project_Type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>IDL,Tech Service</value>
         </criteriaItems>
     </filter>
     <format>Summary</format>

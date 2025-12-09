@@ -1,2 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata"></CustomObjectTranslation>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <validationRules>
+        <errorMessage>
+            <!-- You cannot edit this Opportunity Product while the related Opportunity is In Approval.
+Please wait until the approval process is completed. -->
+        </errorMessage>
+        <name>Prevent_Edit_When_In_Approval_OLI</name>
+    </validationRules>
+</CustomObjectTranslation>

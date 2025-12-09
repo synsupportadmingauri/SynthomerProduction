@@ -8,11 +8,11 @@
     </columns>
     <columns>
         <aggregateTypes>Sum</aggregateTypes>
-        <field>AMOUNT</field>
+        <field>AMOUNT.CONVERT</field>
     </columns>
     <columns>
         <aggregateTypes>Sum</aggregateTypes>
-        <field>EXP_AMOUNT</field>
+        <field>EXP_AMOUNT.CONVERT</field>
     </columns>
     <columns>
         <field>STAGE_NAME</field>
@@ -23,6 +23,7 @@
     <columns>
         <field>FULL_NAME</field>
     </columns>
+    <currency>GBP</currency>
     <format>Tabular</format>
     <name>Top 10 Opp by Weighted GM - Leader</name>
     <params>
@@ -47,7 +48,7 @@
     <showDetails>true</showDetails>
     <showGrandTotal>true</showGrandTotal>
     <showSubTotals>true</showSubTotals>
-    <sortColumn>EXP_AMOUNT</sortColumn>
+    <sortColumn>EXP_AMOUNT.CONVERT</sortColumn>
     <sortOrder>Desc</sortOrder>
     <timeFrameFilter>
         <dateColumn>CLOSE_DATE</dateColumn>

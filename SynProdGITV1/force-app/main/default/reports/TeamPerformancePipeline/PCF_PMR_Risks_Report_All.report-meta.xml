@@ -98,7 +98,7 @@
         <field>AMOUNT.CONVERT</field>
     </columns>
     <columns>
-        <field>Opportunity.Loss_Reason__c</field>
+        <field>Opportunity.Project_Type__c</field>
     </columns>
     <currency>EUR</currency>
     <filter>
@@ -117,11 +117,11 @@
             <value>carpet,paper,foam</value>
         </criteriaItems>
         <criteriaItems>
-            <column>Opportunity.Loss_Reason__c</column>
+            <column>Opportunity.Project_Type__c</column>
             <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
-            <value>Product - Performance</value>
+            <value>IDL,Tech Service</value>
         </criteriaItems>
     </filter>
     <format>Summary</format>

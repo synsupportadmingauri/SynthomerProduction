@@ -5,6 +5,26 @@
         <name>Syn_Edit_Order_Item_Fields</name>
     </customPermissions>
     <description>Allow users to update the Quantity, Commodity, and Country of Origin when the status of the order is Approved, In Process, or Package Preparation</description>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Event.Product_Category__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Task.Product_Category__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>User.Annual_Visit_Target__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>User.Month_Visit_Target__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
     <hasActivationRequired>false</hasActivationRequired>
     <label>Syn Edit Order Item fields</label>
 </PermissionSet>

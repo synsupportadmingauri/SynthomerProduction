@@ -232,13 +232,11 @@
             <axisBinding>y</axisBinding>
             <column>Opportunity.Total_Volume__c</column>
         </chartSummaries>
-        <chartType>HorizontalBarGrouped</chartType>
+        <chartType>HorizontalBar</chartType>
         <enableHoverLabels>false</enableHoverLabels>
         <expandOthers>true</expandOthers>
         <groupingColumn>TYPE</groupingColumn>
-        <legendPosition>Right</legendPosition>
         <location>CHART_BOTTOM</location>
-        <secondaryGroupingColumn>Account.Region__c</secondaryGroupingColumn>
         <showAxisLabels>false</showAxisLabels>
         <showPercentage>false</showPercentage>
         <showTotal>false</showTotal>
@@ -261,7 +259,17 @@
         <midColor>#B56200</midColor>
     </colorRanges>
     <columns>
+        <field>Account.Region__c</field>
+    </columns>
+    <columns>
         <field>FULL_NAME</field>
+    </columns>
+    <columns>
+        <field>Account.Group_Key__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Opportunity.Forecasted__c</field>
     </columns>
     <columns>
         <field>OPPORTUNITY_NAME</field>
@@ -278,14 +286,11 @@
     </columns>
     <columns>
         <aggregateTypes>Sum</aggregateTypes>
-        <field>Opportunity.Total_Revenue__c.CONVERT</field>
-    </columns>
-    <columns>
-        <aggregateTypes>Sum</aggregateTypes>
         <field>AMOUNT.CONVERT</field>
     </columns>
     <columns>
-        <field>Opportunity.Market_Segment__c</field>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Opportunity.Total_Revenue__c.CONVERT</field>
     </columns>
     <currency>EUR</currency>
     <description>EP opps</description>
@@ -314,9 +319,9 @@
         <criteriaItems>
             <column>Account.Region__c</column>
             <columnToColumn>false</columnToColumn>
-            <isUnlocked>false</isUnlocked>
+            <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
-            <value>EMEA,ASIA,AMERICAS</value>
+            <value>EMEA</value>
         </criteriaItems>
         <criteriaItems>
             <column>Opportunity.Market_Segment__c</column>
@@ -324,6 +329,13 @@
             <isUnlocked>true</isUnlocked>
             <operator>startsWith</operator>
             <value>Tape,form</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>TYPE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>New,Add-on,Regain,Secure</value>
         </criteriaItems>
     </filter>
     <format>Summary</format>
@@ -352,13 +364,13 @@
     </groupingsDown>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
-        <field>Account.Region__c</field>
+        <field>TYPE</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
-        <field>TYPE</field>
-        <sortOrder>Asc</sortOrder>
+        <field>STAGE_NAME</field>
+        <sortOrder>Desc</sortOrder>
     </groupingsDown>
     <name>2026 EP Total Opps with Secure New ca</name>
     <params>
@@ -382,12 +394,12 @@
     <showDetails>true</showDetails>
     <showGrandTotal>true</showGrandTotal>
     <showSubTotals>true</showSubTotals>
-    <sortColumn>OPPORTUNITY_NAME</sortColumn>
-    <sortOrder>Asc</sortOrder>
+    <sortColumn>AMOUNT.CONVERT</sortColumn>
+    <sortOrder>Desc</sortOrder>
     <timeFrameFilter>
         <dateColumn>CLOSE_DATE</dateColumn>
-        <endDate>2026-12-31</endDate>
+        <endDate>2026-03-31</endDate>
         <interval>INTERVAL_CUSTOM</interval>
-        <startDate>2026-01-01</startDate>
+        <startDate>2025-10-28</startDate>
     </timeFrameFilter>
 </Report>

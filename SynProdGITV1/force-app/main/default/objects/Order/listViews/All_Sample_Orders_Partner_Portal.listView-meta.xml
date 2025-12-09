@@ -4,13 +4,11 @@
     <columns>ORDERS.ORDER_NUMBER</columns>
     <columns>ORDER.NAME</columns>
     <columns>ORDERS.EFFECTIVE_DATE</columns>
+    <columns>SALES.ACCOUNT.NAME</columns>
     <columns>End_Customer__c</columns>
     <columns>CONTRACT.CONTRACT_NUMBER</columns>
     <columns>ORDERS.STATUS</columns>
     <columns>ORDER.SHIPPING_COUNTRY</columns>
-    <columns>ORDER.SHIPPING_STATE</columns>
-    <columns>ORDER.SHIPPING_STREET</columns>
-    <columns>ORDER.SHIPPING_ZIP</columns>
     <columns>ORDERS.LAST_UPDATE</columns>
     <columns>UPDATEDBY_USER.ALIAS</columns>
     <filterScope>Everything</filterScope>
@@ -19,7 +17,12 @@
         <operation>notEqual</operation>
         <value>ZOR</value>
     </filters>
-    <label>All Sample Orders - Partner Portal</label>
+    <filters>
+        <field>Account_Channel__c</field>
+        <operation>equals</operation>
+        <value>Distributor</value>
+    </filters>
+    <label>All Sample Orders - Distributor</label>
     <sharedTo>
         <allPartnerUsers></allPartnerUsers>
     </sharedTo>

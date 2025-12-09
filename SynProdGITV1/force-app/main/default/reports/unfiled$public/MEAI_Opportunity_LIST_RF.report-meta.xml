@@ -42,7 +42,12 @@
             <value>Zaid Usmani,Mohamed Adel,Hasan Imtiyaz Siddiqui,Reda Fleet</value>
         </criteriaItems>
     </filter>
-    <format>Tabular</format>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>OPPORTUNITY_ID</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
     <name>MEAI- Opportunity LIST_RF</name>
     <params>
         <name>terr</name>
@@ -50,7 +55,7 @@
     </params>
     <params>
         <name>include</name>
-        <value>all</value>
+        <value>open</value>
     </params>
     <params>
         <name>co</name>
@@ -61,6 +66,8 @@
     <showDetails>true</showDetails>
     <showGrandTotal>true</showGrandTotal>
     <showSubTotals>true</showSubTotals>
+    <sortColumn>CREATED_DATE</sortColumn>
+    <sortOrder>Desc</sortOrder>
     <timeFrameFilter>
         <dateColumn>CLOSE_DATE</dateColumn>
         <interval>INTERVAL_CUSTOM</interval>

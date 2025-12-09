@@ -613,6 +613,21 @@
             <field>Closure_Date__c</field>
             <table>Product2.Cases__r</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Created_Month__c</field>
+            <table>Product2.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Case_Created_Month__c</field>
+            <table>Product2.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Case_Created_Year__c</field>
+            <table>Product2.Cases__r</table>
+        </columns>
         <masterLabel>Cases</masterLabel>
     </sections>
 </ReportType>

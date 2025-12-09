@@ -10,9 +10,6 @@
         <field>CREATED_DATEONLY</field>
     </columns>
     <columns>
-        <field>CREATED</field>
-    </columns>
-    <columns>
         <field>Case.Reported_By__c</field>
     </columns>
     <columns>
@@ -112,9 +109,6 @@
     </columns>
     <columns>
         <field>Case.Delivery_Order_Number__c</field>
-    </columns>
-    <columns>
-        <field>Case.Commercial_Action__c</field>
     </columns>
     <currency>USD</currency>
     <format>Summary</format>

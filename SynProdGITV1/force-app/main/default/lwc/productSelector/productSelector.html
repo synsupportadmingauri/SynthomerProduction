@@ -145,7 +145,9 @@
                         <th scope="col"><div class="slds-truncate" title="Category">Product Category</div></th>
                         <th scope="col"><div class="slds-truncate" title="Possible Quantity">Possible Quantity</div></th>
                         <th scope="col"><div class="slds-truncate" title="Plant">Plant</div></th>
+                        <template if:false={ispartneruser}>
                         <th scope="col"><div class="slds-truncate" title="Region">Region</div></th>
+                        </template>
                         <th scope="col"><div class="slds-truncate" title="Min">Min Quantity</div></th>
                         <th scope="col"><div class="slds-truncate" title="Max">Max Quantity</div></th>
                         <th scope="col"><div class="slds-truncate" title="Estimated Stock">Estimated Stock</div></th>
@@ -166,7 +168,9 @@
                                 </div>
                             </td>
                             <td><div class="slds-truncate" title={prod.plantName}>{prod.plantName}</div></td>
+                              <template if:false={ispartneruser}>
                             <td><div class="slds-truncate" title={prod.regionName}>{prod.regionName}</div></td>
+                              </template>
                             <td>
                                 <div class="slds-truncate" title={prod.Min__c}>{prod.Min__c}</div>
                             </td>
@@ -221,7 +225,9 @@
                         <th scope="col"><div class="slds-truncate" title="Category">Product Category</div></th>
                         <th scope="col"><div class="slds-truncate" title="Possible Quantity">Possible Quantity</div></th>
                         <th scope="col"><div class="slds-truncate" title="Plant">Plant</div></th>
+                          <template if:false={ispartneruser}>
                         <th scope="col"><div class="slds-truncate" title="Region">Region</div></th>
+                        </template>
                         <th scope="col"><div class="slds-truncate" title="Min">Min Quantity</div></th>
                         <th scope="col"><div class="slds-truncate" title="Max">Max Quantity</div></th>
                         <th scope="col"><div class="slds-truncate" title="Estimated Stock">Estimated Stock</div></th>
@@ -254,7 +260,9 @@
                             <td><div class="slds-truncate" title={prod.categoryName}>{prod.categoryName}</div></td>
                             <td><div class="slds-truncate" title={prod.possibleQuantity}>{prod.possibleQuantity}</div></td>
                             <td><div class="slds-truncate" title={prod.plantName}>{prod.plantName}</div></td>
+                            <template if:false={ispartneruser}>
                             <td><div class="slds-truncate" title={prod.regionName}>{prod.regionName}</div></td>
+                            </template>
                             <td><div class="slds-truncate" title={prod.Min__c}>{prod.Min__c}</div></td>
                             <td><div class="slds-truncate" title={prod.Max__c}>{prod.Max__c}</div></td>
                             <td><div class="slds-truncate" title={prod.estimatedStock}>{prod.estimatedStock}</div></td>

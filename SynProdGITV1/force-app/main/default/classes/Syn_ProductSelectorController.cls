@@ -166,6 +166,7 @@ Vishal S   30/04/2025    SSP-353	    Initial Implementation
             SELECT Product__r.Name
             FROM Sample_Master_Matrix_Data__c
             WHERE Product__r.Name LIKE :('%' + searchTermFilter + '%') 
+            AND Sampling_Status__c  = '02 - Active'
             ORDER BY Name
             LIMIT 25
         ];

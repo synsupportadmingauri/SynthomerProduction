@@ -15,109 +15,9 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>Other</fullName>
+                <fullName>Appearance</fullName>
                 <default>false</default>
-                <label>Other</label>
-            </value>
-            <value>
-                <fullName>Technical Service</fullName>
-                <default>false</default>
-                <label>Technical Service</label>
-            </value>
-            <value>
-                <fullName>Sales</fullName>
-                <default>false</default>
-                <label>Sales</label>
-            </value>
-            <value>
-                <fullName>Response to Customer</fullName>
-                <default>false</default>
-                <label>Response to Customer</label>
-            </value>
-            <value>
-                <fullName>Product Safety (consider AIMS report)</fullName>
-                <default>false</default>
-                <label>Product Safety (consider AIMS report)</label>
-            </value>
-            <value>
-                <fullName>Invoicing</fullName>
-                <default>false</default>
-                <label>Invoicing</label>
-            </value>
-            <value>
-                <fullName>Customer Requests</fullName>
-                <default>false</default>
-                <label>Customer Requests</label>
-            </value>
-            <value>
-                <fullName>Cooperation</fullName>
-                <default>false</default>
-                <label>Cooperation</label>
-            </value>
-            <value>
-                <fullName>Complaint Handling</fullName>
-                <default>false</default>
-                <label>Complaint Handling</label>
-            </value>
-            <value>
-                <fullName>Availability of product</fullName>
-                <default>false</default>
-                <label>Availability of product</label>
-            </value>
-            <value>
-                <fullName>Instructions</fullName>
-                <default>false</default>
-                <label>Instructions</label>
-            </value>
-            <value>
-                <fullName>Physical Properties</fullName>
-                <default>false</default>
-                <label>Physical Properties</label>
-            </value>
-            <value>
-                <fullName>Odour</fullName>
-                <default>false</default>
-                <label>Odour</label>
-            </value>
-            <value>
-                <fullName>Infection</fullName>
-                <default>false</default>
-                <label>Infection</label>
-            </value>
-            <value>
-                <fullName>Grit (fine coag)</fullName>
-                <default>false</default>
-                <label>Grit (fine coag)</label>
-            </value>
-            <value>
-                <fullName>Gelling</fullName>
-                <default>false</default>
-                <label>Gelling</label>
-            </value>
-            <value>
-                <fullName>Flow Properties</fullName>
-                <default>false</default>
-                <label>Flow Properties</label>
-            </value>
-            <value>
-                <fullName>Creaming</fullName>
-                <default>false</default>
-                <label>Creaming</label>
-            </value>
-            <value>
-                <fullName>Contamination</fullName>
-                <default>false</default>
-                <label>Contamination</label>
-            </value>
-            <value>
-                <fullName>Composition</fullName>
-                <default>false</default>
-                <label>Composition</label>
-            </value>
-            <value>
-                <fullName>Coagulum / Lumps</fullName>
-                <default>false</default>
-                <label>Coagulum / Lumps</label>
+                <label>Appearance</label>
             </value>
             <value>
                 <fullName>Application Properties</fullName>
@@ -125,9 +25,154 @@
                 <label>Application Properties</label>
             </value>
             <value>
-                <fullName>Appearance</fullName>
+                <fullName>Availability of product</fullName>
                 <default>false</default>
-                <label>Appearance</label>
+                <label>Availability of product</label>
+            </value>
+            <value>
+                <fullName>Coagulum / Lumps</fullName>
+                <default>false</default>
+                <label>Coagulum / Lumps</label>
+            </value>
+            <value>
+                <fullName>Complaint Handling</fullName>
+                <default>false</default>
+                <label>Complaint Handling</label>
+            </value>
+            <value>
+                <fullName>Composition</fullName>
+                <default>false</default>
+                <label>Composition</label>
+            </value>
+            <value>
+                <fullName>Contamination</fullName>
+                <default>false</default>
+                <label>Contamination</label>
+            </value>
+            <value>
+                <fullName>Cooperation</fullName>
+                <default>false</default>
+                <label>Cooperation</label>
+            </value>
+            <value>
+                <fullName>Creaming</fullName>
+                <default>false</default>
+                <label>Creaming</label>
+            </value>
+            <value>
+                <fullName>Customer Requests</fullName>
+                <default>false</default>
+                <label>Customer Requests</label>
+            </value>
+            <value>
+                <fullName>Delivery Equipment Failure</fullName>
+                <default>false</default>
+                <label>Delivery Equipment Failure</label>
+            </value>
+            <value>
+                <fullName>Delivery Time</fullName>
+                <default>false</default>
+                <label>Delivery Time</label>
+            </value>
+            <value>
+                <fullName>Driver Issue</fullName>
+                <default>false</default>
+                <label>Driver Issue</label>
+            </value>
+            <value>
+                <fullName>Flow Properties</fullName>
+                <default>false</default>
+                <label>Flow Properties</label>
+            </value>
+            <value>
+                <fullName>Freight Damage</fullName>
+                <default>false</default>
+                <label>Freight Damage</label>
+            </value>
+            <value>
+                <fullName>Frozen Material</fullName>
+                <default>false</default>
+                <label>Frozen Material</label>
+            </value>
+            <value>
+                <fullName>Gelling</fullName>
+                <default>false</default>
+                <label>Gelling</label>
+            </value>
+            <value>
+                <fullName>Grit (fine coag)</fullName>
+                <default>false</default>
+                <label>Grit (fine coag)</label>
+            </value>
+            <value>
+                <fullName>Infection</fullName>
+                <default>false</default>
+                <label>Infection</label>
+            </value>
+            <value>
+                <fullName>Instructions</fullName>
+                <default>false</default>
+                <label>Instructions</label>
+            </value>
+            <value>
+                <fullName>Invoicing</fullName>
+                <default>false</default>
+                <label>Invoicing</label>
+            </value>
+            <value>
+                <fullName>Labelling</fullName>
+                <default>false</default>
+                <label>Labelling</label>
+            </value>
+            <value>
+                <fullName>Logistics, Paperwork</fullName>
+                <default>false</default>
+                <label>Logistics, Paperwork</label>
+            </value>
+            <value>
+                <fullName>Odour</fullName>
+                <default>false</default>
+                <label>Odour</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Packaging</fullName>
+                <default>false</default>
+                <label>Packaging</label>
+            </value>
+            <value>
+                <fullName>Physical Properties</fullName>
+                <default>false</default>
+                <label>Physical Properties</label>
+            </value>
+            <value>
+                <fullName>Product Safety (consider AIMS report)</fullName>
+                <default>false</default>
+                <label>Product Safety (consider AIMS report)</label>
+            </value>
+            <value>
+                <fullName>Quantity</fullName>
+                <default>false</default>
+                <label>Quantity</label>
+            </value>
+            <value>
+                <fullName>Remass</fullName>
+                <default>false</default>
+                <label>Remass</label>
+            </value>
+            <value>
+                <fullName>Response to Customer</fullName>
+                <default>false</default>
+                <label>Response to Customer</label>
+            </value>
+            <value>
+                <fullName>Sales</fullName>
+                <default>false</default>
+                <label>Sales</label>
             </value>
             <value>
                 <fullName>Skins</fullName>
@@ -135,44 +180,9 @@
                 <label>Skins</label>
             </value>
             <value>
-                <fullName>VOC</fullName>
+                <fullName>Slow unloading</fullName>
                 <default>false</default>
-                <label>VOC</label>
-            </value>
-            <value>
-                <fullName>Spec Visc</fullName>
-                <default>false</default>
-                <label>Spec Visc</label>
-            </value>
-            <value>
-                <fullName>Spec Solids</fullName>
-                <default>false</default>
-                <label>Spec Solids</label>
-            </value>
-            <value>
-                <fullName>Spec pH</fullName>
-                <default>false</default>
-                <label>Spec pH</label>
-            </value>
-            <value>
-                <fullName>Spec Other</fullName>
-                <default>false</default>
-                <label>Spec Other</label>
-            </value>
-            <value>
-                <fullName>Spec OH Number</fullName>
-                <default>false</default>
-                <label>Spec OH Number</label>
-            </value>
-            <value>
-                <fullName>Spec Colour</fullName>
-                <default>false</default>
-                <label>Spec Colour</label>
-            </value>
-            <value>
-                <fullName>Spec Coag</fullName>
-                <default>false</default>
-                <label>Spec Coag</label>
+                <label>Slow unloading</label>
             </value>
             <value>
                 <fullName>Spec Acid Number</fullName>
@@ -180,9 +190,19 @@
                 <label>Spec Acid Number</label>
             </value>
             <value>
-                <fullName>Slow unloading</fullName>
+                <fullName>Spec Cloudpoint</fullName>
                 <default>false</default>
-                <label>Slow unloading</label>
+                <label>Spec Cloudpoint</label>
+            </value>
+            <value>
+                <fullName>Spec Coag</fullName>
+                <default>false</default>
+                <label>Spec Coag</label>
+            </value>
+            <value>
+                <fullName>Spec Colour</fullName>
+                <default>false</default>
+                <label>Spec Colour</label>
             </value>
             <value>
                 <fullName>Spec Free Alkali</fullName>
@@ -195,9 +215,24 @@
                 <label>Spec Glass Transition</label>
             </value>
             <value>
-                <fullName>Spec Cloudpoint</fullName>
+                <fullName>Spec Molecular Weight</fullName>
                 <default>false</default>
-                <label>Spec Cloudpoint</label>
+                <label>Spec Molecular Weight</label>
+            </value>
+            <value>
+                <fullName>Spec OH Number</fullName>
+                <default>false</default>
+                <label>Spec OH Number</label>
+            </value>
+            <value>
+                <fullName>Spec Other</fullName>
+                <default>false</default>
+                <label>Spec Other</label>
+            </value>
+            <value>
+                <fullName>Spec pH</fullName>
+                <default>false</default>
+                <label>Spec pH</label>
             </value>
             <value>
                 <fullName>Spec Softening Point</fullName>
@@ -205,39 +240,14 @@
                 <label>Spec Softening Point</label>
             </value>
             <value>
-                <fullName>Spec Molecular Weight</fullName>
+                <fullName>Spec Solids</fullName>
                 <default>false</default>
-                <label>Spec Molecular Weight</label>
+                <label>Spec Solids</label>
             </value>
             <value>
-                <fullName>Frozen Material</fullName>
+                <fullName>Spec Visc</fullName>
                 <default>false</default>
-                <label>Frozen Material</label>
-            </value>
-            <value>
-                <fullName>Remass</fullName>
-                <default>false</default>
-                <label>Remass</label>
-            </value>
-            <value>
-                <fullName>Delivery Equipment Failure</fullName>
-                <default>false</default>
-                <label>Delivery Equipment Failure</label>
-            </value>
-            <value>
-                <fullName>Driver Issue</fullName>
-                <default>false</default>
-                <label>Driver Issue</label>
-            </value>
-            <value>
-                <fullName>Stolen or Lost Freight</fullName>
-                <default>false</default>
-                <label>Stolen or Lost Freight</label>
-            </value>
-            <value>
-                <fullName>Wrong Material</fullName>
-                <default>false</default>
-                <label>Wrong Material</label>
+                <label>Spec Visc</label>
             </value>
             <value>
                 <fullName>Spillage</fullName>
@@ -245,41 +255,55 @@
                 <label>Spillage</label>
             </value>
             <value>
-                <fullName>Quantity</fullName>
+                <fullName>Stolen or Lost Freight</fullName>
                 <default>false</default>
-                <label>Quantity</label>
+                <label>Stolen or Lost Freight</label>
             </value>
             <value>
-                <fullName>Packaging</fullName>
+                <fullName>Technical Service</fullName>
                 <default>false</default>
-                <label>Packaging</label>
+                <label>Technical Service</label>
             </value>
             <value>
-                <fullName>Logistics, Paperwork</fullName>
+                <fullName>VOC</fullName>
                 <default>false</default>
-                <label>Logistics, Paperwork</label>
-            </value>
-            <value>
-                <fullName>Labelling</fullName>
-                <default>false</default>
-                <label>Labelling</label>
-            </value>
-            <value>
-                <fullName>Freight Damage</fullName>
-                <default>false</default>
-                <label>Freight Damage</label>
-            </value>
-            <value>
-                <fullName>Delivery Time</fullName>
-                <default>false</default>
-                <label>Delivery Time</label>
+                <label>VOC</label>
             </value>
             <value>
                 <fullName>Waiting</fullName>
                 <default>false</default>
                 <label>Waiting</label>
             </value>
+            <value>
+                <fullName>Wrong Material</fullName>
+                <default>false</default>
+                <label>Wrong Material</label>
+            </value>
         </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Delivery</controllingFieldValue>
+            <valueName>Delivery Equipment Failure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Delivery</controllingFieldValue>
+            <valueName>Delivery Time</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Delivery</controllingFieldValue>
+            <valueName>Driver Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Delivery</controllingFieldValue>
+            <valueName>Freight Damage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Delivery</controllingFieldValue>
+            <valueName>Labelling</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Delivery</controllingFieldValue>
+            <valueName>Logistics, Paperwork</valueName>
+        </valueSettings>
         <valueSettings>
             <controllingFieldValue>Delivery</controllingFieldValue>
             <controllingFieldValue>Product</controllingFieldValue>
@@ -288,23 +312,7 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Delivery</controllingFieldValue>
-            <valueName>Delivery Equipment Failure</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Delivery</controllingFieldValue>
-            <valueName>Driver Issue</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Delivery</controllingFieldValue>
-            <valueName>Stolen or Lost Freight</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Delivery</controllingFieldValue>
-            <valueName>Wrong Material</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Delivery</controllingFieldValue>
-            <valueName>Spillage</valueName>
+            <valueName>Packaging</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Delivery</controllingFieldValue>
@@ -312,71 +320,19 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Delivery</controllingFieldValue>
-            <valueName>Packaging</valueName>
+            <valueName>Spillage</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Delivery</controllingFieldValue>
-            <valueName>Logistics, Paperwork</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Delivery</controllingFieldValue>
-            <valueName>Labelling</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Delivery</controllingFieldValue>
-            <valueName>Freight Damage</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Delivery</controllingFieldValue>
-            <valueName>Delivery Time</valueName>
+            <valueName>Stolen or Lost Freight</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Delivery</controllingFieldValue>
             <valueName>Waiting</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Product</controllingFieldValue>
-            <valueName>Physical Properties</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Product</controllingFieldValue>
-            <valueName>Odour</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Product</controllingFieldValue>
-            <valueName>Infection</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Product</controllingFieldValue>
-            <valueName>Grit (fine coag)</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Product</controllingFieldValue>
-            <valueName>Gelling</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Product</controllingFieldValue>
-            <valueName>Flow Properties</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Product</controllingFieldValue>
-            <valueName>Creaming</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Product</controllingFieldValue>
-            <valueName>Contamination</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Product</controllingFieldValue>
-            <valueName>Composition</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Product</controllingFieldValue>
-            <valueName>Coagulum / Lumps</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Product</controllingFieldValue>
-            <valueName>Application Properties</valueName>
+            <controllingFieldValue>Delivery</controllingFieldValue>
+            <valueName>Wrong Material</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Product</controllingFieldValue>
@@ -384,39 +340,63 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Application Properties</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Coagulum / Lumps</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Composition</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Contamination</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Creaming</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Flow Properties</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Frozen Material</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Gelling</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Grit (fine coag)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Infection</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Odour</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Physical Properties</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Remass</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
             <valueName>Skins</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Product</controllingFieldValue>
-            <valueName>VOC</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Product</controllingFieldValue>
-            <valueName>Spec Visc</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Product</controllingFieldValue>
-            <valueName>Spec Solids</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Product</controllingFieldValue>
-            <valueName>Spec pH</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Product</controllingFieldValue>
-            <valueName>Spec Other</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Product</controllingFieldValue>
-            <valueName>Spec OH Number</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Product</controllingFieldValue>
-            <valueName>Spec Colour</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Product</controllingFieldValue>
-            <valueName>Spec Coag</valueName>
+            <valueName>Slow unloading</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Product</controllingFieldValue>
@@ -424,7 +404,15 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Product</controllingFieldValue>
-            <valueName>Slow unloading</valueName>
+            <valueName>Spec Cloudpoint</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Spec Coag</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Spec Colour</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Product</controllingFieldValue>
@@ -436,7 +424,19 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Product</controllingFieldValue>
-            <valueName>Spec Cloudpoint</valueName>
+            <valueName>Spec Molecular Weight</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Spec OH Number</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Spec Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Spec pH</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Product</controllingFieldValue>
@@ -444,47 +444,15 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Product</controllingFieldValue>
-            <valueName>Spec Molecular Weight</valueName>
+            <valueName>Spec Solids</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Product</controllingFieldValue>
-            <valueName>Frozen Material</valueName>
+            <valueName>Spec Visc</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Product</controllingFieldValue>
-            <valueName>Remass</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Service</controllingFieldValue>
-            <valueName>Technical Service</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Service</controllingFieldValue>
-            <valueName>Sales</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Service</controllingFieldValue>
-            <valueName>Response to Customer</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Service</controllingFieldValue>
-            <valueName>Product Safety (consider AIMS report)</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Service</controllingFieldValue>
-            <valueName>Invoicing</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Service</controllingFieldValue>
-            <valueName>Customer Requests</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Service</controllingFieldValue>
-            <valueName>Cooperation</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Service</controllingFieldValue>
-            <valueName>Complaint Handling</valueName>
+            <valueName>VOC</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Service</controllingFieldValue>
@@ -492,7 +460,39 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Service</controllingFieldValue>
+            <valueName>Complaint Handling</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <valueName>Cooperation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <valueName>Customer Requests</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service</controllingFieldValue>
             <valueName>Instructions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <valueName>Invoicing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <valueName>Product Safety (consider AIMS report)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <valueName>Response to Customer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <valueName>Sales</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <valueName>Technical Service</valueName>
         </valueSettings>
     </valueSet>
 </CustomField>

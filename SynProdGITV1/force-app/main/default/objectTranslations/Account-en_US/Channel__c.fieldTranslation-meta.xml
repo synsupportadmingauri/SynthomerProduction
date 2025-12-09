@@ -12,6 +12,10 @@
         <translation><!-- Key Account --></translation>
     </picklistValues>
     <picklistValues>
+        <masterLabel>Partner</masterLabel>
+        <translation><!-- Partner --></translation>
+    </picklistValues>
+    <picklistValues>
         <masterLabel>Territory</masterLabel>
         <translation><!-- Territory --></translation>
     </picklistValues>

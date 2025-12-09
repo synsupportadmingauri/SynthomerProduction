@@ -261,7 +261,14 @@ AUTHOR     DATE         Reference        Description
             newOrder.Is_Ship_To_Contact_Related__c = (Boolean)orderFields.get('isShipToContactRelated');
             
             newOrder.End_Customer__c = (String)orderFields.get('End_Customer__c');
-			newOrder.Potential_Volume__c = (String)orderFields.get('Potential_Volume__c');
+            //17/10/2025 Arpita R - Changed Data type to Number
+			//newOrder.Potential_Volume__c = (String)orderFields.get('Potential_Volume__c');
+			if (orderFields.get('Potential_Volume1__c') != ''  ) {
+               newOrder.Potential_Volume1__c = 
+               Decimal.valueOf((String)orderFields.get('Potential_Volume1__c'));
+            }
+
+			//newOrder.Potential_Volume1__c = Decimal.valueOf((String)orderFields.get('Potential_Volume1__c'));
 			newOrder.Application__c = (String)orderFields.get('Application__c');
 			newOrder.Name = (String)orderFields.get('Name');								// SD1-T64+ 03/10/2025 Ankur O
             

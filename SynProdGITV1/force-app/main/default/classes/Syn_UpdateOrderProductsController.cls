@@ -34,7 +34,13 @@ Shyam C    09/08/2025    INC 162773+    Making is_Updated_From_Apex__c = True to
             existingItems.add(oi);
         }
         // Get Order details
-        Order order = [SELECT Id, Pricebook2Id, CurrencyIsoCode FROM Order WHERE Id = : orderId LIMIT 1];
+        Order order = [SELECT Id, Pricebook2Id, CurrencyIsoCode, Status FROM Order WHERE Id = : orderId LIMIT 1];
+        //Arpita Start++ - Throw an exception if the order is modified from the portal when the status is not Draft.
+        if(order.status != 'Draft'){
+            throw new AuraHandledException('Order products can only be edited when the status is set to Draft.');
+        }
+        //Arpita End
+        
         
         // These are common for all products
         Id pricebook2Id = order.Pricebook2Id;

@@ -370,7 +370,7 @@
                 <chartAxisRange>Auto</chartAxisRange>
                 <chartSummary>
                     <axisBinding>y</axisBinding>
-                    <column>AMOUNT</column>
+                    <column>AMOUNT.CONVERT</column>
                 </chartSummary>
                 <componentType>Bar</componentType>
                 <dashboardFilterColumns>
@@ -393,15 +393,13 @@
                 <expandOthers>false</expandOthers>
                 <groupingColumn>OPPORTUNITY_NAME</groupingColumn>
                 <groupingSortProperties/>
-                <header>Top 10 Opp by Weighted GM</header>
+                <header>Top 10 Opp by Weighted GM - Leader</header>
                 <legendPosition>Bottom</legendPosition>
-                <maxValuesDisplayed>10</maxValuesDisplayed>
                 <report>MyOpportunitiesLeaderView/Top_10_Opp_by_Weighted_GM_Leader_Wh8</report>
                 <showPercentage>false</showPercentage>
                 <showPicturesOnCharts>false</showPicturesOnCharts>
                 <showValues>true</showValues>
-                <sortBy>RowLabelAscending</sortBy>
-                <title>Top Opportunities</title>
+                <sortBy>RowValueDescending</sortBy>
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
             <rowIndex>11</rowIndex>
@@ -416,13 +414,9 @@
                 <chartSummary>
                     <aggregate>Sum</aggregate>
                     <axisBinding>y</axisBinding>
-                    <column>AMOUNT</column>
+                    <column>AMOUNT.CONVERT</column>
                 </chartSummary>
-                <chartSummary>
-                    <axisBinding>y2</axisBinding>
-                    <column>RowCount</column>
-                </chartSummary>
-                <componentType>ColumnLine</componentType>
+                <componentType>Column</componentType>
                 <dashboardFilterColumns>
                     <column>Opportunity.Territory_L1__c</column>
                 </dashboardFilterColumns>
@@ -441,20 +435,19 @@
                 <drillToDetailEnabled>false</drillToDetailEnabled>
                 <enableHover>false</enableHover>
                 <expandOthers>false</expandOthers>
-                <groupingColumn>CDF1</groupingColumn>
+                <groupingColumn>Opportunity.Stage_Risk_Ind__c</groupingColumn>
                 <groupingSortProperties>
                     <groupingSorts>
                         <groupingLevel>g1</groupingLevel>
                         <sortOrder>a</sortOrder>
                     </groupingSorts>
                 </groupingSortProperties>
-                <header>%Opportunities at risk</header>
+                <header>%Opportunites at risk(red &amp; green)Leader</header>
                 <legendPosition>Bottom</legendPosition>
                 <report>MyOpportunitiesLeaderView/Opportunites_at_riskred_greenLeader_W79</report>
                 <showPercentage>false</showPercentage>
                 <showValues>true</showValues>
                 <sortBy>RowLabelAscending</sortBy>
-                <title>Risk Analysis</title>
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
             <rowIndex>11</rowIndex>
@@ -469,7 +462,7 @@
                 <chartSummary>
                     <aggregate>Sum</aggregate>
                     <axisBinding>y</axisBinding>
-                    <column>EXP_AMOUNT</column>
+                    <column>AMOUNT.CONVERT</column>
                 </chartSummary>
                 <componentType>Column</componentType>
                 <dashboardFilterColumns>
@@ -497,13 +490,12 @@
                         <sortOrder>a</sortOrder>
                     </groupingSorts>
                 </groupingSortProperties>
-                <header>Opp close in next 12 mon by weighted GM</header>
+                <header>Opp close next 12 mon-weighted GM Leader</header>
                 <legendPosition>Bottom</legendPosition>
                 <report>MyOpportunitiesLeaderView/Opp_close_next_12_monweighted_GM_Leader_W3V</report>
                 <showPercentage>false</showPercentage>
                 <showValues>true</showValues>
                 <sortBy>RowLabelAscending</sortBy>
-                <title>Near-Term Forecast</title>
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
             <rowIndex>11</rowIndex>
@@ -1069,7 +1061,7 @@
     <dashboardType>LoggedInUser</dashboardType>
     <isGridLayout>true</isGridLayout>
     <owner>rahul.layak@gauri.com.syn</owner>
-    <runningUser>support.gauri@gauri.com.syn</runningUser>
+    <runningUser>jakub.hnilicka@synthomer.com</runningUser>
     <textColor>#000000</textColor>
     <title>My Opportunities -  Territory View</title>
     <titleColor>#000000</titleColor>

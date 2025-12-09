@@ -6,9 +6,8 @@
     <columns>
         <field>Account.Activities$Assigned_To__c</field>
     </columns>
-    <currency>GBP</currency>
     <filter>
-        <booleanFilter>1 AND 2 AND (3 OR 4)</booleanFilter>
+        <booleanFilter>1 AND (2 OR 3)</booleanFilter>
         <criteriaItems>
             <column>Account.Activities$IsTask</column>
             <columnToColumn>false</columnToColumn>
@@ -17,25 +16,18 @@
             <value>0</value>
         </criteriaItems>
         <criteriaItems>
-            <column>Account.Activities$ActivityDate</column>
+            <column>Account$Parent</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account$Type</column>
             <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
-            <value>LAST_N_MONTHS:12</value>
-        </criteriaItems>
-        <criteriaItems>
-            <column>Account.Activities$HQ_Account_Id__c</column>
-            <columnToColumn>false</columnToColumn>
-            <isUnlocked>false</isUnlocked>
-            <operator>notEqual</operator>
-            <value></value>
-        </criteriaItems>
-        <criteriaItems>
-            <column>Account.Activities$RHQ_Account_Id__c</column>
-            <columnToColumn>false</columnToColumn>
-            <isUnlocked>false</isUnlocked>
-            <operator>notEqual</operator>
-            <value></value>
+            <value>RHQ,HQ</value>
         </criteriaItems>
     </filter>
     <format>Matrix</format>
@@ -61,6 +53,6 @@
     <showSubTotals>true</showSubTotals>
     <timeFrameFilter>
         <dateColumn>Account.Activities$ActivityDate</dateColumn>
-        <interval>INTERVAL_CUSTOM</interval>
+        <interval>INTERVAL_CURY</interval>
     </timeFrameFilter>
 </Report>

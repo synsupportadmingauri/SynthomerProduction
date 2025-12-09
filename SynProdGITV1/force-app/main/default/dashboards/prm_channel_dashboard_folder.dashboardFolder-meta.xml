@@ -22,11 +22,6 @@
     </folderShares>
     <folderShares>
         <accessLevel>Manage</accessLevel>
-        <sharedTo>ext.irfan.dean@synthomer.com</sharedTo>
-        <sharedToType>User</sharedToType>
-    </folderShares>
-    <folderShares>
-        <accessLevel>Manage</accessLevel>
         <sharedTo>jakub.hnilicka@synthomer.com</sharedTo>
         <sharedToType>User</sharedToType>
     </folderShares>
@@ -48,11 +43,6 @@
     <folderShares>
         <accessLevel>Manage</accessLevel>
         <sharedTo>norliza.ismail@synthomer.com</sharedTo>
-        <sharedToType>User</sharedToType>
-    </folderShares>
-    <folderShares>
-        <accessLevel>Manage</accessLevel>
-        <sharedTo>seamus.dunne@synthomer.com</sharedTo>
         <sharedToType>User</sharedToType>
     </folderShares>
     <folderShares>

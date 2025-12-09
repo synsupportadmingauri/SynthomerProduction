@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Complaint_Category_is_Product</fullName>
+    <active>true</active>
+    <description>Product Batch Number” field is mandatory for cases that have “Product” identified as the “Complaint Category”.</description>
+    <errorConditionFormula>AND( TEXT(Complaint_Category__c) = &apos;Product&apos;, ISBLANK(Product_Batch_Number__c) )</errorConditionFormula>
+    <errorDisplayField>Product_Batch_Number__c</errorDisplayField>
+    <errorMessage>Product Batch Number is mandatory for Complaint Category “Product”, please add it.</errorMessage>
+</ValidationRule>

@@ -49,7 +49,7 @@
         <field>CREATED_DATE</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
-    <name>Prospects Created Since Live</name>
+    <name>Prospects Created in Last 90 Days</name>
     <params>
         <name>co</name>
         <value>1</value>
@@ -61,7 +61,6 @@
     <showSubTotals>true</showSubTotals>
     <timeFrameFilter>
         <dateColumn>CREATED_DATE</dateColumn>
-        <interval>INTERVAL_CUSTOM</interval>
-        <startDate>2025-07-14</startDate>
+        <interval>INTERVAL_LAST90</interval>
     </timeFrameFilter>
 </Report>

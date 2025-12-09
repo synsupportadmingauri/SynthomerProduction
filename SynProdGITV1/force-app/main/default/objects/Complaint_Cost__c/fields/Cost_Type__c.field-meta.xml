@@ -11,36 +11,6 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>Investigation</fullName>
-                <default>false</default>
-                <label>Investigation</label>
-            </value>
-            <value>
-                <fullName>Outside Lab Analysis</fullName>
-                <default>false</default>
-                <label>Outside Lab Analysis</label>
-            </value>
-            <value>
-                <fullName>Equipment Calibration/Repair</fullName>
-                <default>false</default>
-                <label>Equipment Calibration/Repair</label>
-            </value>
-            <value>
-                <fullName>Other</fullName>
-                <default>false</default>
-                <label>Other</label>
-            </value>
-            <value>
-                <fullName>Training Cost</fullName>
-                <default>false</default>
-                <label>Training Cost</label>
-            </value>
-            <value>
-                <fullName>Labour Cost</fullName>
-                <default>false</default>
-                <label>Labour Cost</label>
-            </value>
-            <value>
                 <fullName>3rd Party Support Cost</fullName>
                 <default>false</default>
                 <label>3rd Party Support Cost</label>
@@ -51,14 +21,29 @@
                 <label>Cleaning Cost</label>
             </value>
             <value>
+                <fullName>Compensation</fullName>
+                <default>false</default>
+                <label>Compensation</label>
+            </value>
+            <value>
                 <fullName>Disposal Cost</fullName>
                 <default>false</default>
                 <label>Disposal Cost</label>
             </value>
             <value>
-                <fullName>Material Cost</fullName>
+                <fullName>Equipment Calibration/Repair</fullName>
                 <default>false</default>
-                <label>Material Cost</label>
+                <label>Equipment Calibration/Repair</label>
+            </value>
+            <value>
+                <fullName>Investigation</fullName>
+                <default>false</default>
+                <label>Investigation</label>
+            </value>
+            <value>
+                <fullName>Labour Cost</fullName>
+                <default>false</default>
+                <label>Labour Cost</label>
             </value>
             <value>
                 <fullName>Logistics Cost</fullName>
@@ -66,9 +51,24 @@
                 <label>Logistics Cost</label>
             </value>
             <value>
-                <fullName>Compensation</fullName>
+                <fullName>Material Cost</fullName>
                 <default>false</default>
-                <label>Compensation</label>
+                <label>Material Cost</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Outside Lab Analysis</fullName>
+                <default>false</default>
+                <label>Outside Lab Analysis</label>
+            </value>
+            <value>
+                <fullName>Training Cost</fullName>
+                <default>false</default>
+                <label>Training Cost</label>
             </value>
         </valueSetDefinition>
     </valueSet>

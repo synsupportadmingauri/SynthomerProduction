@@ -16,7 +16,7 @@
         <picklistValueName>Customer Feedback</picklistValueName>
     </pathAssistantSteps>
     <pathAssistantSteps>
-        <info>&lt;ol&gt;&lt;li&gt;Review complaint (case) details and assign case owner.&lt;/li&gt;&lt;li&gt;Document team members that will be part of the investigation in the Case Team.&lt;/li&gt;&lt;li&gt;Ensure the complaint description is clear.&lt;/li&gt;&lt;li&gt;Document immediate (containment) actions.&lt;/li&gt;&lt;li&gt;Click &amp;quot;Mark Status as Complete&amp;quot; button and continue investigation.&lt;/li&gt;&lt;/ol&gt;</info>
+        <info>&lt;ol&gt;&lt;li&gt;Review complaint (case) details and assign case owner.&lt;/li&gt;&lt;li&gt;Document team members that will be part of the investigation in the Case Team.&lt;/li&gt;&lt;li&gt;Ensure the complaint description is clear.&lt;/li&gt;&lt;li&gt;Document immediate (containment) actions and select the Nature of Complaint.&lt;/li&gt;&lt;li&gt;Click &amp;quot;Mark Status as Complete&amp;quot; button and continue investigation.&lt;/li&gt;&lt;/ol&gt;</info>
         <picklistValueName>Initial Review</picklistValueName>
     </pathAssistantSteps>
     <pathAssistantSteps>

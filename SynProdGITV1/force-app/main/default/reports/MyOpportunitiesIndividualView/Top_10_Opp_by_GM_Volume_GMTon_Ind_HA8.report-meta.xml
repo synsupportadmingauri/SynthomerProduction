@@ -28,34 +28,34 @@
         <field>FULL_NAME</field>
     </columns>
     <columns>
+        <field>AGE</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Stage_Risk_Ind__c</field>
+    </columns>
+    <columns>
+        <field>LAST_STAGE_CHANGE_DATE</field>
+    </columns>
+    <columns>
         <field>LAST_ACTIVITY</field>
     </columns>
     <columns>
-        <field>AGE</field>
+        <field>Opportunity.Last_Activity_Ind__c</field>
+    </columns>
+    <columns>
+        <field>LAST_UPDATE</field>
     </columns>
     <columns>
         <field>CDF1</field>
     </columns>
+    <currency>EUR</currency>
     <customDetailFormulas>
-        <calculatedFormula>IF(
-  OR(AND(TEXT(STAGE_NAME) = &quot;Adoption&quot;, (CLOSE_DATE - TODAY()) &lt; 60),CLOSE_DATE &lt; TODAY()), &quot;🔴&quot;,
-  IF(
-    OR(AND(TEXT(STAGE_NAME) = &quot;Commercial&quot;, (CLOSE_DATE - TODAY()) &lt; 90),CLOSE_DATE &lt; TODAY()),  &quot;🔴&quot;,
-    IF(
-      OR(AND(TEXT(STAGE_NAME) = &quot;Operations&quot;, (CLOSE_DATE - TODAY()) &lt; 180),CLOSE_DATE &lt; TODAY()), &quot;🔴&quot;,
-      IF(
-        OR(AND(TEXT(STAGE_NAME) = &quot;Chemistry&quot;, (CLOSE_DATE - TODAY()) &lt; 360),CLOSE_DATE &lt; TODAY()), &quot;🔴&quot;,
-        IF(
-          OR(AND(TEXT(STAGE_NAME) = &quot;Qualify&quot;, (CLOSE_DATE - TODAY()) &lt; 450),CLOSE_DATE &lt; TODAY()), &quot;🔴&quot;,
-          &quot;🟢&quot;
-        )
-      )
-    )
-  )
-)</calculatedFormula>
+        <calculatedFormula>IF(AND(Opportunity.Last_Activity_Ind__c= &quot;🔴&quot; , Opportunity.Stage_Risk_Ind__c = &quot;🔴&quot;),&quot;🔴&quot; ,
+    IF(AND(Opportunity.Last_Activity_Ind__c= &quot;🟢&quot; , Opportunity.Stage_Risk_Ind__c = &quot;🟢&quot;),&quot;🟢&quot; , &quot;🟡&quot;))</calculatedFormula>
         <dataType>Text</dataType>
+        <description>Health Check</description>
         <developerName>CDF1</developerName>
-        <label>Risk Stage Check</label>
+        <label>Health Check</label>
         <scale>2</scale>
     </customDetailFormulas>
     <format>Tabular</format>

@@ -7,6 +7,9 @@
         <field>Sample_Master_Matrix_Data__c$Product__c</field>
     </columns>
     <columns>
+        <field>Sample_Master_Matrix_Data__c$Product_Category_ID__c</field>
+    </columns>
+    <columns>
         <aggregateTypes>Sum</aggregateTypes>
         <field>Sample_Master_Matrix_Data__c$Min__c</field>
     </columns>
@@ -19,6 +22,9 @@
     </columns>
     <columns>
         <field>Sample_Master_Matrix_Data__c$Sampling_Status__c</field>
+    </columns>
+    <columns>
+        <field>Sample_Master_Matrix_Data__c$PKR_Attribute__c</field>
     </columns>
     <columns>
         <field>Sample_Master_Matrix_Data__c$Approver__c</field>
@@ -45,6 +51,8 @@
     <showDetails>true</showDetails>
     <showGrandTotal>true</showGrandTotal>
     <showSubTotals>false</showSubTotals>
+    <sortColumn>Sample_Master_Matrix_Data__c$Product__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
     <timeFrameFilter>
         <dateColumn>Sample_Master_Matrix_Data__c$CreatedDate</dateColumn>
         <interval>INTERVAL_CUSTOM</interval>

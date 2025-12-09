@@ -443,7 +443,7 @@
                         <sortOrder>a</sortOrder>
                     </groupingSorts>
                 </groupingSortProperties>
-                <header>PMR by Product &amp; Stage</header>
+                <header>PMR 2025 &amp; 2026 All Opps by Product - CB</header>
                 <legendPosition>Right</legendPosition>
                 <report>Sales_and_Marketing_Reports/ASReports/X00DashboardsDashboards/UnderlyingReports/PMR_2025_2026_All_Opps_by_Product_CB</report>
                 <showPercentage>false</showPercentage>

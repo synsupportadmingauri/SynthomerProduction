@@ -11,11 +11,6 @@
         <sharedToType>User</sharedToType>
     </folderShares>
     <folderShares>
-        <accessLevel>Manage</accessLevel>
-        <sharedTo>ext.irfan.dean@synthomer.com</sharedTo>
-        <sharedToType>User</sharedToType>
-    </folderShares>
-    <folderShares>
         <accessLevel>View</accessLevel>
         <sharedTo>jakub.hnilicka@synthomer.com</sharedTo>
         <sharedToType>User</sharedToType>
@@ -23,11 +18,6 @@
     <folderShares>
         <accessLevel>View</accessLevel>
         <sharedTo>jason.davies@synthomer.com</sharedTo>
-        <sharedToType>User</sharedToType>
-    </folderShares>
-    <folderShares>
-        <accessLevel>View</accessLevel>
-        <sharedTo>seamus.dunne@synthomer.com</sharedTo>
         <sharedToType>User</sharedToType>
     </folderShares>
     <folderShares>

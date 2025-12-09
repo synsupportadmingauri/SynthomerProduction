@@ -10,11 +10,15 @@
         <scale>2</scale>
     </aggregates>
     <columns>
-        <field>Account.Activities$Account_Name__c</field>
-    </columns>
-    <columns>
         <field>Account.Activities$Who</field>
     </columns>
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Activities$Subject</field>
+    </columns>
+    <currency>USD</currency>
     <filter>
         <criteriaItems>
             <column>Account.Activities$IsTask</column>

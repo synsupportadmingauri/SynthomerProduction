@@ -283,13 +283,6 @@
                 <stringValue>ZOR</stringValue>
             </value>
         </filters>
-        <filters>
-            <field>TSCA_Approval_Status__c</field>
-            <operator>IsChanged</operator>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </filters>
         <object>Order</object>
         <recordTriggerType>Update</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
@@ -298,7 +291,7 @@
     <textTemplates>
         <name>strTSAApprovalBody</name>
         <isViewedAsPlainText>false</isViewedAsPlainText>
-        <text>&lt;p&gt;Dear TSCA Approver,&lt;/p&gt;&lt;p&gt;A new sample order has been sent for your review and TSCA approval.&lt;/p&gt;&lt;p&gt;Request Details:&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Order Number:&amp;nbsp;&amp;nbsp;&lt;/strong&gt;&amp;nbsp;{!$Record.OrderNumber}&amp;nbsp;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Ship To:&amp;nbsp;&amp;nbsp;&lt;/strong&gt;&amp;nbsp;{!$Record.Ship_To_Account__r.Name}&amp;nbsp;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Requestor:&amp;nbsp;&lt;/strong&gt;&amp;nbsp;{!$Record.Owner:User.FirstName} {!$Record.Owner:User.LastName}&lt;/p&gt;&lt;p&gt;Please review the order and take necessary action.&lt;/p&gt;&lt;p&gt;Link to Order in mySalesForce: &lt;a href=&quot;{!URLBase}/lightning/r/Order/{!$Record.Id}/view&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;color: rgb(26, 115, 232);&quot;&gt;{!$Record.OrderNumber}&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Best regards,&amp;nbsp;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Your CRM Support Team&lt;/p&gt;&lt;p&gt;(This is an automated message from the mySalesforce system.)&lt;/p&gt;</text>
+        <text>&lt;p&gt;Dear TSCA Approver,&lt;/p&gt;&lt;p&gt;A new sample order has been sent for your review and TSCA approval.&lt;/p&gt;&lt;h3 style=&quot;color:#1E90FF; border-bottom:2px solid #1E90FF; padding-bottom:4px; font-size:15px;&quot;&gt;Request Details&lt;/h3&gt;&lt;table style=&quot;border-collapse:collapse; width:100%; font-family:Arial,sans-serif; font-size:14px; color:#000;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;padding:6px; font-weight:bold; width:160px;&quot;&gt;Order Number:&lt;/td&gt;&lt;td style=&quot;padding:6px;&quot;&gt;{!$Record.OrderNumber}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;padding:6px; font-weight:bold;&quot;&gt;Ship To:&lt;/td&gt;&lt;td style=&quot;padding:6px;&quot;&gt;{!$Record.Ship_To_Account__r.Name}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;padding:6px; font-weight:bold;&quot;&gt;Requestor:&lt;/td&gt;&lt;td style=&quot;padding:6px;&quot;&gt;{!$Record.Owner:User.FirstName} {!$Record.Owner:User.LastName}&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;Please review the order and take necessary action.&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;{!URLBase}/lightning/r/Order/{!$Record.Id}/view&quot; style=&quot;display:inline-block; background-color:#1E90FF; color:#fff; padding:8px 14px; text-decoration:none; border-radius:4px; font-weight:bold;&quot;&gt;View Order in Salesforce&lt;/a&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;Best regards,&lt;br&gt;&lt;strong&gt;Your CRM Support Team&lt;/strong&gt;&lt;/p&gt;&lt;p style=&quot;font-size:12px; color:#666;&quot;&gt;(This is an automated message from the mySalesforce system.)&lt;/p&gt;</text>
     </textTemplates>
     <textTemplates>
         <name>strTSASubject</name>

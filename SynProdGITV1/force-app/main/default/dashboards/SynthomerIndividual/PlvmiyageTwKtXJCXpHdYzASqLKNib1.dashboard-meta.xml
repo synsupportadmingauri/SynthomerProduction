@@ -120,7 +120,7 @@
                 <drillToDetailEnabled>false</drillToDetailEnabled>
                 <enableHover>false</enableHover>
                 <expandOthers>false</expandOthers>
-                <groupingColumn>ACCOUNT_NAME</groupingColumn>
+                <groupingColumn>OPPORTUNITY_NAME</groupingColumn>
                 <groupingSortProperties/>
                 <header>Top 10 Opp by Weighted GM - Ind</header>
                 <legendPosition>Bottom</legendPosition>
@@ -145,11 +145,7 @@
                     <axisBinding>y</axisBinding>
                     <column>AMOUNT</column>
                 </chartSummary>
-                <chartSummary>
-                    <axisBinding>y2</axisBinding>
-                    <column>RowCount</column>
-                </chartSummary>
-                <componentType>ColumnLine</componentType>
+                <componentType>Column</componentType>
                 <dashboardFilterColumns>
                     <column>Opportunity.Is_My_Opportunity__c</column>
                 </dashboardFilterColumns>
@@ -159,20 +155,19 @@
                 <drillToDetailEnabled>false</drillToDetailEnabled>
                 <enableHover>false</enableHover>
                 <expandOthers>false</expandOthers>
-                <groupingColumn>CDF1</groupingColumn>
+                <groupingColumn>Opportunity.Stage_Risk_Ind__c</groupingColumn>
                 <groupingSortProperties>
                     <groupingSorts>
                         <groupingLevel>g1</groupingLevel>
                         <sortOrder>a</sortOrder>
                     </groupingSorts>
                 </groupingSortProperties>
-                <header>%Opportunities at risk</header>
+                <header>%Opportunites at risk(red and green)-Ind</header>
                 <legendPosition>Bottom</legendPosition>
                 <report>MyOpportunitiesIndividualView/Opportunites_at_riskred_and_greenInd_RLu</report>
                 <showPercentage>false</showPercentage>
                 <showValues>true</showValues>
                 <sortBy>RowLabelAscending</sortBy>
-                <title>Risk Analysis</title>
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
             <rowIndex>11</rowIndex>
@@ -409,7 +404,7 @@
                 <decimalPrecision>-1</decimalPrecision>
                 <displayUnits>Auto</displayUnits>
                 <groupingSortProperties/>
-                <header>No Stage Change 180 Days</header>
+                <header>No Inactive Opps (180 Days)</header>
                 <indicatorBreakpoint1>33.0</indicatorBreakpoint1>
                 <indicatorBreakpoint2>67.0</indicatorBreakpoint2>
                 <indicatorHighColor>#00716B</indicatorHighColor>
@@ -508,7 +503,7 @@
                 <decimalPrecision>-1</decimalPrecision>
                 <displayUnits>Auto</displayUnits>
                 <groupingSortProperties/>
-                <header>GM No Stage Change 180 Days</header>
+                <header>GM Inactive Opps (180 Days)</header>
                 <indicatorBreakpoint1>33.0</indicatorBreakpoint1>
                 <indicatorBreakpoint2>67.0</indicatorBreakpoint2>
                 <indicatorHighColor>#00716B</indicatorHighColor>

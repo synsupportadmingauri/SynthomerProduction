@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage_Risk_Ind__c</fullName>
+    <description>Stage Check</description>
+    <externalId>false</externalId>
+    <formula>IF(OR(AND(TEXT( StageName ) = &quot;Adoption&quot;, ( CloseDate  - TODAY()) &lt; $CustomMetadata.SYN_Analytics__mdt.Oppotunity_Dashboard.Adoption_Stage__c ),CloseDate &lt; TODAY()),
+  &quot;🔴&quot;,
+  IF(OR(AND(TEXT(StageName) = &quot;Commercial&quot;, (CloseDate - TODAY()) &lt; $CustomMetadata.SYN_Analytics__mdt.Oppotunity_Dashboard.Commercial_Stage_Threshold__c ),CloseDate &lt; TODAY()),
+    &quot;🔴&quot;,
+    IF(OR(AND(TEXT(StageName) = &quot;Operations&quot;, (CloseDate - TODAY()) &lt;  $CustomMetadata.SYN_Analytics__mdt.Oppotunity_Dashboard.Operations__c  ),CloseDate &lt; TODAY()),
+      &quot;🔴&quot;,
+      IF(OR(AND(TEXT(StageName) = &quot;Chemistry&quot;, (CloseDate - TODAY()) &lt; $CustomMetadata.SYN_Analytics__mdt.Oppotunity_Dashboard.Chemistry_Stage_Threshold__c),CloseDate &lt; TODAY()),
+        &quot;🔴&quot;,
+        IF(OR(AND(TEXT(StageName) = &quot;Qualify&quot;, (CloseDate - TODAY()) &lt;  $CustomMetadata.SYN_Analytics__mdt.Oppotunity_Dashboard.Qualify_Stage_Threshold__c ),CloseDate &lt; TODAY()),
+          &quot;🔴&quot;,
+          &quot;🟢&quot;
+        )
+      )
+    )
+  )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Stage Check based on duration of each stage.</inlineHelpText>
+    <label>Stage Risk</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

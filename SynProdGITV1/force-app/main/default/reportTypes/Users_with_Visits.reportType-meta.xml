@@ -420,6 +420,16 @@
             <field>Signature_ContentDownload_URL__c</field>
             <table>User</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Annual_Visit_Target__c</field>
+            <table>User</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Month_Visit_Target__c</field>
+            <table>User</table>
+        </columns>
         <masterLabel>Users</masterLabel>
     </sections>
     <sections>
@@ -744,5 +754,41 @@
             <table>User.Activity$OwnerId</table>
         </columns>
         <masterLabel>Activities (Assigned To)</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Effectiveness_Check_Method__c</field>
+            <table>User.Activity$OwnerId</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Effective_Check_Results__c</field>
+            <table>User.Activity$OwnerId</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Product_Category__c</field>
+            <table>User.Activity$OwnerId</table>
+        </columns>
+        <masterLabel>Activities</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Visit_Outcome__c.Call_Content_Minutes__c</field>
+            <table>User.Activity$OwnerId</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Visit_Outcome__c.Pre_call_Preparation__c</field>
+            <table>User.Activity$OwnerId</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Visit_Outcome__c.Outcome__c</field>
+            <table>User.Activity$OwnerId</table>
+        </columns>
+        <masterLabel>Visit Outcome</masterLabel>
     </sections>
 </ReportType>

@@ -10,35 +10,35 @@
         <field>STAGE_NAME</field>
     </columns>
     <columns>
-        <field>AMOUNT</field>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>AMOUNT.CONVERT</field>
     </columns>
     <columns>
         <field>PROBABILITY</field>
     </columns>
     <columns>
         <aggregateTypes>Sum</aggregateTypes>
-        <field>EXP_AMOUNT</field>
+        <field>EXP_AMOUNT.CONVERT</field>
     </columns>
     <columns>
         <field>CLOSE_DATE</field>
     </columns>
-    <currency>GBP</currency>
     <description>Top 10 Opportunities by Weighted Gross Margin</description>
     <filter>
         <booleanFilter>1 OR 2</booleanFilter>
         <criteriaItems>
-            <column>Opportunity.HQ_Account__c</column>
+            <column>PARENT_NAME</column>
             <columnToColumn>false</columnToColumn>
-            <isUnlocked>false</isUnlocked>
+            <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
             <value></value>
         </criteriaItems>
         <criteriaItems>
-            <column>Opportunity.RHQ_Account__c</column>
+            <column>ACCOUNT_TYPE</column>
             <columnToColumn>false</columnToColumn>
-            <isUnlocked>false</isUnlocked>
-            <operator>notEqual</operator>
-            <value></value>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>RHQ,HQ</value>
         </criteriaItems>
     </filter>
     <format>Tabular</format>

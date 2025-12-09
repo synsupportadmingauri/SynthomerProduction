@@ -35,6 +35,10 @@
                 <behavior>Edit</behavior>
                 <field>External_Contact_ID__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Required</behavior>
+                <field>Status__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

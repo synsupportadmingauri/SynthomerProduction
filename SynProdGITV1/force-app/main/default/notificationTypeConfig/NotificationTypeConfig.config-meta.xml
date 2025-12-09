@@ -526,6 +526,21 @@
             <desktopEnabled>true</desktopEnabled>
             <mobileEnabled>true</mobileEnabled>
         </notificationChannels>
+        <notificationType>Distributor_User_Notification</notificationType>
+    </notificationTypeSettings>
+    <notificationTypeSettings>
+        <appSettings>
+            <connectedAppName>sf_chttr_apps__Chatter_for_Android</connectedAppName>
+            <enabled>false</enabled>
+        </appSettings>
+        <appSettings>
+            <connectedAppName>sf_chttr_apps__Chatter_for_iOS</connectedAppName>
+            <enabled>false</enabled>
+        </appSettings>
+        <notificationChannels>
+            <desktopEnabled>true</desktopEnabled>
+            <mobileEnabled>true</mobileEnabled>
+        </notificationChannels>
         <notificationType>MS_Team_Notification</notificationType>
     </notificationTypeSettings>
     <notificationTypeSettings>

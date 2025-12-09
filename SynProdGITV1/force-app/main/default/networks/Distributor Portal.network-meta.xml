@@ -53,6 +53,7 @@
         <permissionSet>Distributor_Manager_Permission_Set</permissionSet>
         <profile>Admin</profile>
         <profile>Synthomer Distributor User</profile>
+        <profile>synthomer distributor user - mfa</profile>
     </networkMemberGroups>
     <networkPageOverrides>
         <changePasswordPageOverrideSetting>Standard</changePasswordPageOverrideSetting>
@@ -66,7 +67,7 @@
     <sendWelcomeEmail>true</sendWelcomeEmail>
     <site>Distributor_Portal</site>
     <siteArchiveStatus>NotArchived</siteArchiveStatus>
-    <status>UnderConstruction</status>
+    <status>Live</status>
     <tabs>
         <defaultTab>home</defaultTab>
         <standardTab>Chatter</standardTab>

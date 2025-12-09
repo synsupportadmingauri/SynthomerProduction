@@ -249,6 +249,10 @@
             <label>Application</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP0000025dim</field>
+            <label>Approval Status</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NJ9000005v6vd</field>
             <label>Budget Confirmed</label>
         </opportunityListFieldsLabelMappings>
@@ -281,6 +285,10 @@
             <label>Global Business Unit</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6T</field>
+            <label>GM CY Impact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xFy2</field>
             <label>HAS_TERRITORY_A_VALUE</label>
         </opportunityListFieldsLabelMappings>
@@ -299,6 +307,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00NdP000001Z8oX</field>
             <label>Is My Opportunity?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000001yHvD</field>
+            <label>Last Activity Check</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000001mnM2</field>
@@ -321,6 +333,10 @@
             <label>Opportunity External ID</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002DfFW</field>
+            <label>Opportunity Link</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0E</field>
             <label>PO Number</label>
         </opportunityListFieldsLabelMappings>
@@ -333,8 +349,16 @@
             <label>Project Type</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6U</field>
+            <label>Quantity CY Impact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG3K</field>
             <label>Reporting Sub Group</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6V</field>
+            <label>Revenue CY Impact</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0F</field>
@@ -347,6 +371,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0G</field>
             <label>Sample Feedback</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000001yHvE</field>
+            <label>Stage Risk</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0H</field>
@@ -458,6 +486,7 @@
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>FORECASTEDMFJVALUE</field>
             <field>00NdP000000xG07</field>
+            <field>00NdP0000025dim</field>
             <field>00NJ9000005v6vd</field>
             <field>00NdP000000xFy1</field>
             <field>00NJ9000005v6ve</field>
@@ -466,23 +495,29 @@
             <field>00NdP000000xG08</field>
             <field>00NdP000000xG09</field>
             <field>00NdP000000xG3I</field>
+            <field>00NdP000002Gj6T</field>
             <field>00NdP000000xFy2</field>
             <field>00NdP000000xG0A</field>
             <field>00NdP000000xG0B</field>
             <field>00NdP000001hVUb</field>
             <field>00NdP000001Z8oX</field>
+            <field>00NdP000001yHvD</field>
             <field>00NdP000001mnM2</field>
             <field>00NJ9000005v6vg</field>
             <field>00NdP000000xG3J</field>
             <field>00NdP000000xG0C</field>
             <field>00NdP000000xG0D</field>
+            <field>00NdP000002DfFW</field>
             <field>00NdP000000xG0E</field>
             <field>00NdP000001kHN5</field>
             <field>00NdP000001kHN6</field>
+            <field>00NdP000002Gj6U</field>
             <field>00NdP000000xG3K</field>
+            <field>00NdP000002Gj6V</field>
             <field>00NdP000000xG0F</field>
             <field>00NJ9000005v6vf</field>
             <field>00NdP000000xG0G</field>
+            <field>00NdP000001yHvE</field>
             <field>00NdP000000xG0H</field>
             <field>00NdP000001G2N5</field>
             <field>00NdP000001G2N6</field>
@@ -667,6 +702,10 @@
             <label>Application</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP0000025dim</field>
+            <label>Approval Status</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NJ9000005v6vd</field>
             <label>Budget Confirmed</label>
         </opportunityListFieldsLabelMappings>
@@ -699,6 +738,10 @@
             <label>Global Business Unit</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6T</field>
+            <label>GM CY Impact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xFy2</field>
             <label>HAS_TERRITORY_A_VALUE</label>
         </opportunityListFieldsLabelMappings>
@@ -717,6 +760,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00NdP000001Z8oX</field>
             <label>Is My Opportunity?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000001yHvD</field>
+            <label>Last Activity Check</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000001mnM2</field>
@@ -739,6 +786,10 @@
             <label>Opportunity External ID</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002DfFW</field>
+            <label>Opportunity Link</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0E</field>
             <label>PO Number</label>
         </opportunityListFieldsLabelMappings>
@@ -751,8 +802,16 @@
             <label>Project Type</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6U</field>
+            <label>Quantity CY Impact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG3K</field>
             <label>Reporting Sub Group</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6V</field>
+            <label>Revenue CY Impact</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0F</field>
@@ -765,6 +824,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0G</field>
             <label>Sample Feedback</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000001yHvE</field>
+            <label>Stage Risk</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0H</field>
@@ -876,6 +939,7 @@
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>FORECASTEDMFJVALUE</field>
             <field>00NdP000000xG07</field>
+            <field>00NdP0000025dim</field>
             <field>00NJ9000005v6vd</field>
             <field>00NdP000000xFy1</field>
             <field>00NJ9000005v6ve</field>
@@ -884,23 +948,29 @@
             <field>00NdP000000xG08</field>
             <field>00NdP000000xG09</field>
             <field>00NdP000000xG3I</field>
+            <field>00NdP000002Gj6T</field>
             <field>00NdP000000xFy2</field>
             <field>00NdP000000xG0A</field>
             <field>00NdP000000xG0B</field>
             <field>00NdP000001hVUb</field>
             <field>00NdP000001Z8oX</field>
+            <field>00NdP000001yHvD</field>
             <field>00NdP000001mnM2</field>
             <field>00NJ9000005v6vg</field>
             <field>00NdP000000xG3J</field>
             <field>00NdP000000xG0C</field>
             <field>00NdP000000xG0D</field>
+            <field>00NdP000002DfFW</field>
             <field>00NdP000000xG0E</field>
             <field>00NdP000001kHN5</field>
             <field>00NdP000001kHN6</field>
+            <field>00NdP000002Gj6U</field>
             <field>00NdP000000xG3K</field>
+            <field>00NdP000002Gj6V</field>
             <field>00NdP000000xG0F</field>
             <field>00NJ9000005v6vf</field>
             <field>00NdP000000xG0G</field>
+            <field>00NdP000001yHvE</field>
             <field>00NdP000000xG0H</field>
             <field>00NdP000001G2N5</field>
             <field>00NdP000001G2N6</field>
@@ -1089,6 +1159,10 @@
             <label>Application</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP0000025dim</field>
+            <label>Approval Status</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NJ9000005v6vd</field>
             <label>Budget Confirmed</label>
         </opportunityListFieldsLabelMappings>
@@ -1121,6 +1195,10 @@
             <label>Global Business Unit</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6T</field>
+            <label>GM CY Impact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xFy2</field>
             <label>HAS_TERRITORY_A_VALUE</label>
         </opportunityListFieldsLabelMappings>
@@ -1139,6 +1217,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00NdP000001Z8oX</field>
             <label>Is My Opportunity?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000001yHvD</field>
+            <label>Last Activity Check</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000001mnM2</field>
@@ -1161,6 +1243,10 @@
             <label>Opportunity External ID</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002DfFW</field>
+            <label>Opportunity Link</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0E</field>
             <label>PO Number</label>
         </opportunityListFieldsLabelMappings>
@@ -1173,8 +1259,16 @@
             <label>Project Type</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6U</field>
+            <label>Quantity CY Impact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG3K</field>
             <label>Reporting Sub Group</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6V</field>
+            <label>Revenue CY Impact</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0F</field>
@@ -1187,6 +1281,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0G</field>
             <label>Sample Feedback</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000001yHvE</field>
+            <label>Stage Risk</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0H</field>
@@ -1299,6 +1397,7 @@
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>FORECASTEDMFJVALUE</field>
             <field>00NdP000000xG07</field>
+            <field>00NdP0000025dim</field>
             <field>00NJ9000005v6vd</field>
             <field>00NdP000000xFy1</field>
             <field>00NJ9000005v6ve</field>
@@ -1307,23 +1406,29 @@
             <field>00NdP000000xG08</field>
             <field>00NdP000000xG09</field>
             <field>00NdP000000xG3I</field>
+            <field>00NdP000002Gj6T</field>
             <field>00NdP000000xFy2</field>
             <field>00NdP000000xG0A</field>
             <field>00NdP000000xG0B</field>
             <field>00NdP000001hVUb</field>
             <field>00NdP000001Z8oX</field>
+            <field>00NdP000001yHvD</field>
             <field>00NdP000001mnM2</field>
             <field>00NJ9000005v6vg</field>
             <field>00NdP000000xG3J</field>
             <field>00NdP000000xG0C</field>
             <field>00NdP000000xG0D</field>
+            <field>00NdP000002DfFW</field>
             <field>00NdP000000xG0E</field>
             <field>00NdP000001kHN5</field>
             <field>00NdP000001kHN6</field>
+            <field>00NdP000002Gj6U</field>
             <field>00NdP000000xG3K</field>
+            <field>00NdP000002Gj6V</field>
             <field>00NdP000000xG0F</field>
             <field>00NJ9000005v6vf</field>
             <field>00NdP000000xG0G</field>
+            <field>00NdP000001yHvE</field>
             <field>00NdP000000xG0H</field>
             <field>00NdP000001G2N5</field>
             <field>00NdP000001G2N6</field>
@@ -1508,6 +1613,10 @@
             <label>Application</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP0000025dim</field>
+            <label>Approval Status</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NJ9000005v6vd</field>
             <label>Budget Confirmed</label>
         </opportunityListFieldsLabelMappings>
@@ -1540,6 +1649,10 @@
             <label>Global Business Unit</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6T</field>
+            <label>GM CY Impact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xFy2</field>
             <label>HAS_TERRITORY_A_VALUE</label>
         </opportunityListFieldsLabelMappings>
@@ -1558,6 +1671,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00NdP000001Z8oX</field>
             <label>Is My Opportunity?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000001yHvD</field>
+            <label>Last Activity Check</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000001mnM2</field>
@@ -1580,6 +1697,10 @@
             <label>Opportunity External ID</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002DfFW</field>
+            <label>Opportunity Link</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0E</field>
             <label>PO Number</label>
         </opportunityListFieldsLabelMappings>
@@ -1592,8 +1713,16 @@
             <label>Project Type</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6U</field>
+            <label>Quantity CY Impact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG3K</field>
             <label>Reporting Sub Group</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6V</field>
+            <label>Revenue CY Impact</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0F</field>
@@ -1606,6 +1735,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0G</field>
             <label>Sample Feedback</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000001yHvE</field>
+            <label>Stage Risk</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0H</field>
@@ -1717,6 +1850,7 @@
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>FORECASTEDMFJVALUE</field>
             <field>00NdP000000xG07</field>
+            <field>00NdP0000025dim</field>
             <field>00NJ9000005v6vd</field>
             <field>00NdP000000xFy1</field>
             <field>00NJ9000005v6ve</field>
@@ -1725,23 +1859,29 @@
             <field>00NdP000000xG08</field>
             <field>00NdP000000xG09</field>
             <field>00NdP000000xG3I</field>
+            <field>00NdP000002Gj6T</field>
             <field>00NdP000000xFy2</field>
             <field>00NdP000000xG0A</field>
             <field>00NdP000000xG0B</field>
             <field>00NdP000001hVUb</field>
             <field>00NdP000001Z8oX</field>
+            <field>00NdP000001yHvD</field>
             <field>00NdP000001mnM2</field>
             <field>00NJ9000005v6vg</field>
             <field>00NdP000000xG3J</field>
             <field>00NdP000000xG0C</field>
             <field>00NdP000000xG0D</field>
+            <field>00NdP000002DfFW</field>
             <field>00NdP000000xG0E</field>
             <field>00NdP000001kHN5</field>
             <field>00NdP000001kHN6</field>
+            <field>00NdP000002Gj6U</field>
             <field>00NdP000000xG3K</field>
+            <field>00NdP000002Gj6V</field>
             <field>00NdP000000xG0F</field>
             <field>00NJ9000005v6vf</field>
             <field>00NdP000000xG0G</field>
+            <field>00NdP000001yHvE</field>
             <field>00NdP000000xG0H</field>
             <field>00NdP000001G2N5</field>
             <field>00NdP000001G2N6</field>
@@ -1930,6 +2070,10 @@
             <label>Application</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP0000025dim</field>
+            <label>Approval Status</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NJ9000005v6vd</field>
             <label>Budget Confirmed</label>
         </opportunityListFieldsLabelMappings>
@@ -1962,6 +2106,10 @@
             <label>Global Business Unit</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6T</field>
+            <label>GM CY Impact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xFy2</field>
             <label>HAS_TERRITORY_A_VALUE</label>
         </opportunityListFieldsLabelMappings>
@@ -1980,6 +2128,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00NdP000001Z8oX</field>
             <label>Is My Opportunity?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000001yHvD</field>
+            <label>Last Activity Check</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000001mnM2</field>
@@ -2002,6 +2154,10 @@
             <label>Opportunity External ID</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002DfFW</field>
+            <label>Opportunity Link</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0E</field>
             <label>PO Number</label>
         </opportunityListFieldsLabelMappings>
@@ -2014,8 +2170,16 @@
             <label>Project Type</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6U</field>
+            <label>Quantity CY Impact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG3K</field>
             <label>Reporting Sub Group</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6V</field>
+            <label>Revenue CY Impact</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0F</field>
@@ -2028,6 +2192,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0G</field>
             <label>Sample Feedback</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000001yHvE</field>
+            <label>Stage Risk</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0H</field>
@@ -2140,6 +2308,7 @@
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>FORECASTEDMFJVALUE</field>
             <field>00NdP000000xG07</field>
+            <field>00NdP0000025dim</field>
             <field>00NJ9000005v6vd</field>
             <field>00NdP000000xFy1</field>
             <field>00NJ9000005v6ve</field>
@@ -2148,23 +2317,29 @@
             <field>00NdP000000xG08</field>
             <field>00NdP000000xG09</field>
             <field>00NdP000000xG3I</field>
+            <field>00NdP000002Gj6T</field>
             <field>00NdP000000xFy2</field>
             <field>00NdP000000xG0A</field>
             <field>00NdP000000xG0B</field>
             <field>00NdP000001hVUb</field>
             <field>00NdP000001Z8oX</field>
+            <field>00NdP000001yHvD</field>
             <field>00NdP000001mnM2</field>
             <field>00NJ9000005v6vg</field>
             <field>00NdP000000xG3J</field>
             <field>00NdP000000xG0C</field>
             <field>00NdP000000xG0D</field>
+            <field>00NdP000002DfFW</field>
             <field>00NdP000000xG0E</field>
             <field>00NdP000001kHN5</field>
             <field>00NdP000001kHN6</field>
+            <field>00NdP000002Gj6U</field>
             <field>00NdP000000xG3K</field>
+            <field>00NdP000002Gj6V</field>
             <field>00NdP000000xG0F</field>
             <field>00NJ9000005v6vf</field>
             <field>00NdP000000xG0G</field>
+            <field>00NdP000001yHvE</field>
             <field>00NdP000000xG0H</field>
             <field>00NdP000001G2N5</field>
             <field>00NdP000001G2N6</field>
@@ -2349,6 +2524,10 @@
             <label>Application</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP0000025dim</field>
+            <label>Approval Status</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NJ9000005v6vd</field>
             <label>Budget Confirmed</label>
         </opportunityListFieldsLabelMappings>
@@ -2381,6 +2560,10 @@
             <label>Global Business Unit</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6T</field>
+            <label>GM CY Impact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xFy2</field>
             <label>HAS_TERRITORY_A_VALUE</label>
         </opportunityListFieldsLabelMappings>
@@ -2399,6 +2582,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00NdP000001Z8oX</field>
             <label>Is My Opportunity?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000001yHvD</field>
+            <label>Last Activity Check</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000001mnM2</field>
@@ -2421,6 +2608,10 @@
             <label>Opportunity External ID</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002DfFW</field>
+            <label>Opportunity Link</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0E</field>
             <label>PO Number</label>
         </opportunityListFieldsLabelMappings>
@@ -2433,8 +2624,16 @@
             <label>Project Type</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6U</field>
+            <label>Quantity CY Impact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG3K</field>
             <label>Reporting Sub Group</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6V</field>
+            <label>Revenue CY Impact</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0F</field>
@@ -2447,6 +2646,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0G</field>
             <label>Sample Feedback</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000001yHvE</field>
+            <label>Stage Risk</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0H</field>
@@ -2558,6 +2761,7 @@
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>FORECASTEDMFJVALUE</field>
             <field>00NdP000000xG07</field>
+            <field>00NdP0000025dim</field>
             <field>00NJ9000005v6vd</field>
             <field>00NdP000000xFy1</field>
             <field>00NJ9000005v6ve</field>
@@ -2566,23 +2770,29 @@
             <field>00NdP000000xG08</field>
             <field>00NdP000000xG09</field>
             <field>00NdP000000xG3I</field>
+            <field>00NdP000002Gj6T</field>
             <field>00NdP000000xFy2</field>
             <field>00NdP000000xG0A</field>
             <field>00NdP000000xG0B</field>
             <field>00NdP000001hVUb</field>
             <field>00NdP000001Z8oX</field>
+            <field>00NdP000001yHvD</field>
             <field>00NdP000001mnM2</field>
             <field>00NJ9000005v6vg</field>
             <field>00NdP000000xG3J</field>
             <field>00NdP000000xG0C</field>
             <field>00NdP000000xG0D</field>
+            <field>00NdP000002DfFW</field>
             <field>00NdP000000xG0E</field>
             <field>00NdP000001kHN5</field>
             <field>00NdP000001kHN6</field>
+            <field>00NdP000002Gj6U</field>
             <field>00NdP000000xG3K</field>
+            <field>00NdP000002Gj6V</field>
             <field>00NdP000000xG0F</field>
             <field>00NJ9000005v6vf</field>
             <field>00NdP000000xG0G</field>
+            <field>00NdP000001yHvE</field>
             <field>00NdP000000xG0H</field>
             <field>00NdP000001G2N5</field>
             <field>00NdP000001G2N6</field>
@@ -2771,6 +2981,10 @@
             <label>Application</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP0000025dim</field>
+            <label>Approval Status</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NJ9000005v6vd</field>
             <label>Budget Confirmed</label>
         </opportunityListFieldsLabelMappings>
@@ -2803,6 +3017,10 @@
             <label>Global Business Unit</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6T</field>
+            <label>GM CY Impact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xFy2</field>
             <label>HAS_TERRITORY_A_VALUE</label>
         </opportunityListFieldsLabelMappings>
@@ -2821,6 +3039,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00NdP000001Z8oX</field>
             <label>Is My Opportunity?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000001yHvD</field>
+            <label>Last Activity Check</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000001mnM2</field>
@@ -2843,6 +3065,10 @@
             <label>Opportunity External ID</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002DfFW</field>
+            <label>Opportunity Link</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0E</field>
             <label>PO Number</label>
         </opportunityListFieldsLabelMappings>
@@ -2855,8 +3081,16 @@
             <label>Project Type</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6U</field>
+            <label>Quantity CY Impact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG3K</field>
             <label>Reporting Sub Group</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6V</field>
+            <label>Revenue CY Impact</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0F</field>
@@ -2869,6 +3103,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0G</field>
             <label>Sample Feedback</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000001yHvE</field>
+            <label>Stage Risk</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0H</field>
@@ -2981,6 +3219,7 @@
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>FORECASTEDMFJVALUE</field>
             <field>00NdP000000xG07</field>
+            <field>00NdP0000025dim</field>
             <field>00NJ9000005v6vd</field>
             <field>00NdP000000xFy1</field>
             <field>00NJ9000005v6ve</field>
@@ -2989,23 +3228,29 @@
             <field>00NdP000000xG08</field>
             <field>00NdP000000xG09</field>
             <field>00NdP000000xG3I</field>
+            <field>00NdP000002Gj6T</field>
             <field>00NdP000000xFy2</field>
             <field>00NdP000000xG0A</field>
             <field>00NdP000000xG0B</field>
             <field>00NdP000001hVUb</field>
             <field>00NdP000001Z8oX</field>
+            <field>00NdP000001yHvD</field>
             <field>00NdP000001mnM2</field>
             <field>00NJ9000005v6vg</field>
             <field>00NdP000000xG3J</field>
             <field>00NdP000000xG0C</field>
             <field>00NdP000000xG0D</field>
+            <field>00NdP000002DfFW</field>
             <field>00NdP000000xG0E</field>
             <field>00NdP000001kHN5</field>
             <field>00NdP000001kHN6</field>
+            <field>00NdP000002Gj6U</field>
             <field>00NdP000000xG3K</field>
+            <field>00NdP000002Gj6V</field>
             <field>00NdP000000xG0F</field>
             <field>00NJ9000005v6vf</field>
             <field>00NdP000000xG0G</field>
+            <field>00NdP000001yHvE</field>
             <field>00NdP000000xG0H</field>
             <field>00NdP000001G2N5</field>
             <field>00NdP000001G2N6</field>
@@ -3190,6 +3435,10 @@
             <label>Application</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP0000025dim</field>
+            <label>Approval Status</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NJ9000005v6vd</field>
             <label>Budget Confirmed</label>
         </opportunityListFieldsLabelMappings>
@@ -3222,6 +3471,10 @@
             <label>Global Business Unit</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6T</field>
+            <label>GM CY Impact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xFy2</field>
             <label>HAS_TERRITORY_A_VALUE</label>
         </opportunityListFieldsLabelMappings>
@@ -3240,6 +3493,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00NdP000001Z8oX</field>
             <label>Is My Opportunity?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000001yHvD</field>
+            <label>Last Activity Check</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000001mnM2</field>
@@ -3262,6 +3519,10 @@
             <label>Opportunity External ID</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002DfFW</field>
+            <label>Opportunity Link</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0E</field>
             <label>PO Number</label>
         </opportunityListFieldsLabelMappings>
@@ -3274,8 +3535,16 @@
             <label>Project Type</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6U</field>
+            <label>Quantity CY Impact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG3K</field>
             <label>Reporting Sub Group</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6V</field>
+            <label>Revenue CY Impact</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0F</field>
@@ -3288,6 +3557,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0G</field>
             <label>Sample Feedback</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000001yHvE</field>
+            <label>Stage Risk</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0H</field>
@@ -3399,6 +3672,7 @@
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>FORECASTEDMFJVALUE</field>
             <field>00NdP000000xG07</field>
+            <field>00NdP0000025dim</field>
             <field>00NJ9000005v6vd</field>
             <field>00NdP000000xFy1</field>
             <field>00NJ9000005v6ve</field>
@@ -3407,23 +3681,29 @@
             <field>00NdP000000xG08</field>
             <field>00NdP000000xG09</field>
             <field>00NdP000000xG3I</field>
+            <field>00NdP000002Gj6T</field>
             <field>00NdP000000xFy2</field>
             <field>00NdP000000xG0A</field>
             <field>00NdP000000xG0B</field>
             <field>00NdP000001hVUb</field>
             <field>00NdP000001Z8oX</field>
+            <field>00NdP000001yHvD</field>
             <field>00NdP000001mnM2</field>
             <field>00NJ9000005v6vg</field>
             <field>00NdP000000xG3J</field>
             <field>00NdP000000xG0C</field>
             <field>00NdP000000xG0D</field>
+            <field>00NdP000002DfFW</field>
             <field>00NdP000000xG0E</field>
             <field>00NdP000001kHN5</field>
             <field>00NdP000001kHN6</field>
+            <field>00NdP000002Gj6U</field>
             <field>00NdP000000xG3K</field>
+            <field>00NdP000002Gj6V</field>
             <field>00NdP000000xG0F</field>
             <field>00NJ9000005v6vf</field>
             <field>00NdP000000xG0G</field>
+            <field>00NdP000001yHvE</field>
             <field>00NdP000000xG0H</field>
             <field>00NdP000001G2N5</field>
             <field>00NdP000001G2N6</field>
@@ -3612,6 +3892,10 @@
             <label>Application</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP0000025dim</field>
+            <label>Approval Status</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NJ9000005v6vd</field>
             <label>Budget Confirmed</label>
         </opportunityListFieldsLabelMappings>
@@ -3644,6 +3928,10 @@
             <label>Global Business Unit</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6T</field>
+            <label>GM CY Impact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xFy2</field>
             <label>HAS_TERRITORY_A_VALUE</label>
         </opportunityListFieldsLabelMappings>
@@ -3662,6 +3950,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00NdP000001Z8oX</field>
             <label>Is My Opportunity?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000001yHvD</field>
+            <label>Last Activity Check</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000001mnM2</field>
@@ -3684,6 +3976,10 @@
             <label>Opportunity External ID</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002DfFW</field>
+            <label>Opportunity Link</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0E</field>
             <label>PO Number</label>
         </opportunityListFieldsLabelMappings>
@@ -3696,8 +3992,16 @@
             <label>Project Type</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6U</field>
+            <label>Quantity CY Impact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG3K</field>
             <label>Reporting Sub Group</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6V</field>
+            <label>Revenue CY Impact</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0F</field>
@@ -3710,6 +4014,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0G</field>
             <label>Sample Feedback</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000001yHvE</field>
+            <label>Stage Risk</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0H</field>
@@ -3822,6 +4130,7 @@
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>FORECASTEDMFJVALUE</field>
             <field>00NdP000000xG07</field>
+            <field>00NdP0000025dim</field>
             <field>00NJ9000005v6vd</field>
             <field>00NdP000000xFy1</field>
             <field>00NJ9000005v6ve</field>
@@ -3830,23 +4139,29 @@
             <field>00NdP000000xG08</field>
             <field>00NdP000000xG09</field>
             <field>00NdP000000xG3I</field>
+            <field>00NdP000002Gj6T</field>
             <field>00NdP000000xFy2</field>
             <field>00NdP000000xG0A</field>
             <field>00NdP000000xG0B</field>
             <field>00NdP000001hVUb</field>
             <field>00NdP000001Z8oX</field>
+            <field>00NdP000001yHvD</field>
             <field>00NdP000001mnM2</field>
             <field>00NJ9000005v6vg</field>
             <field>00NdP000000xG3J</field>
             <field>00NdP000000xG0C</field>
             <field>00NdP000000xG0D</field>
+            <field>00NdP000002DfFW</field>
             <field>00NdP000000xG0E</field>
             <field>00NdP000001kHN5</field>
             <field>00NdP000001kHN6</field>
+            <field>00NdP000002Gj6U</field>
             <field>00NdP000000xG3K</field>
+            <field>00NdP000002Gj6V</field>
             <field>00NdP000000xG0F</field>
             <field>00NJ9000005v6vf</field>
             <field>00NdP000000xG0G</field>
+            <field>00NdP000001yHvE</field>
             <field>00NdP000000xG0H</field>
             <field>00NdP000001G2N5</field>
             <field>00NdP000001G2N6</field>
@@ -4031,6 +4346,10 @@
             <label>Application</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP0000025dim</field>
+            <label>Approval Status</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NJ9000005v6vd</field>
             <label>Budget Confirmed</label>
         </opportunityListFieldsLabelMappings>
@@ -4063,6 +4382,10 @@
             <label>Global Business Unit</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6T</field>
+            <label>GM CY Impact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xFy2</field>
             <label>HAS_TERRITORY_A_VALUE</label>
         </opportunityListFieldsLabelMappings>
@@ -4081,6 +4404,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00NdP000001Z8oX</field>
             <label>Is My Opportunity?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000001yHvD</field>
+            <label>Last Activity Check</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000001mnM2</field>
@@ -4103,6 +4430,10 @@
             <label>Opportunity External ID</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002DfFW</field>
+            <label>Opportunity Link</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0E</field>
             <label>PO Number</label>
         </opportunityListFieldsLabelMappings>
@@ -4115,8 +4446,16 @@
             <label>Project Type</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6U</field>
+            <label>Quantity CY Impact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG3K</field>
             <label>Reporting Sub Group</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6V</field>
+            <label>Revenue CY Impact</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0F</field>
@@ -4129,6 +4468,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0G</field>
             <label>Sample Feedback</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000001yHvE</field>
+            <label>Stage Risk</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0H</field>
@@ -4240,6 +4583,7 @@
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>FORECASTEDMFJVALUE</field>
             <field>00NdP000000xG07</field>
+            <field>00NdP0000025dim</field>
             <field>00NJ9000005v6vd</field>
             <field>00NdP000000xFy1</field>
             <field>00NJ9000005v6ve</field>
@@ -4248,23 +4592,29 @@
             <field>00NdP000000xG08</field>
             <field>00NdP000000xG09</field>
             <field>00NdP000000xG3I</field>
+            <field>00NdP000002Gj6T</field>
             <field>00NdP000000xFy2</field>
             <field>00NdP000000xG0A</field>
             <field>00NdP000000xG0B</field>
             <field>00NdP000001hVUb</field>
             <field>00NdP000001Z8oX</field>
+            <field>00NdP000001yHvD</field>
             <field>00NdP000001mnM2</field>
             <field>00NJ9000005v6vg</field>
             <field>00NdP000000xG3J</field>
             <field>00NdP000000xG0C</field>
             <field>00NdP000000xG0D</field>
+            <field>00NdP000002DfFW</field>
             <field>00NdP000000xG0E</field>
             <field>00NdP000001kHN5</field>
             <field>00NdP000001kHN6</field>
+            <field>00NdP000002Gj6U</field>
             <field>00NdP000000xG3K</field>
+            <field>00NdP000002Gj6V</field>
             <field>00NdP000000xG0F</field>
             <field>00NJ9000005v6vf</field>
             <field>00NdP000000xG0G</field>
+            <field>00NdP000001yHvE</field>
             <field>00NdP000000xG0H</field>
             <field>00NdP000001G2N5</field>
             <field>00NdP000001G2N6</field>
@@ -4453,6 +4803,10 @@
             <label>Application</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP0000025dim</field>
+            <label>Approval Status</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NJ9000005v6vd</field>
             <label>Budget Confirmed</label>
         </opportunityListFieldsLabelMappings>
@@ -4485,6 +4839,10 @@
             <label>Global Business Unit</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6T</field>
+            <label>GM CY Impact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xFy2</field>
             <label>HAS_TERRITORY_A_VALUE</label>
         </opportunityListFieldsLabelMappings>
@@ -4503,6 +4861,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00NdP000001Z8oX</field>
             <label>Is My Opportunity?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000001yHvD</field>
+            <label>Last Activity Check</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000001mnM2</field>
@@ -4525,6 +4887,10 @@
             <label>Opportunity External ID</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002DfFW</field>
+            <label>Opportunity Link</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0E</field>
             <label>PO Number</label>
         </opportunityListFieldsLabelMappings>
@@ -4537,8 +4903,16 @@
             <label>Project Type</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6U</field>
+            <label>Quantity CY Impact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG3K</field>
             <label>Reporting Sub Group</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6V</field>
+            <label>Revenue CY Impact</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0F</field>
@@ -4551,6 +4925,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0G</field>
             <label>Sample Feedback</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000001yHvE</field>
+            <label>Stage Risk</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0H</field>
@@ -4663,6 +5041,7 @@
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>FORECASTEDMFJVALUE</field>
             <field>00NdP000000xG07</field>
+            <field>00NdP0000025dim</field>
             <field>00NJ9000005v6vd</field>
             <field>00NdP000000xFy1</field>
             <field>00NJ9000005v6ve</field>
@@ -4671,23 +5050,29 @@
             <field>00NdP000000xG08</field>
             <field>00NdP000000xG09</field>
             <field>00NdP000000xG3I</field>
+            <field>00NdP000002Gj6T</field>
             <field>00NdP000000xFy2</field>
             <field>00NdP000000xG0A</field>
             <field>00NdP000000xG0B</field>
             <field>00NdP000001hVUb</field>
             <field>00NdP000001Z8oX</field>
+            <field>00NdP000001yHvD</field>
             <field>00NdP000001mnM2</field>
             <field>00NJ9000005v6vg</field>
             <field>00NdP000000xG3J</field>
             <field>00NdP000000xG0C</field>
             <field>00NdP000000xG0D</field>
+            <field>00NdP000002DfFW</field>
             <field>00NdP000000xG0E</field>
             <field>00NdP000001kHN5</field>
             <field>00NdP000001kHN6</field>
+            <field>00NdP000002Gj6U</field>
             <field>00NdP000000xG3K</field>
+            <field>00NdP000002Gj6V</field>
             <field>00NdP000000xG0F</field>
             <field>00NJ9000005v6vf</field>
             <field>00NdP000000xG0G</field>
+            <field>00NdP000001yHvE</field>
             <field>00NdP000000xG0H</field>
             <field>00NdP000001G2N5</field>
             <field>00NdP000001G2N6</field>
@@ -4872,6 +5257,10 @@
             <label>Application</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP0000025dim</field>
+            <label>Approval Status</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NJ9000005v6vd</field>
             <label>Budget Confirmed</label>
         </opportunityListFieldsLabelMappings>
@@ -4904,6 +5293,10 @@
             <label>Global Business Unit</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6T</field>
+            <label>GM CY Impact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xFy2</field>
             <label>HAS_TERRITORY_A_VALUE</label>
         </opportunityListFieldsLabelMappings>
@@ -4922,6 +5315,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00NdP000001Z8oX</field>
             <label>Is My Opportunity?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000001yHvD</field>
+            <label>Last Activity Check</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000001mnM2</field>
@@ -4944,6 +5341,10 @@
             <label>Opportunity External ID</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002DfFW</field>
+            <label>Opportunity Link</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0E</field>
             <label>PO Number</label>
         </opportunityListFieldsLabelMappings>
@@ -4956,8 +5357,16 @@
             <label>Project Type</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6U</field>
+            <label>Quantity CY Impact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG3K</field>
             <label>Reporting Sub Group</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6V</field>
+            <label>Revenue CY Impact</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0F</field>
@@ -4970,6 +5379,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0G</field>
             <label>Sample Feedback</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000001yHvE</field>
+            <label>Stage Risk</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0H</field>
@@ -5081,6 +5494,7 @@
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>FORECASTEDMFJVALUE</field>
             <field>00NdP000000xG07</field>
+            <field>00NdP0000025dim</field>
             <field>00NJ9000005v6vd</field>
             <field>00NdP000000xFy1</field>
             <field>00NJ9000005v6ve</field>
@@ -5089,23 +5503,29 @@
             <field>00NdP000000xG08</field>
             <field>00NdP000000xG09</field>
             <field>00NdP000000xG3I</field>
+            <field>00NdP000002Gj6T</field>
             <field>00NdP000000xFy2</field>
             <field>00NdP000000xG0A</field>
             <field>00NdP000000xG0B</field>
             <field>00NdP000001hVUb</field>
             <field>00NdP000001Z8oX</field>
+            <field>00NdP000001yHvD</field>
             <field>00NdP000001mnM2</field>
             <field>00NJ9000005v6vg</field>
             <field>00NdP000000xG3J</field>
             <field>00NdP000000xG0C</field>
             <field>00NdP000000xG0D</field>
+            <field>00NdP000002DfFW</field>
             <field>00NdP000000xG0E</field>
             <field>00NdP000001kHN5</field>
             <field>00NdP000001kHN6</field>
+            <field>00NdP000002Gj6U</field>
             <field>00NdP000000xG3K</field>
+            <field>00NdP000002Gj6V</field>
             <field>00NdP000000xG0F</field>
             <field>00NJ9000005v6vf</field>
             <field>00NdP000000xG0G</field>
+            <field>00NdP000001yHvE</field>
             <field>00NdP000000xG0H</field>
             <field>00NdP000001G2N5</field>
             <field>00NdP000001G2N6</field>
@@ -5294,6 +5714,10 @@
             <label>Application</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP0000025dim</field>
+            <label>Approval Status</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NJ9000005v6vd</field>
             <label>Budget Confirmed</label>
         </opportunityListFieldsLabelMappings>
@@ -5326,6 +5750,10 @@
             <label>Global Business Unit</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6T</field>
+            <label>GM CY Impact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xFy2</field>
             <label>HAS_TERRITORY_A_VALUE</label>
         </opportunityListFieldsLabelMappings>
@@ -5344,6 +5772,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00NdP000001Z8oX</field>
             <label>Is My Opportunity?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000001yHvD</field>
+            <label>Last Activity Check</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000001mnM2</field>
@@ -5366,6 +5798,10 @@
             <label>Opportunity External ID</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002DfFW</field>
+            <label>Opportunity Link</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0E</field>
             <label>PO Number</label>
         </opportunityListFieldsLabelMappings>
@@ -5378,8 +5814,16 @@
             <label>Project Type</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6U</field>
+            <label>Quantity CY Impact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG3K</field>
             <label>Reporting Sub Group</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6V</field>
+            <label>Revenue CY Impact</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0F</field>
@@ -5392,6 +5836,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0G</field>
             <label>Sample Feedback</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000001yHvE</field>
+            <label>Stage Risk</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0H</field>
@@ -5500,6 +5948,7 @@
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>00NdP000000xG07</field>
+            <field>00NdP0000025dim</field>
             <field>00NJ9000005v6vd</field>
             <field>00NdP000000xFy1</field>
             <field>00NJ9000005v6ve</field>
@@ -5508,23 +5957,29 @@
             <field>00NdP000000xG08</field>
             <field>00NdP000000xG09</field>
             <field>00NdP000000xG3I</field>
+            <field>00NdP000002Gj6T</field>
             <field>00NdP000000xFy2</field>
             <field>00NdP000000xG0A</field>
             <field>00NdP000000xG0B</field>
             <field>00NdP000001hVUb</field>
             <field>00NdP000001Z8oX</field>
+            <field>00NdP000001yHvD</field>
             <field>00NdP000001mnM2</field>
             <field>00NJ9000005v6vg</field>
             <field>00NdP000000xG3J</field>
             <field>00NdP000000xG0C</field>
             <field>00NdP000000xG0D</field>
+            <field>00NdP000002DfFW</field>
             <field>00NdP000000xG0E</field>
             <field>00NdP000001kHN5</field>
             <field>00NdP000001kHN6</field>
+            <field>00NdP000002Gj6U</field>
             <field>00NdP000000xG3K</field>
+            <field>00NdP000002Gj6V</field>
             <field>00NdP000000xG0F</field>
             <field>00NJ9000005v6vf</field>
             <field>00NdP000000xG0G</field>
+            <field>00NdP000001yHvE</field>
             <field>00NdP000000xG0H</field>
             <field>00NdP000001G2N5</field>
             <field>00NdP000001G2N6</field>
@@ -5717,6 +6172,10 @@
             <label>Application</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP0000025dim</field>
+            <label>Approval Status</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NJ9000005v6vd</field>
             <label>Budget Confirmed</label>
         </opportunityListFieldsLabelMappings>
@@ -5749,6 +6208,10 @@
             <label>Global Business Unit</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6T</field>
+            <label>GM CY Impact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xFy2</field>
             <label>HAS_TERRITORY_A_VALUE</label>
         </opportunityListFieldsLabelMappings>
@@ -5767,6 +6230,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00NdP000001Z8oX</field>
             <label>Is My Opportunity?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000001yHvD</field>
+            <label>Last Activity Check</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000001mnM2</field>
@@ -5789,6 +6256,10 @@
             <label>Opportunity External ID</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002DfFW</field>
+            <label>Opportunity Link</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0E</field>
             <label>PO Number</label>
         </opportunityListFieldsLabelMappings>
@@ -5801,8 +6272,16 @@
             <label>Project Type</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6U</field>
+            <label>Quantity CY Impact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG3K</field>
             <label>Reporting Sub Group</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6V</field>
+            <label>Revenue CY Impact</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0F</field>
@@ -5815,6 +6294,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0G</field>
             <label>Sample Feedback</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000001yHvE</field>
+            <label>Stage Risk</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0H</field>
@@ -5924,6 +6407,7 @@
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>00NdP000000xG07</field>
+            <field>00NdP0000025dim</field>
             <field>00NJ9000005v6vd</field>
             <field>00NdP000000xFy1</field>
             <field>00NJ9000005v6ve</field>
@@ -5932,23 +6416,29 @@
             <field>00NdP000000xG08</field>
             <field>00NdP000000xG09</field>
             <field>00NdP000000xG3I</field>
+            <field>00NdP000002Gj6T</field>
             <field>00NdP000000xFy2</field>
             <field>00NdP000000xG0A</field>
             <field>00NdP000000xG0B</field>
             <field>00NdP000001hVUb</field>
             <field>00NdP000001Z8oX</field>
+            <field>00NdP000001yHvD</field>
             <field>00NdP000001mnM2</field>
             <field>00NJ9000005v6vg</field>
             <field>00NdP000000xG3J</field>
             <field>00NdP000000xG0C</field>
             <field>00NdP000000xG0D</field>
+            <field>00NdP000002DfFW</field>
             <field>00NdP000000xG0E</field>
             <field>00NdP000001kHN5</field>
             <field>00NdP000001kHN6</field>
+            <field>00NdP000002Gj6U</field>
             <field>00NdP000000xG3K</field>
+            <field>00NdP000002Gj6V</field>
             <field>00NdP000000xG0F</field>
             <field>00NJ9000005v6vf</field>
             <field>00NdP000000xG0G</field>
+            <field>00NdP000001yHvE</field>
             <field>00NdP000000xG0H</field>
             <field>00NdP000001G2N5</field>
             <field>00NdP000001G2N6</field>
@@ -6141,6 +6631,10 @@
             <label>Application</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP0000025dim</field>
+            <label>Approval Status</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NJ9000005v6vd</field>
             <label>Budget Confirmed</label>
         </opportunityListFieldsLabelMappings>
@@ -6173,6 +6667,10 @@
             <label>Global Business Unit</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6T</field>
+            <label>GM CY Impact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xFy2</field>
             <label>HAS_TERRITORY_A_VALUE</label>
         </opportunityListFieldsLabelMappings>
@@ -6191,6 +6689,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00NdP000001Z8oX</field>
             <label>Is My Opportunity?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000001yHvD</field>
+            <label>Last Activity Check</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000001mnM2</field>
@@ -6213,6 +6715,10 @@
             <label>Opportunity External ID</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002DfFW</field>
+            <label>Opportunity Link</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0E</field>
             <label>PO Number</label>
         </opportunityListFieldsLabelMappings>
@@ -6225,8 +6731,16 @@
             <label>Project Type</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6U</field>
+            <label>Quantity CY Impact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG3K</field>
             <label>Reporting Sub Group</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6V</field>
+            <label>Revenue CY Impact</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0F</field>
@@ -6239,6 +6753,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0G</field>
             <label>Sample Feedback</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000001yHvE</field>
+            <label>Stage Risk</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0H</field>
@@ -6348,6 +6866,7 @@
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>00NdP000000xG07</field>
+            <field>00NdP0000025dim</field>
             <field>00NJ9000005v6vd</field>
             <field>00NdP000000xFy1</field>
             <field>00NJ9000005v6ve</field>
@@ -6356,23 +6875,29 @@
             <field>00NdP000000xG08</field>
             <field>00NdP000000xG09</field>
             <field>00NdP000000xG3I</field>
+            <field>00NdP000002Gj6T</field>
             <field>00NdP000000xFy2</field>
             <field>00NdP000000xG0A</field>
             <field>00NdP000000xG0B</field>
             <field>00NdP000001hVUb</field>
             <field>00NdP000001Z8oX</field>
+            <field>00NdP000001yHvD</field>
             <field>00NdP000001mnM2</field>
             <field>00NJ9000005v6vg</field>
             <field>00NdP000000xG3J</field>
             <field>00NdP000000xG0C</field>
             <field>00NdP000000xG0D</field>
+            <field>00NdP000002DfFW</field>
             <field>00NdP000000xG0E</field>
             <field>00NdP000001kHN5</field>
             <field>00NdP000001kHN6</field>
+            <field>00NdP000002Gj6U</field>
             <field>00NdP000000xG3K</field>
+            <field>00NdP000002Gj6V</field>
             <field>00NdP000000xG0F</field>
             <field>00NJ9000005v6vf</field>
             <field>00NdP000000xG0G</field>
+            <field>00NdP000001yHvE</field>
             <field>00NdP000000xG0H</field>
             <field>00NdP000001G2N5</field>
             <field>00NdP000001G2N6</field>
@@ -6561,6 +7086,10 @@
             <label>Application</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP0000025dim</field>
+            <label>Approval Status</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NJ9000005v6vd</field>
             <label>Budget Confirmed</label>
         </opportunityListFieldsLabelMappings>
@@ -6593,6 +7122,10 @@
             <label>Global Business Unit</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6T</field>
+            <label>GM CY Impact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xFy2</field>
             <label>HAS_TERRITORY_A_VALUE</label>
         </opportunityListFieldsLabelMappings>
@@ -6611,6 +7144,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00NdP000001Z8oX</field>
             <label>Is My Opportunity?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000001yHvD</field>
+            <label>Last Activity Check</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000001mnM2</field>
@@ -6633,6 +7170,10 @@
             <label>Opportunity External ID</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002DfFW</field>
+            <label>Opportunity Link</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0E</field>
             <label>PO Number</label>
         </opportunityListFieldsLabelMappings>
@@ -6645,8 +7186,16 @@
             <label>Project Type</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6U</field>
+            <label>Quantity CY Impact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG3K</field>
             <label>Reporting Sub Group</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6V</field>
+            <label>Revenue CY Impact</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0F</field>
@@ -6659,6 +7208,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0G</field>
             <label>Sample Feedback</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000001yHvE</field>
+            <label>Stage Risk</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0H</field>
@@ -6767,6 +7320,7 @@
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>00NdP000000xG07</field>
+            <field>00NdP0000025dim</field>
             <field>00NJ9000005v6vd</field>
             <field>00NdP000000xFy1</field>
             <field>00NJ9000005v6ve</field>
@@ -6775,23 +7329,29 @@
             <field>00NdP000000xG08</field>
             <field>00NdP000000xG09</field>
             <field>00NdP000000xG3I</field>
+            <field>00NdP000002Gj6T</field>
             <field>00NdP000000xFy2</field>
             <field>00NdP000000xG0A</field>
             <field>00NdP000000xG0B</field>
             <field>00NdP000001hVUb</field>
             <field>00NdP000001Z8oX</field>
+            <field>00NdP000001yHvD</field>
             <field>00NdP000001mnM2</field>
             <field>00NJ9000005v6vg</field>
             <field>00NdP000000xG3J</field>
             <field>00NdP000000xG0C</field>
             <field>00NdP000000xG0D</field>
+            <field>00NdP000002DfFW</field>
             <field>00NdP000000xG0E</field>
             <field>00NdP000001kHN5</field>
             <field>00NdP000001kHN6</field>
+            <field>00NdP000002Gj6U</field>
             <field>00NdP000000xG3K</field>
+            <field>00NdP000002Gj6V</field>
             <field>00NdP000000xG0F</field>
             <field>00NJ9000005v6vf</field>
             <field>00NdP000000xG0G</field>
+            <field>00NdP000001yHvE</field>
             <field>00NdP000000xG0H</field>
             <field>00NdP000001G2N5</field>
             <field>00NdP000001G2N6</field>
@@ -6984,6 +7544,10 @@
             <label>Application</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP0000025dim</field>
+            <label>Approval Status</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NJ9000005v6vd</field>
             <label>Budget Confirmed</label>
         </opportunityListFieldsLabelMappings>
@@ -7016,6 +7580,10 @@
             <label>Global Business Unit</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6T</field>
+            <label>GM CY Impact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xFy2</field>
             <label>HAS_TERRITORY_A_VALUE</label>
         </opportunityListFieldsLabelMappings>
@@ -7034,6 +7602,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00NdP000001Z8oX</field>
             <label>Is My Opportunity?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000001yHvD</field>
+            <label>Last Activity Check</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000001mnM2</field>
@@ -7056,6 +7628,10 @@
             <label>Opportunity External ID</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002DfFW</field>
+            <label>Opportunity Link</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0E</field>
             <label>PO Number</label>
         </opportunityListFieldsLabelMappings>
@@ -7068,8 +7644,16 @@
             <label>Project Type</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6U</field>
+            <label>Quantity CY Impact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG3K</field>
             <label>Reporting Sub Group</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6V</field>
+            <label>Revenue CY Impact</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0F</field>
@@ -7082,6 +7666,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0G</field>
             <label>Sample Feedback</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000001yHvE</field>
+            <label>Stage Risk</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0H</field>
@@ -7191,6 +7779,7 @@
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>00NdP000000xG07</field>
+            <field>00NdP0000025dim</field>
             <field>00NJ9000005v6vd</field>
             <field>00NdP000000xFy1</field>
             <field>00NJ9000005v6ve</field>
@@ -7199,23 +7788,29 @@
             <field>00NdP000000xG08</field>
             <field>00NdP000000xG09</field>
             <field>00NdP000000xG3I</field>
+            <field>00NdP000002Gj6T</field>
             <field>00NdP000000xFy2</field>
             <field>00NdP000000xG0A</field>
             <field>00NdP000000xG0B</field>
             <field>00NdP000001hVUb</field>
             <field>00NdP000001Z8oX</field>
+            <field>00NdP000001yHvD</field>
             <field>00NdP000001mnM2</field>
             <field>00NJ9000005v6vg</field>
             <field>00NdP000000xG3J</field>
             <field>00NdP000000xG0C</field>
             <field>00NdP000000xG0D</field>
+            <field>00NdP000002DfFW</field>
             <field>00NdP000000xG0E</field>
             <field>00NdP000001kHN5</field>
             <field>00NdP000001kHN6</field>
+            <field>00NdP000002Gj6U</field>
             <field>00NdP000000xG3K</field>
+            <field>00NdP000002Gj6V</field>
             <field>00NdP000000xG0F</field>
             <field>00NJ9000005v6vf</field>
             <field>00NdP000000xG0G</field>
+            <field>00NdP000001yHvE</field>
             <field>00NdP000000xG0H</field>
             <field>00NdP000001G2N5</field>
             <field>00NdP000001G2N6</field>
@@ -7404,6 +7999,10 @@
             <label>Application</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP0000025dim</field>
+            <label>Approval Status</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NJ9000005v6vd</field>
             <label>Budget Confirmed</label>
         </opportunityListFieldsLabelMappings>
@@ -7436,6 +8035,10 @@
             <label>Global Business Unit</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6T</field>
+            <label>GM CY Impact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xFy2</field>
             <label>HAS_TERRITORY_A_VALUE</label>
         </opportunityListFieldsLabelMappings>
@@ -7454,6 +8057,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00NdP000001Z8oX</field>
             <label>Is My Opportunity?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000001yHvD</field>
+            <label>Last Activity Check</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000001mnM2</field>
@@ -7476,6 +8083,10 @@
             <label>Opportunity External ID</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002DfFW</field>
+            <label>Opportunity Link</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0E</field>
             <label>PO Number</label>
         </opportunityListFieldsLabelMappings>
@@ -7488,8 +8099,16 @@
             <label>Project Type</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6U</field>
+            <label>Quantity CY Impact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG3K</field>
             <label>Reporting Sub Group</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6V</field>
+            <label>Revenue CY Impact</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0F</field>
@@ -7502,6 +8121,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0G</field>
             <label>Sample Feedback</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000001yHvE</field>
+            <label>Stage Risk</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0H</field>
@@ -7610,6 +8233,7 @@
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>00NdP000000xG07</field>
+            <field>00NdP0000025dim</field>
             <field>00NJ9000005v6vd</field>
             <field>00NdP000000xFy1</field>
             <field>00NJ9000005v6ve</field>
@@ -7618,23 +8242,29 @@
             <field>00NdP000000xG08</field>
             <field>00NdP000000xG09</field>
             <field>00NdP000000xG3I</field>
+            <field>00NdP000002Gj6T</field>
             <field>00NdP000000xFy2</field>
             <field>00NdP000000xG0A</field>
             <field>00NdP000000xG0B</field>
             <field>00NdP000001hVUb</field>
             <field>00NdP000001Z8oX</field>
+            <field>00NdP000001yHvD</field>
             <field>00NdP000001mnM2</field>
             <field>00NJ9000005v6vg</field>
             <field>00NdP000000xG3J</field>
             <field>00NdP000000xG0C</field>
             <field>00NdP000000xG0D</field>
+            <field>00NdP000002DfFW</field>
             <field>00NdP000000xG0E</field>
             <field>00NdP000001kHN5</field>
             <field>00NdP000001kHN6</field>
+            <field>00NdP000002Gj6U</field>
             <field>00NdP000000xG3K</field>
+            <field>00NdP000002Gj6V</field>
             <field>00NdP000000xG0F</field>
             <field>00NJ9000005v6vf</field>
             <field>00NdP000000xG0G</field>
+            <field>00NdP000001yHvE</field>
             <field>00NdP000000xG0H</field>
             <field>00NdP000001G2N5</field>
             <field>00NdP000001G2N6</field>
@@ -7823,6 +8453,10 @@
             <label>Application</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP0000025dim</field>
+            <label>Approval Status</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NJ9000005v6vd</field>
             <label>Budget Confirmed</label>
         </opportunityListFieldsLabelMappings>
@@ -7855,6 +8489,10 @@
             <label>Global Business Unit</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6T</field>
+            <label>GM CY Impact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xFy2</field>
             <label>HAS_TERRITORY_A_VALUE</label>
         </opportunityListFieldsLabelMappings>
@@ -7873,6 +8511,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00NdP000001Z8oX</field>
             <label>Is My Opportunity?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000001yHvD</field>
+            <label>Last Activity Check</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000001mnM2</field>
@@ -7895,6 +8537,10 @@
             <label>Opportunity External ID</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002DfFW</field>
+            <label>Opportunity Link</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0E</field>
             <label>PO Number</label>
         </opportunityListFieldsLabelMappings>
@@ -7907,8 +8553,16 @@
             <label>Project Type</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6U</field>
+            <label>Quantity CY Impact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG3K</field>
             <label>Reporting Sub Group</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6V</field>
+            <label>Revenue CY Impact</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0F</field>
@@ -7921,6 +8575,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0G</field>
             <label>Sample Feedback</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000001yHvE</field>
+            <label>Stage Risk</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0H</field>
@@ -8029,6 +8687,7 @@
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>00NdP000000xG07</field>
+            <field>00NdP0000025dim</field>
             <field>00NJ9000005v6vd</field>
             <field>00NdP000000xFy1</field>
             <field>00NJ9000005v6ve</field>
@@ -8037,23 +8696,29 @@
             <field>00NdP000000xG08</field>
             <field>00NdP000000xG09</field>
             <field>00NdP000000xG3I</field>
+            <field>00NdP000002Gj6T</field>
             <field>00NdP000000xFy2</field>
             <field>00NdP000000xG0A</field>
             <field>00NdP000000xG0B</field>
             <field>00NdP000001hVUb</field>
             <field>00NdP000001Z8oX</field>
+            <field>00NdP000001yHvD</field>
             <field>00NdP000001mnM2</field>
             <field>00NJ9000005v6vg</field>
             <field>00NdP000000xG3J</field>
             <field>00NdP000000xG0C</field>
             <field>00NdP000000xG0D</field>
+            <field>00NdP000002DfFW</field>
             <field>00NdP000000xG0E</field>
             <field>00NdP000001kHN5</field>
             <field>00NdP000001kHN6</field>
+            <field>00NdP000002Gj6U</field>
             <field>00NdP000000xG3K</field>
+            <field>00NdP000002Gj6V</field>
             <field>00NdP000000xG0F</field>
             <field>00NJ9000005v6vf</field>
             <field>00NdP000000xG0G</field>
+            <field>00NdP000001yHvE</field>
             <field>00NdP000000xG0H</field>
             <field>00NdP000001G2N5</field>
             <field>00NdP000001G2N6</field>
@@ -8242,6 +8907,10 @@
             <label>Application</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP0000025dim</field>
+            <label>Approval Status</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NJ9000005v6vd</field>
             <label>Budget Confirmed</label>
         </opportunityListFieldsLabelMappings>
@@ -8274,6 +8943,10 @@
             <label>Global Business Unit</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6T</field>
+            <label>GM CY Impact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xFy2</field>
             <label>HAS_TERRITORY_A_VALUE</label>
         </opportunityListFieldsLabelMappings>
@@ -8292,6 +8965,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00NdP000001Z8oX</field>
             <label>Is My Opportunity?</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000001yHvD</field>
+            <label>Last Activity Check</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000001mnM2</field>
@@ -8314,6 +8991,10 @@
             <label>Opportunity External ID</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002DfFW</field>
+            <label>Opportunity Link</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0E</field>
             <label>PO Number</label>
         </opportunityListFieldsLabelMappings>
@@ -8326,8 +9007,16 @@
             <label>Project Type</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6U</field>
+            <label>Quantity CY Impact</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG3K</field>
             <label>Reporting Sub Group</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000002Gj6V</field>
+            <label>Revenue CY Impact</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0F</field>
@@ -8340,6 +9029,10 @@
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0G</field>
             <label>Sample Feedback</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NdP000001yHvE</field>
+            <label>Stage Risk</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
             <field>00NdP000000xG0H</field>
@@ -8448,6 +9141,7 @@
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>00NdP000000xG07</field>
+            <field>00NdP0000025dim</field>
             <field>00NJ9000005v6vd</field>
             <field>00NdP000000xFy1</field>
             <field>00NJ9000005v6ve</field>
@@ -8456,23 +9150,29 @@
             <field>00NdP000000xG08</field>
             <field>00NdP000000xG09</field>
             <field>00NdP000000xG3I</field>
+            <field>00NdP000002Gj6T</field>
             <field>00NdP000000xFy2</field>
             <field>00NdP000000xG0A</field>
             <field>00NdP000000xG0B</field>
             <field>00NdP000001hVUb</field>
             <field>00NdP000001Z8oX</field>
+            <field>00NdP000001yHvD</field>
             <field>00NdP000001mnM2</field>
             <field>00NJ9000005v6vg</field>
             <field>00NdP000000xG3J</field>
             <field>00NdP000000xG0C</field>
             <field>00NdP000000xG0D</field>
+            <field>00NdP000002DfFW</field>
             <field>00NdP000000xG0E</field>
             <field>00NdP000001kHN5</field>
             <field>00NdP000001kHN6</field>
+            <field>00NdP000002Gj6U</field>
             <field>00NdP000000xG3K</field>
+            <field>00NdP000002Gj6V</field>
             <field>00NdP000000xG0F</field>
             <field>00NJ9000005v6vf</field>
             <field>00NdP000000xG0G</field>
+            <field>00NdP000001yHvE</field>
             <field>00NdP000000xG0H</field>
             <field>00NdP000001G2N5</field>
             <field>00NdP000001G2N6</field>

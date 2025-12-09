@@ -22,7 +22,6 @@
             </value>
         </inputParameters>
         <nameSegment>Syn_RetrieveVisitDetails</nameSegment>
-        <offset>0</offset>
         <outputParameters>
             <assignToReference>VisitId</assignToReference>
             <name>VisitId</name>
@@ -98,9 +97,21 @@
             <targetReference>Log_An_Error</targetReference>
         </faultConnector>
         <inputAssignments>
+            <field>Call_Content_Minutes__c</field>
+            <value>
+                <elementReference>Call_Content_Minutes.value</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>Outcome__c</field>
             <value>
                 <elementReference>output2.value</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Pre_call_Preparation__c</field>
+            <value>
+                <elementReference>Pre_Call_Preparation.value</elementReference>
             </value>
         </inputAssignments>
         <object>Visit_Outcome__c</object>
@@ -168,9 +179,21 @@
             </value>
         </filters>
         <inputAssignments>
+            <field>Call_Content_Minutes__c</field>
+            <value>
+                <elementReference>Call_Content_Minutes_Edit.value</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>Outcome__c</field>
             <value>
                 <elementReference>Display.value</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Pre_call_Preparation__c</field>
+            <value>
+                <elementReference>Pre_Call_Preparation_Edit.value</elementReference>
             </value>
         </inputAssignments>
         <object>Visit_Outcome__c</object>
@@ -187,6 +210,26 @@
             <targetReference>Create_Outcome_Record</targetReference>
         </connector>
         <fields>
+            <name>Pre_Call_Preparation</name>
+            <extensionName>c:inputRichTextFSC</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>disableAdvancedTools</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>label</name>
+                <value>
+                    <stringValue>Pre-call Preparation / Agenda</stringValue>
+                </value>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <fields>
             <name>output2</name>
             <extensionName>c:inputRichTextFSC</extensionName>
             <fieldType>ComponentInstance</fieldType>
@@ -199,7 +242,21 @@
             <inputParameters>
                 <name>label</name>
                 <value>
-                    <stringValue>Visit Outcome</stringValue>
+                    <stringValue>Visit Content / Minutes</stringValue>
+                </value>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <fields>
+            <name>Call_Content_Minutes</name>
+            <extensionName>c:inputRichTextFSC</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>label</name>
+                <value>
+                    <stringValue>Follow-up Actions</stringValue>
                 </value>
             </inputParameters>
             <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
@@ -222,6 +279,26 @@
         <connector>
             <targetReference>Update_Outcome</targetReference>
         </connector>
+        <fields>
+            <name>Pre_Call_Preparation_Edit</name>
+            <extensionName>c:inputRichTextFSC</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>label</name>
+                <value>
+                    <stringValue>Pre-call Preparation /Agenda</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>value</name>
+                <value>
+                    <elementReference>Get_Outcome_Record.Pre_call_Preparation__c</elementReference>
+                </value>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
         <fields>
             <name>Display</name>
             <extensionName>c:inputRichTextFSC</extensionName>
@@ -247,7 +324,27 @@
             <inputParameters>
                 <name>label</name>
                 <value>
-                    <stringValue>Visit Outcome</stringValue>
+                    <stringValue>Visit Content / Minutes</stringValue>
+                </value>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <fields>
+            <name>Call_Content_Minutes_Edit</name>
+            <extensionName>c:inputRichTextFSC</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>label</name>
+                <value>
+                    <stringValue>Follow-up Actions</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>value</name>
+                <value>
+                    <elementReference>Get_Outcome_Record.Call_Content_Minutes__c</elementReference>
                 </value>
             </inputParameters>
             <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>

@@ -8,13 +8,11 @@
             <axisBinding>y</axisBinding>
             <column>RowCount</column>
         </chartSummaries>
-        <chartType>HorizontalBarGrouped</chartType>
+        <chartType>HorizontalBar</chartType>
         <enableHoverLabels>false</enableHoverLabels>
         <expandOthers>true</expandOthers>
         <groupingColumn>Account$Type</groupingColumn>
-        <legendPosition>Right</legendPosition>
         <location>CHART_BOTTOM</location>
-        <secondaryGroupingColumn>Account$Region__c</secondaryGroupingColumn>
         <showAxisLabels>true</showAxisLabels>
         <showPercentage>false</showPercentage>
         <showTotal>false</showTotal>
@@ -79,16 +77,8 @@
         <sortType>Aggregate</sortType>
     </groupingsDown>
     <groupingsDown>
-        <aggregateType>RowCount</aggregateType>
         <dateGranularity>Day</dateGranularity>
-        <field>Account$Region__c</field>
-        <sortByName>RowCount</sortByName>
-        <sortOrder>Desc</sortOrder>
-        <sortType>Aggregate</sortType>
-    </groupingsDown>
-    <groupingsDown>
-        <dateGranularity>Day</dateGranularity>
-        <field>Account$Parent</field>
+        <field>Account$Channel__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
     <name>AS/ Account_Data_Integrity</name>

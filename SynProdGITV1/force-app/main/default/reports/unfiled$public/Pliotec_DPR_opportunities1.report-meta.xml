@@ -43,7 +43,7 @@
             <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>contains</operator>
-            <value>pliotec</value>
+            <value>pliotec DPR</value>
         </criteriaItems>
     </filter>
     <format>Summary</format>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Edit_When_In_Approval_OLI</fullName>
+    <active>true</active>
+    <description>Prevents users from editing or updating key Opportunity Product fields when the related Opportunity is in the “In Approval” stage.</description>
+    <errorConditionFormula>AND(
+    TEXT(Opportunity.Approval_Status__c) = &quot;In Approval&quot;,
+    NOT(
+        AND(
+            $User.FirstName = &quot;Automated&quot;,
+            $User.LastName = &quot;Process&quot;
+        )
+    ),
+    NOT($Permission.Syn_Update_Opportunity_Fields),
+    $Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+    OR(
+        ISCHANGED(ServiceDate),
+        ISCHANGED(Description),
+        ISCHANGED(Quantity),
+        ISCHANGED(Product2Id),
+        ISCHANGED(UnitPrice),
+        ISCHANGED(Product_Category__c),
+        ISCHANGED(TotalPrice),
+        ISCHANGED(Revenue_Unit__c),
+        ISCHANGED(SAP_Product_ID__c),
+        ISCHANGED(Revenue__c),
+        ISCHANGED(Opportunity_Product_External_ID__c)
+    )
+)</errorConditionFormula>
+    <errorMessage>You cannot edit this Opportunity Product while the related Opportunity is In Approval.
+Please wait until the approval process is completed.</errorMessage>
+</ValidationRule>

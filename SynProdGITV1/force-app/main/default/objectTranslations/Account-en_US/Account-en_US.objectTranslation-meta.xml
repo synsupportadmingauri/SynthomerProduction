@@ -86,4 +86,36 @@
         <label><!-- Syn_Shuttle_form --></label>
         <name>Syn_Shuttle_form</name>
     </webLinks>
+    <webLinks>
+        <label><!-- View_HQ_Related_Activities --></label>
+        <name>View_HQ_Related_Activities</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- View_HQ_Related_Cases --></label>
+        <name>View_HQ_Related_Cases</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- View_HQ_Related_Opportunities --></label>
+        <name>View_HQ_Related_Opportunities</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- View_HQ_Related_Quotes --></label>
+        <name>View_HQ_Related_Quotes</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- View_RHQ_Related_Activities --></label>
+        <name>View_RHQ_Related_Activities</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- View_RHQ_Related_Cases --></label>
+        <name>View_RHQ_Related_Cases</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- View_RHQ_Related_Opportunities --></label>
+        <name>View_RHQ_Related_Opportunities</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- View_RHQ_Related_Quotes --></label>
+        <name>View_RHQ_Related_Quotes</name>
+    </webLinks>
 </CustomObjectTranslation>

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Report xmlns="http://soap.sforce.com/2006/04/metadata">
     <columns>
+        <field>ACCOUNT_NAME</field>
+    </columns>
+    <columns>
         <field>OPPORTUNITY_NAME</field>
     </columns>
     <columns>
@@ -17,33 +20,27 @@
         <aggregateTypes>Sum</aggregateTypes>
         <field>Opportunity.Total_Volume__c</field>
     </columns>
-    <currency>GBP</currency>
     <filter>
         <booleanFilter>1 OR 2</booleanFilter>
         <criteriaItems>
-            <column>Opportunity.HQ_Account__c</column>
+            <column>PARENT_NAME</column>
             <columnToColumn>false</columnToColumn>
-            <isUnlocked>false</isUnlocked>
+            <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
             <value></value>
         </criteriaItems>
         <criteriaItems>
-            <column>Opportunity.RHQ_Account__c</column>
+            <column>ACCOUNT_TYPE</column>
             <columnToColumn>false</columnToColumn>
-            <isUnlocked>false</isUnlocked>
-            <operator>notEqual</operator>
-            <value></value>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>RHQ,HQ</value>
         </criteriaItems>
     </filter>
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
-        <field>ACCOUNT_NAME</field>
-        <sortOrder>Asc</sortOrder>
-    </groupingsDown>
-    <groupingsDown>
-        <dateGranularity>Day</dateGranularity>
-        <field>FAMILY</field>
+        <field>OpportunityLineItem.Product_Category__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
     <name>Top product groups by GM or volume Hie</name>
@@ -72,6 +69,6 @@
     <sortOrder>Desc</sortOrder>
     <timeFrameFilter>
         <dateColumn>CLOSE_DATE</dateColumn>
-        <interval>INTERVAL_CUSTOM</interval>
+        <interval>INTERVAL_CURY</interval>
     </timeFrameFilter>
 </Report>

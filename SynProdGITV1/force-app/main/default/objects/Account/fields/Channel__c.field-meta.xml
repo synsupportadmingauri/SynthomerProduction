@@ -19,13 +19,18 @@
             </value>
             <value>
                 <fullName>Territory</fullName>
-                <default>false</default>
+                <default>true</default>
                 <label>Territory</label>
             </value>
             <value>
                 <fullName>Distributor</fullName>
                 <default>false</default>
                 <label>Distributor</label>
+            </value>
+            <value>
+                <fullName>Partner</fullName>
+                <default>false</default>
+                <label>Partner</label>
             </value>
         </valueSetDefinition>
     </valueSet>

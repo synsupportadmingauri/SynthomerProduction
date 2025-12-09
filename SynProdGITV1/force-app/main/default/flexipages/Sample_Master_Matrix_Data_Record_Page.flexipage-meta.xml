@@ -103,6 +103,16 @@
                 <identifier>RecordRegion__cField</identifier>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.PKR_Attribute__c</fieldItem>
+                <identifier>RecordPKR_Attribute__cField</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-7f4d56cd-e45e-4059-9bbb-dc7e6f2677a7</name>
         <type>Facet</type>
     </flexiPageRegions>

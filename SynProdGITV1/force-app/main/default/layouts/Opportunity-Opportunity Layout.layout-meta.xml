@@ -110,6 +110,10 @@
                 <behavior>Edit</behavior>
                 <field>Project_Number__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Approval_Status__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -412,6 +416,14 @@
         <fields>NAME</fields>
         <fields>File_Link__c</fields>
         <relatedList>File_Link__c.Opportunity__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <fields>Visit_Name__c</fields>
+        <fields>Visit_Link__c</fields>
+        <fields>OWNER.FIRST_NAME</fields>
+        <fields>OWNER.LAST_NAME</fields>
+        <relatedList>Visit_Opportunity_Link__c.Opportunity__c</relatedList>
     </relatedLists>
     <relatedObjects>AccountId</relatedObjects>
     <showEmailCheckbox>false</showEmailCheckbox>

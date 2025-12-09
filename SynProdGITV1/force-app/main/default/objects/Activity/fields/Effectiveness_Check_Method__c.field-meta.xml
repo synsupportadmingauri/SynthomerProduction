@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Effectiveness_Check_Method__c</fullName>
+    <description>Captures details on how the effectiveness of the complaint treatment will be verified. This field is required only for Effectiveness Check (EC) tasks to ensure proper documentation of verification methods.</description>
+    <inlineHelpText>Describe how the effectiveness of the complaint treatment will be verified.
+(Required only for Effectiveness Check tasks.)</inlineHelpText>
+    <label>Effectiveness Check Method</label>
+    <required>false</required>
+    <type>TextArea</type>
+</CustomField>

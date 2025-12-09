@@ -332,14 +332,6 @@
         <sortOrder>Asc</sortOrder>
         <sortType>Aggregate</sortType>
     </groupingsDown>
-    <groupingsDown>
-        <aggregateType>Sum</aggregateType>
-        <dateGranularity>Day</dateGranularity>
-        <field>Opportunity.Market_Segment__c</field>
-        <sortByName>AMOUNT.CONVERT</sortByName>
-        <sortOrder>Asc</sortOrder>
-        <sortType>Aggregate</sortType>
-    </groupingsDown>
     <name>APO Total Opps By Applications</name>
     <params>
         <name>terr</name>

@@ -261,7 +261,8 @@ static void testCreateOrderWithProducts() {
         'Evaluated_Sold_To_Party__c' => acc.Id,
         'IncoTerms_Location__c' => 'Warehouse 5',
         'Payment_Terms__c' => paymentTerm.Id,
-         'isShipToContactRelated' => True
+         'isShipToContactRelated' => True,
+            'Potential_Volume1__c' => '10'
     };
 
     // Construct orderProducts list
@@ -291,6 +292,7 @@ static void testCreateOrderWithProducts() {
     List<OrderItem> orderItems = [SELECT Id, Quantity FROM OrderItem WHERE OrderId = :orderId];
     System.assertEquals(1, orderItems.size(), 'One OrderItem should be created');
     System.assertEquals(2, orderItems[0].Quantity, 'OrderItem quantity should match');
+
 }
     
     @isTest

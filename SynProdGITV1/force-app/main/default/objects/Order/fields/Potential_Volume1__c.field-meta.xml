@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Potential_Volume1__c</fullName>
+    <description>SD1-T16: Potential Volume</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter the potential volume (numbers only).</inlineHelpText>
+    <label>Potential Volume</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Effectiveness_Check_Fields</fullName>
+    <active>true</active>
+    <description>Requires users to fill in Effective Check Method and Effective Check Results when the Effectiveness Check checkbox is selected.</description>
+    <errorConditionFormula>AND(
+    NOT(ISNEW()),   
+    Effectiveness_Check__c = TRUE,
+    OR(
+        ISBLANK(Effectiveness_Check_Method__c),
+        ISBLANK(Effective_Check_Results__c)
+    ),
+    NOT(
+        OR(
+            AND(
+                $User.FirstName = &quot;Integration&quot;,
+                $User.LastName = &quot;User&quot;
+            ),
+            AND(
+                $User.FirstName = &quot;Automated&quot;,
+                $User.LastName = &quot;Process&quot;
+            )
+        )
+    )
+)</errorConditionFormula>
+    <errorMessage>Both Effective Check Method and Effective Check Results are required when the task is flagged as an Effectiveness Check. Please provide this information to proceed.</errorMessage>
+</ValidationRule>

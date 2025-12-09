@@ -80,32 +80,28 @@
                     <axisBinding>y</axisBinding>
                     <column>RowCount</column>
                 </chartSummary>
-                <componentType>BarGrouped</componentType>
+                <componentType>Bar</componentType>
                 <decimalPrecision>-1</decimalPrecision>
-                <displayUnits>Integer</displayUnits>
+                <displayUnits>Auto</displayUnits>
                 <drillEnabled>false</drillEnabled>
                 <drillToDetailEnabled>false</drillToDetailEnabled>
                 <enableHover>false</enableHover>
                 <expandOthers>false</expandOthers>
-                <groupingColumn>Activity$Who</groupingColumn>
-                <groupingColumn>Activity$Assigned_To__c</groupingColumn>
+                <groupingColumn>Activity$Account</groupingColumn>
                 <groupingSortProperties>
                     <groupingSorts>
                         <groupingLevel>g1</groupingLevel>
-                        <sortOrder>a</sortOrder>
-                    </groupingSorts>
-                    <groupingSorts>
-                        <groupingLevel>g2</groupingLevel>
-                        <sortOrder>a</sortOrder>
+                        <sortColumn>RowCount</sortColumn>
+                        <sortOrder>d</sortOrder>
                     </groupingSorts>
                 </groupingSortProperties>
-                <header>My Monthly Visits LAST 18 Months</header>
-                <legendPosition>Right</legendPosition>
+                <header>My Monthly Visits Year to Date - Ind</header>
+                <legendPosition>Bottom</legendPosition>
                 <report>VisitsandActivitiesIndividualView/My_Monthly_Visit_LAST_18_Months_Ind_mx8</report>
                 <showPercentage>false</showPercentage>
+                <showPicturesOnCharts>false</showPicturesOnCharts>
                 <showValues>true</showValues>
                 <sortBy>RowLabelAscending</sortBy>
-                <title>Engagement Tracking</title>
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
             <rowIndex>0</rowIndex>
@@ -508,7 +504,7 @@
     <dashboardType>MyTeamUser</dashboardType>
     <isGridLayout>true</isGridLayout>
     <owner>rahul.layak@gauri.com.syn</owner>
-    <runningUser>dirk.suehling@synthomer.com</runningUser>
+    <runningUser>jakub.hnilicka@synthomer.com</runningUser>
     <textColor>#000000</textColor>
     <title>My Visit and Activity - Individual</title>
     <titleColor>#000000</titleColor>

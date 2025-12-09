@@ -6,17 +6,18 @@
     <masterLabel>Default</masterLabel>
     <pathAssistantSteps>
         <fieldNames>CloseDate</fieldNames>
+        <fieldNames>Approval_Status__c</fieldNames>
         <fieldNames>Forecasted__c</fieldNames>
         <fieldNames>First_Commercial_Order_Completed__c</fieldNames>
         <fieldNames>Amount</fieldNames>
-        <info>&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-family: Arial, sans-serif;&quot;&gt;First order delivered.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-family: Arial, sans-serif;&quot;&gt;Monitor for second order.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-family: Arial, sans-serif; font-size: 13px;&quot;&gt;Set opportunity as Won once second order is received.&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;</info>
+        <info>&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-family: Arial, sans-serif;&quot;&gt;First order delivered.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-family: Arial, sans-serif;&quot;&gt;Monitor for second order.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 13px; font-family: Arial, sans-serif;&quot;&gt;Set opportunity as Won once second order is received.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;Minimum time for this stage is&lt;strong&gt; &lt;/strong&gt;&lt;strong style=&quot;font-size: 13px;&quot;&gt;2 months.&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;When the stage is &lt;strong style=&quot;font-size: 13px;&quot;&gt;Adoption&lt;/strong&gt;, the Opportunity is auto-submitted for Manager approval and becomes read-only. Only the Sales Manager can edit it.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</info>
         <picklistValueName>Adoption</picklistValueName>
     </pathAssistantSteps>
     <pathAssistantSteps>
         <fieldNames>Type</fieldNames>
         <fieldNames>Amount</fieldNames>
         <fieldNames>CloseDate</fieldNames>
-        <info>&lt;ul&gt;&lt;li&gt;Send samples for lab testing.&lt;/li&gt;&lt;li&gt;Confirm product passes lab approval.&lt;/li&gt;&lt;li&gt;Get customer feedback to proceed to trials.&lt;/li&gt;&lt;li&gt;Determine Sweet Spots (VS).&lt;/li&gt;&lt;li&gt;Confirm customer/prospect has BANT - Budget, Authority, Need and Timeline.&lt;/li&gt;&lt;/ul&gt;</info>
+        <info>&lt;ul&gt;&lt;li&gt;Send samples for lab testing.&lt;/li&gt;&lt;li&gt;Confirm product passes lab approval.&lt;/li&gt;&lt;li&gt;Get customer feedback to proceed to trials.&lt;/li&gt;&lt;li&gt;Determine Sweet Spots (VS).&lt;/li&gt;&lt;li&gt;Confirm customer/prospect has BANT - Budget, Authority, Need and Timeline.&lt;/li&gt;&lt;li&gt;Minimum time for this stage is &lt;strong&gt;12 months.&lt;/strong&gt;&lt;/li&gt;&lt;/ul&gt;</info>
         <picklistValueName>Chemistry</picklistValueName>
     </pathAssistantSteps>
     <pathAssistantSteps>
@@ -35,21 +36,21 @@
         <fieldNames>Forecasted__c</fieldNames>
         <fieldNames>First_Commercial_Order_Completed__c</fieldNames>
         <fieldNames>Amount</fieldNames>
-        <info>&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-family: Arial, sans-serif;&quot;&gt;Agree all commercial terms and price.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-family: Arial, sans-serif;&quot;&gt;Confirm first order and delivery date. &lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-family: Arial, sans-serif; font-size: 13px;&quot;&gt;Complete forecast&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;</info>
+        <info>&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-family: Arial, sans-serif;&quot;&gt;Agree all commercial terms and price.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-family: Arial, sans-serif;&quot;&gt;Confirm first order and delivery date. &lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 13px; font-family: Arial, sans-serif;&quot;&gt;Complete forecast.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;Minimum time for this stage is&lt;strong&gt; &lt;/strong&gt;&lt;strong style=&quot;font-size: 13px;&quot;&gt;3 months.&lt;/strong&gt;&lt;/li&gt;&lt;/ul&gt;</info>
         <picklistValueName>Commercial</picklistValueName>
     </pathAssistantSteps>
     <pathAssistantSteps>
         <fieldNames>Type</fieldNames>
         <fieldNames>Amount</fieldNames>
         <fieldNames>CloseDate</fieldNames>
-        <info>&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-family: Arial, sans-serif;&quot;&gt;Support trials and upscaling.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-family: Arial, sans-serif;&quot;&gt;Confirm product works for customer.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-family: Arial, sans-serif;&quot;&gt;Get full technical sign-off.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 13px; font-family: Arial, sans-serif;&quot;&gt;Check if target volume is realistic.&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;</info>
+        <info>&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-family: Arial, sans-serif;&quot;&gt;Support trials and upscaling.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-family: Arial, sans-serif;&quot;&gt;Confirm product works for customer.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-family: Arial, sans-serif;&quot;&gt;Get full technical sign-off.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 13px; font-family: Arial, sans-serif;&quot;&gt;Check if target volume is realistic.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;Minimum time for this stage is &lt;strong style=&quot;font-size: 13px;&quot;&gt;6 months.&lt;/strong&gt;&lt;/li&gt;&lt;/ul&gt;</info>
         <picklistValueName>Operations</picklistValueName>
     </pathAssistantSteps>
     <pathAssistantSteps>
         <fieldNames>Type</fieldNames>
         <fieldNames>Amount</fieldNames>
         <fieldNames>CloseDate</fieldNames>
-        <info>&lt;ul&gt;&lt;li&gt;Confirm real demand or project.&lt;/li&gt;&lt;li&gt;Understand customer&amp;#39;s strategic, tactical, political, and individual needs (VS).&lt;/li&gt;&lt;li&gt;Identify key decision-makers.&lt;/li&gt;&lt;/ul&gt;</info>
+        <info>&lt;ul&gt;&lt;li&gt;Confirm real demand or project.&lt;/li&gt;&lt;li&gt;Understand customer&amp;#39;s strategic, tactical, political, and individual needs (VS).&lt;/li&gt;&lt;li&gt;Identify key decision-makers.&lt;/li&gt;&lt;li&gt;Minimum time for this stage is &lt;strong&gt;15 months.&lt;/strong&gt;&lt;/li&gt;&lt;/ul&gt;</info>
         <picklistValueName>Qualify</picklistValueName>
     </pathAssistantSteps>
     <recordTypeName>__MASTER__</recordTypeName>

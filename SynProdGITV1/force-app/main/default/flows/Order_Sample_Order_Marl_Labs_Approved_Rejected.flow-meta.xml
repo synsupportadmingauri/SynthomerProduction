@@ -3,12 +3,12 @@
     <actionCalls>
         <name>Approval_chatter_post</name>
         <label>Approval chatter post</label>
-        <locationX>1634</locationX>
+        <locationX>3614</locationX>
         <locationY>566</locationY>
         <actionName>chatterPost</actionName>
         <actionType>chatterPost</actionType>
         <connector>
-            <targetReference>Update_Order</targetReference>
+            <targetReference>Get_Running_User_Approved</targetReference>
         </connector>
         <faultConnector>
             <targetReference>Create_Error_Log</targetReference>
@@ -33,12 +33,12 @@
     <actionCalls>
         <name>Approval_chatter_post_Distributor_User</name>
         <label>Approval chatter post</label>
-        <locationX>1106</locationX>
+        <locationX>2558</locationX>
         <locationY>566</locationY>
         <actionName>chatterPost</actionName>
         <actionType>chatterPost</actionType>
         <connector>
-            <targetReference>Update_Order</targetReference>
+            <targetReference>Check_Distributor_User_Approved</targetReference>
         </connector>
         <faultConnector>
             <targetReference>Create_Error_Log_Approval_Chatter_Post_for_DM</targetReference>
@@ -63,12 +63,12 @@
     <actionCalls>
         <name>Approval_chatter_post_Not_Needed</name>
         <label>Approval chatter post</label>
-        <locationX>3746</locationX>
+        <locationX>8366</locationX>
         <locationY>566</locationY>
         <actionName>chatterPost</actionName>
         <actionType>chatterPost</actionType>
         <connector>
-            <targetReference>Update_Order</targetReference>
+            <targetReference>Get_Running_User_Not_Needed</targetReference>
         </connector>
         <faultConnector>
             <targetReference>Create_Error_Log_Not_Needed</targetReference>
@@ -93,12 +93,12 @@
     <actionCalls>
         <name>Approval_chatter_post_Not_Needed_DM</name>
         <label>Approval chatter post</label>
-        <locationX>3218</locationX>
+        <locationX>7310</locationX>
         <locationY>566</locationY>
         <actionName>chatterPost</actionName>
         <actionType>chatterPost</actionType>
         <connector>
-            <targetReference>Update_Order</targetReference>
+            <targetReference>Check_Distributor_User_Not_Needed</targetReference>
         </connector>
         <faultConnector>
             <targetReference>Create_Error_Log_Not_Needed_Chatter_Post</targetReference>
@@ -123,12 +123,12 @@
     <actionCalls>
         <name>In_Approval_chatter_post</name>
         <label>In Approval chatter post</label>
-        <locationX>578</locationX>
+        <locationX>1238</locationX>
         <locationY>566</locationY>
         <actionName>chatterPost</actionName>
         <actionType>chatterPost</actionType>
         <connector>
-            <targetReference>Update_Order</targetReference>
+            <targetReference>Get_Running_User_In_Approval</targetReference>
         </connector>
         <faultConnector>
             <targetReference>Create_Error_Log_InApproval</targetReference>
@@ -153,12 +153,12 @@
     <actionCalls>
         <name>In_Approval_chatter_post_DM</name>
         <label>In Approval chatter post</label>
-        <locationX>50</locationX>
+        <locationX>182</locationX>
         <locationY>566</locationY>
         <actionName>chatterPost</actionName>
         <actionType>chatterPost</actionType>
         <connector>
-            <targetReference>Update_Order</targetReference>
+            <targetReference>Check_Distributor_User_In_Approval</targetReference>
         </connector>
         <faultConnector>
             <targetReference>Create_Error_Log_In_Approval</targetReference>
@@ -183,12 +183,12 @@
     <actionCalls>
         <name>Rejected_chatter_post</name>
         <label>Rejected chatter post</label>
-        <locationX>2690</locationX>
+        <locationX>5990</locationX>
         <locationY>566</locationY>
         <actionName>chatterPost</actionName>
         <actionType>chatterPost</actionType>
         <connector>
-            <targetReference>Update_Order</targetReference>
+            <targetReference>Get_Running_User_Rejected</targetReference>
         </connector>
         <faultConnector>
             <targetReference>Create_Error_Log_2</targetReference>
@@ -213,12 +213,12 @@
     <actionCalls>
         <name>Rejected_chatter_post_DM</name>
         <label>Rejected chatter post</label>
-        <locationX>2162</locationX>
+        <locationX>4934</locationX>
         <locationY>566</locationY>
         <actionName>chatterPost</actionName>
         <actionType>chatterPost</actionType>
         <connector>
-            <targetReference>Update_Order</targetReference>
+            <targetReference>Check_Distributor_User_Rejected</targetReference>
         </connector>
         <faultConnector>
             <targetReference>Create_Error_Log_Rejected_DM</targetReference>
@@ -240,11 +240,675 @@
         <offset>0</offset>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </actionCalls>
+    <actionCalls>
+        <name>Send_Approval_Email_to_Distributor_Submittor</name>
+        <label>Send Approval Email to Distributor Submittor</label>
+        <locationX>314</locationX>
+        <locationY>890</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>Update_Order</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Create_Error_Log_Send_Approval_Email_to_Distributor_Submittor</targetReference>
+        </faultConnector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>recipientAddresses</name>
+            <value/>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <stringValue>salesforce@synthomer.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>composeEmailContent</name>
+            <value>
+                <stringValue>True</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Marl Lab Approval Submitted – Order {!Order.OrderNumber}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <stringValue>&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;Marl Lab Approval&lt;/title&gt;&lt;/head&gt;&lt;body style=&quot;font-family:Arial,sans-serif;font-size:14px;color:#000;line-height:1.6;&quot;&gt;&lt;p&gt;Dear {!Get_User.Name},&lt;/p&gt;&lt;p&gt;Order has been &lt;strong style=&quot;color:#003366;&quot;&gt;submitted for Marl Lab Approval&lt;/strong&gt;.&lt;/p&gt;&lt;h3 style=&quot;color:#003366;border-bottom:2px solid #003366;padding-bottom:4px;font-size:15px;&quot;&gt;Request Details&lt;/h3&gt;&lt;table style=&quot;border-collapse:collapse;width:100%;font-family:Arial,sans-serif;font-size:14px;color:#000;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;padding:6px;font-weight:bold;width:160px;&quot;&gt;Order Number:&lt;/td&gt;&lt;td style=&quot;padding:6px;&quot;&gt;{!Order.OrderNumber}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;padding:6px;font-weight:bold;&quot;&gt;Ship To Name:&lt;/td&gt;&lt;td style=&quot;padding:6px;&quot;&gt;{!Order.Ship_To_Account__r.Name}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;padding:6px;font-weight:bold;&quot;&gt;Requestor:&lt;/td&gt;&lt;td style=&quot;padding:6px;&quot;&gt;{!Order.Owner:User.FirstName} {!Order.Owner:User.LastName}&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;a href=&quot;{!URLBase}/lightning/r/Order/{!Order.Id}/view&quot; style=&quot;display:inline-block;background-color:#003366;color:#fff;padding:8px 14px;text-decoration:none;border-radius:4px;font-weight:bold;&quot;&gt;View Order in Salesforce&lt;/a&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;Best regards,&lt;br&gt;&lt;strong&gt;Your CRM Support Team&lt;/strong&gt;&lt;/p&gt;&lt;p style=&quot;font-size:12px;color:#666;&quot;&gt;(The mySalesforce system automatically generated this message.)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>relatedRecordId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>logEmailOnSend</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <actionCalls>
+        <name>Send_Approved_Email_to_Distributor_Submittor</name>
+        <label>Send Approved Email to Distributor Submittor</label>
+        <locationX>2690</locationX>
+        <locationY>890</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>Update_Order</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Create_Error_Send_Approved_Email_to_Running_User</targetReference>
+        </faultConnector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>recipientAddresses</name>
+            <value/>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <stringValue>salesforce@synthomer.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>composeEmailContent</name>
+            <value>
+                <stringValue>True</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Marl Lab Approval Granted – Order {!Order.OrderNumber}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <stringValue>&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;Marl Lab Approved&lt;/title&gt;&lt;/head&gt;&lt;body style=&quot;font-family:Arial,sans-serif;font-size:14px;color:#000;line-height:1.6;&quot;&gt;&lt;p&gt;Dear {!Get_User.Name},&lt;/p&gt;&lt;p&gt;Marl approval has been &lt;strong style=&quot;color:#008000;&quot;&gt;approved&lt;/strong&gt;.&lt;/p&gt;&lt;h3 style=&quot;color:#008000;border-bottom:2px solid #008000;padding-bottom:4px;font-size:15px;&quot;&gt;Request Details&lt;/h3&gt;&lt;table style=&quot;border-collapse:collapse;width:100%;font-family:Arial,sans-serif;font-size:14px;color:#000;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;padding:6px;font-weight:bold;width:160px;&quot;&gt;Order Number:&lt;/td&gt;&lt;td style=&quot;padding:6px;&quot;&gt;{!Order.OrderNumber}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;padding:6px;font-weight:bold;&quot;&gt;Ship To Name:&lt;/td&gt;&lt;td style=&quot;padding:6px;&quot;&gt;{!Order.Ship_To_Account__r.Name}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;padding:6px;font-weight:bold;&quot;&gt;Requestor:&lt;/td&gt;&lt;td style=&quot;padding:6px;&quot;&gt;{!Order.Owner:User.FirstName} {!Order.Owner:User.LastName}&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;a href=&quot;{!URLBase}/lightning/r/Order/{!Order.Id}/view&quot; style=&quot;display:inline-block;background-color:#008000;color:#fff;padding:8px 14px;text-decoration:none;border-radius:4px;font-weight:bold;&quot;&gt;View Order in Salesforce&lt;/a&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;Best regards,&lt;br&gt;&lt;strong&gt;Your CRM Support Team&lt;/strong&gt;&lt;/p&gt;&lt;p style=&quot;font-size:12px;color:#666;&quot;&gt;(The mySalesforce system automatically generated this message.)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>relatedRecordId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>logEmailOnSend</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <actionCalls>
+        <name>Send_Approved_Email_to_Running_User</name>
+        <label>Send Approved Email to Running User</label>
+        <locationX>3746</locationX>
+        <locationY>998</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>Update_Order</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Create_Error_Log_Send_Approved_Email_to_Running_User</targetReference>
+        </faultConnector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>recipientAddresses</name>
+            <value/>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <stringValue>salesforce@synthomer.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>composeEmailContent</name>
+            <value>
+                <stringValue>True</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Marl Lab Approval Granted – Order {!Order.OrderNumber}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <stringValue>&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;Marl Lab Approval Granted&lt;/title&gt;&lt;/head&gt;&lt;body style=&quot;font-family:Arial,sans-serif;font-size:14px;color:#000;line-height:1.6;&quot;&gt;&lt;p&gt;Dear {!Get_Running_User_Approved.Name},&lt;/p&gt;&lt;p&gt;Marl Lab approval has been &lt;strong style=&quot;color:#00b300;&quot;&gt;granted&lt;/strong&gt;.&lt;/p&gt;&lt;h3 style=&quot;color:#00b300;border-bottom:2px solid #00b300;padding-bottom:4px;font-size:15px;&quot;&gt;Request Details&lt;/h3&gt;&lt;table style=&quot;border-collapse:collapse;width:100%;font-family:Arial,sans-serif;font-size:14px;color:#000;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;padding:6px;font-weight:bold;width:160px;&quot;&gt;Order Number:&lt;/td&gt;&lt;td style=&quot;padding:6px;&quot;&gt;{!Order.OrderNumber}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;padding:6px;font-weight:bold;&quot;&gt;Ship To Name:&lt;/td&gt;&lt;td style=&quot;padding:6px;&quot;&gt;{!Order.Ship_To_Account__r.Name}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;padding:6px;font-weight:bold;&quot;&gt;Requestor:&lt;/td&gt;&lt;td style=&quot;padding:6px;&quot;&gt;{!Order.Owner:User.FirstName} {!Order.Owner:User.LastName}&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;a href=&quot;{!URLBase}/lightning/r/Order/{!Order.Id}/view&quot; style=&quot;display:inline-block;background-color:#00b300;color:#fff;padding:8px 14px;text-decoration:none;border-radius:4px;font-weight:bold;&quot;&gt;View Order in Salesforce&lt;/a&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;Best regards,&lt;br&gt;&lt;strong&gt;Your CRM Support Team&lt;/strong&gt;&lt;/p&gt;&lt;p style=&quot;font-size:12px;color:#666;&quot;&gt;(The mySalesforce system automatically generated this message.)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>relatedRecordId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>logEmailOnSend</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <actionCalls>
+        <name>Send_In_Approval_Email_to_Running_User</name>
+        <label>Send In Approval Email to Running User</label>
+        <locationX>1370</locationX>
+        <locationY>998</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>Update_Order</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Create_Error_Log_Send_In_Approval_Email_to_Running_User</targetReference>
+        </faultConnector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>recipientAddresses</name>
+            <value/>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <stringValue>salesforce@synthomer.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>composeEmailContent</name>
+            <value>
+                <stringValue>True</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Marl Lab Approval Submitted – Order {!Order.OrderNumber}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <stringValue>&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;Marl Lab Approval Submitted&lt;/title&gt;&lt;/head&gt;&lt;body style=&quot;font-family:Arial,sans-serif;font-size:14px;color:#000;line-height:1.6;&quot;&gt;&lt;p&gt;Dear {!Get_Running_User_In_Approval.Name},&lt;/p&gt;&lt;p&gt;Order has been &lt;strong style=&quot;color:#003366;&quot;&gt;submitted for Marl Lab Approval&lt;/strong&gt;.&lt;/p&gt;&lt;h3 style=&quot;color:#003366;border-bottom:2px solid #003366;padding-bottom:4px;font-size:15px;&quot;&gt;Request Details&lt;/h3&gt;&lt;table style=&quot;border-collapse:collapse;width:100%;font-family:Arial,sans-serif;font-size:14px;color:#000;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;padding:6px;font-weight:bold;width:160px;&quot;&gt;Order Number:&lt;/td&gt;&lt;td style=&quot;padding:6px;&quot;&gt;{!Order.OrderNumber}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;padding:6px;font-weight:bold;&quot;&gt;Ship To Name:&lt;/td&gt;&lt;td style=&quot;padding:6px;&quot;&gt;{!Order.Ship_To_Account__r.Name}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;padding:6px;font-weight:bold;&quot;&gt;Requestor:&lt;/td&gt;&lt;td style=&quot;padding:6px;&quot;&gt;{!Order.Owner:User.FirstName} {!Order.Owner:User.LastName}&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;a href=&quot;{!URLBase}/lightning/r/Order/{!Order.Id}/view&quot; style=&quot;display:inline-block;background-color:#003366;color:#fff;padding:8px 14px;text-decoration:none;border-radius:4px;font-weight:bold;&quot;&gt;View Order in Salesforce&lt;/a&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;Best regards,&lt;br&gt;&lt;strong&gt;Your CRM Support Team&lt;/strong&gt;&lt;/p&gt;&lt;p style=&quot;font-size:12px;color:#666;&quot;&gt;(The mySalesforce system automatically generated this message.)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>relatedRecordId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>logEmailOnSend</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <actionCalls>
+        <name>Send_Order_Approved_Email_to_Distributor_Submittor</name>
+        <label>Send Order Approved Email to Distributor Submittor</label>
+        <locationX>7442</locationX>
+        <locationY>890</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>Update_Order</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Create_Error_Log_Send_Order_Approved_Email_to_Distributor_Submittor</targetReference>
+        </faultConnector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>recipientAddresses</name>
+            <value/>
+        </inputParameters>
+        <inputParameters>
+            <name>composeEmailContent</name>
+            <value>
+                <stringValue>True</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Sample Order Approved – Order {!Order.OrderNumber}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <stringValue>&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;Sample Order Approved&lt;/title&gt;&lt;/head&gt;&lt;body style=&quot;font-family:Arial,sans-serif;font-size:14px;color:#000;line-height:1.6;&quot;&gt;&lt;p&gt;Dear {!Get_User.Name},&lt;/p&gt;&lt;p&gt;Sample Order - {!Order.OrderNumber} has been &lt;strong style=&quot;color:#00b300;&quot;&gt;Approved&lt;/strong&gt;.&lt;/p&gt;&lt;h3 style=&quot;color:#00b300;border-bottom:2px solid #00b300;padding-bottom:4px;font-size:15px;&quot;&gt;Request Details&lt;/h3&gt;&lt;table style=&quot;border-collapse:collapse;width:100%;font-family:Arial,sans-serif;font-size:14px;color:#000;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;padding:6px;font-weight:bold;width:160px;&quot;&gt;Order Number:&lt;/td&gt;&lt;td style=&quot;padding:6px;&quot;&gt;{!Order.OrderNumber}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;padding:6px;font-weight:bold;&quot;&gt;Ship To Name:&lt;/td&gt;&lt;td style=&quot;padding:6px;&quot;&gt;{!Order.Ship_To_Account__r.Name}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;padding:6px;font-weight:bold;&quot;&gt;Requestor:&lt;/td&gt;&lt;td style=&quot;padding:6px;&quot;&gt;{!Order.Owner:User.FirstName} {!Order.Owner:User.LastName}&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;a href=&quot;{!URLBase}/lightning/r/Order/{!Order.Id}/view&quot; style=&quot;display:inline-block;background-color:#00b300;color:#fff;padding:8px 14px;text-decoration:none;border-radius:4px;font-weight:bold;&quot;&gt;View Order in Salesforce&lt;/a&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;Best regards,&lt;br&gt;&lt;strong&gt;Your CRM Support Team&lt;/strong&gt;&lt;/p&gt;&lt;p style=&quot;font-size:12px;color:#666;&quot;&gt;(The mySalesforce system automatically generated this message.)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>relatedRecordId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>logEmailOnSend</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <actionCalls>
+        <name>Send_Order_Approved_Email_to_Running_User</name>
+        <label>Send Order Approved Email to Running User</label>
+        <locationX>8498</locationX>
+        <locationY>998</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>Update_Order</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Create_Error_Log_Send_Order_Approved_Email_to_Running_User</targetReference>
+        </faultConnector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>recipientAddresses</name>
+            <value/>
+        </inputParameters>
+        <inputParameters>
+            <name>composeEmailContent</name>
+            <value>
+                <stringValue>True</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Sample Order Approved – Order {!Order.OrderNumber}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <stringValue>&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;Sample Order Approved&lt;/title&gt;&lt;/head&gt;&lt;body style=&quot;font-family:Arial,sans-serif;font-size:14px;color:#000;line-height:1.6;&quot;&gt;&lt;p&gt;Dear {!Get_Running_User_Not_Needed.Name},&lt;/p&gt;&lt;p&gt;Sample Order - {!Order.OrderNumber} has been &lt;strong style=&quot;color:#00b300;&quot;&gt;Approved&lt;/strong&gt;.&lt;/p&gt;&lt;h3 style=&quot;color:#00b300;border-bottom:2px solid #00b300;padding-bottom:4px;font-size:15px;&quot;&gt;Request Details&lt;/h3&gt;&lt;table style=&quot;border-collapse:collapse;width:100%;font-family:Arial,sans-serif;font-size:14px;color:#000;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;padding:6px;font-weight:bold;width:160px;&quot;&gt;Order Number:&lt;/td&gt;&lt;td style=&quot;padding:6px;&quot;&gt;{!Order.OrderNumber}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;padding:6px;font-weight:bold;&quot;&gt;Ship To Name:&lt;/td&gt;&lt;td style=&quot;padding:6px;&quot;&gt;{!Order.Ship_To_Account__r.Name}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;padding:6px;font-weight:bold;&quot;&gt;Requestor:&lt;/td&gt;&lt;td style=&quot;padding:6px;&quot;&gt;{!Order.Owner:User.FirstName} {!Order.Owner:User.LastName}&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;a href=&quot;{!URLBase}/lightning/r/Order/{!Order.Id}/view&quot; style=&quot;display:inline-block;background-color:#00b300;color:#fff;padding:8px 14px;text-decoration:none;border-radius:4px;font-weight:bold;&quot;&gt;View Order in Salesforce&lt;/a&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;Best regards,&lt;br&gt;&lt;strong&gt;Your CRM Support Team&lt;/strong&gt;&lt;/p&gt;&lt;p style=&quot;font-size:12px;color:#666;&quot;&gt;(The mySalesforce system automatically generated this message.)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>relatedRecordId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>logEmailOnSend</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <actionCalls>
+        <name>Send_Rejected_Email_to_Distributor_Submittor</name>
+        <label>Send Rejected Email to Distributor Submittor</label>
+        <locationX>5066</locationX>
+        <locationY>890</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>Update_Order</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Create_Error_Log_Send_Rejected_Email_to_Distributor_Submittor</targetReference>
+        </faultConnector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>recipientAddresses</name>
+            <value/>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <stringValue>salesforce@synthomer.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>composeEmailContent</name>
+            <value>
+                <stringValue>True</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Marl Lab Approval Rejected – Order {!Order.OrderNumber}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <stringValue>&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;Marl Lab Rejected&lt;/title&gt;&lt;/head&gt;&lt;body style=&quot;font-family:Arial,sans-serif;font-size:14px;color:#000;line-height:1.6;&quot;&gt;&lt;p&gt;Dear {!Get_User.Name},&lt;/p&gt;&lt;p&gt;Marl approval has been &lt;strong style=&quot;color:#cc0000;&quot;&gt;rejected&lt;/strong&gt;.&lt;/p&gt;&lt;h3 style=&quot;color:#cc0000;border-bottom:2px solid #cc0000;padding-bottom:4px;font-size:15px;&quot;&gt;Request Details&lt;/h3&gt;&lt;table style=&quot;border-collapse:collapse;width:100%;font-family:Arial,sans-serif;font-size:14px;color:#000;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;padding:6px;font-weight:bold;width:160px;&quot;&gt;Order Number:&lt;/td&gt;&lt;td style=&quot;padding:6px;&quot;&gt;{!Order.OrderNumber}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;padding:6px;font-weight:bold;&quot;&gt;Ship To Name:&lt;/td&gt;&lt;td style=&quot;padding:6px;&quot;&gt;{!Order.Ship_To_Account__r.Name}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;padding:6px;font-weight:bold;&quot;&gt;Requestor:&lt;/td&gt;&lt;td style=&quot;padding:6px;&quot;&gt;{!Order.Owner:User.FirstName} {!Order.Owner:User.LastName}&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;a href=&quot;{!URLBase}/lightning/r/Order/{!Order.Id}/view&quot; style=&quot;display:inline-block;background-color:#cc0000;color:#fff;padding:8px 14px;text-decoration:none;border-radius:4px;font-weight:bold;&quot;&gt;View Order in Salesforce&lt;/a&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;Best regards,&lt;br&gt;&lt;strong&gt;Your CRM Support Team&lt;/strong&gt;&lt;/p&gt;&lt;p style=&quot;font-size:12px;color:#666;&quot;&gt;(The mySalesforce system automatically generated this message.)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>relatedRecordId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>logEmailOnSend</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <actionCalls>
+        <name>Send_Rejected_Email_to_Running_User</name>
+        <label>Send Rejected Email to Running User</label>
+        <locationX>6122</locationX>
+        <locationY>998</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>Update_Order</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Create_Error_Log_Send_Rejected_Email_to_Running_User</targetReference>
+        </faultConnector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>recipientAddresses</name>
+            <value/>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <stringValue>salesforce@synthomer.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>composeEmailContent</name>
+            <value>
+                <stringValue>True</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Marl Lab Approval Rejected – Order {!Order.OrderNumber}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <stringValue>&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;Marl Lab Approval Rejected&lt;/title&gt;&lt;/head&gt;&lt;body style=&quot;font-family:Arial,sans-serif;font-size:14px;color:#000;line-height:1.6;&quot;&gt;&lt;p&gt;Dear {!Get_Running_User_Rejected.Name},&lt;/p&gt;&lt;p&gt;Marl Lab approval has been &lt;strong style=&quot;color:#ff0000;&quot;&gt;Rejected&lt;/strong&gt;.&lt;/p&gt;&lt;h3 style=&quot;color:#ff0000;border-bottom:2px solid #ff0000;padding-bottom:4px;font-size:15px;&quot;&gt;Request Details&lt;/h3&gt;&lt;table style=&quot;border-collapse:collapse;width:100%;font-family:Arial,sans-serif;font-size:14px;color:#000;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;padding:6px;font-weight:bold;width:160px;&quot;&gt;Order Number:&lt;/td&gt;&lt;td style=&quot;padding:6px;&quot;&gt;{!Order.OrderNumber}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;padding:6px;font-weight:bold;&quot;&gt;Ship To Name:&lt;/td&gt;&lt;td style=&quot;padding:6px;&quot;&gt;{!Order.Ship_To_Account__r.Name}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;padding:6px;font-weight:bold;&quot;&gt;Requestor:&lt;/td&gt;&lt;td style=&quot;padding:6px;&quot;&gt;{!Order.Owner:User.FirstName} {!Order.Owner:User.LastName}&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;a href=&quot;{!URLBase}/lightning/r/Order/{!Order.Id}/view&quot; style=&quot;display:inline-block;background-color:#ff0000;color:#fff;padding:8px 14px;text-decoration:none;border-radius:4px;font-weight:bold;&quot;&gt;View Order in Salesforce&lt;/a&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;Best regards,&lt;br&gt;&lt;strong&gt;Your CRM Support Team&lt;/strong&gt;&lt;/p&gt;&lt;p style=&quot;font-size:12px;color:#666;&quot;&gt;(The mySalesforce system automatically generated this message.)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>relatedRecordId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>logEmailOnSend</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
     <apiVersion>63.0</apiVersion>
+    <assignments>
+        <name>Assign_Email_DU_Approved</name>
+        <label>Assign Email</label>
+        <locationX>2690</locationX>
+        <locationY>782</locationY>
+        <assignmentItems>
+            <assignToReference>Email</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_User.Email</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Send_Approved_Email_to_Distributor_Submittor</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Email_DU_InApproval</name>
+        <label>Assign Email</label>
+        <locationX>314</locationX>
+        <locationY>782</locationY>
+        <assignmentItems>
+            <assignToReference>Email</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_User.Email</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Send_Approval_Email_to_Distributor_Submittor</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Email_DU_NotNeeded</name>
+        <label>Assign Email</label>
+        <locationX>7442</locationX>
+        <locationY>782</locationY>
+        <assignmentItems>
+            <assignToReference>Email</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_User.Email</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Send_Order_Approved_Email_to_Distributor_Submittor</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Email_DU_Rejected</name>
+        <label>Assign Email</label>
+        <locationX>5066</locationX>
+        <locationY>782</locationY>
+        <assignmentItems>
+            <assignToReference>Email</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_User.Email</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Send_Rejected_Email_to_Distributor_Submittor</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Email_RU_Approved</name>
+        <label>Assign Email</label>
+        <locationX>3746</locationX>
+        <locationY>890</locationY>
+        <assignmentItems>
+            <assignToReference>Email</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Running_User_Approved.Email</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Send_Approved_Email_to_Running_User</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Email_RU_In_Approval</name>
+        <label>Assign Email</label>
+        <locationX>1370</locationX>
+        <locationY>890</locationY>
+        <assignmentItems>
+            <assignToReference>Email</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Running_User_In_Approval.Email</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Send_In_Approval_Email_to_Running_User</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Email_RU_Not_needed</name>
+        <label>Assign Email</label>
+        <locationX>8498</locationX>
+        <locationY>890</locationY>
+        <assignmentItems>
+            <assignToReference>Email</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Running_User_Not_Needed.Email</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Send_Order_Approved_Email_to_Running_User</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Email_RU_Rejected</name>
+        <label>Assign Email</label>
+        <locationX>6122</locationX>
+        <locationY>890</locationY>
+        <assignmentItems>
+            <assignToReference>Email</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Running_User_Rejected.Email</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Send_Rejected_Email_to_Running_User</targetReference>
+        </connector>
+    </assignments>
     <assignments>
         <name>ML_Approval_Status_Approved</name>
         <label>ML Approval Status - Approved</label>
-        <locationX>1370</locationX>
+        <locationX>3086</locationX>
         <locationY>350</locationY>
         <assignmentItems>
             <assignToReference>Order.ML_Approval_Status__c</assignToReference>
@@ -267,7 +931,7 @@
     <assignments>
         <name>ML_Approval_Status_In_Progress</name>
         <label>ML Approval Status - In Progress</label>
-        <locationX>314</locationX>
+        <locationX>710</locationX>
         <locationY>350</locationY>
         <assignmentItems>
             <assignToReference>Order.ML_Approval_Status__c</assignToReference>
@@ -283,7 +947,7 @@
     <assignments>
         <name>ML_Approval_Status_Not_Needed</name>
         <label>ML Approval Status - Not Needed</label>
-        <locationX>3482</locationX>
+        <locationX>7838</locationX>
         <locationY>350</locationY>
         <assignmentItems>
             <assignToReference>Order.ML_Approval_Status__c</assignToReference>
@@ -306,7 +970,7 @@
     <assignments>
         <name>ML_Approval_Status_Rejected</name>
         <label>ML Approval Status - Rejected</label>
-        <locationX>2426</locationX>
+        <locationX>5462</locationX>
         <locationY>350</locationY>
         <assignmentItems>
             <assignToReference>Order.ML_Approval_Status__c</assignToReference>
@@ -327,9 +991,109 @@
         </connector>
     </assignments>
     <decisions>
+        <name>Check_Distributor_User_Approved</name>
+        <label>Check Distributor User</label>
+        <locationX>2558</locationX>
+        <locationY>674</locationY>
+        <defaultConnector>
+            <targetReference>Assign_Email_DU_Approved</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not Null</defaultConnectorLabel>
+        <rules>
+            <name>Null_Approved</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_User</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Create_Error_Log_Check_Distributor_User_Approved</targetReference>
+            </connector>
+            <label>Null</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Distributor_User_In_Approval</name>
+        <label>Check Distributor User</label>
+        <locationX>182</locationX>
+        <locationY>674</locationY>
+        <defaultConnector>
+            <targetReference>Assign_Email_DU_InApproval</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not Null</defaultConnectorLabel>
+        <rules>
+            <name>Null_In_Approval</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_User</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Create_Error_Log_Null_In_Approval</targetReference>
+            </connector>
+            <label>Null</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Distributor_User_Not_Needed</name>
+        <label>Check Distributor User</label>
+        <locationX>7310</locationX>
+        <locationY>674</locationY>
+        <defaultConnector>
+            <targetReference>Assign_Email_DU_NotNeeded</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not Null</defaultConnectorLabel>
+        <rules>
+            <name>Null</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_User</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Create_Error_Log_Check_Distributor_User_Not_Needed</targetReference>
+            </connector>
+            <label>Null</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Distributor_User_Rejected</name>
+        <label>Check Distributor User</label>
+        <locationX>4934</locationX>
+        <locationY>674</locationY>
+        <defaultConnector>
+            <targetReference>Assign_Email_DU_Rejected</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not Null</defaultConnectorLabel>
+        <rules>
+            <name>Null_Rejected</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_User</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Create_Error_Log_Null_Rejected</targetReference>
+            </connector>
+            <label>Null</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Check_ML_Approval_Stauts</name>
         <label>Check ML Approval Stauts</label>
-        <locationX>2294</locationX>
+        <locationX>5132</locationX>
         <locationY>242</locationY>
         <defaultConnector>
             <targetReference>Update_Order</targetReference>
@@ -397,9 +1161,109 @@
         </rules>
     </decisions>
     <decisions>
+        <name>Check_Running_User_Approved</name>
+        <label>Check Running User</label>
+        <locationX>3614</locationX>
+        <locationY>782</locationY>
+        <defaultConnector>
+            <targetReference>Assign_Email_RU_Approved</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not Null</defaultConnectorLabel>
+        <rules>
+            <name>Null_Running_User_Approved</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Running_User_Approved</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Create_Error_Log_Check_Running_User_Approved</targetReference>
+            </connector>
+            <label>Null</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Running_User_In_Approval</name>
+        <label>Check Running User</label>
+        <locationX>1238</locationX>
+        <locationY>782</locationY>
+        <defaultConnector>
+            <targetReference>Assign_Email_RU_In_Approval</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not Null</defaultConnectorLabel>
+        <rules>
+            <name>Null_Running_User_InApproval</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Running_User_In_Approval</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Create_Error_Log_Check_Running_User_In_Approval</targetReference>
+            </connector>
+            <label>Null</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Running_User_Not_Needed</name>
+        <label>Check Running User</label>
+        <locationX>8366</locationX>
+        <locationY>782</locationY>
+        <defaultConnector>
+            <targetReference>Assign_Email_RU_Not_needed</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not Null</defaultConnectorLabel>
+        <rules>
+            <name>Null_Running_User_Not_Needed</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Running_User_Not_Needed</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Create_Error_Log_Check_Running_User_Not_Needed</targetReference>
+            </connector>
+            <label>Null</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Running_User_Rejected</name>
+        <label>Check Running User</label>
+        <locationX>5990</locationX>
+        <locationY>782</locationY>
+        <defaultConnector>
+            <targetReference>Assign_Email_RU_Rejected</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not Null</defaultConnectorLabel>
+        <rules>
+            <name>Null_Running_User_Rejected</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Running_User_Rejected</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Create_Error_Log_Check_Running_User_Rejected</targetReference>
+            </connector>
+            <label>Null</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Order_Created_by_Distributor_User</name>
         <label>Order Created by Distributor User?</label>
-        <locationX>1370</locationX>
+        <locationX>3086</locationX>
         <locationY>458</locationY>
         <defaultConnector>
             <targetReference>Approval_chatter_post</targetReference>
@@ -409,10 +1273,10 @@
             <name>Yes_Approved</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Order.CreatedBy.Profile.Name</leftValueReference>
+                <leftValueReference>Order.Created_From_Portal__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Synthomer Distributor User</stringValue>
+                    <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -424,7 +1288,7 @@
     <decisions>
         <name>Order_created_by_Distributor_User_In_Approval</name>
         <label>Order created by Distributor User?</label>
-        <locationX>314</locationX>
+        <locationX>710</locationX>
         <locationY>458</locationY>
         <defaultConnector>
             <targetReference>In_Approval_chatter_post</targetReference>
@@ -434,10 +1298,10 @@
             <name>Yes_In_Approval</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Order.CreatedBy.Profile.Name</leftValueReference>
+                <leftValueReference>Order.Created_From_Portal__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Synthomer Distributor User</stringValue>
+                    <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -449,7 +1313,7 @@
     <decisions>
         <name>Order_Created_by_Distributor_User_NotNeeded</name>
         <label>Order Created by Distributor User?</label>
-        <locationX>3482</locationX>
+        <locationX>7838</locationX>
         <locationY>458</locationY>
         <defaultConnector>
             <targetReference>Approval_chatter_post_Not_Needed</targetReference>
@@ -474,7 +1338,7 @@
     <decisions>
         <name>Order_Created_by_Distributor_User_Rejected</name>
         <label>Order Created by Distributor User?</label>
-        <locationX>2426</locationX>
+        <locationX>5462</locationX>
         <locationY>458</locationY>
         <defaultConnector>
             <targetReference>Rejected_chatter_post</targetReference>
@@ -484,10 +1348,10 @@
             <name>Yes_Rejected</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Order.CreatedBy.Profile.Name</leftValueReference>
+                <leftValueReference>Order.Created_From_Portal__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Synthomer Distributor User</stringValue>
+                    <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -509,6 +1373,11 @@ else tag both</description>
    &quot;@[&quot; &amp; {!Order.OwnerId}&amp; &quot;]&quot;,
    &quot;@[&quot; &amp; {!Order.OwnerId} &amp; &quot;] and @[&quot; &amp; {!Order.CreatedById} &amp; &quot;]&quot;
 )</expression>
+    </formulas>
+    <formulas>
+        <name>URLBase</name>
+        <dataType>String</dataType>
+        <expression>LEFT({!$Api.Enterprise_Server_URL_610}, FIND(&quot;/services&quot;, {!$Api.Enterprise_Server_URL_610}) - 1)</expression>
     </formulas>
     <interviewLabel>Order - Sample Order Marl Labs - Approved/Rejected {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Order - Sample Order Marl Labs - Approved/Rejected</label>
@@ -532,9 +1401,133 @@ else tag both</description>
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <recordLookups>
+        <name>Get_Running_User_Approved</name>
+        <label>Get Running User</label>
+        <locationX>3614</locationX>
+        <locationY>674</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_Running_User_Approved</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Create_Error_Log_Get_Running_User_Approved</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Username</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Order.Running_User_for_Approval__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>IsActive</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>User</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Running_User_In_Approval</name>
+        <label>Get Running User</label>
+        <locationX>1238</locationX>
+        <locationY>674</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_Running_User_In_Approval</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Create_Error_Log_Get_Running_User_In_Approval</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Username</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Order.Running_User_for_Approval__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>IsActive</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>User</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Running_User_Not_Needed</name>
+        <label>Get Running User</label>
+        <locationX>8366</locationX>
+        <locationY>674</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_Running_User_Not_Needed</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Create_Error_Log_Get_Running_User_Not_Needed</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Username</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Order.Running_User_for_Approval__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>IsActive</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>User</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Running_User_Rejected</name>
+        <label>Get Running User</label>
+        <locationX>5990</locationX>
+        <locationY>674</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_Running_User_Rejected</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Create_Error_Log_Get_Running_User_Rejected</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Username</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Order.Running_User_for_Approval__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>IsActive</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>User</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
         <name>Get_User</name>
         <label>Get User</label>
-        <locationX>2294</locationX>
+        <locationX>5132</locationX>
         <locationY>134</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -558,15 +1551,15 @@ else tag both</description>
     <recordUpdates>
         <name>Update_Order</name>
         <label>Update Order</label>
-        <locationX>2294</locationX>
-        <locationY>1082</locationY>
+        <locationX>5132</locationX>
+        <locationY>1598</locationY>
         <faultConnector>
             <targetReference>Create_Error_Log_3</targetReference>
         </faultConnector>
         <inputReference>Order</inputReference>
     </recordUpdates>
     <start>
-        <locationX>2168</locationX>
+        <locationX>5006</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Get_User</targetReference>
@@ -576,7 +1569,7 @@ else tag both</description>
     <subflows>
         <name>Create_Error_Log</name>
         <label>Create Error Log</label>
-        <locationX>1898</locationX>
+        <locationX>4538</locationX>
         <locationY>674</locationY>
         <flowName>Subflow_Create_Log</flowName>
         <inputAssignments>
@@ -625,7 +1618,7 @@ else tag both</description>
     <subflows>
         <name>Create_Error_Log_2</name>
         <label>Create Error Log</label>
-        <locationX>2954</locationX>
+        <locationX>6914</locationX>
         <locationY>674</locationY>
         <flowName>Subflow_Create_Log</flowName>
         <inputAssignments>
@@ -674,8 +1667,8 @@ else tag both</description>
     <subflows>
         <name>Create_Error_Log_3</name>
         <label>Create Error Log</label>
-        <locationX>4450</locationX>
-        <locationY>1190</locationY>
+        <locationX>9730</locationX>
+        <locationY>1706</locationY>
         <flowName>Subflow_Create_Log</flowName>
         <inputAssignments>
             <name>VAR_FlowName</name>
@@ -723,7 +1716,7 @@ else tag both</description>
     <subflows>
         <name>Create_Error_Log_Approval_Chatter_Post_for_DM</name>
         <label>Create Error Log</label>
-        <locationX>1370</locationX>
+        <locationX>3218</locationX>
         <locationY>674</locationY>
         <flowName>Subflow_Create_Log</flowName>
         <inputAssignments>
@@ -770,9 +1763,517 @@ else tag both</description>
         </inputAssignments>
     </subflows>
     <subflows>
+        <name>Create_Error_Log_Check_Distributor_User_Approved</name>
+        <label>Create Error Log</label>
+        <locationX>2426</locationX>
+        <locationY>782</locationY>
+        <connector>
+            <targetReference>Update_Order</targetReference>
+        </connector>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Sample Order Marl Labs - Approved/Rejected</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Check Distributor User</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Information</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Distributor Submittor is not present.</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Create_Error_Log_Check_Distributor_User_Not_Needed</name>
+        <label>Create Error Log</label>
+        <locationX>7178</locationX>
+        <locationY>782</locationY>
+        <connector>
+            <targetReference>Update_Order</targetReference>
+        </connector>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Sample Order Marl Labs - Approved/Rejected</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Check Distributor User</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Information</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Distributor Submittor is not present.</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Create_Error_Log_Check_Running_User_Approved</name>
+        <label>Create Error Log</label>
+        <locationX>3482</locationX>
+        <locationY>890</locationY>
+        <connector>
+            <targetReference>Update_Order</targetReference>
+        </connector>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Sample Order Marl Labs - Approved/Rejected</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Check Distributor User</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Information</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Distributor Submittor is not present.</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Create_Error_Log_Check_Running_User_In_Approval</name>
+        <label>Create Error Log</label>
+        <locationX>1106</locationX>
+        <locationY>890</locationY>
+        <connector>
+            <targetReference>Update_Order</targetReference>
+        </connector>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Sample Order Marl Labs - Approved/Rejected</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Get Running User</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Error occurred while fetching user</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Create_Error_Log_Check_Running_User_Not_Needed</name>
+        <label>Create Error Log</label>
+        <locationX>8234</locationX>
+        <locationY>890</locationY>
+        <connector>
+            <targetReference>Update_Order</targetReference>
+        </connector>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Sample Order Marl Labs - Approved/Rejected</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Check Running User</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Information</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Running user is not present or inactive.</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Create_Error_Log_Check_Running_User_Rejected</name>
+        <label>Create Error Log</label>
+        <locationX>5858</locationX>
+        <locationY>890</locationY>
+        <connector>
+            <targetReference>Update_Order</targetReference>
+        </connector>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Sample Order Marl Labs - Approved/Rejected</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Check Distributor User</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Information</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Distributor Submittor is not present.</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Create_Error_Log_Get_Running_User_Approved</name>
+        <label>Create Error Log</label>
+        <locationX>4274</locationX>
+        <locationY>782</locationY>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Sample Order Marl Labs - Approved/Rejected</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Get Running User</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Error occurred while fetching user</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Create_Error_Log_Get_Running_User_In_Approval</name>
+        <label>Create Error Log</label>
+        <locationX>1898</locationX>
+        <locationY>782</locationY>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Sample Order Marl Labs - Approved/Rejected</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Get Running User</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Error occurred while fetching user</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Create_Error_Log_Get_Running_User_Not_Needed</name>
+        <label>Create Error Log</label>
+        <locationX>9026</locationX>
+        <locationY>782</locationY>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Sample Order Marl Labs - Approved/Rejected</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Get Running User</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Error occurred while fetching user</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Create_Error_Log_Get_Running_User_Rejected</name>
+        <label>Create Error Log</label>
+        <locationX>6650</locationX>
+        <locationY>782</locationY>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Sample Order Marl Labs - Approved/Rejected</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Get Running User</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Error occurred while fetching user</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
         <name>Create_Error_Log_Get_user</name>
         <label>Create Error Log</label>
-        <locationX>4714</locationX>
+        <locationX>9994</locationX>
         <locationY>242</locationY>
         <flowName>Subflow_Create_Log</flowName>
         <inputAssignments>
@@ -821,7 +2322,7 @@ else tag both</description>
     <subflows>
         <name>Create_Error_Log_In_Approval</name>
         <label>Create Error Log</label>
-        <locationX>314</locationX>
+        <locationX>842</locationX>
         <locationY>674</locationY>
         <flowName>Subflow_Create_Log</flowName>
         <inputAssignments>
@@ -870,7 +2371,7 @@ else tag both</description>
     <subflows>
         <name>Create_Error_Log_InApproval</name>
         <label>Create Error Log</label>
-        <locationX>842</locationX>
+        <locationX>2162</locationX>
         <locationY>674</locationY>
         <flowName>Subflow_Create_Log</flowName>
         <inputAssignments>
@@ -919,7 +2420,7 @@ else tag both</description>
     <subflows>
         <name>Create_Error_Log_Not_Needed</name>
         <label>Create Error Log</label>
-        <locationX>4010</locationX>
+        <locationX>9290</locationX>
         <locationY>674</locationY>
         <flowName>Subflow_Create_Log</flowName>
         <inputAssignments>
@@ -968,7 +2469,7 @@ else tag both</description>
     <subflows>
         <name>Create_Error_Log_Not_Needed_Chatter_Post</name>
         <label>Create Error Log</label>
-        <locationX>3482</locationX>
+        <locationX>7970</locationX>
         <locationY>674</locationY>
         <flowName>Subflow_Create_Log</flowName>
         <inputAssignments>
@@ -1015,9 +2516,113 @@ else tag both</description>
         </inputAssignments>
     </subflows>
     <subflows>
+        <name>Create_Error_Log_Null_In_Approval</name>
+        <label>Create Error Log</label>
+        <locationX>50</locationX>
+        <locationY>782</locationY>
+        <connector>
+            <targetReference>Update_Order</targetReference>
+        </connector>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Sample Order Marl Labs - Approved/Rejected</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Check Distributor User</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Information</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Distributor Submittor is not present.</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Create_Error_Log_Null_Rejected</name>
+        <label>Create Error Log</label>
+        <locationX>4802</locationX>
+        <locationY>782</locationY>
+        <connector>
+            <targetReference>Update_Order</targetReference>
+        </connector>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Sample Order Marl Labs - Approved/Rejected</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Check Distributor User</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Information</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Distributor Submittor is not present.</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
         <name>Create_Error_Log_Rejected_DM</name>
         <label>Create Error Log</label>
-        <locationX>2426</locationX>
+        <locationX>5594</locationX>
         <locationY>674</locationY>
         <flowName>Subflow_Create_Log</flowName>
         <inputAssignments>
@@ -1060,6 +2665,398 @@ else tag both</description>
             <name>VAR_SystemErrorMessage</name>
             <value>
                 <stringValue>Error occurred while posting on chatter</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Create_Error_Log_Send_Approval_Email_to_Distributor_Submittor</name>
+        <label>Create Error Log</label>
+        <locationX>578</locationX>
+        <locationY>998</locationY>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Sample Order Marl Labs - Approved/Rejected</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Send Approval Email to Distributor Submittor</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Error occurred while sending an email</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Create_Error_Log_Send_Approved_Email_to_Running_User</name>
+        <label>Create Error Log</label>
+        <locationX>4010</locationX>
+        <locationY>1106</locationY>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Sample Order Marl Labs - Approved/Rejected</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Send Approved Email to Running User</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Error occurred while sending an email</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Create_Error_Log_Send_In_Approval_Email_to_Running_User</name>
+        <label>Create Error Log</label>
+        <locationX>1634</locationX>
+        <locationY>1106</locationY>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Sample Order Marl Labs - Approved/Rejected</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Send In Approval Email to Running User</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Error occurred while sending an email</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Create_Error_Log_Send_Order_Approved_Email_to_Distributor_Submittor</name>
+        <label>Create Error Log</label>
+        <locationX>7706</locationX>
+        <locationY>998</locationY>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Sample Order Marl Labs - Approved/Rejected</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Send Order Approved Email to Distributor Submittor</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Error occurred while sending an email</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Create_Error_Log_Send_Order_Approved_Email_to_Running_User</name>
+        <label>Create Error Log</label>
+        <locationX>8762</locationX>
+        <locationY>1106</locationY>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Sample Order Marl Labs - Approved/Rejected</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Send Order Approved Email to Running User</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Error occurred while sending an email</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Create_Error_Log_Send_Rejected_Email_to_Distributor_Submittor</name>
+        <label>Create Error Log</label>
+        <locationX>5330</locationX>
+        <locationY>998</locationY>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Sample Order Marl Labs - Approved/Rejected</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Send Rejected Email to Distributor Submittor</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Error occurred while sending an email to distributor submittor. </stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Create_Error_Log_Send_Rejected_Email_to_Running_User</name>
+        <label>Create Error Log</label>
+        <locationX>6386</locationX>
+        <locationY>1106</locationY>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Sample Order Marl Labs - Approved/Rejected</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Send Rejected Email to Running User</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Error occurred while sending an email</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Create_Error_Send_Approved_Email_to_Running_User</name>
+        <label>Create Error Log</label>
+        <locationX>2954</locationX>
+        <locationY>998</locationY>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Order - Sample Order Marl Labs - Approved/Rejected</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Send Approved Email to Running User</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>Order.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Error occurred while sending an email</stringValue>
             </value>
         </inputAssignments>
     </subflows>
@@ -1147,6 +3144,13 @@ Kindly be informed that the status of Sample Order {!Order.OrderNumber} has been
 Best regards,
 Your CRM Support Team</text>
     </textTemplates>
+    <variables>
+        <name>Email</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
     <variables>
         <name>ML_Approval_Status</name>
         <dataType>String</dataType>

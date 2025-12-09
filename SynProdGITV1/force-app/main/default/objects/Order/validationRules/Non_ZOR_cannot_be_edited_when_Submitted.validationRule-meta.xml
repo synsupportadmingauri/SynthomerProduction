@@ -36,8 +36,10 @@
 	|| ISCHANGED(HQ_Account__c  )
 	|| ISCHANGED(RHQ_Account__c  )
 	|| ISCHANGED(End_Customer__c) 
-	|| ISCHANGED(Potential_Volume__c)
+	|| ISCHANGED(Potential_Volume1__c)
 	|| ISCHANGED(Application__c)
+	|| ISCHANGED( Instruction_for_Warehouse__c )
+ || ISCHANGED ( Internal_Notes__c )
 	
 )
 &amp;&amp; $User.Username &lt;&gt; &apos;support.gauri@gauri.com.syn&apos;</errorConditionFormula>

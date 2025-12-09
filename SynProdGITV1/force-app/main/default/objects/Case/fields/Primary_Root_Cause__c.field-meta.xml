@@ -24,19 +24,24 @@
                 <label>Capability</label>
             </value>
             <value>
-                <fullName>Communication</fullName>
-                <default>false</default>
-                <label>Communication</label>
-            </value>
-            <value>
                 <fullName>Communicable Disease</fullName>
                 <default>false</default>
                 <label>Communicable Disease</label>
             </value>
             <value>
+                <fullName>Communication</fullName>
+                <default>false</default>
+                <label>Communication</label>
+            </value>
+            <value>
                 <fullName>Defect</fullName>
                 <default>false</default>
                 <label>Defect</label>
+            </value>
+            <value>
+                <fullName>Equipment</fullName>
+                <default>false</default>
+                <label>Equipment</label>
             </value>
             <value>
                 <fullName>Human Element</fullName>
@@ -47,6 +52,11 @@
                 <fullName>Inspection</fullName>
                 <default>false</default>
                 <label>Inspection</label>
+            </value>
+            <value>
+                <fullName>Inventory Management</fullName>
+                <default>false</default>
+                <label>Inventory Management</label>
             </value>
             <value>
                 <fullName>IT</fullName>
@@ -69,6 +79,11 @@
                 <label>MoC</label>
             </value>
             <value>
+                <fullName>No Cause</fullName>
+                <default>false</default>
+                <label>No Cause</label>
+            </value>
+            <value>
                 <fullName>Practices</fullName>
                 <default>false</default>
                 <label>Practices</label>
@@ -79,29 +94,14 @@
                 <label>Recipes/Formulation</label>
             </value>
             <value>
-                <fullName>Third Party</fullName>
-                <default>false</default>
-                <label>Third Party</label>
-            </value>
-            <value>
-                <fullName>No Cause</fullName>
-                <default>false</default>
-                <label>No Cause</label>
-            </value>
-            <value>
-                <fullName>Equipment</fullName>
-                <default>false</default>
-                <label>Equipment</label>
-            </value>
-            <value>
-                <fullName>Inventory Management</fullName>
-                <default>false</default>
-                <label>Inventory Management</label>
-            </value>
-            <value>
                 <fullName>Regulatory/Environmental</fullName>
                 <default>false</default>
                 <label>Regulatory/Environmental</label>
+            </value>
+            <value>
+                <fullName>Third Party</fullName>
+                <default>false</default>
+                <label>Third Party</label>
             </value>
         </valueSetDefinition>
     </valueSet>

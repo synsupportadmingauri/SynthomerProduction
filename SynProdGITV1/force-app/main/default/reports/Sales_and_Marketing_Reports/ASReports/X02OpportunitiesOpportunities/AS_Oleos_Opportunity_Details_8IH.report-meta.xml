@@ -75,7 +75,7 @@
         <aggregateTypes>Sum</aggregateTypes>
         <field>AMOUNT.CONVERT</field>
     </columns>
-    <currency>EUR</currency>
+    <currency>USD</currency>
     <filter>
         <criteriaItems>
             <column>OpportunityLineItem.Product_Category__c</column>

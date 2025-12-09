@@ -43,7 +43,7 @@
             <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
-            <value>,COA</value>
+            <value>$USER</value>
         </criteriaItems>
     </filter>
     <format>Matrix</format>
@@ -60,7 +60,7 @@
     <name>New Opps CTGS AMER</name>
     <params>
         <name>terr</name>
-        <value>all</value>
+        <value>terr2Missing</value>
     </params>
     <params>
         <name>open</name>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_Activity_Ind__c</fullName>
+    <description>Last Activity Indicator</description>
+    <externalId>false</externalId>
+    <formula>IF((OR((TODAY()- LastActivityDate) &gt;  $CustomMetadata.SYN_Analytics__mdt.Oppotunity_Dashboard.Activity_Check_t__c , ISNULL(LastActivityDate))),&quot;🔴&quot;,&quot;🟢&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Last Activity Indicator</inlineHelpText>
+    <label>Last Activity Check</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

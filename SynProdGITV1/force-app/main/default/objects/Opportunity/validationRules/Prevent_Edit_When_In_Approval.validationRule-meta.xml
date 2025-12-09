@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Edit_When_In_Approval</fullName>
+    <active>true</active>
+    <description>Prevents users from editing key Opportunity fields when the record is in the “In Approval” stage.</description>
+    <errorConditionFormula>AND(
+    TEXT(Approval_Status__c) = &quot;In Approval&quot;,
+    NOT(
+        AND(
+            $User.FirstName = &quot;Automated&quot;,
+            $User.LastName = &quot;Process&quot;
+        )
+    ),
+    NOT($Permission.Syn_Update_Opportunity_Fields),
+    $Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+    OR(
+        ISCHANGED(Name),
+        ISCHANGED(AccountId),
+        ISCHANGED(Type),
+        ISCHANGED(Territory2Id),
+        ISCHANGED(Total_Volume__c),
+        ISCHANGED(OwnerId),
+        ISCHANGED(StageName),
+        ISCHANGED(CloseDate),
+        ISCHANGED(Probability),
+        ISCHANGED(CurrencyIsoCode),
+        ISCHANGED(Amount),
+        ISCHANGED(Total_Revenue__c),
+        ISCHANGED(Application__c),
+        ISCHANGED(Market_Segment__c),
+        ISCHANGED(Industry_Segment__c),
+        ISCHANGED(Reporting_Sub_Group__c),
+        ISCHANGED(Global_Business_Unit__c),
+        ISCHANGED(Description),
+        ISCHANGED(Target_Plant__c),
+        ISCHANGED(Forecasted__c),
+        ISCHANGED(First_Commercial_Order_Completed__c),
+        ISCHANGED(Loss_Reason__c),
+        ISCHANGED(NextStep),
+        ISCHANGED(Project_Type__c),
+        ISCHANGED(Project_Number__c),
+        ISCHANGED(LeadSource),
+        ISCHANGED(PO_Number__c),
+        ISCHANGED(Value_Selling_Opportunity__c),
+        ISCHANGED(Cross_Selling__c),
+        ISCHANGED(Opportunity_External_ID__c),
+        ISCHANGED(ForecastCategoryName),
+        ISCHANGED(Approval_Status__c)
+    )
+)</errorConditionFormula>
+    <errorMessage>This Opportunity is in the approval process.
+Please wait until the approval is complete or contact your Salesforce Administrator if an update is required.</errorMessage>
+</ValidationRule>

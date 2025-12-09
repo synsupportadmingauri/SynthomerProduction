@@ -16,28 +16,28 @@
         <aggregateTypes>Sum</aggregateTypes>
         <field>AMOUNT</field>
     </columns>
-    <currency>GBP</currency>
+    <currency>USD</currency>
     <filter>
         <booleanFilter>1 OR 2</booleanFilter>
         <criteriaItems>
-            <column>Opportunity.HQ_Account__c</column>
+            <column>PARENT_NAME</column>
             <columnToColumn>false</columnToColumn>
-            <isUnlocked>false</isUnlocked>
+            <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
             <value></value>
         </criteriaItems>
         <criteriaItems>
-            <column>Opportunity.RHQ_Account__c</column>
+            <column>ACCOUNT_TYPE</column>
             <columnToColumn>false</columnToColumn>
-            <isUnlocked>false</isUnlocked>
-            <operator>notEqual</operator>
-            <value></value>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>RHQ,HQ</value>
         </criteriaItems>
     </filter>
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
-        <field>FAMILY</field>
+        <field>OpportunityLineItem.Product_Category__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
     <name>Pipeline GM by product group Hierarchy</name>
@@ -64,6 +64,6 @@
     <showSubTotals>true</showSubTotals>
     <timeFrameFilter>
         <dateColumn>CLOSE_DATE</dateColumn>
-        <interval>INTERVAL_CUSTOM</interval>
+        <interval>INTERVAL_CURY</interval>
     </timeFrameFilter>
 </Report>

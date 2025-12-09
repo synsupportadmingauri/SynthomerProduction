@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Created_From_Portal__c</fullName>
-    <formula>CreatedBy.Profile.Name = &apos;Synthomer Distributor User&apos;</formula>
+    <formula>/* CreatedBy.Profile.Name = &apos;Synthomer Distributor User&apos; */
+ISPICKVAL(CreatedBy.UserType, &quot;PowerPartner&quot;)</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Created From Portal</label>
     <trackHistory>false</trackHistory>

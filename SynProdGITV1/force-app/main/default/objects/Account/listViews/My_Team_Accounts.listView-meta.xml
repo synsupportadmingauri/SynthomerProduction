@@ -3,6 +3,7 @@
     <fullName>My_Team_Accounts</fullName>
     <columns>ACCOUNT.NAME</columns>
     <columns>ACCOUNT.TYPE</columns>
+    <columns>Status__c</columns>
     <columns>ACCOUNT.PHONE1</columns>
     <columns>GUKC360_01__Customer_Id__c</columns>
     <columns>ACCOUNT.ADDRESS1_COUNTRY_CODE</columns>

@@ -231,7 +231,7 @@
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>relatedListComponentOverride</name>
-                    <value>NONE</value>
+                    <value>ADVGRID</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>rowsToDisplay</name>
@@ -412,6 +412,26 @@
                 </visibilityRule>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Distributor_Submission_Approval_Status__c</fieldItem>
+                <identifier>RecordDA_Approval__cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Potential_Volume1__c</fieldItem>
+                <identifier>RecordPotential_Volume1__cField</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-174205b7-4a47-49c4-82b5-8d9eb3f60ff8</name>
         <type>Facet</type>
     </flexiPageRegions>
@@ -574,7 +594,7 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.No_of_Packages__c</fieldItem>
-                <identifier>RecordNo_of_Packages_cField</identifier>
+                <identifier>RecordNo_of_Packages__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -899,6 +919,68 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
+                <fieldItem>Record.End_Customer__c</fieldItem>
+                <identifier>RecordEnd_Customer_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Application__c</fieldItem>
+                <identifier>RecordApplication_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <name>Facet-49b6be5a-d051-4ac4-bec0-9c4a88305e1a</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Potential_Volume1__c</fieldItem>
+                <identifier>RecordPotential_Volume1_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <name>Facet-1ef69910-b1be-47ea-9b19-af7c847b9cf3</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>body</name>
+                    <value>Facet-49b6be5a-d051-4ac4-bec0-9c4a88305e1a</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:column</componentName>
+                <identifier>flexipage_column6</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>body</name>
+                    <value>Facet-1ef69910-b1be-47ea-9b19-af7c847b9cf3</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:column</componentName>
+                <identifier>flexipage_column7</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>Facet-6c4384e9-c755-4444-970a-fd110017e4e0</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.Order_DM_External_ID__c</fieldItem>
                 <identifier>RecordOrder_DM_External_ID__cField</identifier>
             </fieldInstance>
@@ -994,7 +1076,14 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Integration_Error_Log__c</fieldItem>
-                <identifier>RecordIntegration_Error_Log_cField</identifier>
+                <identifier>RecordLog_Record__cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Integration_Status__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>In Error</rightValue>
+                    </criteria>
+                </visibilityRule>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -1103,7 +1192,7 @@
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>horizontalAlignment</name>
-                    <value>false</value>
+                    <value>true</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
@@ -1207,6 +1296,31 @@
             <componentInstance>
                 <componentInstanceProperties>
                     <name>columns</name>
+                    <value>Facet-6c4384e9-c755-4444-970a-fd110017e4e0</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>label</name>
+                    <value>Portal Information</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:fieldSection</componentName>
+                <identifier>flexipage_fieldSection4</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Created_From_Portal__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>true</rightValue>
+                    </criteria>
+                </visibilityRule>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>columns</name>
                     <value>Facet-10d94aac-877e-477d-80f6-a990722f40e4</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
@@ -1229,7 +1343,7 @@
             <componentInstance>
                 <componentInstanceProperties>
                     <name>relatedListComponentOverride</name>
-                    <value>NONE</value>
+                    <value>GRID</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>rowsToDisplay</name>
@@ -1566,7 +1680,12 @@
                 <valueListItems>
                     <value>CustomButton.Order.Conga_Composer_Proforma_Invoice</value>
                     <visibilityRule>
-                        <booleanFilter>( 1 OR 2 OR 3) AND 4</booleanFilter>
+                        <booleanFilter>1 AND ( 2  OR 3 OR 4) AND 5</booleanFilter>
+                        <criteria>
+                            <leftValue>{!Record.Salesforce_Order_Type__c}</leftValue>
+                            <operator>NE</operator>
+                            <rightValue>ZOR</rightValue>
+                        </criteria>
                         <criteria>
                             <leftValue>{!$Permission.CustomPermission.Syn_Sales_User}</leftValue>
                             <operator>EQUAL</operator>
