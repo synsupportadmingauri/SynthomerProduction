@@ -14,5 +14,5 @@
     </accessMappings>
     <name>Distributor Sharing Sets</name>
     <profiles>Synthomer Distributor User</profiles>
-    <profiles>synthomer distributor user - mfa</profiles>
+    <profiles>Synthomer Distributor User - MFA</profiles>
 </SharingSet>

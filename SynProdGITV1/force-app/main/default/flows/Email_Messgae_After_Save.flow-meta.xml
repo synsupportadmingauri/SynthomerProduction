@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <environments>Default</environments>
+    <interviewLabel>Email Messgae - After Save {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Email Messgae - After Save</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordDeletes>
+        <name>Delete_Email_Message</name>
+        <label>Delete Email Message</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <faultConnector>
+            <targetReference>Create_Log</targetReference>
+        </faultConnector>
+        <inputReference>$Record</inputReference>
+    </recordDeletes>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Delete_Email_Message</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Source</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Einstein Activity Capture</stringValue>
+            </value>
+        </filters>
+        <object>EmailMessage</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <name>Create_Log</name>
+        <label>Create Log</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <flowName>Subflow_Create_Log</flowName>
+        <inputAssignments>
+            <name>VAR_FlowName</name>
+            <value>
+                <stringValue>Email Messgae - After Save  </stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_FlowNode</name>
+            <value>
+                <stringValue>Delete</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_LogLevel</name>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_RecordInfo</name>
+            <value>
+                <elementReference>$Record.RelatedToId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_StackTrace</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>VAR_SystemErrorMessage</name>
+            <value>
+                <stringValue>Error while deleting Email Message</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+</Flow>

@@ -20,10 +20,6 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Signature_URL__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>Annual_Visit_Target__c</field>
             </layoutItems>
             <layoutItems>
@@ -39,6 +35,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>CompanyName</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Signature_URL__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
@@ -77,6 +77,22 @@
         <label>Background</label>
         <layoutColumns>
             <layoutItems>
+                <behavior>Required</behavior>
+                <field>Alias</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Required</behavior>
+                <field>TimeZoneSidKey</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Division</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Department</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Edit</behavior>
                 <field>AboutMe</field>
             </layoutItems>
@@ -95,6 +111,13 @@
     </layoutSections>
     <relatedLists>
         <relatedList>RelatedFileList</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>TERRITORY.NAME</fields>
+        <fields>MODEL.NAME</fields>
+        <fields>MODEL.STATE</fields>
+        <fields>ASSIGNMENT_DATE</fields>
+        <relatedList>UserAssignedTerritory2sRelatedList</relatedList>
     </relatedLists>
     <relatedLists>
         <relatedList>RelatedGroupList</relatedList>

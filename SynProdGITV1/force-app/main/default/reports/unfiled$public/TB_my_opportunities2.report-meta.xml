@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <aggregate>Sum</aggregate>
+            <axisBinding>y</axisBinding>
+            <column>Opportunity.Total_Volume__c</column>
+        </chartSummaries>
+        <chartType>HorizontalBarStacked</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>ACCOUNT.NAME</groupingColumn>
+        <legendPosition>Right</legendPosition>
+        <location>CHART_BOTTOM</location>
+        <secondaryGroupingColumn>OPPORTUNITY.NAME</secondaryGroupingColumn>
+        <showAxisLabels>false</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>false</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>STAGE_NAME</field>
+    </columns>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>CLOSE_DATE</field>
+    </columns>
+    <columns>
+        <field>CDF1</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>STAGE_DURATION</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>AGE</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_UPDATE_BY</field>
+    </columns>
+    <columns>
+        <field>DESCRIPTION</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Opportunity.Total_Volume__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>AMOUNT.CONVERT</field>
+    </columns>
+    <columns>
+        <field>TERR2_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_LAST_ACTIVITY</field>
+    </columns>
+    <columns>
+        <field>MEMBER_NAME</field>
+    </columns>
+    <crossFilters>
+        <criteriaItems>
+            <column>Name</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Thomas Bernhofer</value>
+        </criteriaItems>
+        <operation>with</operation>
+        <primaryTableColumn>OPPORTUNITY_ID</primaryTableColumn>
+        <relatedTable>OpportunityTeamMember-User</relatedTable>
+        <relatedTableJoinColumn>Opportunity</relatedTableJoinColumn>
+    </crossFilters>
+    <currency>EUR</currency>
+    <customDetailFormulas>
+        <calculatedFormula>IF(
+ /* 1. Prüfen, ob ALLE Felder leer sind */
+ AND(
+   ISBLANK(LAST_ACTIVITY),
+   ISBLANK(Opportunity.Last_Chatter_Post_Date__c),
+   ISBLANK(LAST_UPDATE),
+   ISBLANK(LAST_STAGE_CHANGE_DATE)
+ ),
+ NULL, /* Wenn ja, gib NULL zurück */
+ /* 2. Prüfen, ob LAST_ACTIVITY das Maximum ist */
+ IF(
+   AND(
+     NOT(ISBLANK(LAST_ACTIVITY)),
+     OR(ISBLANK(Opportunity.Last_Chatter_Post_Date__c), LAST_ACTIVITY &gt;= DATEVALUE(Opportunity.Last_Chatter_Post_Date__c)),
+     OR(ISBLANK(LAST_UPDATE), LAST_ACTIVITY &gt;= DATEVALUE(LAST_UPDATE)),
+     OR(ISBLANK(LAST_STAGE_CHANGE_DATE), LAST_ACTIVITY &gt;= DATEVALUE(LAST_STAGE_CHANGE_DATE))
+   ),
+   LAST_ACTIVITY, /* Wenn ja, gib LAST_ACTIVITY zurück */
+   /* 3. Prüfen, ob Chatter Post das Maximum ist */
+   IF(
+     AND(
+       NOT(ISBLANK(Opportunity.Last_Chatter_Post_Date__c)),
+       OR(ISBLANK(LAST_UPDATE), DATEVALUE(Opportunity.Last_Chatter_Post_Date__c) &gt;= DATEVALUE(LAST_UPDATE)),
+       OR(ISBLANK(LAST_STAGE_CHANGE_DATE), DATEVALUE(Opportunity.Last_Chatter_Post_Date__c) &gt;= DATEVALUE(LAST_STAGE_CHANGE_DATE))
+     ),
+     DATEVALUE(Opportunity.Last_Chatter_Post_Date__c), /* Wenn ja, gib Chatter Post zurück */
+     /* 4. Prüfen, ob Last Modified das Maximum ist */
+     IF(
+       AND(
+         NOT(ISBLANK(LAST_UPDATE)),
+         OR(ISBLANK(LAST_STAGE_CHANGE_DATE), DATEVALUE(LAST_UPDATE) &gt;= DATEVALUE(LAST_STAGE_CHANGE_DATE))
+       ),
+       DATEVALUE(LAST_UPDATE), /* Wenn ja, gib Last Modified zurück */
+       /* 5. Ansonsten MUSS es Last Stage Change sein (oder NULL, was durch DATEVALUE abgefangen wird) */
+       DATEVALUE(LAST_STAGE_CHANGE_DATE)
+     )
+   )
+ )
+)</calculatedFormula>
+        <dataType>DateOnly</dataType>
+        <developerName>CDF1</developerName>
+        <label>last update</label>
+        <scale>2</scale>
+    </customDetailFormulas>
+    <filter>
+        <criteriaItems>
+            <column>MEMBER_NAME</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Thomas Bernhofer</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>ACCOUNT.NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>OPPORTUNITY.NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>TB_my opportunities</name>
+    <params>
+        <name>terr</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>include</name>
+        <value>open</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>OpportunityTeam@Opportunity.Application__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <sortColumn>CDF1</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CLOSE_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

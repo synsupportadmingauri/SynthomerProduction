@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>OPPORTUNITY.NAME</field>
+    </columns>
+    <columns>
+        <field>STAGE_NAME</field>
+    </columns>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>CLOSE_DATE</field>
+    </columns>
+    <columns>
+        <field>CDF1</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>STAGE_DURATION</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>AGE</field>
+    </columns>
+    <columns>
+        <field>MEMBER_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_UPDATE_BY</field>
+    </columns>
+    <columns>
+        <field>DESCRIPTION</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Opportunity.Total_Volume__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>AMOUNT.CONVERT</field>
+    </columns>
+    <columns>
+        <field>TERR2_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_LAST_ACTIVITY</field>
+    </columns>
+    <columns>
+        <field>MEMBER_ROLE</field>
+    </columns>
+    <currency>EUR</currency>
+    <customDetailFormulas>
+        <calculatedFormula>IF(
+ /* 1. Prüfen, ob ALLE Felder leer sind */
+ AND(
+   ISBLANK(LAST_ACTIVITY),
+   ISBLANK(Opportunity.Last_Chatter_Post_Date__c),
+   ISBLANK(LAST_UPDATE),
+   ISBLANK(LAST_STAGE_CHANGE_DATE)
+ ),
+ NULL, /* Wenn ja, gib NULL zurück */
+ /* 2. Prüfen, ob LAST_ACTIVITY das Maximum ist */
+ IF(
+   AND(
+     NOT(ISBLANK(LAST_ACTIVITY)),
+     OR(ISBLANK(Opportunity.Last_Chatter_Post_Date__c), LAST_ACTIVITY &gt;= DATEVALUE(Opportunity.Last_Chatter_Post_Date__c)),
+     OR(ISBLANK(LAST_UPDATE), LAST_ACTIVITY &gt;= DATEVALUE(LAST_UPDATE)),
+     OR(ISBLANK(LAST_STAGE_CHANGE_DATE), LAST_ACTIVITY &gt;= DATEVALUE(LAST_STAGE_CHANGE_DATE))
+   ),
+   LAST_ACTIVITY, /* Wenn ja, gib LAST_ACTIVITY zurück */
+   /* 3. Prüfen, ob Chatter Post das Maximum ist */
+   IF(
+     AND(
+       NOT(ISBLANK(Opportunity.Last_Chatter_Post_Date__c)),
+       OR(ISBLANK(LAST_UPDATE), DATEVALUE(Opportunity.Last_Chatter_Post_Date__c) &gt;= DATEVALUE(LAST_UPDATE)),
+       OR(ISBLANK(LAST_STAGE_CHANGE_DATE), DATEVALUE(Opportunity.Last_Chatter_Post_Date__c) &gt;= DATEVALUE(LAST_STAGE_CHANGE_DATE))
+     ),
+     DATEVALUE(Opportunity.Last_Chatter_Post_Date__c), /* Wenn ja, gib Chatter Post zurück */
+     /* 4. Prüfen, ob Last Modified das Maximum ist */
+     IF(
+       AND(
+         NOT(ISBLANK(LAST_UPDATE)),
+         OR(ISBLANK(LAST_STAGE_CHANGE_DATE), DATEVALUE(LAST_UPDATE) &gt;= DATEVALUE(LAST_STAGE_CHANGE_DATE))
+       ),
+       DATEVALUE(LAST_UPDATE), /* Wenn ja, gib Last Modified zurück */
+       /* 5. Ansonsten MUSS es Last Stage Change sein (oder NULL, was durch DATEVALUE abgefangen wird) */
+       DATEVALUE(LAST_STAGE_CHANGE_DATE)
+     )
+   )
+ )
+)</calculatedFormula>
+        <dataType>DateOnly</dataType>
+        <developerName>CDF1</developerName>
+        <label>Last Activity Date</label>
+        <scale>2</scale>
+    </customDetailFormulas>
+    <filter>
+        <criteriaItems>
+            <column>TERR2_NAME</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>coatings europe north</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>MEMBER_ROLE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Commercial Caretaker</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>CEN - opportunities</name>
+    <params>
+        <name>terr</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>include</name>
+        <value>open</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>OpportunityTeam@Opportunity.Application__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <sortColumn>CLOSE_DATE</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CLOSE_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

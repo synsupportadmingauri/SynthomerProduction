@@ -3,8 +3,8 @@
     <actionCalls>
         <name>Chatter_Post_7_Days_before_Close_Date</name>
         <label>Chatter Post - 7 Days before Close Date</label>
-        <locationX>594</locationX>
-        <locationY>2040</locationY>
+        <locationX>869</locationX>
+        <locationY>2148</locationY>
         <actionName>chatterPost</actionName>
         <actionType>chatterPost</actionType>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
@@ -27,8 +27,8 @@
     <actionCalls>
         <name>Copy_1_of_Chatter_Post_7_Days_before_Close_Date</name>
         <label>Copy 1 of Chatter Post - 7 Days before Close Date</label>
-        <locationX>946</locationX>
-        <locationY>2148</locationY>
+        <locationX>1221</locationX>
+        <locationY>2256</locationY>
         <actionName>chatterPost</actionName>
         <actionType>chatterPost</actionType>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
@@ -51,8 +51,8 @@
     <actionCalls>
         <name>Notify_7_day_s_Before_of_Close_Date</name>
         <label>Notify 7 day&apos;s Before of Close Date</label>
-        <locationX>594</locationX>
-        <locationY>1932</locationY>
+        <locationX>869</locationX>
+        <locationY>2040</locationY>
         <actionName>customNotificationAction</actionName>
         <actionType>customNotificationAction</actionType>
         <connector>
@@ -95,8 +95,8 @@
     <actionCalls>
         <name>Notify_7_day_s_Before_of_Close_Date2</name>
         <label>Notify 7 day&apos;s Before of Close Date</label>
-        <locationX>946</locationX>
-        <locationY>2040</locationY>
+        <locationX>1221</locationX>
+        <locationY>2148</locationY>
         <actionName>customNotificationAction</actionName>
         <actionType>customNotificationAction</actionType>
         <connector>
@@ -140,8 +140,8 @@
     <assignments>
         <name>Assign_Owner</name>
         <label>Assign Owner</label>
-        <locationX>946</locationX>
-        <locationY>1524</locationY>
+        <locationX>1221</locationX>
+        <locationY>1632</locationY>
         <assignmentItems>
             <assignToReference>SalesTeamIds</assignToReference>
             <operator>Add</operator>
@@ -156,8 +156,8 @@
     <assignments>
         <name>Assign_Team_Member_Ids</name>
         <label>Assign Team Member Ids</label>
-        <locationX>858</locationX>
-        <locationY>1140</locationY>
+        <locationX>1133</locationX>
+        <locationY>1248</locationY>
         <assignmentItems>
             <assignToReference>SalesTeamIds</assignToReference>
             <operator>Add</operator>
@@ -172,8 +172,8 @@
     <assignments>
         <name>Assign_User_Names</name>
         <label>Assign User Names</label>
-        <locationX>682</locationX>
-        <locationY>1740</locationY>
+        <locationX>957</locationX>
+        <locationY>1848</locationY>
         <assignmentItems>
             <assignToReference>UserNames</assignToReference>
             <operator>Add</operator>
@@ -188,8 +188,8 @@
     <assignments>
         <name>Assign_User_Names2</name>
         <label>Assign User Names</label>
-        <locationX>1034</locationX>
-        <locationY>1848</locationY>
+        <locationX>1309</locationX>
+        <locationY>1956</locationY>
         <assignmentItems>
             <assignToReference>UserNames</assignToReference>
             <operator>Add</operator>
@@ -204,8 +204,8 @@
     <decisions>
         <name>Check_User_for_flow_bypass</name>
         <label>Check User for flow bypass</label>
-        <locationX>462</locationX>
-        <locationY>492</locationY>
+        <locationX>737</locationX>
+        <locationY>600</locationY>
         <defaultConnector>
             <targetReference>Get_Opportunity_Sales_Team</targetReference>
         </defaultConnector>
@@ -224,10 +224,32 @@
         </rules>
     </decisions>
     <decisions>
+        <name>Closed_Opportunity</name>
+        <label>Closed Opportunity?</label>
+        <locationX>451</locationX>
+        <locationY>276</locationY>
+        <defaultConnector>
+            <targetReference>Get_Bypass_User</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Open</defaultConnectorLabel>
+        <rules>
+            <name>Closed</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.IsClosed</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Closed</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Is_Owner_In_Team</name>
         <label>Is Owner In Team</label>
-        <locationX>770</locationX>
-        <locationY>1416</locationY>
+        <locationX>1045</locationX>
+        <locationY>1524</locationY>
         <defaultConnector>
             <targetReference>Assign_Owner</targetReference>
         </defaultConnector>
@@ -252,8 +274,8 @@
         <description>Checks whether the user is active or not.</description>
         <name>Is_User_Active</name>
         <label>Is User Active?</label>
-        <locationX>990</locationX>
-        <locationY>1032</locationY>
+        <locationX>1265</locationX>
+        <locationY>1140</locationY>
         <defaultConnector>
             <targetReference>Iterate_Over_Opportunity_Team_members</targetReference>
         </defaultConnector>
@@ -291,8 +313,8 @@
     <loops>
         <name>Iterate_Over_Get_User_Details</name>
         <label>Iterate Over Get User Details</label>
-        <locationX>594</locationX>
-        <locationY>1632</locationY>
+        <locationX>869</locationX>
+        <locationY>1740</locationY>
         <collectionReference>Get_user_Details</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -305,8 +327,8 @@
     <loops>
         <name>Iterate_Over_Get_User_Details2</name>
         <label>Iterate Over Get User Details</label>
-        <locationX>946</locationX>
-        <locationY>1740</locationY>
+        <locationX>1221</locationX>
+        <locationY>1848</locationY>
         <collectionReference>Get_user_Details2</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -319,8 +341,8 @@
     <loops>
         <name>Iterate_Over_Opportunity_Team_members</name>
         <label>Iterate Over Opportunity Team members</label>
-        <locationX>770</locationX>
-        <locationY>924</locationY>
+        <locationX>1045</locationX>
+        <locationY>1032</locationY>
         <collectionReference>Get_Opportunity_Sales_Team</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -353,8 +375,8 @@
         <description>Get the bypass user-related flow - child of Bypass Flows - user</description>
         <name>Get_Bypass_Flows_User_related_Flow</name>
         <label>Get Bypass Flows - User related Flow</label>
-        <locationX>462</locationX>
-        <locationY>384</locationY>
+        <locationX>737</locationX>
+        <locationY>492</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Check_User_for_flow_bypass</targetReference>
@@ -382,8 +404,8 @@
         <description>Get the current user details if he can bypass the validation</description>
         <name>Get_Bypass_User</name>
         <label>Get Bypass User</label>
-        <locationX>462</locationX>
-        <locationY>276</locationY>
+        <locationX>737</locationX>
+        <locationY>384</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Get_Bypass_Flows_User_related_Flow</targetReference>
@@ -410,8 +432,8 @@
     <recordLookups>
         <name>Get_Opportunity_Sales_Team</name>
         <label>Get Opportunity Team Members</label>
-        <locationX>770</locationX>
-        <locationY>600</locationY>
+        <locationX>1045</locationX>
+        <locationY>708</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Get_User</targetReference>
@@ -431,8 +453,8 @@
     <recordLookups>
         <name>Get_User</name>
         <label>Get User</label>
-        <locationX>770</locationX>
-        <locationY>708</locationY>
+        <locationX>1045</locationX>
+        <locationY>816</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Notification_Type</targetReference>
@@ -460,8 +482,8 @@
         <description>Get only the Active user (Email can be only sent to Active users)</description>
         <name>Get_user_Details</name>
         <label>Get user Details</label>
-        <locationX>594</locationX>
-        <locationY>1524</locationY>
+        <locationX>869</locationX>
+        <locationY>1632</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Iterate_Over_Get_User_Details</targetReference>
@@ -489,8 +511,8 @@
         <description>Get only the Active user (Email can be only sent to Active users)</description>
         <name>Get_user_Details2</name>
         <label>Get user Details</label>
-        <locationX>946</locationX>
-        <locationY>1632</locationY>
+        <locationX>1221</locationX>
+        <locationY>1740</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Iterate_Over_Get_User_Details2</targetReference>
@@ -517,8 +539,8 @@
     <recordLookups>
         <name>Notification_Type</name>
         <label>Notification Type</label>
-        <locationX>770</locationX>
-        <locationY>816</locationY>
+        <locationX>1045</locationX>
+        <locationY>924</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Iterate_Over_Opportunity_Team_members</targetReference>
@@ -543,7 +565,7 @@
         <scheduledPaths>
             <name>Scheduled_BIP_Start</name>
             <connector>
-                <targetReference>Get_Bypass_User</targetReference>
+                <targetReference>Closed_Opportunity</targetReference>
             </connector>
             <label>Scheduled BIP Start</label>
             <offsetNumber>-7</offsetNumber>

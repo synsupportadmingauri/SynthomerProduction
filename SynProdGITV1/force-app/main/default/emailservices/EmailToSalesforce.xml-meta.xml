@@ -229,6 +229,13 @@
         <runAsUser>sebastien.lochner@synthomer.com</runAsUser>
     </emailServicesAddresses>
     <emailServicesAddresses>
+        <authorizedSenders>minmarco.wei@synthomer.com</authorizedSenders>
+        <developerName>emailtosalesforce127</developerName>
+        <isActive>true</isActive>
+        <localPart>emailtosalesforce</localPart>
+        <runAsUser>minmarco.wei@synthomer.com</runAsUser>
+    </emailServicesAddresses>
+    <emailServicesAddresses>
         <authorizedSenders>joe.isaac@synthomer.com</authorizedSenders>
         <developerName>emailtosalesforce13</developerName>
         <isActive>true</isActive>

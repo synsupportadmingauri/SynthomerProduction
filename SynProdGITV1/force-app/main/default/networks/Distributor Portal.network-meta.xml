@@ -53,7 +53,7 @@
         <permissionSet>Distributor_Manager_Permission_Set</permissionSet>
         <profile>Admin</profile>
         <profile>Synthomer Distributor User</profile>
-        <profile>synthomer distributor user - mfa</profile>
+        <profile>Synthomer Distributor User - MFA</profile>
     </networkMemberGroups>
     <networkPageOverrides>
         <changePasswordPageOverrideSetting>Standard</changePasswordPageOverrideSetting>

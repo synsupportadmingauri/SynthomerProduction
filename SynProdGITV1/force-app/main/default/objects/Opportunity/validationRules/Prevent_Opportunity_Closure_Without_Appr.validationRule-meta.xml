@@ -5,8 +5,9 @@
     <description>Prevents users from setting the Opportunity Stage = Closed Won if the Approval Status is not Approved.
 This ensures that only Opportunities that have gone through and passed the approval process can be closed as won.</description>
     <errorConditionFormula>AND(
-    ISPICKVAL(StageName, &quot;Closed Won&quot;),
-    NOT(ISPICKVAL(Approval_Status__c, &quot;Approved&quot;))
+ISPICKVAL(StageName, &quot;Closed Won&quot;),
+NOT(ISPICKVAL(Approval_Status__c, &quot;Approved&quot;)),
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;
 )</errorConditionFormula>
     <errorMessage>This Opportunity is not approved yet — you cannot close it.</errorMessage>
 </ValidationRule>

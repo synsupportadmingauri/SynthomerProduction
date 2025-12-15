@@ -65,10 +65,6 @@
     <name>ApexComponent</name>
   </types>
   <types>
-    <members>apexEmailNotifications</members>
-    <name>ApexEmailNotifications</name>
-  </types>
-  <types>
     <members>AnswersHome</members>
     <members>BandwidthExceeded</members>
     <members>ChangePassword</members>
@@ -95,27 +91,12 @@
     <name>ApexPage</name>
   </types>
   <types>
-    <members>AppSwitcher</members>
-    <members>Salesforce1</members>
-    <name>AppMenu</name>
-  </types>
-  <types>
     <members>Lead.Lead Assignment Rule</members>
     <name>AssignmentRule</name>
   </types>
   <types>
-    <members>Case</members>
-    <members>Lead</members>
-    <name>AssignmentRules</name>
-  </types>
-  <types>
     <members>Default</members>
     <name>Audience</name>
-  </types>
-  <types>
-    <members>Case</members>
-    <members>Lead</members>
-    <name>AutoResponseRules</name>
   </types>
   <types>
     <members>primaryModel</members>
@@ -184,6 +165,7 @@
     <members>Image_20251007_134402</members>
     <members>Image_20251007_150221png</members>
     <members>Image_20251007_150257png</members>
+    <members>Image_20251024_193202</members>
     <members>LAIEX_Price_List_SEPTEMBER_2025</members>
     <members>Lead_generation</members>
     <members>PortalBanner_1</members>
@@ -206,27 +188,6 @@
     <members>Inside_Sales</members>
     <members>Sales_Leader</members>
     <members>Sales_Operations</members>
-    <members>standard__AllTabSet</members>
-    <members>standard__AppLauncher</members>
-    <members>standard__Approvals</members>
-    <members>standard__Chatter</members>
-    <members>standard__Community</members>
-    <members>standard__DataGovernanceConsole</members>
-    <members>standard__FlowsApp</members>
-    <members>standard__HVSConsole</members>
-    <members>standard__LightningBolt</members>
-    <members>standard__LightningInstrumentation</members>
-    <members>standard__LightningSales</members>
-    <members>standard__LightningSalesConsole</members>
-    <members>standard__Marketing</members>
-    <members>standard__MSJApp</members>
-    <members>standard__OnlineSales</members>
-    <members>standard__Platform</members>
-    <members>standard__Sales</members>
-    <members>standard__SalesCloudMobile</members>
-    <members>standard__SalesforceCMS</members>
-    <members>standard__Service</members>
-    <members>standard__ServiceConsole</members>
     <members>Success_Manager</members>
     <members>Synthomer_Sales_Admin</members>
     <name>CustomApplication</name>
@@ -271,6 +232,7 @@
     <members>Account_Sales_Data__c.Payment_Term__c</members>
     <members>Account_Sales_Data__c.Sales_Org_Data__c</members>
     <members>Account.Segmentation__c</members>
+    <members>Account.Status__c</members>
     <members>Account.Sub_Reporting_Groups__c</members>
     <members>AccountTeamMember.Industry_Segment_Codes__c</members>
     <members>AccountTeamMember.Industry_Segments__c</members>
@@ -280,7 +242,9 @@
     <members>Activity.Account_Name__c</members>
     <members>Activity.Activity_External_Id__c</members>
     <members>Activity.Assigned_To__c</members>
+    <members>Activity.Effective_Check_Results__c</members>
     <members>Activity.Effectiveness_Check__c</members>
+    <members>Activity.Effectiveness_Check_Method__c</members>
     <members>Activity.Global_Business_Unit__c</members>
     <members>Activity.HQ_Account__c</members>
     <members>Activity.HQ_Account_Id__c</members>
@@ -288,6 +252,7 @@
     <members>Activity.Is_My_Team_Activity__c</members>
     <members>Activity.ParentId__c</members>
     <members>Activity.Priority__c</members>
+    <members>Activity.Product_Category__c</members>
     <members>Activity.Reporting_Sub_Group__c</members>
     <members>Activity.RHQ_Account__c</members>
     <members>Activity.RHQ_Account_Id__c</members>
@@ -306,6 +271,8 @@
     <members>Case.Case_Age__c</members>
     <members>Case.Case_Closed_Duration__c</members>
     <members>Case.Case_Created_date__c</members>
+    <members>Case.Case_Created_Month__c</members>
+    <members>Case.Case_Created_Year__c</members>
     <members>Case.Case_First_Closure_Completed__c</members>
     <members>Case.Case_Members_And_Roles__c</members>
     <members>Case.Case_Open_Duration__c</members>
@@ -320,6 +287,7 @@
     <members>Case.Corrective_Action_Implementation__c</members>
     <members>Case.Corrective_Action_Impl_Status__c</members>
     <members>Case.CreatedBy_Name__c</members>
+    <members>Case.Created_Month__c</members>
     <members>Case.Customer_Feedback__c</members>
     <members>Case.Customer_Feedback_Documented_Date__c</members>
     <members>Case.Customer_Feedback_Duration__c</members>
@@ -375,6 +343,7 @@
     <members>Complaint_Cost__c.Price__c</members>
     <members>Contact.External_Contact_ID__c</members>
     <members>Contact.Record_Type_Name__c</members>
+    <members>Contact.Status__c</members>
     <members>ContentVersion.Case_File_Type__c</members>
     <members>ContentVersion.Content_Version_External_Id__c</members>
     <members>ContentVersion.Is_Signature__c</members>
@@ -444,6 +413,7 @@
     <members>Log_Retention_Duration__mdt.Duration__c</members>
     <members>Name_Value_Pair__mdt.Value__c</members>
     <members>Opportunity.Application__c</members>
+    <members>Opportunity.Approval_Status__c</members>
     <members>Opportunity.Budget_Confirmed__c</members>
     <members>Opportunity_Competitors__c.Competitor__c</members>
     <members>Opportunity_Competitors__c.Competitor_Price__c</members>
@@ -457,6 +427,7 @@
     <members>Opportunity.First_Commercial_Order_Completed__c</members>
     <members>Opportunity.Forecasted__c</members>
     <members>Opportunity.Global_Business_Unit__c</members>
+    <members>Opportunity.GM_CY_Impact__c</members>
     <members>Opportunity.HAS_TERRITORY_A_VALUE__c</members>
     <members>Opportunity__hd.Amount__c</members>
     <members>Opportunity__hd.Amount__c</members>
@@ -474,6 +445,7 @@
     <members>Opportunity.Industry_Segment__c</members>
     <members>Opportunity.Is_Close_Date_in_past__c</members>
     <members>Opportunity.Is_My_Opportunity__c</members>
+    <members>Opportunity.Last_Activity_Ind__c</members>
     <members>Opportunity.Last_Chatter_Post_Date__c</members>
     <members>OpportunityLineItem.Opportunity_Product_External_ID__c</members>
     <members>OpportunityLineItem.Product_Category__c</members>
@@ -485,13 +457,17 @@
     <members>Opportunity.Market_Segment__c</members>
     <members>Opportunity.Migrated__c</members>
     <members>Opportunity.Opportunity_External_ID__c</members>
+    <members>Opportunity.Opportunity_Link__c</members>
     <members>Opportunity.PO_Number__c</members>
     <members>Opportunity.Project_Number__c</members>
     <members>Opportunity.Project_Type__c</members>
+    <members>Opportunity.Quantity_CY_Impact__c</members>
     <members>Opportunity.Reporting_Sub_Group__c</members>
+    <members>Opportunity.Revenue_CY_Impact__c</members>
     <members>Opportunity.RHQ_Account__c</members>
     <members>Opportunity.ROI_Analysis_Completed__c</members>
     <members>Opportunity.Sample_Feedback__c</members>
+    <members>Opportunity.Stage_Risk_Ind__c</members>
     <members>Opportunity.Target_Plant__c</members>
     <members>OpportunityTeamMember.Is_My_Team_Member__c</members>
     <members>OpportunityTeamMember.Opportunity_Team_Member_External_ID__c</members>
@@ -502,6 +478,7 @@
     <members>Opportunity.Total_Revenue__c</members>
     <members>Opportunity.Total_Volume__c</members>
     <members>Opportunity.Value_Selling_Opportunity__c</members>
+    <members>Order.Account_Channel__c</members>
     <members>Order.Application__c</members>
     <members>Order.Approved_Line_Items__c</members>
     <members>Order.Can_Submit_for_Approval__c</members>
@@ -573,8 +550,10 @@
     <members>Order.Packing_Date_and_Tracking_Match__c</members>
     <members>Order.Payment_Terms__c</members>
     <members>Order.Plant__c</members>
+    <members>Order.Potential_Volume1__c</members>
     <members>Order.Potential_Volume__c</members>
     <members>Order.RHQ_Account__c</members>
+    <members>Order.Running_User_for_Approval__c</members>
     <members>Order.S4_Order_Type__c</members>
     <members>Order.Salesforce_Order_Type__c</members>
     <members>Order.Sales_Organisation__c</members>
@@ -722,17 +701,31 @@
     <members>Service_Team_Member__c.Service_Team__c</members>
     <members>Service_Team_Member__c.Service_Team_Member_External_Id__c</members>
     <members>Service_Team_Member__c.User_Team_Member__c</members>
+    <members>SYN_Analytics__mdt.Activity_Check_t__c</members>
+    <members>SYN_Analytics__mdt.Adoption_Stage__c</members>
+    <members>SYN_Analytics__mdt.Chemistry_Stage_Threshold__c</members>
+    <members>SYN_Analytics__mdt.Commercial_Stage_Threshold__c</members>
+    <members>SYN_Analytics__mdt.Operations__c</members>
+    <members>SYN_Analytics__mdt.Qualify_Stage_Threshold__c</members>
     <members>Territory2.Territory_Level__c</members>
     <members>UoM_Std_Data__c.Dimension__c</members>
     <members>UoM_Std_Data__c.Internal_UoM_Code__c</members>
     <members>UoM_Std_Data__c.UOM_Code__c</members>
+    <members>User.Annual_Visit_Target__c</members>
     <members>User.Business_Partner_ID__c</members>
+    <members>User.Month_Visit_Target__c</members>
     <members>User.Signature_ContentDownload_URL__c</members>
     <members>User.Signature_URL__c</members>
     <members>Visit_Account__c.HQ_Account__c</members>
     <members>Visit_Account__c.RHQ_Account__c</members>
     <members>Visit_Account__c.Visit_Account_External_Id__c</members>
+    <members>Visit_Opportunity_Link__c.Opportunity__c</members>
+    <members>Visit_Opportunity_Link__c.Visit_Id__c</members>
+    <members>Visit_Opportunity_Link__c.Visit_Link__c</members>
+    <members>Visit_Opportunity_Link__c.Visit_Name__c</members>
+    <members>Visit_Outcome__c.Call_Content_Minutes__c</members>
     <members>Visit_Outcome__c.Outcome__c</members>
+    <members>Visit_Outcome__c.Pre_call_Preparation__c</members>
     <members>Visit_Outcome__c.Visit_Outcome_External_Id__c</members>
     <name>CustomField</name>
   </types>
@@ -754,10 +747,6 @@
     <members>Synthomer_Logo_Link</members>
     <members>Unit_of_Measure</members>
     <name>CustomLabel</name>
-  </types>
-  <types>
-    <members>CustomLabels</members>
-    <name>CustomLabels</name>
   </types>
   <types>
     <members>Bypass_Flows_User_related_Flow.Opportunity_Team_Member_After_Insert</members>
@@ -1161,132 +1150,39 @@
     <members>Name_Value_Pair.SenderOrgWideEmailAddress</members>
     <members>Name_Value_Pair.User_Agent</members>
     <members>report_sender__Report_Sender_Columns_Setting.zvx</members>
+    <members>SYN_Analytics.Oppotunity_Dashboard</members>
     <name>CustomMetadata</name>
   </types>
   <types>
     <members>Distributor_Manager_Notification</members>
+    <members>Distributor_User_Notification</members>
     <members>MS_Team_Notification</members>
     <members>Opportunity_Team_Member_Notification</members>
     <members>Visit_Notification</members>
     <name>CustomNotificationType</name>
   </types>
   <types>
-    <members>Account</members>
-    <members>AccountBrand</members>
-    <members>AccountContactRelation</members>
-    <members>AccountContactRole</members>
     <members>Account_Industry_Segment__c</members>
     <members>Account_Partners_Data__c</members>
-    <members>AccountPlan</members>
     <members>Account_Plan_Competitors__c</members>
-    <members>AccountPlanObjective</members>
-    <members>AccountPlanObjectiveMeasure</members>
-    <members>AccountPlanObjMeasRela</members>
     <members>Account_Sales_Data__c</members>
-    <members>AccountTeamMember</members>
-    <members>ActionPlan</members>
-    <members>ActionPlanItemDependency</members>
-    <members>ActionPlnTmplItmDependency</members>
-    <members>Activity</members>
-    <members>AnalyticsUserAttrFuncTkn</members>
-    <members>ApprovalSubmission</members>
-    <members>ApprovalSubmissionDetail</members>
-    <members>ApprovalWorkItem</members>
-    <members>Asset</members>
-    <members>AssetRelationship</members>
-    <members>AssistantProgress</members>
-    <members>AssociatedLocation</members>
-    <members>BatchJob</members>
-    <members>BatchJobPart</members>
-    <members>BatchJobPartFailedRecord</members>
     <members>Bypass_Flows_User__mdt</members>
     <members>Bypass_Flows_User_related_Flow__mdt</members>
-    <members>Campaign</members>
-    <members>CampaignMember</members>
     <members>Carrier__c</members>
-    <members>Case</members>
-    <members>CaseContactRole</members>
-    <members>ChannelProgram</members>
-    <members>ChannelProgramLevel</members>
-    <members>ChannelProgramMember</members>
-    <members>ChatterActivity</members>
-    <members>CollaborationGroup</members>
-    <members>CollaborationGroupMember</members>
     <members>Complaint_Cost__c</members>
-    <members>Contact</members>
-    <members>ContactRequest</members>
-    <members>ContentVersion</members>
-    <members>Contract</members>
-    <members>ContractContactRole</members>
-    <members>ConversationApiLog</members>
-    <members>ConversationApiLogObjSum</members>
     <members>Country_Region_Mapping__mdt</members>
     <members>Create_Log__e</members>
-    <members>DuplicateRecordItem</members>
-    <members>DuplicateRecordSet</members>
-    <members>EmailMessage</members>
-    <members>EmailMessageMigration</members>
-    <members>Event</members>
-    <members>ExchangeUserMapping</members>
-    <members>ExpressionFilter</members>
-    <members>ExpressionFilterCriteria</members>
-    <members>ExternalEventMapping</members>
-    <members>FeedItem</members>
     <members>File_Link__c</members>
     <members>Flow_Execution_Log__c</members>
-    <members>FlowOrchestrationInstance</members>
-    <members>FlowOrchestrationLog</members>
-    <members>FlowOrchestrationStageInstance</members>
-    <members>FlowOrchestrationStepInstance</members>
-    <members>FlowOrchestrationVersion</members>
-    <members>FlowOrchestrationWorkItem</members>
-    <members>ForecastingAdjustment</members>
-    <members>ForecastingCategoryMapping</members>
-    <members>ForecastingCustomData</members>
-    <members>ForecastingOwnerAdjustment</members>
-    <members>ForecastingQuota</members>
-    <members>ForecastingTypeToCategory</members>
-    <members>Idea</members>
-    <members>Image</members>
     <members>In_App_Checklist_Settings__c</members>
     <members>Industry_Segment_Data__c</members>
-    <members>Lead</members>
-    <members>Location</members>
-    <members>LocationTrustMeasure</members>
     <members>Log__c</members>
     <members>Log_Retention_Duration__mdt</members>
-    <members>Macro</members>
-    <members>MacroAction</members>
-    <members>MacroInstruction</members>
-    <members>MacroUsage</members>
-    <members>MessagingEndUser</members>
-    <members>MessagingSession</members>
-    <members>MigratedEmail</members>
-    <members>MLModel</members>
-    <members>MLModelFactor</members>
-    <members>MLModelFactorComponent</members>
     <members>Name_Value_Pair__mdt</members>
-    <members>NetworkMember</members>
-    <members>NetworkMemberChunk</members>
-    <members>Opportunity</members>
-    <members>OpportunityCompetitor</members>
     <members>Opportunity_Competitors__c</members>
-    <members>OpportunityContactRole</members>
-    <members>OpportunityLineItem</members>
-    <members>OpportunityRelatedDeleteLog</members>
-    <members>OpportunityTeamMember</members>
-    <members>Order</members>
-    <members>OrderItem</members>
-    <members>OrgMetricScanResult</members>
-    <members>OrgMetricScanSummary</members>
-    <members>PartnerRole</members>
     <members>Payment_Terms__c</members>
     <members>Plant__c</members>
     <members>Plant_Team_Data__c</members>
-    <members>Pricebook2</members>
-    <members>PricebookEntry</members>
-    <members>ProcessException</members>
-    <members>Product2</members>
     <members>Product_Category__c</members>
     <members>Product_Conversions_Data__c</members>
     <members>Product_Plant_Data__c</members>
@@ -1294,171 +1190,22 @@
     <members>Product_Stock_Batch_Data__c</members>
     <members>Product_Stock_Data__c</members>
     <members>Product_Text_Data__c</members>
-    <members>ProfileSkill</members>
-    <members>ProfileSkillEndorsement</members>
-    <members>ProfileSkillUser</members>
-    <members>PromptAction</members>
-    <members>PromptError</members>
-    <members>QuickText</members>
-    <members>QuickTextUsage</members>
-    <members>Quote</members>
-    <members>QuoteLineItem</members>
-    <members>ReceivedDocument</members>
-    <members>ReceivedDocumentType</members>
-    <members>Recommendation</members>
-    <members>RecordAction</members>
-    <members>RecordMergeHistory</members>
-    <members>RequestsForAccessSIQ</members>
     <members>Salesforce_Order_Type_Determination__c</members>
     <members>Sales_Org_Data__c</members>
     <members>Sample_Master_Matrix_Data__c</members>
     <members>SAP_S4_Order_Type_Determination__c</members>
-    <members>Scorecard</members>
-    <members>ScorecardAssociation</members>
-    <members>ScorecardMetric</members>
     <members>Service_Team__c</members>
     <members>Service_Team_Member__c</members>
-    <members>SharingRecordCollection</members>
-    <members>SharingRecordCollectionItem</members>
-    <members>SharingRecordCollectionMember</members>
-    <members>Site</members>
-    <members>SocialPersona</members>
-    <members>SocialPost</members>
-    <members>Solution</members>
-    <members>StagedEmail</members>
-    <members>StreamActivityAccess</members>
-    <members>StreamingChannel</members>
-    <members>TableauHostMapping</members>
-    <members>Task</members>
-    <members>Territory2</members>
-    <members>Territory2Model</members>
-    <members>Topic</members>
-    <members>TopicAssignment</members>
+    <members>SYN_Analytics__mdt</members>
     <members>UoM_Std_Data__c</members>
-    <members>User</members>
-    <members>UserCapabilityPreference</members>
-    <members>UserExternalCredential</members>
-    <members>UserLocalWebServerIdentity</members>
-    <members>UserPrioritizedRecord</members>
-    <members>UserProvisioningRequest</members>
-    <members>UserTerritory2Association</members>
-    <members>VideoCall</members>
-    <members>VideoCallParticipant</members>
-    <members>VideoCallRecording</members>
     <members>Visit_Account__c</members>
+    <members>Visit_Opportunity_Link__c</members>
     <members>Visit_Outcome__c</members>
-    <members>VoiceCall</members>
-    <members>WorkBadge</members>
-    <members>WorkBadgeDefinition</members>
-    <members>WorkOrder</members>
-    <members>WorkOrderLineItem</members>
-    <members>WorkThanks</members>
     <name>CustomObject</name>
   </types>
   <types>
-    <members>Account-en_US</members>
-    <members>Account_Industry_Segment__c-en_US</members>
-    <members>Account_Partners_Data__c-en_US</members>
-    <members>Account_Plan_Competitors__c-en_US</members>
-    <members>Account_Sales_Data__c-en_US</members>
-    <members>APXTConga4__Composer_Host_Override__c-en_US</members>
-    <members>APXTConga4__Composer_QuickMerge__c-en_US</members>
-    <members>APXTConga4__Composer_Setting__mdt-en_US</members>
-    <members>APXTConga4__Conga_Collection__c-en_US</members>
-    <members>APXTConga4__Conga_Collection_Solution__c-en_US</members>
-    <members>APXTConga4__Conga_Composer_Settings__c-en_US</members>
-    <members>APXTConga4__Conga_Email_Staging__c-en_US</members>
-    <members>APXTConga4__Conga_Email_Template__c-en_US</members>
-    <members>APXTConga4__Conga_Merge_Query__c-en_US</members>
-    <members>APXTConga4__Conga_Solution__c-en_US</members>
-    <members>APXTConga4__Conga_Solution_Email_Template__c-en_US</members>
-    <members>APXTConga4__Conga_Solution_Export_Environment__mdt-en_US</members>
-    <members>APXTConga4__Conga_Solution_Export_Setting__mdt-en_US</members>
-    <members>APXTConga4__Conga_Solution_Parameter__c-en_US</members>
-    <members>APXTConga4__Conga_Solution_Query__c-en_US</members>
-    <members>APXTConga4__Conga_Solution_Report__c-en_US</members>
-    <members>APXTConga4__Conga_Solutions_Settings__c-en_US</members>
-    <members>APXTConga4__Conga_Solution_Template__c-en_US</members>
-    <members>APXTConga4__Conga_Template__c-en_US</members>
-    <members>APXTConga4__Connected_App_Setting__mdt-en_US</members>
-    <members>APXTConga4__Document_History__c-en_US</members>
-    <members>APXTConga4__Document_History_Detail__c-en_US</members>
-    <members>APXTConga4__EventData__c-en_US</members>
-    <members>APXTConga4__VersionedData__c-en_US</members>
-    <members>Bypass_Flows_User__mdt-en_US</members>
-    <members>Bypass_Flows_User_related_Flow__mdt-en_US</members>
-    <members>Carrier__c-en_US</members>
-    <members>CMTD__EnhancedRelatedList__mdt-en_US</members>
-    <members>Complaint_Cost__c-en_US</members>
-    <members>Country_Region_Mapping__mdt-en_US</members>
-    <members>Create_Log__e-en_US</members>
-    <members>efl__EFL_Child_Objects_List__c-en_US</members>
-    <members>efl__EFL_Config_Settings__c-en_US</members>
-    <members>Event-en_US</members>
-    <members>File_Link__c-en_US</members>
-    <members>Flow_Execution_Log__c-en_US</members>
-    <members>GUKC360_01__GC360_Authorization_Details__mdt-en_US</members>
-    <members>GUKC360_01__GC360_Brand_PermissionSet_Mapping__mdt-en_US</members>
-    <members>GUKC360_01__GC360_Object_Configuration__mdt-en_US</members>
-    <members>GUKC360_01__GC360_SAP_Cust_Overview__c-en_US</members>
-    <members>GUKC360_01__GC360_SAP_Delivery_Detail_List__c-en_US</members>
-    <members>GUKC360_01__GC360_SAP_Delivery_Header__c-en_US</members>
-    <members>GUKC360_01__GC360_SAP_Invoice_Detail_List__c-en_US</members>
-    <members>GUKC360_01__GC360_SAP_Invoice_Header__c-en_US</members>
-    <members>GUKC360_01__GC360_SAP_Sales_Doc_Detail_List__c-en_US</members>
-    <members>GUKC360_01__GC360_SAP_Sales_Doc_Header__c-en_US</members>
-    <members>GUKC360_01__GC360_Test__c-en_US</members>
-    <members>GUK_INTEG__Integration_Child_Relation__mdt-en_US</members>
-    <members>GUK_INTEG__Integration_Interface__mdt-en_US</members>
-    <members>GUK_INTEG__Interface_Field__mdt-en_US</members>
-    <members>In_App_Checklist_Settings__c-en_US</members>
-    <members>Industry_Segment_Data__c-en_US</members>
-    <members>LabsActionPlans__ActionPlan__c-en_US</members>
-    <members>LabsActionPlans__Action_Plans_Settings__c-en_US</members>
-    <members>LabsActionPlans__ActionPlanTemplate__c-en_US</members>
-    <members>LabsActionPlans__APTask__c-en_US</members>
-    <members>LabsActionPlans__APTemplateTask__c-en_US</members>
-    <members>LabsActionPlans__Weekend_Day__mdt-en_US</members>
-    <members>Log__c-en_US</members>
-    <members>Log_Retention_Duration__mdt-en_US</members>
-    <members>Name_Value_Pair__mdt-en_US</members>
-    <members>Opportunity_Competitors__c-en_US</members>
-    <members>Opportunity-en_US</members>
-    <members>OpportunityLineItem-en_US</members>
-    <members>Payment_Terms__c-en_US</members>
-    <members>Plant__c-en_US</members>
-    <members>Plant_Team_Data__c-en_US</members>
-    <members>Product_Category__c-en_US</members>
-    <members>Product_Conversions_Data__c-en_US</members>
-    <members>Product_Plant_Data__c-en_US</members>
-    <members>Product_Sales_Data__c-en_US</members>
-    <members>Product_Stock_Batch_Data__c-en_US</members>
-    <members>Product_Stock_Data__c-en_US</members>
-    <members>Product_Text_Data__c-en_US</members>
-    <members>QuoteLineItem-en_US</members>
-    <members>report_sender__Custom_Template__c-en_US</members>
-    <members>report_sender__DashboardView__c-en_US</members>
-    <members>report_sender__Email_Attachment__c-en_US</members>
-    <members>report_sender__Email_Data__c-en_US</members>
-    <members>report_sender__Email_Jobs__c-en_US</members>
-    <members>report_sender__ORG_wide_Adress__c-en_US</members>
-    <members>report_sender__Post_Update_Custom_Settings__c-en_US</members>
-    <members>report_sender__Report_Schedule_Settings__mdt-en_US</members>
-    <members>report_sender__Report_Sender_Columns_Setting__mdt-en_US</members>
-    <members>report_sender__Schedule_Log__c-en_US</members>
-    <members>Salesforce_Order_Type_Determination__c-en_US</members>
-    <members>Sales_Org_Data__c-en_US</members>
-    <members>Sample_Master_Matrix_Data__c-en_US</members>
-    <members>SAP_S4_Order_Type_Determination__c-en_US</members>
-    <members>Service_Team__c-en_US</members>
-    <members>Service_Team_Member__c-en_US</members>
-    <members>UoM_Std_Data__c-en_US</members>
-    <members>Visit_Account__c-en_US</members>
-    <members>Visit_Outcome__c-en_US</members>
-    <name>CustomObjectTranslation</name>
-  </types>
-  <types>
     <members>Block_HQ_RHQ_Account_Creation</members>
+    <members>Bypass_Case_Validation</members>
     <members>Bypass_Order_Cancellation_Validation</members>
     <members>Contractor_User</members>
     <members>Create_Edit_Employees</members>
@@ -1472,6 +1219,7 @@
     <members>Syn_Sales_User</members>
     <members>Syn_Service_User</members>
     <members>Syn_Super_Admin_User</members>
+    <members>Syn_Update_Opportunity_Fields</members>
     <name>CustomPermission</name>
   </types>
   <types>
@@ -1532,6 +1280,8 @@
     <members>Service_Dashboards/Service_Exec_Overview</members>
     <members>Service_Dashboards/Service_KPIs</members>
     <members>SynthomerDashboard</members>
+    <members>SynthomerDashboard/IkwzFPITiUDOEhvYhcMRhlcEKZzkOg</members>
+    <members>SynthomerDashboard/MkCaUhgoheFGKPNByyYFjHYmqfSbDG</members>
     <members>SynthomerDashboard/NEJOmmFgEWIHHljEdfBYgvWgaovqdc</members>
     <members>SynthomerDashboard/QYRaQlLryAmGfficFoGPQInDEzFzzq</members>
     <members>SynthomerIndividual</members>
@@ -1547,8 +1297,13 @@
     <members>SynthomerLeaderDashboards</members>
     <members>SynthomerLeaderDashboards/PlvmiyageTwKtXJCXpHdYzASqLKNib11</members>
     <members>SynthomerLeaderDashboards/QqqpbSGoFfQporPXDdSthDQARnTfFA12</members>
+    <members>SynthomerLeaderDashboards/QqqpbSGoFfQporPXDdSthDQARnTfFA1215</members>
     <members>SynthomerLeaderDashboards/vKjBMyJobFvUCrtAuArnRXxivPeIBt2</members>
     <members>SynthomerLeaderDashboards/wuSUhzMgtQWoaDoAgYdHeJHmTDWxDM11</members>
+    <members>SynthomerLeaderDashboards/wuSUhzMgtQWoaDoAgYdHeJHmTDWxDM112</members>
+    <members>SynthomerLeaderDashboards/wuSUhzMgtQWoaDoAgYdHeJHmTDWxDM1121</members>
+    <members>SynthomerLeaderDashboards/wuSUhzMgtQWoaDoAgYdHeJHmTDWxDM11211</members>
+    <members>SynthomerLeaderDashboards/wuSUhzMgtQWoaDoAgYdHeJHmTDWxDM112111</members>
     <members>SynthomerServiceDashboards</members>
     <members>SynthomerServiceDashboards/WXZUstYujKDyXQNRfYmWolqnYnIynD</members>
     <name>Dashboard</name>
@@ -1596,7 +1351,6 @@
     <members>Synthomer_Email_Templates/Case_Team_Member_Notify_to_Assign_Case_of_Complaint</members>
     <members>Synthomer_Email_Templates/Sample_Order_Status_Completed_CRM_Order</members>
     <members>Synthomer_Email_Templates/Sample_Order_Status_Completed_Non_CRM</members>
-    <members>unfiled$public</members>
     <members>unfiled$public/CommunityChangePasswordEmailTemplate</members>
     <members>unfiled$public/CommunityChgEmailVerNewTemplate</members>
     <members>unfiled$public/CommunityChgEmailVerOldTemplate</members>
@@ -1647,10 +1401,6 @@
     <members>unfiled$public/SUPPORTSelfServiceResetPasswordSAMPLE2</members>
     <members>unfiled$public/SUPPORTWebtoCaseemailresponseSAMPLE</members>
     <name>EmailTemplate</name>
-  </types>
-  <types>
-    <members>Case</members>
-    <name>EscalationRules</name>
   </types>
   <types>
     <members>Distributor_Portal1</members>
@@ -1722,6 +1472,10 @@
     <members>Payment_Terms_Record_Page</members>
     <members>Plant_Data_Record_Page</members>
     <members>Plant_Record_Page</members>
+    <members>Portal_Order_Product_Record_Page</members>
+    <members>Portal_Order_Record_Page</members>
+    <members>Portal_Product_Record_Page</members>
+    <members>Portal_Sample_Master_Matrix_Data_Record_Page</members>
     <members>Product_Category_Record_Page</members>
     <members>Product_Conversions_Data_Record_Page</members>
     <members>Product_Plant_Data_Record_Page</members>
@@ -1776,8 +1530,11 @@
     <members>Case_Scheduled_Notify_Case_assigned_to_Queue_Over_3Days</members>
     <members>Case_Scheduled_Notify_Status_Not_Completed_Over_40Days</members>
     <members>Case_Schedule_Status_Open_24Hrs_For_HENKEL_or_3_Days_for_Other</members>
+    <members>Contact_Set_as_Inactive</members>
     <members>Create_Log_Record</members>
     <members>Delete_Old_Log_Records</members>
+    <members>Email_Messgae_After_Save</members>
+    <members>Event_After_Create_Create_Opportunity_Link</members>
     <members>Event_After_Create_Create_Visit_Account</members>
     <members>Event_Before_Create_Update_Update_Visit_Location</members>
     <members>Feed_Item_Update_Last_Chatter_Post_Date_on_Opportunity</members>
@@ -1786,14 +1543,19 @@
     <members>Lead_Update_Industry_Segment_Import</members>
     <members>Opportunity_Add_Opportunity_Team_Member</members>
     <members>Opportunity_After_Insert</members>
+    <members>Opportunity_Approval_Process</members>
     <members>Opportunity_Before_Insert_and_Update</members>
     <members>Opportunity_Before_Insert_Assign_Price_Book</members>
     <members>Opportunity_Before_Insert_Or_Update_HQ_RHQ_Account</members>
     <members>Opportunity_Before_Insert_Update_Industry_Segment</members>
     <members>Opportunity_Before_Save_Dashboards</members>
     <members>Opportunity_BIP_Scheduler</members>
+    <members>Opportunity_Get_Opportunity_Product_Details</members>
+    <members>Opportunity_Manager_Approval_Approved_Rejected</members>
     <members>Opportunity_Product_Before_Insert_Or_Update</members>
     <members>Opportunity_Team_Member_After_Insert_Notify_Team_Member</members>
+    <members>Opportunity_Visit_Link_Link_Opportunities_to_Visit</members>
+    <members>Opportunity_Visit_Link_Show_Opportunities</members>
     <members>Order_After_Update_Product_Details_to_Blank</members>
     <members>Order_Before_Insert_KSA_Short_Address</members>
     <members>Order_Before_Insert_Or_Update_HQ_RHQ_Account</members>
@@ -1849,6 +1611,7 @@
     <members>Subflow_Screen_Log_Error</members>
     <members>Task_After_Insert</members>
     <members>Trigger_External_System_Callout_via_Button</members>
+    <members>User_Deactivation_Flow</members>
     <members>User_Update_Signature_URL</members>
     <members>Visit_After_Close_Notify_User</members>
     <members>Visit_Outcome_Display</members>
@@ -1882,8 +1645,11 @@
     <members>Case_Scheduled_Notify_Case_assigned_to_Queue_Over_3Days</members>
     <members>Case_Scheduled_Notify_Status_Not_Completed_Over_40Days</members>
     <members>Case_Schedule_Status_Open_24Hrs_For_HENKEL_or_3_Days_for_Other</members>
+    <members>Contact_Set_as_Inactive</members>
     <members>Create_Log_Record</members>
     <members>Delete_Old_Log_Records</members>
+    <members>Email_Messgae_After_Save</members>
+    <members>Event_After_Create_Create_Opportunity_Link</members>
     <members>Event_After_Create_Create_Visit_Account</members>
     <members>Event_Before_Create_Update_Update_Visit_Location</members>
     <members>Feed_Item_Update_Last_Chatter_Post_Date_on_Opportunity</members>
@@ -1892,14 +1658,19 @@
     <members>Lead_Update_Industry_Segment_Import</members>
     <members>Opportunity_Add_Opportunity_Team_Member</members>
     <members>Opportunity_After_Insert</members>
+    <members>Opportunity_Approval_Process</members>
     <members>Opportunity_Before_Insert_and_Update</members>
     <members>Opportunity_Before_Insert_Assign_Price_Book</members>
     <members>Opportunity_Before_Insert_Or_Update_HQ_RHQ_Account</members>
     <members>Opportunity_Before_Insert_Update_Industry_Segment</members>
     <members>Opportunity_Before_Save_Dashboards</members>
     <members>Opportunity_BIP_Scheduler</members>
+    <members>Opportunity_Get_Opportunity_Product_Details</members>
+    <members>Opportunity_Manager_Approval_Approved_Rejected</members>
     <members>Opportunity_Product_Before_Insert_Or_Update</members>
     <members>Opportunity_Team_Member_After_Insert_Notify_Team_Member</members>
+    <members>Opportunity_Visit_Link_Link_Opportunities_to_Visit</members>
+    <members>Opportunity_Visit_Link_Show_Opportunities</members>
     <members>Order_After_Update_Product_Details_to_Blank</members>
     <members>Order_Before_Insert_KSA_Short_Address</members>
     <members>Order_Before_Insert_Or_Update_HQ_RHQ_Account</members>
@@ -1955,6 +1726,7 @@
     <members>Subflow_Screen_Log_Error</members>
     <members>Task_After_Insert</members>
     <members>Trigger_External_System_Callout_via_Button</members>
+    <members>User_Deactivation_Flow</members>
     <members>User_Update_Signature_URL</members>
     <members>Visit_After_Close_Notify_User</members>
     <members>Visit_Outcome_Display</members>
@@ -2017,112 +1789,6 @@
     <name>HomePageLayout</name>
   </types>
   <types>
-    <members>IframeWhiteListUrlSettings</members>
-    <name>IframeWhiteListUrlSettings</name>
-  </types>
-  <types>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>APXTConga4</members>
-    <members>CMTD</members>
-    <members>efl</members>
-    <members>GUKC360_01</members>
-    <members>GUK_INTEG</members>
-    <members>LabsActionPlans</members>
-    <members>mule</members>
-    <members>OIQ</members>
-    <members>OIQ</members>
-    <members>OIQ</members>
-    <members>report_sender</members>
-    <members>sf_chttr_apps</members>
-    <members>sf_chttr_apps</members>
-    <members>sf_chttr_apps</members>
-    <members>sf_chttr_apps</members>
-    <members>sf_chttr_apps</members>
-    <members>sf_chttr_apps</members>
-    <members>sf_chttr_apps</members>
-    <members>sf_chttr_apps</members>
-    <members>sf_chttr_apps</members>
-    <members>sf_chttr_apps</members>
-    <members>sf_chttr_apps</members>
-    <members>sf_chttr_apps</members>
-    <members>sf_chttr_apps</members>
-    <members>sf_chttr_apps</members>
-    <members>sf_chttr_apps</members>
-    <members>sf_chttr_apps</members>
-    <members>sf_chttr_apps</members>
-    <members>sf_chttr_apps</members>
-    <members>sf_chttr_apps</members>
-    <members>sf_chttr_apps</members>
-    <members>sf_chttr_apps</members>
-    <members>sf_com_apps</members>
-    <members>sf_com_apps</members>
-    <members>sf_com_apps</members>
-    <members>sf_com_apps</members>
-    <members>sf_com_apps</members>
-    <members>sf_com_apps</members>
-    <members>sf_com_apps</members>
-    <members>sf_com_apps</members>
-    <members>sf_com_apps</members>
-    <members>sf_com_apps</members>
-    <members>sf_com_apps</members>
-    <members>sf_com_apps</members>
-    <members>sf_com_apps</members>
-    <members>sf_com_apps</members>
-    <members>sf_com_apps</members>
-    <members>sf_com_apps</members>
-    <members>sf_com_apps</members>
-    <name>InstalledPackage</name>
-  </types>
-  <types>
     <members>Distributor Portal.Banned</members>
     <name>KeywordList</name>
   </types>
@@ -2176,16 +1842,15 @@
     <members>Event-Event Layout</members>
     <members>FeedItem-Feed Item Layout</members>
     <members>File_Link__c-File Link Layout</members>
+    <members>FlowInterview-Flow Interview Layout</members>
     <members>FlowOrchestrationInstance-Orchestration Run Layout</members>
     <members>FlowOrchestration-Orchestration Layout</members>
     <members>FlowOrchestrationStageInstance-Orchestration Stage Run Layout</members>
     <members>FlowOrchestrationStepInstance-Orchestration Step Run Layout</members>
+    <members>FlowOrchestrationWorkItem-Orchestration Work Item Layout</members>
     <members>FlowRecord-Flow Layout</members>
     <members>Global-Global Layout</members>
     <members>GUKC360_01__GC360_SAP_Cust_Overview__c-GC360 SAP Cust Overview Layout-No Fields</members>
-    <members>GUK_INTEG__Integration_Child_Relation__mdt-Integration Child Relation Layout</members>
-    <members>GUK_INTEG__Integration_Interface__mdt-Integration Interface Layout</members>
-    <members>GUK_INTEG__Interface_Field__mdt-Interface Field Layout</members>
     <members>Idea-Idea Layout</members>
     <members>IframeWhiteListUrl-Trusted Domain for Inline Frames Layout</members>
     <members>Industry_Segment_Data__c-Industry Segment Layout</members>
@@ -2242,6 +1907,7 @@
     <members>Service_Team_Member__c-Service Team Member Layout</members>
     <members>SiqExchangeConnection-Exchange Connection Layout</members>
     <members>Solution-Solution Layout</members>
+    <members>SYN_Analytics__mdt-SYN Analytics Layout</members>
     <members>Task-Task Layout</members>
     <members>Territory2Model-Territory Model Layout</members>
     <members>Territory2-Territory Layout</members>
@@ -2255,6 +1921,7 @@
     <members>UserTerritory2Association-User Territory Association Layout</members>
     <members>User-User Layout</members>
     <members>Visit_Account__c-Visit Account Layout</members>
+    <members>Visit_Opportunity_Link__c-Visit Opportunity Link Layout</members>
     <members>Visit_Outcome__c-Visit Outcome Layout</members>
     <members>VoiceCall-Voice Call Layout</members>
     <members>WorkAccess-Access Layout</members>
@@ -2274,6 +1941,7 @@
   <types>
     <members>createSampleOrder</members>
     <members>globalTestAction</members>
+    <members>inputRichTextFSC</members>
     <members>portalButton</members>
     <members>productSelector</members>
     <members>redirectToParentChatter</members>
@@ -2365,6 +2033,7 @@
     <members>Idea.Ideas_Last_7_Days</members>
     <members>Industry_Segment_Data__c.All</members>
     <members>Industry_Segment_Data__c.Aplication</members>
+    <members>Industry_Segment_Data__c.Industry_Segements</members>
     <members>Lead.Acrylate_Monomers_Lead</members>
     <members>Lead.AllOpenLeads</members>
     <members>Lead.AO_Americas_Lead</members>
@@ -2445,6 +2114,7 @@
     <members>Pricebook2.All_Price_Books</members>
     <members>ProcessException.all_process_exceptions</members>
     <members>Product2.AllProducts</members>
+    <members>Product2.ENORICA</members>
     <members>Product_Category__c.All</members>
     <members>Product_Category__c.Chemical_Group</members>
     <members>Product_Text_Data__c.All</members>
@@ -2470,6 +2140,7 @@
     <members>Task.CompletedTasks</members>
     <members>Task.DelegatedTasks</members>
     <members>Task.DelegatedTasks</members>
+    <members>Task.Effectiveness_Check_Tasks</members>
     <members>Task.OpenTasks</members>
     <members>Task.OpenTasks</members>
     <members>Task.OverdueTasks</members>
@@ -2512,12 +2183,6 @@
     <name>MatchingRule</name>
   </types>
   <types>
-    <members>Account</members>
-    <members>Contact</members>
-    <members>Lead</members>
-    <name>MatchingRules</name>
-  </types>
-  <types>
     <members>Distributor Portal.Block_banned_keywords</members>
     <members>Distributor Portal.Flag_banned</members>
     <members>Distributor Portal.Freeze_for_frequent_posting</members>
@@ -2543,18 +2208,16 @@
     <name>NetworkBranding</name>
   </types>
   <types>
-    <members>NotificationTypeConfig</members>
-    <name>NotificationTypeConfig</name>
-  </types>
-  <types>
     <members>Case_Path</members>
     <members>Lead_Path</members>
     <members>Opportunity_Default</members>
+    <members>Order</members>
     <name>PathAssistant</name>
   </types>
   <types>
     <members>Base_Sales_User</members>
     <members>Base_Service_User</members>
+    <members>Bypass_Case_Validation</members>
     <members>Bypass_Order_Cancellation</members>
     <members>Create_Edit_Employees</members>
     <members>Create_Edit_Hierarchy_Accounts</members>
@@ -2572,20 +2235,16 @@
     <members>Sales_User</members>
     <members>Service_Admin</members>
     <members>Service_User_Contractor</members>
-    <members>sfdcInternalInt__sfdc_activityplatform</members>
-    <members>sfdcInternalInt__sfdc_scrt2</members>
     <members>Super_Admin_User</members>
     <members>Syn_Action_Plans_Creator</members>
     <members>Syn_Action_Plans_Template_Creator</members>
     <members>Syn_Action_Plans_User</members>
+    <members>Syn_Edit_Opportunity_Fields</members>
     <members>Syn_Edit_Order_Item_fields</members>
     <name>PermissionSet</name>
   </types>
   <types>
     <members>Contractor_User_Group</members>
-    <members>force__PartnerCloudChannelManagerPsg</members>
-    <members>force__PartnerCloudPartnerUserPsg</members>
-    <members>force__ScaleCenterUsers</members>
     <members>Integration_User_Group</members>
     <members>Partner_Distributor_User</members>
     <members>Product_Managers</members>
@@ -2631,6 +2290,7 @@
     <members>SolutionManager</members>
     <members>Standard</members>
     <members>Synthomer Distributor User</members>
+    <members>Synthomer Distributor User - MFA</members>
     <members>Synthomer Standard User</members>
     <name>Profile</name>
   </types>
@@ -2730,6 +2390,7 @@
     <members>Create_Visit</members>
     <members>Event.Complete_Visit</members>
     <members>Event.Create_Edit_Outcome</members>
+    <members>Event.Link_Opportunity_to_Visit</members>
     <members>FeedItem.NewTaskFromFeedItem</members>
     <members>Follow_Up</members>
     <members>GuestCommunityCase</members>
@@ -2817,6 +2478,15 @@
     <name>RemoteSiteSetting</name>
   </types>
   <types>
+    <members>AccountHierarchyReports</members>
+    <members>AccountHierarchyReports/Activities_related_to_HQRHQ_Account_zwV</members>
+    <members>AccountHierarchyReports/Activities_related_to_RHQ_Account_CoN</members>
+    <members>AccountHierarchyReports/Cases_Related_to_HQ_Acccount_hzc</members>
+    <members>AccountHierarchyReports/Cases_Related_to_RHQ_Account_uMN</members>
+    <members>AccountHierarchyReports/Opportunities_related_to_HQRHQ_Account</members>
+    <members>AccountHierarchyReports/Opportunities_related_to_RHQ_Accont_GWO</members>
+    <members>AccountHierarchyReports/Sales_Quotes_related_to_HQ_Account_78m</members>
+    <members>AccountHierarchyReports/Sales_Quotes_related_to_RHQ_Account_o0h</members>
     <members>ASReports</members>
     <members>CleanMyRoomIndividualView</members>
     <members>CleanMyRoomIndividualView/Acc_with_required_fields_completed_Ind_oCS</members>
@@ -2866,6 +2536,7 @@
     <members>EP</members>
     <members>EP/AS_Open_Close_2025_Champions_EPCM_KTT</members>
     <members>EP/New_Opportunities_with_Products_Report_5Ej</members>
+    <members>EP/Sushant_All_Plextol_A2861_M_opps</members>
     <members>GaurisAnalysisReports</members>
     <members>GaurisAnalysisReports/All_Activities_92n</members>
     <members>GaurisAnalysisReports/Copy_of_Leader_Total_Pipeline_Size_in_Tpk</members>
@@ -2926,22 +2597,43 @@
     <members>Getting_Started_Sales_Representative/Top_Open_Opportunities_r6f</members>
     <members>HPPMReports</members>
     <members>HPPMReports/Account_with_Monomers_industrial_segment_td0</members>
+    <members>HPPMReports/Account_with_Visits_Gloves_azA</members>
+    <members>HPPMReports/Account_with_Visits_Paper_YTD_2025_d69</members>
     <members>HPPMReports/Account_wthout_industrial_segment_C2Y</members>
     <members>HPPMReports/Complaints_Created_or_Updated_zP5</members>
+    <members>HPPMReports/Copy_of_All_accountsPCF_lO5</members>
     <members>HPPMReports/Copy_of_Copy_of_Copy_of_HPPM_Foam_Opp_kJh</members>
     <members>HPPMReports/Copy_of_Copy_of_HPPM_Carpet_Opportunity_4TA</members>
     <members>HPPMReports/Copy_of_HPPM_Opportunity_Terr_Hierarc</members>
     <members>HPPMReports/Copy_of_HPPM_Paper_Opportunity_t4a</members>
     <members>HPPMReports/Copy_of_HPPM_PCF_Opportunity_E89</members>
+    <members>HPPMReports/Expected_GM_of_open_opportunitiesPaper_CVW</members>
+    <members>HPPMReports/HP_Close_Won_2025_gEv</members>
+    <members>HPPMReports/HP_Opportunities_list_closing_Pmk</members>
+    <members>HPPMReports/HP_Opportunities_list_Q1_2026_4mF</members>
+    <members>HPPMReports/HP_Opportunitysegment_2025_c8M</members>
+    <members>HPPMReports/HP_Opportunitysegment_Q1_2026_WzR</members>
     <members>HPPMReports/HPPM_ALL_visits_created_after_golive_Wer</members>
     <members>HPPMReports/HPPM_Gloves_Opportunity_tAb</members>
+    <members>HPPMReports/HPPM_Opportunities_list_FfF</members>
+    <members>HPPMReports/HPPM_Opportunities_list_Q1_2026_3sD</members>
+    <members>HPPMReports/HPPM_Opportunityregion_E9E</members>
+    <members>HPPMReports/HPPM_Opportunityregion_Qqj</members>
+    <members>HPPMReports/HPPM_Opportunitysegment_FJU</members>
+    <members>HPPMReports/HPPM_Opportunitysegment_jda</members>
+    <members>HPPMReports/HPPM_Opportunitysegment_Q126_xCK</members>
+    <members>HPPMReports/HPPM_OpportunityTerritory_L2_hLB</members>
     <members>HPPMReports/HPPM_PCF_Opps_Risks_Report</members>
     <members>HPPMReports/HPPM_PCF_Risks_Report_BGG</members>
     <members>HPPMReports/HPPM_SVP_Opportunity</members>
     <members>HPPMReports/HPPM_visits_2024</members>
     <members>HPPMReports/HPPM_visits_YTD_2025</members>
+    <members>HPPMReports/New_Accounts_Report_b4Z</members>
     <members>HPPMReports/Opportunities_Created_after_GOLIVE_Mil</members>
     <members>HPPMReports/Opportunities_Risks_PHT_tco</members>
+    <members>HPPMReports/Paper_Opps_Report_2025</members>
+    <members>HPPMReports/PCF_Opps_Report_2026</members>
+    <members>HPPMReports/PCF_Opps_Report_NN</members>
     <members>HPPMReports/Quotes_Created_iF5</members>
     <members>HPPMReports/Sample_Orders_Created_after_GOLIVE_SwL</members>
     <members>HPPMReports/SYN_Visit_with_AttendeesGlove_2024_gqr</members>
@@ -2954,6 +2646,7 @@
     <members>HPPMReports/Visit_with_AttendeesPCF_2025_YTD_dML</members>
     <members>HPPMReports/Visit_with_AttendeesSVP_2024_3YU</members>
     <members>HPPMReports/Visit_with_AttendeesSVP_2025_YTD_7Vg</members>
+    <members>HPPMReports/Weighted_GM_for_overall_pipelinePAPER_YQp</members>
     <members>LeadInsightsReports</members>
     <members>LeadInsightsReports/SampleReportLeadAvgScoreByField</members>
     <members>LeadInsightsReports/SampleReportLeadDisByConverted</members>
@@ -2962,11 +2655,15 @@
     <members>MyKeyAccountsAccountHierarchy/Accounts_without_future_activity_Hie_0aI</members>
     <members>MyKeyAccountsAccountHierarchy/Expected_revenue_from_key_accounts_Hie_cdY</members>
     <members>MyKeyAccountsAccountHierarchy/GM_contributionnew_products_in_pip_Hie_H4A</members>
+    <members>MyKeyAccountsAccountHierarchy/GM_of_open_opportunities_Hierarchy_1Ew</members>
     <members>MyKeyAccountsAccountHierarchy/GM_per_Stage_Hierarchy_Cf2</members>
+    <members>MyKeyAccountsAccountHierarchy/Inactive_OppNo_stg_change_in_180d_hie_njt</members>
     <members>MyKeyAccountsAccountHierarchy/New_opportunities_Added_30_Days_Hie_FKN</members>
+    <members>MyKeyAccountsAccountHierarchy/New_Stage_Entries_30_Days_Hierarchy_eSh</members>
     <members>MyKeyAccountsAccountHierarchy/Open_Visits_Aged_30_Days_Hierarchy_ute</members>
     <members>MyKeyAccountsAccountHierarchy/Opp_Average_Deal_Size_Hierarchy_tnD</members>
     <members>MyKeyAccountsAccountHierarchy/Opp_in_the_same_stage_180_days_Hierar_jjh</members>
+    <members>MyKeyAccountsAccountHierarchy/Opportunites_at_riskred_green_hiera_ePi</members>
     <members>MyKeyAccountsAccountHierarchy/Opportunities_per_Stage_Hierarchy_nUl</members>
     <members>MyKeyAccountsAccountHierarchy/Opp_tagged_with_new_products_Hierarchy_jsH</members>
     <members>MyKeyAccountsAccountHierarchy/Opp_with_early_stagesClose_next_30d_Hie_5HS</members>
@@ -3002,15 +2699,22 @@
     <members>MyOpportunitiesIndividualView</members>
     <members>MyOpportunitiesIndividualView/Adfors_KA_opp_review</members>
     <members>MyOpportunitiesIndividualView/Copy_of_Top_10_GM_Opp_closing_in_90_days</members>
+    <members>MyOpportunitiesIndividualView/Copy_of_Top_10_Opp_by_GM_to_End_of_2026</members>
     <members>MyOpportunitiesIndividualView/Copy_of_Top_10_Opp_by_GM_Volume_GM_To</members>
+    <members>MyOpportunitiesIndividualView/Copy_of_Top_10_Opp_by_GM_Volume_GM_To1</members>
+    <members>MyOpportunitiesIndividualView/Copy_of_Top_10_Opp_by_GM_Volume_GM_To2</members>
     <members>MyOpportunitiesIndividualView/GM_by_Accounts_Billing_Country_Ind_0Or</members>
     <members>MyOpportunitiesIndividualView/Inactive_OppNo_stg_change_in_180_d_Ind_3it</members>
+    <members>MyOpportunitiesIndividualView/MW_Territory_Opps_end_date_2026</members>
+    <members>MyOpportunitiesIndividualView/MW_UK_IE_Opps_close_date_by_end_2026</members>
     <members>MyOpportunitiesIndividualView/Opp_close_in_next_12_monweighted_GM_Ind_SLs</members>
     <members>MyOpportunitiesIndividualView/Opp_close_in_next_90_daysweightedGM_Ind_Q6o</members>
     <members>MyOpportunitiesIndividualView/Opp_in_same_stage_180_days_Caretaker_Ind_OaV</members>
     <members>MyOpportunitiesIndividualView/Opportunites_at_riskred_and_greenInd_RLu</members>
     <members>MyOpportunitiesIndividualView/Opportunities_Pipeline_MEAI</members>
+    <members>MyOpportunitiesIndividualView/Opps_by_country_and_MW_end_2026</members>
     <members>MyOpportunitiesIndividualView/Opp_without_Technical_Caretaker_Ind_DbA</members>
+    <members>MyOpportunitiesIndividualView/SIKA_KA_Opportunity_Review</members>
     <members>MyOpportunitiesIndividualView/Top_10_GM_Opp_closing_in_90_days_Ind_cMA</members>
     <members>MyOpportunitiesIndividualView/Top_10_Open_Opp_to_Close_next_90_day_Ind_ESw</members>
     <members>MyOpportunitiesIndividualView/Top_10_Opp_by_GM_Volume_GM_Ahmed_Ant</members>
@@ -3018,6 +2722,7 @@
     <members>MyOpportunitiesIndividualView/Top_10_Opp_by_Weighted_GM_Ind_5lr</members>
     <members>MyOpportunitiesIndividualView/Zaid_Top_10_Opp_by_GM</members>
     <members>MyOpportunitiesLeaderView</members>
+    <members>MyOpportunitiesLeaderView/Copy_of_Inactive_Opp_No_stg_change_in_18</members>
     <members>MyOpportunitiesLeaderView/GM_by_Accounts_Billing_Country_Leader_oez</members>
     <members>MyOpportunitiesLeaderView/Inactive_OppNo_stg_change_in_180_d_Lead_5NZ</members>
     <members>MyOpportunitiesLeaderView/Opp_close_next_12_monweighted_GM_Leader_W3V</members>
@@ -3028,11 +2733,13 @@
     <members>MyOpportunitiesLeaderView/Top_10_GM_Opp_closing_in_90_days_Leader_ISu</members>
     <members>MyOpportunitiesLeaderView/Top_10_Open_Opp_Close_next_90_day_Leader_T9b</members>
     <members>MyOpportunitiesLeaderView/Top_10_Opp_by_GM_Volume_GMTon_Leader_ScJ</members>
+    <members>MyOpportunitiesLeaderView/Top_10_Opp_by_GM_Volume_RISK_MEAI</members>
     <members>MyOpportunitiesLeaderView/Top_10_Opp_by_Weighted_GM_Leader_Wh8</members>
     <members>MyOpportunitiesLeaderView/Top_10_Opp_by_Weighted_GM_new_regain_ad</members>
     <members>MyPipelineIndividualView</members>
     <members>MyPipelineIndividualView/Average_Opp_days_in_Stage_Individual_9UH</members>
     <members>MyPipelineIndividualView/Average_opportunity_size_Individual_zQ7</members>
+    <members>MyPipelineIndividualView/Copy_of_Copy_of_Opportunities_by_Stage</members>
     <members>MyPipelineIndividualView/Copy_of_Opportunities_by_Stage_Hasan</members>
     <members>MyPipelineIndividualView/Copy_of_Opportunities_by_Stage_Individ</members>
     <members>MyPipelineIndividualView/Copy_of_Opportunities_by_Stage_Zaid</members>
@@ -3044,6 +2751,8 @@
     <members>MyPipelineIndividualView/GM_Weighted_GM_by_Stg_TerrirtoryInd_gN3</members>
     <members>MyPipelineIndividualView/Gross_Margin_WinLoss_Yearly_Ind_hN4</members>
     <members>MyPipelineIndividualView/JLM_Opp_by_Stage</members>
+    <members>MyPipelineIndividualView/list_opportunity_FB_China_by_stage</members>
+    <members>MyPipelineIndividualView/list_opportunity_FB_China_market_stage</members>
     <members>MyPipelineIndividualView/Lost_GM_by_Lose_Reason_Report_Ind_416</members>
     <members>MyPipelineIndividualView/Lost_Opportunity_Categorization_Ind_YSy</members>
     <members>MyPipelineIndividualView/New_Stage_Entries_30_Days_Opp_Indi_1tE</members>
@@ -3059,8 +2768,11 @@
     <members>MyPipelineLeaderView</members>
     <members>MyPipelineLeaderView/Average_Opp_days_in_Stage_Leader_VLN</members>
     <members>MyPipelineLeaderView/Average_opportunity_size_Leader_btW</members>
+    <members>MyPipelineLeaderView/CONS_Opp_by_Country</members>
     <members>MyPipelineLeaderView/Construction_Americas_Weekly_Meeting</members>
     <members>MyPipelineLeaderView/Copy_of_Opportunities_by_Stage_Leader</members>
+    <members>MyPipelineLeaderView/Copy_of_Opportunities_Construction</members>
+    <members>MyPipelineLeaderView/Copy_of_Top_Opportunities_Leader</members>
     <members>MyPipelineLeaderView/GM_by_Opportunity_Stage_Leader_PbR</members>
     <members>MyPipelineLeaderView/GM_of_GMton_for_open_opportunit_Leader_olI</members>
     <members>MyPipelineLeaderView/GM_of_open_opportunities_Leader_XhR</members>
@@ -3072,6 +2784,7 @@
     <members>MyPipelineLeaderView/New_Stage_Entries_30_Days_Leader_Kt3</members>
     <members>MyPipelineLeaderView/Opportunities_by_Stage_Leader_z3v</members>
     <members>MyPipelineLeaderView/Opportunities_closed_as_Lost_2025</members>
+    <members>MyPipelineLeaderView/Opportunities_Construction</members>
     <members>MyPipelineLeaderView/Opportunity_closed_as_win_2025</members>
     <members>MyPipelineLeaderView/Opp_with_Stage_change_in_last_30_Leader_rzG</members>
     <members>MyPipelineLeaderView/Volume_by_Opportunity_Stage_Leader_mkA</members>
@@ -3080,8 +2793,8 @@
     <members>MyPipelineLeaderView/Win_Velocity_of_Opportunity_Leader_p6o</members>
     <members>OpportunityReports</members>
     <members>OpportunityReports/Copy_of_HPPM_Opps_Risks_Report_by_Volume</members>
-    <members>OpportunityReports/NN_of_HPPM_Opps_Risks_Report_b</members>
     <members>OpportunityReports/Opportunities_Closing_in_Next_6_Weeks_uTK</members>
+    <members>OpportunityReports/Opportunities_SOUTH_Coatings</members>
     <members>OpportunityReports/Tapes_and_Label_Opportunities</members>
     <members>prm_channel_reports_folder</members>
     <members>prm_ch_reports_sub_folder</members>
@@ -3207,6 +2920,7 @@
     <members>Servicereports</members>
     <members>Servicereports/All_Cases_Report_St_phane</members>
     <members>SynthomerReports</members>
+    <members>SynthomerReports/Account_Duplicities_Report_Z81</members>
     <members>SynthomerReports/Account_Hierarchy_Report_iFi</members>
     <members>SynthomerReports/Accounts_Report_Lkw</members>
     <members>SynthomerReports/Active_Users_Logged_in_This_Month_Q2T</members>
@@ -3227,6 +2941,7 @@
     <members>SynthomerReports/JLM_Opp_with_YD</members>
     <members>SynthomerReports/MK_Opps_in_Netherlands</members>
     <members>SynthomerReports/Mogadore_Samples</members>
+    <members>SynthomerReports/Mogadore_Samples1</members>
     <members>SynthomerReports/MS_Opp_with_MK</members>
     <members>SynthomerReports/My_Accounts_with_no_Activity_in_LAST_90d_hYn</members>
     <members>SynthomerReports/New_Account_with_Visits_Report_4rC</members>
@@ -3234,6 +2949,7 @@
     <members>SynthomerReports/NPS_2025_Report_tMU</members>
     <members>SynthomerReports/OPP_MAPEI</members>
     <members>SynthomerReports/Opportunity_list_South_East</members>
+    <members>SynthomerReports/Outlook_Integration_Usage_per_Day_T2m</members>
     <members>SynthomerReports/Plant_Team_Order_Book_Report_U7T</members>
     <members>SynthomerReports/Plant_Team_Report_SwO</members>
     <members>SynthomerReports/Product_Plant_Data_Report_I16</members>
@@ -3243,6 +2959,9 @@
     <members>SynthomerReports/SYN_Effectiveness_Check_task_Report_EA6</members>
     <members>SynthomerReports/SYN_Visit_with_Attendees_Report_RLy</members>
     <members>SynthomerReports/Territory_Model_Report_teM</members>
+    <members>SynthomerReports/Users_Report_qKp</members>
+    <members>SynthomerReports/Users_With_Manager_Report_HSt</members>
+    <members>SynthomerReports/Visit_reports_China_Team_X9O</members>
     <members>SynthomerSFDCAdminReports</members>
     <members>SynthomerSFDCAdminReports/Complaints_Created_or_Updated_95J</members>
     <members>SynthomerSFDCAdminReports/Opportunities_Created_By_Stage_MhL</members>
@@ -3272,6 +2991,7 @@
     <members>TeamPerformancePipeline/Opp_with_logged_next_step_or_activity</members>
     <members>TeamPerformancePipeline/Opp_with_Missing_field_Value</members>
     <members>TeamPerformancePipeline/PCF_DMR_Opps_Risks_Report</members>
+    <members>TeamPerformancePipeline/PCF_DMR_Opps_Risks_Report_Foam</members>
     <members>TeamPerformancePipeline/PCF_New_Orders_Report</members>
     <members>TeamPerformancePipeline/PCF_Open_Opportunities1</members>
     <members>TeamPerformancePipeline/PCF_Open_Opportunities_SH</members>
@@ -3308,15 +3028,21 @@
     <members>UnderlyingReports/Sushant_Open_2025_1</members>
     <members>UnderlyingReports/Sushant_Top_10_Opp_by_Rev_Vol_1</members>
     <members>UnderlyingReports/Tacolyn_Dresinate_All_Opps_CB</members>
-    <members>unfiled$public</members>
     <members>unfiled$public/Accounts_sample_orders_and_line_item_DZ6</members>
+    <members>unfiled$public/Accounts_team_Asia_rto</members>
     <members>unfiled$public/Account_team_assigned_to_Daniel_ZLP</members>
     <members>unfiled$public/Account_team_Assigned_to_oliver</members>
     <members>unfiled$public/Account_team_my2</members>
+    <members>unfiled$public/All_Activities_visits_by_colleague</members>
+    <members>unfiled$public/All_Activities_visits_by_MD_fXz</members>
+    <members>unfiled$public/ALL_Cases_and_Service_Team_Report</members>
+    <members>unfiled$public/ALL_Cases_Report</members>
+    <members>unfiled$public/ALL_Leads_Coatings</members>
     <members>unfiled$public/APO_Total_Opps_By_Applications</members>
     <members>unfiled$public/AS_Closed_Won_Opp_EMEA_20251</members>
     <members>unfiled$public/AS_EMEAI_Visit_Completed_by_Salesperson</members>
     <members>unfiled$public/AS_EMEAI_visits_by_sales_team</members>
+    <members>unfiled$public/AS_Innovation_Market_Type_Product</members>
     <members>unfiled$public/As_North_Europe_18_08_25</members>
     <members>unfiled$public/AS_visits_by_sales_team</members>
     <members>unfiled$public/BFs_Account_team_I1Q</members>
@@ -3327,34 +3053,46 @@
     <members>unfiled$public/CB_Account_team_by_Country</members>
     <members>unfiled$public/CCS_JF_report_activity_last_14_days_BHi</members>
     <members>unfiled$public/CCS_ticket_age</members>
-    <members>unfiled$public/CG_CCS_Opps_without_plant</members>
+    <members>unfiled$public/CEN_opportunities</members>
     <members>unfiled$public/CG_Visits_All_Time_II</members>
-    <members>unfiled$public/CG_Visits_xda</members>
+    <members>unfiled$public/China_Team_Visit_Completed_Salesperson_9pT</members>
+    <members>unfiled$public/CM_FY_2025_Closing_Opportunities_Funnel_JWo</members>
     <members>unfiled$public/CM_Opportunities</members>
     <members>unfiled$public/CM_Opportunity_Team</members>
     <members>unfiled$public/CM_Opportunity_Team_Oliver_Artur1</members>
     <members>unfiled$public/CM_Weekly_Visit_Reports_DvO</members>
-    <members>unfiled$public/COATech_Team_Opportunities_crY</members>
     <members>unfiled$public/COATech_Team_Opportunities_hK5</members>
+    <members>unfiled$public/Coatings_Jour_fixe_report_2</members>
     <members>unfiled$public/Complaints_Bericht_Worms</members>
+    <members>unfiled$public/CONS_SEA_Opp_by_Country</members>
+    <members>unfiled$public/Construction_Sample_Report_ILY</members>
     <members>unfiled$public/Consumer_Materials_Accounts_UoN</members>
     <members>unfiled$public/Copy_of_APO_Total_Opps_By_Applications</members>
     <members>unfiled$public/Copy_of_BFs_Coatings_Account_team_MKb</members>
+    <members>unfiled$public/Copy_of_Cases_Report_UC</members>
     <members>unfiled$public/Copy_of_Copy_of_Visit_Report_Industry</members>
     <members>unfiled$public/Copy_of_HPPM_industry_segments</members>
     <members>unfiled$public/Copy_of_MEAI_Opportunity_LIST_RF</members>
+    <members>unfiled$public/Copy_of_MW_Territory_Opps_end_date_2026</members>
+    <members>unfiled$public/Copy_of_OPen_samples_Simona</members>
     <members>unfiled$public/Copy_of_Opportunities_MEAI_IND_SEGMENT_rKA</members>
     <members>unfiled$public/Copy_of_Opportunities_me_involved_TWX</members>
     <members>unfiled$public/Copy_of_Opportunity_by_GM_JZ</members>
+    <members>unfiled$public/Copy_of_Top_10_Opp_EP_2026</members>
     <members>unfiled$public/Copy_of_Users_Logged_in_This_Month_n4y</members>
     <members>unfiled$public/Copy_of_Visit_Report_Industry_Segment</members>
     <members>unfiled$public/Copy_of_visit_reports_Table_CN</members>
     <members>unfiled$public/CRM_Sample_workbook_Mb3</members>
     <members>unfiled$public/CR_Visit_all_IlQ</members>
+    <members>unfiled$public/DSU_my_opportunities</members>
+    <members>unfiled$public/DSU_my_opportunities_closed_last_month</members>
+    <members>unfiled$public/DSU_my_opportunities_country</members>
+    <members>unfiled$public/Effectiveness_Check_Tasks_EKg</members>
     <members>unfiled$public/EMEAI_AS_Opportunities_Marco</members>
     <members>unfiled$public/EP_Opportunities_Katja1</members>
-    <members>unfiled$public/EP_Total_Opps_KATJA</members>
     <members>unfiled$public/EP_Total_Opps_with_Secure_New_called_out1</members>
+    <members>unfiled$public/EU_CCS_JF_report_activity_last_141</members>
+    <members>unfiled$public/EU_COA_Tech_Team_Opportunities</members>
     <members>unfiled$public/flow_orchestration_log_ootb_report_two_four_eight</members>
     <members>unfiled$public/flow_orchestration_run_ootb_report_two_four_eight</members>
     <members>unfiled$public/flow_orchestration_stage_run_ootb_report_two_four_eight</members>
@@ -3367,14 +3105,19 @@
     <members>unfiled$public/H_P_Gloves_Opportunities2</members>
     <members>unfiled$public/HPPM_industry_segments_Expected_GM_pAM</members>
     <members>unfiled$public/IDEA25_LEADS_CM_aQ8</members>
+    <members>unfiled$public/Inno_Report_Katja</members>
     <members>unfiled$public/Jeanettas_Account_team_Kch</members>
     <members>unfiled$public/JLc_Account_team_NyE</members>
     <members>unfiled$public/JLM_Account_team_by_country</members>
     <members>unfiled$public/JMR_Team</members>
     <members>unfiled$public/Joes_Visit_Report_O3k</members>
     <members>unfiled$public/John_Roperts_Team_CHD</members>
+    <members>unfiled$public/JRs_Team_Accounts_emY</members>
     <members>unfiled$public/Key_Account_Opportunities_6Ws</members>
+    <members>unfiled$public/Key_Account_Opportunities_by_Country</members>
+    <members>unfiled$public/Last_Activity_at_Account</members>
     <members>unfiled$public/Lauras_Account_team_europe</members>
+    <members>unfiled$public/Leads_Converted_by_FQ_COA</members>
     <members>unfiled$public/Leszek_Account_team_qrL</members>
     <members>unfiled$public/Leszeks_sample_orders_and_line_tkq</members>
     <members>unfiled$public/Lithene_Opps</members>
@@ -3387,27 +3130,37 @@
     <members>unfiled$public/MKs_Account_team_VyI</members>
     <members>unfiled$public/MK_Visits</members>
     <members>unfiled$public/MO_Sample_workbook_ArJ</members>
+    <members>unfiled$public/MW_COA_OPPS_until_end_of_2026</members>
+    <members>unfiled$public/MW_Opportunities_DS</members>
     <members>unfiled$public/My_visits_last_year_MuT</members>
+    <members>unfiled$public/New_Account_with_Account_Teams_Report_7AS</members>
     <members>unfiled$public/New_Account_with_Account_Teams_Report_DeE</members>
     <members>unfiled$public/New_Opps_CTGS_AMER</members>
     <members>unfiled$public/New_Report_ojk</members>
     <members>unfiled$public/Number_of_Visits_YTD_CM_eyn</members>
     <members>unfiled$public/Ollis_Account_team_e5f</members>
+    <members>unfiled$public/OPen_samples_Petra</members>
+    <members>unfiled$public/OPen_samples_Simona</members>
     <members>unfiled$public/Opp_Mark_Mc_Veigh</members>
     <members>unfiled$public/Opportunities_by_Coatings_EMEA_rZr</members>
+    <members>unfiled$public/Opportunities_Construction_2025_2026</members>
+    <members>unfiled$public/Opportunities_Laura1</members>
     <members>unfiled$public/Opportunities_me_involved_MM1</members>
+    <members>unfiled$public/Opportunities_MW_Team</members>
     <members>unfiled$public/Opportunities_Uwe_Haas_involved_YXn</members>
     <members>unfiled$public/Opportunities_with_DR_involved_rYV</members>
     <members>unfiled$public/Opportunity_Amount_by_Stage_Sample</members>
     <members>unfiled$public/Opportunity_by_GM_CN</members>
     <members>unfiled$public/Opportunity_Team_Martin_Driever_tQG</members>
-    <members>unfiled$public/Opportunity_Team_Oliver1</members>
-    <members>unfiled$public/Opportunity_Team_Stefan1</members>
     <members>unfiled$public/Opp_OyR</members>
     <members>unfiled$public/Planned_visit_reports</members>
     <members>unfiled$public/Pliotec_DPR_opportunities1</members>
     <members>unfiled$public/Sample_Order_Report_With_Product_OW_yzL</members>
-    <members>unfiled$public/sample_orders_and_line_item_dwR</members>
+    <members>unfiled$public/Sample_orders_and_line_item_20251030</members>
+    <members>unfiled$public/sample_orders_and_line_item4</members>
+    <members>unfiled$public/sample_orders_and_line_item_BS</members>
+    <members>unfiled$public/sample_orders_and_line_item_BS_all_TS</members>
+    <members>unfiled$public/sample_orders_and_line_item_JLM</members>
     <members>unfiled$public/SampleReportActiveUsers</members>
     <members>unfiled$public/SampleReportCasesStatusbyRep</members>
     <members>unfiled$public/SampleReportClosedSales</members>
@@ -3441,16 +3194,21 @@
     <members>unfiled$public/SampleReportUsersLoggedIn</members>
     <members>unfiled$public/SAS_Opportunities2</members>
     <members>unfiled$public/Service_Team_Report_73e</members>
+    <members>unfiled$public/SGW_Key_Account_Opps1</members>
     <members>unfiled$public/Sushant_My_visits</members>
     <members>unfiled$public/Sushant_Opps_with_tech_caretakers</members>
     <members>unfiled$public/SVP_All_Opps_Open</members>
     <members>unfiled$public/SVP_IndSeg_Product_Open_Opps</members>
+    <members>unfiled$public/SVP_IndSeg_Product_Win_Loss</members>
     <members>unfiled$public/SVP_Pipeline_product_and_plant_filter</members>
     <members>unfiled$public/Tapes_and_Label_Opportunities_Katja</members>
     <members>unfiled$public/Tapes_and_Label_Opportunities_Katja2</members>
+    <members>unfiled$public/TB_my_opportunities2</members>
     <members>unfiled$public/TFs_Account_team_ef8</members>
     <members>unfiled$public/TFs_Planned_visit_reports_foU</members>
     <members>unfiled$public/Thomas_B_Account_team_gow</members>
+    <members>unfiled$public/Top_10_Opp_by_Weighted_GM_EP</members>
+    <members>unfiled$public/Top_10_Opp_EP_2025</members>
     <members>unfiled$public/Users_Logged_in_This_Week_vTU</members>
     <members>unfiled$public/Uwe_Haas_Account_team_svL</members>
     <members>unfiled$public/Visit_iO3</members>
@@ -3479,8 +3237,10 @@
     <members>VisitsandActivitiesLeaderView</members>
     <members>VisitsandActivitiesLeaderView/Account_with_no_Visit_in_LAST_30D_Leader_ifB</members>
     <members>VisitsandActivitiesLeaderView/Activity_by_channel_Acc_type_Leader_WOA</members>
+    <members>VisitsandActivitiesLeaderView/Average_Monthly_Visit_Leader_with_accoun</members>
     <members>VisitsandActivitiesLeaderView/Average_Monthly_Visit_Leader_YbK</members>
     <members>VisitsandActivitiesLeaderView/Coatings_Americas_Visits_Report1</members>
+    <members>VisitsandActivitiesLeaderView/Copy_of_Copy_of_Coatings_Americas_Visits</members>
     <members>VisitsandActivitiesLeaderView/LAST_12_Months</members>
     <members>VisitsandActivitiesLeaderView/LAST_18_Months_vAF</members>
     <members>VisitsandActivitiesLeaderView/My_Monthly_Visit_LAST_18_Months_Leader_vwe</members>
@@ -3504,13 +3264,17 @@
     <members>X02OpportunitiesOpportunities/Age_of_PLASTVANCE_Open_Opportunities</members>
     <members>X02OpportunitiesOpportunities/All_APO_opportunities_2025</members>
     <members>X02OpportunitiesOpportunities/All_APO_WON_opps</members>
+    <members>X02OpportunitiesOpportunities/All_C5_opps_closing_in_2026</members>
+    <members>X02OpportunitiesOpportunities/All_PMR_opps_closing_in_2026</members>
     <members>X02OpportunitiesOpportunities/Ananth_AS_Open_Close_2025_Champions</members>
     <members>X02OpportunitiesOpportunities/AS_2025_Global_Opportunities_to_close_in</members>
+    <members>X02OpportunitiesOpportunities/AS_Account_Segmentation_Qto</members>
     <members>X02OpportunitiesOpportunities/AS_All_new_created_opps_in_2025</members>
     <members>X02OpportunitiesOpportunities/AS_All_WON_opps_in_2025</members>
     <members>X02OpportunitiesOpportunities/AS_America_Close_WON_2025_OET</members>
     <members>X02OpportunitiesOpportunities/AS_America_Open_Target_Close_2025_rWq</members>
     <members>X02OpportunitiesOpportunities/AS_America_Open_Target_Close_2026_UjH</members>
+    <members>X02OpportunitiesOpportunities/AS_APAC_Open_Close_2026_Champions_Oig</members>
     <members>X02OpportunitiesOpportunities/AS_Closed_LOST_2025</members>
     <members>X02OpportunitiesOpportunities/AS_EMEAI_Closed_LOST_opportunities</members>
     <members>X02OpportunitiesOpportunities/AS_EMEAI_Close_WON_2025</members>
@@ -3520,23 +3284,33 @@
     <members>X02OpportunitiesOpportunities/AS_OLEOS_Opportunity_Details_6KU</members>
     <members>X02OpportunitiesOpportunities/AS_Oleos_Opportunity_Details_8IH</members>
     <members>X02OpportunitiesOpportunities/AS_Open_Close_2025_Champions_0hJ</members>
+    <members>X02OpportunitiesOpportunities/AS_Open_Close_NovDec_2025_EMEAI_wwL</members>
+    <members>X02OpportunitiesOpportunities/AS_Opportunities_Closed_by_Month_mWz</members>
     <members>X02OpportunitiesOpportunities/AS_Opportunities_Example_oPS</members>
     <members>X02OpportunitiesOpportunities/AS_Opportunities_Teams_Roles_TBC</members>
+    <members>X02OpportunitiesOpportunities/AS_Opportunities_Territory_Check_GmR</members>
     <members>X02OpportunitiesOpportunities/AS_Opportunity_Application_Hzi</members>
     <members>X02OpportunitiesOpportunities/AS_Opportunity_Teams_gHJ1</members>
     <members>X02OpportunitiesOpportunities/AS_Samples_Details_ou8</members>
     <members>X02OpportunitiesOpportunities/AS_Samples_Details_Products_V6m</members>
+    <members>X02OpportunitiesOpportunities/AS_Vanita_Open_Close_2026_Champions_hOC</members>
     <members>X02OpportunitiesOpportunities/AS_Won_Close_2025_Champions_ptS</members>
     <members>X02OpportunitiesOpportunities/China_Open_Close_2025_I1a</members>
+    <members>X02OpportunitiesOpportunities/closed_opp_won</members>
     <members>X02OpportunitiesOpportunities/Copy_of_AS_Open_Close_2026_Champions_eIx</members>
+    <members>X02OpportunitiesOpportunities/Copy_of_AS_Opportunity_Account_Segment</members>
+    <members>X02OpportunitiesOpportunities/Copy_of_AS_Opportunity_Bus_Unit_Pro</members>
     <members>X02OpportunitiesOpportunities/Copy_of_EMEAI_Plastvance_w_tech_caretak</members>
+    <members>X02OpportunitiesOpportunities/Daniel_DACH_opportunities_all</members>
     <members>X02OpportunitiesOpportunities/EMEAI_AS_Open_Opps_25_regional_meeting</members>
+    <members>X02OpportunitiesOpportunities/EMEAI_AS_Open_Opps_to_be_closed_in_2025</members>
     <members>X02OpportunitiesOpportunities/EMEAI_AS_Open_Protect_Opps_MDP</members>
     <members>X02OpportunitiesOpportunities/EMEAI_AS_Open_Protect_Opps_Modified_by</members>
     <members>X02OpportunitiesOpportunities/EMEAI_Open_2025_for_regional_meeting</members>
     <members>X02OpportunitiesOpportunities/EMEAI_Plastvance_w_tech_caretakers</members>
     <members>X02OpportunitiesOpportunities/Eva_AS_Opportunity_overview</members>
     <members>X02OpportunitiesOpportunities/Global_Opportunities_to_close_in_2025</members>
+    <members>X02OpportunitiesOpportunities/KDB_Open_opps</members>
     <members>X02OpportunitiesOpportunities/Paolo_C_Opportunity_Report_2qd</members>
     <members>X02OpportunitiesOpportunities/Sushant_Opps_in_Chemistry_Operations</members>
     <members>X03VisitsVisits</members>
@@ -3555,6 +3329,7 @@
     <name>Report</name>
   </types>
   <types>
+    <members>Account_Duplicities</members>
     <members>Account_Hierarchy</members>
     <members>Accounts_With_Cases</members>
     <members>Accounts_with_Contacts_with_Daily_Engagements</members>
@@ -3588,6 +3363,7 @@
     <members>Leads_with_Monthly_Engagements</members>
     <members>Leads_With_or_Without_Sales_Cadence_Trackers</members>
     <members>My_Service_Team_Cases</members>
+    <members>My_Visit_Target</members>
     <members>Opportunities_with_Historical_Trending</members>
     <members>Opportunities_with_Opportunity_Teams</members>
     <members>Opportunity_with_Activities</members>
@@ -3602,6 +3378,7 @@
     <members>Sales_Cadences_amp_Trackers</members>
     <members>Sales_Cadences_and_Trackers_Inner_join</members>
     <members>Sales_Cadences_Steps_with_Monthly_Metrics</members>
+    <members>Sales_Quotes</members>
     <members>Sample_Matrix_Report</members>
     <members>screen_flows_prebuilt_crt</members>
     <members>Service_Team</members>
@@ -3615,144 +3392,21 @@
   </types>
   <types>
     <members>Boehlen_Plant_Users</members>
+    <members>CBobiPartnerPersonAccount</members>
+    <members>DMUserPartnerPersonAccount</members>
+    <members>EAndePartnerPersonAccount</members>
+    <members>JShulPartnerPersonAccount</members>
     <members>Longview_Plant_Users</members>
+    <members>PCancPartnerPersonAccount</members>
     <members>Sales_and_Service_User</members>
     <members>Senior_Leadership</members>
     <members>System_Administrator</members>
+    <members>ZYousPartnerPersonAccount</members>
     <name>Role</name>
   </types>
   <types>
     <members>sts</members>
     <name>SamlSsoConfig</name>
-  </types>
-  <types>
-    <members>Account</members>
-    <members>AccountIntelligence</members>
-    <members>Actions</members>
-    <members>Activities</members>
-    <members>Address</members>
-    <members>Ai4m</members>
-    <members>Analytics</members>
-    <members>Apex</members>
-    <members>AppAnalytics</members>
-    <members>AppExperience</members>
-    <members>AutomatedContacts</members>
-    <members>Blockchain</members>
-    <members>Bot</members>
-    <members>BusinessHours</members>
-    <members>Campaign</members>
-    <members>Case</members>
-    <members>Chatter</members>
-    <members>ChatterEmailsMD</members>
-    <members>CodeBuilder</members>
-    <members>Commerce</members>
-    <members>Communities</members>
-    <members>Company</members>
-    <members>ConnectedApp</members>
-    <members>Content</members>
-    <members>Contract</members>
-    <members>ConversationalIntelligence</members>
-    <members>Currency</members>
-    <members>CustomAddressField</members>
-    <members>CustomerDataPlatform</members>
-    <members>CustomizablePropensityScoring</members>
-    <members>DataImportManagement</members>
-    <members>Deployment</members>
-    <members>DevHub</members>
-    <members>Discovery</members>
-    <members>DocumentChecklist</members>
-    <members>DynamicForms</members>
-    <members>EAC</members>
-    <members>EinsteinDealInsights</members>
-    <members>EinsteinDocumentCapture</members>
-    <members>EmailAdministration</members>
-    <members>EmailIntegration</members>
-    <members>EmailTemplate</members>
-    <members>EmployeeFieldAccess</members>
-    <members>EmployeeUser</members>
-    <members>EncryptionKey</members>
-    <members>EnhancedNotes</members>
-    <members>Essentials</members>
-    <members>Event</members>
-    <members>ExperienceBundle</members>
-    <members>ExternalClientApp</members>
-    <members>FilesConnect</members>
-    <members>FileUploadAndDownloadSecurity</members>
-    <members>Flow</members>
-    <members>Forecasting</members>
-    <members>ForecastingObjectList</members>
-    <members>Formula</members>
-    <members>GoogleApps</members>
-    <members>HighVelocitySales</members>
-    <members>Ideas</members>
-    <members>IdentityProvider</members>
-    <members>IncidentMgmt</members>
-    <members>Industries</members>
-    <members>IndustriesEinsteinFeature</members>
-    <members>InvocableAction</members>
-    <members>KnowledgeGeneration</members>
-    <members>Language</members>
-    <members>LeadConfig</members>
-    <members>LightningExperience</members>
-    <members>Macro</members>
-    <members>MailMerge</members>
-    <members>MapsAndLocation</members>
-    <members>Meetings</members>
-    <members>Mobile</members>
-    <members>MyDomain</members>
-    <members>Name</members>
-    <members>Notifications</members>
-    <members>OauthOidc</members>
-    <members>ObjectLinking</members>
-    <members>OmniChannel</members>
-    <members>OmniChannelPricing</members>
-    <members>OnlineSales</members>
-    <members>Opportunity</members>
-    <members>OpportunityScore</members>
-    <members>Order</members>
-    <members>Org</members>
-    <members>Pardot</members>
-    <members>PardotEinstein</members>
-    <members>PartyDataModel</members>
-    <members>PathAssistant</members>
-    <members>PaymentsManagementEnabled</members>
-    <members>Picklist</members>
-    <members>PlatformEncryption</members>
-    <members>PlatformEvent</members>
-    <members>Portals</members>
-    <members>PredictionBuilder</members>
-    <members>Privacy</members>
-    <members>Product</members>
-    <members>QuickText</members>
-    <members>Quote</members>
-    <members>RealTimeEvent</members>
-    <members>RecommendationBuilder</members>
-    <members>RecordPage</members>
-    <members>RetailExecution</members>
-    <members>Sandbox</members>
-    <members>SceGlobalModelOptOut</members>
-    <members>Schema</members>
-    <members>Search</members>
-    <members>Security</members>
-    <members>ServiceCloudVoice</members>
-    <members>ServiceSetupAssistant</members>
-    <members>Sharing</members>
-    <members>Site</members>
-    <members>SocialCustomerService</members>
-    <members>SourceTracking</members>
-    <members>SubscriptionManagement</members>
-    <members>Survey</members>
-    <members>SystemNotification</members>
-    <members>Territory2</members>
-    <members>Trailhead</members>
-    <members>TrialOrg</members>
-    <members>UserEngagement</members>
-    <members>UserInterface</members>
-    <members>UserManagement</members>
-    <members>Voice</members>
-    <members>WebToX</members>
-    <members>WorkDotCom</members>
-    <name>Settings</name>
   </types>
   <types>
     <members>Case.All_Boehlen_Cases_with_Boehlen_plant_users</members>
@@ -3772,67 +3426,16 @@
     <name>SharingOwnerRule</name>
   </types>
   <types>
-    <members>Account</members>
-    <members>AccountBrand</members>
     <members>Account_Partners_Data__c</members>
-    <members>AccountPlan</members>
     <members>Account_Sales_Data__c</members>
-    <members>ActionPlan</members>
-    <members>ActionPlanTemplate</members>
-    <members>ActivityRecurrence2</members>
-    <members>ActivityRecurrence2Exception</members>
-    <members>AnalyticsUserAttrFuncTkn</members>
-    <members>ApprovalSubmission</members>
-    <members>Asset</members>
-    <members>AssistantInteraction</members>
-    <members>AssistantProgress</members>
-    <members>AssistantRecommendation</members>
-    <members>BatchJob</members>
-    <members>CalendarModel</members>
-    <members>CalendarView</members>
-    <members>Campaign</members>
     <members>Carrier__c</members>
-    <members>Case</members>
-    <members>ChannelProgram</members>
-    <members>ComponentResponseCache</members>
-    <members>Contact</members>
-    <members>ContactRequest</members>
-    <members>ConvCoachingRecommendation</members>
-    <members>ConversationApiLog</members>
-    <members>DialerCallUsage</members>
-    <members>ExchangeUserMapping</members>
-    <members>ExternalEventMapping</members>
     <members>File_Link__c</members>
-    <members>FlowInterview</members>
-    <members>FlowInterviewLog</members>
-    <members>FlowOrchestrationInstance</members>
-    <members>FlowOrchestrationStageInstance</members>
-    <members>FlowOrchestrationStepInstance</members>
-    <members>FlowOrchestrationWorkItem</members>
-    <members>FlowRecord</members>
-    <members>FlowTestResult</members>
-    <members>Image</members>
     <members>In_App_Checklist_Settings__c</members>
     <members>Industry_Segment_Data__c</members>
-    <members>Lead</members>
-    <members>ListEmail</members>
-    <members>Location</members>
-    <members>LocationTrustMeasure</members>
     <members>Log__c</members>
-    <members>Macro</members>
-    <members>MacroUsage</members>
-    <members>MessagingEndUser</members>
-    <members>MessagingSession</members>
-    <members>NetworkMemberChunk</members>
-    <members>NotifDeliveryUserPref</members>
-    <members>ObjectDataImport</members>
-    <members>Opportunity</members>
-    <members>Order</members>
     <members>Payment_Terms__c</members>
     <members>Plant__c</members>
     <members>Plant_Team_Data__c</members>
-    <members>ProcessException</members>
-    <members>Product2</members>
     <members>Product_Category__c</members>
     <members>Product_Conversions_Data__c</members>
     <members>Product_Plant_Data__c</members>
@@ -3840,50 +3443,16 @@
     <members>Product_Stock_Batch_Data__c</members>
     <members>Product_Stock_Data__c</members>
     <members>Product_Text_Data__c</members>
-    <members>ProfileSkill</members>
-    <members>PromptAction</members>
-    <members>PromptError</members>
-    <members>QuickText</members>
-    <members>QuickTextUsage</members>
-    <members>Quote</members>
-    <members>ReceivedDocument</members>
-    <members>RecordMergeHistory</members>
-    <members>ReportResultBlob</members>
-    <members>RequestsForAccessSIQ</members>
     <members>Salesforce_Order_Type_Determination__c</members>
     <members>Sales_Org_Data__c</members>
     <members>Sample_Master_Matrix_Data__c</members>
     <members>SAP_S4_Order_Type_Determination__c</members>
-    <members>Scorecard</members>
     <members>Service_Team__c</members>
     <members>Service_Team_Member__c</members>
-    <members>SharingRecordCollection</members>
-    <members>SiqUserBlacklist</members>
-    <members>SocialPersonaFieldBackup</members>
-    <members>SocialPost</members>
-    <members>StreamActivityAccess</members>
-    <members>StreamingChannel</members>
-    <members>TableauHostMapping</members>
-    <members>TodayGoal</members>
     <members>UoM_Std_Data__c</members>
-    <members>User</members>
-    <members>UserAppMenuCustomization</members>
-    <members>UserCapabilityPreference</members>
-    <members>UserDefinedLabel</members>
-    <members>UserDefinedLabelAssignment</members>
-    <members>UserEmailPreferredPerson</members>
-    <members>UserExternalCredential</members>
-    <members>UserLocalWebServerIdentity</members>
-    <members>UserPrioritizedRecord</members>
-    <members>UserProvisioningRequest</members>
-    <members>VideoCall</members>
     <members>Visit_Account__c</members>
+    <members>Visit_Opportunity_Link__c</members>
     <members>Visit_Outcome__c</members>
-    <members>VoiceCall</members>
-    <members>WorkAccess</members>
-    <members>WorkBadgeDefinition</members>
-    <members>WorkOrder</members>
-    <members>WorkThanks</members>
     <name>SharingRules</name>
   </types>
   <types>
@@ -4061,6 +3630,7 @@
     <members>Task</members>
     <members>UoM_Std_Data__c</members>
     <members>Visit_Account__c</members>
+    <members>Visit_Opportunity_Link__c</members>
     <members>Visit_Outcome__c</members>
     <members>WorkOrder</members>
     <members>WorkOrderLineItem</members>
@@ -4080,12 +3650,18 @@
     <members>Account.Prospect_Creation_Billing_Country_Mandat</members>
     <members>Case.Cannot_Edit_Closed_Case</members>
     <members>Case.Cannot_Open_Closed_Case</members>
+    <members>Case.Complaint_Category_is_Product</members>
     <members>Case.Prevent_Case_Owner_Update_On_Completion</members>
+    <members>Contact.Require_Account_For_Contact</members>
     <members>Contact.Restrict_Employee_Contact_Edit</members>
     <members>Lead.Prevent_Lead_Creation_Without_Country</members>
     <members>Lead.Rating_Mandatory_When_Working</members>
     <members>Lead.Require_Reason_for_Lead_Disqualification</members>
     <members>Opportunity.Industry_Segment_Application_Valid_Check</members>
+    <members>OpportunityLineItem.Prevent_Edit_When_In_Approval_OLI</members>
+    <members>Opportunity.Manager_Required_For_Adoption_Stage</members>
+    <members>Opportunity.Prevent_Edit_When_In_Approval</members>
+    <members>Opportunity.Prevent_Opportunity_Closure_Without_Appr</members>
     <members>Order.All_Line_Item_Approval_Required</members>
     <members>Order.Allow_Cancel_From_Draft_Only</members>
     <members>Order.Billing_Street_Length_Validation</members>
@@ -4108,6 +3684,7 @@
     <members>Quote.Prevent_Edit_On_Accepted_Rejected_Quote</members>
     <members>Quote.Quote_Requires_Opportunity_Or_Account</members>
     <members>Quote.Rejected_Status_Reason_Required</members>
+    <members>Task.Require_Effectiveness_Check_Fields</members>
     <name>ValidationRule</name>
   </types>
   <types>
@@ -4115,6 +3692,14 @@
     <members>Account.GoogleNews</members>
     <members>Account.GoogleSearch</members>
     <members>Account.Syn_Shuttle_form</members>
+    <members>Account.View_HQ_Related_Activities</members>
+    <members>Account.View_HQ_Related_Cases</members>
+    <members>Account.View_HQ_Related_Opportunities</members>
+    <members>Account.View_HQ_Related_Quotes</members>
+    <members>Account.View_RHQ_Related_Activities</members>
+    <members>Account.View_RHQ_Related_Cases</members>
+    <members>Account.View_RHQ_Related_Opportunities</members>
+    <members>Account.View_RHQ_Related_Quotes</members>
     <members>Campaign.ViewAllCampaignMembers</members>
     <members>Campaign.ViewCampaignInfluenceReport</members>
     <members>Case.Conga_Composer_Report_Generation_8D</members>

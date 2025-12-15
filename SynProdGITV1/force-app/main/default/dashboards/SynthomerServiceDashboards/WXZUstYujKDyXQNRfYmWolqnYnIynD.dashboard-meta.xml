@@ -7,6 +7,402 @@
     <colorPalette>unity</colorPalette>
     <dashboardChartTheme>light</dashboardChartTheme>
     <dashboardColorPalette>unity</dashboardColorPalette>
+    <dashboardFilters>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>2020</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>2021</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>2022</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>2023</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>2024</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>2025</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>2026</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>2027</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>2028</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>2029</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>2030</values>
+        </dashboardFilterOptions>
+        <name>Case Created Year</name>
+    </dashboardFilters>
+    <dashboardFilters>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>January</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>February</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>March</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>April</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>May</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>June</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>July</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>August</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>September</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>October</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>November</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>December</values>
+        </dashboardFilterOptions>
+        <name>Case Created Month</name>
+    </dashboardFilters>
+    <dashboardFilters>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Adhesive Solutions,Lithene</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Batteries,Coatings,Construction,DEV,EMOD,Fibre Bonding,Oil &amp; Gas,Powder Coating,Raw Material Trading,Reinforcing Resins,Specialities Add.,Tire Cord</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Antioxidants,Carpet,Coated Fabrics,Compounds,Foam,Gloves,Laminates &amp; Films,Medical devices,Monomers,Natural Rubber,Others,Paper,Speciality Vinyl Pol,William Blythe</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Adhesive Solutions</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Antioxidants</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Batteries</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Carpet</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Coated Fabrics</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Coatings</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Compounds</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Construction</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>DEV</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>EMOD</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Fibre Bonding</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Foam</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Gloves</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Laminates &amp; Films</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Lithene</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Medical devices</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Monomers</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Natural Rubber</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Oil &amp; Gas</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Others</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Paper</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Powder Coating</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Raw Material Trading</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Reinforcing Resins</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Specialities Add.</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Speciality Vinyl Pol</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Tire Cord</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>William Blythe</values>
+        </dashboardFilterOptions>
+        <name>GBU / Industry Segment</name>
+    </dashboardFilters>
+    <dashboardFilters>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Akron,Alkyd,Asua,Caojing,Chester,Dammam,Emultex,Filago,Franklin,Gent,Harlow,Jefferson,Kluang,Langelsheim,Le Havre,Lithene Stallingborough,Longview,MAR1 / NLP,MAR2 / BUN,Middelburg,Mogadore,Nanjing,Pasir Gudang,Pilot Plant,Pischelsdorf,Ribecourt,Roebuck,Sant&apos; Albano,Sintra,Sokolov-Dispersions,Sokolov-Monomers,Stallingborough Dispersion,Uruapan,Vietnam,Worms</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Arlanxeo Dormagen,CCP Taiwan,Cin Chem Pro,Daguan,Dubai U.A.E.,EOC Portugal / Belgium,Shanghai (FICE),Goodyear,Huangshan Konka,Matco Chemicals B.V.,Paramelt,Polyventive,Texas Blending,Synthomer Trading Limited</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Akron,Chester,Franklin,Jefferson,Longview,Mogadore,Pilot Plant,Roebuck,Uruapan</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Caojing,Shanghai (FICE),Pasir Gudang,Alkyd,Emultex,Kluang,Vietnam,Nanjing</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Asua,Dammam,Filago,Gent,Harlow,Le Havre,Langelsheim,MAR1 / NLP,MAR2 / BUN,Middelburg,Pischelsdorf,Ribecourt,Sant&apos; Albano,Sintra,Sokolov-Dispersions,Sokolov-Monomers,Stallingborough Dispersion,Lithene Stallingborough,Worms,Synthomer Trading Limited</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Akron</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Alkyd</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Asua</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Caojing</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Chester</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Dammam</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Emultex</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Filago</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Franklin</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Gent</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Harlow</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Jefferson</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Kluang</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Langelsheim</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Le Havre</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Lithene Stallingborough</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Longview</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>MAR1 / NLP,MAR2 / BUN</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>MAR1 / NLP</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>MAR2 / BUN</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Middelburg</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Mogadore</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Nanjing</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Pasir Gudang</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Pilot Plant</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Pischelsdorf</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Ribecourt</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Roebuck</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Sant&apos; Albano</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Sintra</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Sokolov-Dispersions</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Sokolov-Monomers</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Sokolov-Dispersions,Sokolov-Monomers</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Stallingborough Dispersion</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Uruapan</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Vietnam</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Worms</values>
+        </dashboardFilterOptions>
+        <name>Service Team</name>
+    </dashboardFilters>
     <dashboardGridLayout>
         <dashboardGridComponents>
             <colSpan>4</colSpan>
@@ -17,16 +413,28 @@
                     <column>RowCount</column>
                 </chartSummary>
                 <componentType>Metric</componentType>
+                <dashboardFilterColumns>
+                    <column>Case.Case_Created_Year__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>Case.Case_Created_Month__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>Case.Industry_Segment__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>Case.Service_Team__c</column>
+                </dashboardFilterColumns>
                 <decimalPrecision>-1</decimalPrecision>
                 <displayUnits>Auto</displayUnits>
                 <groupingSortProperties/>
-                <header>Total Open Cases</header>
+                <header>Total # of Cases</header>
                 <indicatorBreakpoint1>33.0</indicatorBreakpoint1>
                 <indicatorBreakpoint2>100.0</indicatorBreakpoint2>
                 <indicatorHighColor>#DF0707</indicatorHighColor>
                 <indicatorLowColor>#33C136</indicatorLowColor>
                 <indicatorMiddleColor>#CA8501</indicatorMiddleColor>
-                <report>Service_Dashboards_Reports/Cases_Currently_Open</report>
+                <report>ServiceDashboardsReports/Cases_Currently_Open</report>
                 <showRange>false</showRange>
             </dashboardComponent>
             <rowIndex>0</rowIndex>
@@ -43,22 +451,34 @@
                     <column>RowCount</column>
                 </chartSummary>
                 <componentType>Bar</componentType>
+                <dashboardFilterColumns>
+                    <column>Case.Case_Created_Year__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>Case.Case_Created_Month__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>Case.Industry_Segment__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>Case.Service_Team__c</column>
+                </dashboardFilterColumns>
                 <decimalPrecision>-1</decimalPrecision>
                 <displayUnits>Auto</displayUnits>
                 <drillEnabled>false</drillEnabled>
                 <drillToDetailEnabled>false</drillToDetailEnabled>
                 <enableHover>false</enableHover>
                 <expandOthers>false</expandOthers>
-                <groupingColumn>CASE_CREATED_DATEONLY</groupingColumn>
+                <groupingColumn>CREATED_DATEONLY</groupingColumn>
                 <groupingSortProperties>
                     <groupingSorts>
                         <groupingLevel>g1</groupingLevel>
-                        <sortOrder>d</sortOrder>
+                        <sortOrder>a</sortOrder>
                     </groupingSorts>
                 </groupingSortProperties>
-                <header>Open Cases By Creation Date</header>
+                <header>Open Cases by Date</header>
                 <legendPosition>Bottom</legendPosition>
-                <report>Service_Dashboards_Reports/New_Case_History_Report_fkI</report>
+                <report>ServiceDashboardsReports/Cases_by_Open_Date_MDI</report>
                 <showPercentage>false</showPercentage>
                 <showPicturesOnCharts>false</showPicturesOnCharts>
                 <showValues>true</showValues>
@@ -79,6 +499,18 @@
                     <column>RowCount</column>
                 </chartSummary>
                 <componentType>Donut</componentType>
+                <dashboardFilterColumns>
+                    <column>Case.Case_Created_Year__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>Case.Case_Created_Month__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>Case.Industry_Segment__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>Case.Service_Team__c</column>
+                </dashboardFilterColumns>
                 <decimalPrecision>-1</decimalPrecision>
                 <displayUnits>Auto</displayUnits>
                 <drillEnabled>false</drillEnabled>
@@ -92,10 +524,10 @@
                         <sortOrder>a</sortOrder>
                     </groupingSorts>
                 </groupingSortProperties>
-                <header>Open Cases By Severity</header>
+                <header>Cases By Severity</header>
                 <legendPosition>Right</legendPosition>
                 <maxValuesDisplayed>9</maxValuesDisplayed>
-                <report>Service_Dashboards_Reports/Open_Cases_By_Severity_gwj</report>
+                <report>ServiceDashboardsReports/Open_Cases_By_Severity_gwj</report>
                 <showPercentage>false</showPercentage>
                 <showTotal>true</showTotal>
                 <showValues>true</showValues>
@@ -116,26 +548,36 @@
                     <axisBinding>y</axisBinding>
                     <column>Case.Total_Cost__c.CONVERT</column>
                 </chartSummary>
-                <componentType>Donut</componentType>
+                <componentType>Column</componentType>
+                <dashboardFilterColumns>
+                    <column>Case.Case_Created_Year__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>Case.Case_Created_Month__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>Case.Industry_Segment__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>Case.Service_Team__c</column>
+                </dashboardFilterColumns>
                 <decimalPrecision>-1</decimalPrecision>
                 <displayUnits>Auto</displayUnits>
                 <drillEnabled>false</drillEnabled>
                 <drillToDetailEnabled>false</drillToDetailEnabled>
                 <enableHover>false</enableHover>
                 <expandOthers>false</expandOthers>
-                <groupingColumn>CLOSED_DATEONLY</groupingColumn>
+                <groupingColumn>CREATED_DATEONLY</groupingColumn>
                 <groupingSortProperties>
                     <groupingSorts>
                         <groupingLevel>g1</groupingLevel>
-                        <sortOrder>d</sortOrder>
+                        <sortOrder>a</sortOrder>
                     </groupingSorts>
                 </groupingSortProperties>
-                <header>Complaint By Cost YTD</header>
-                <legendPosition>Right</legendPosition>
-                <maxValuesDisplayed>24</maxValuesDisplayed>
-                <report>Service_Dashboards_Reports/Complaint_By_Cost_lYq</report>
+                <header>Complaint By Cost</header>
+                <legendPosition>Bottom</legendPosition>
+                <report>ServiceDashboardsReports/Complaint_By_Cost_lYq</report>
                 <showPercentage>false</showPercentage>
-                <showTotal>true</showTotal>
                 <showValues>true</showValues>
                 <sortBy>RowLabelAscending</sortBy>
                 <useReportChart>false</useReportChart>
@@ -149,6 +591,18 @@
             <dashboardComponent>
                 <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
                 <componentType>FlexTable</componentType>
+                <dashboardFilterColumns>
+                    <column>Case.Case_Created_Year__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>Case.Case_Created_Month__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>Case.Industry_Segment__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>Case.Service_Team__c</column>
+                </dashboardFilterColumns>
                 <flexComponentProperties>
                     <decimalPrecision>-1</decimalPrecision>
                     <flexTableColumn>
@@ -175,8 +629,8 @@
                         <sortOrder>d</sortOrder>
                     </groupingSorts>
                 </groupingSortProperties>
-                <header>Top 10 Accounts With Most Complaint Cost - Last 12 Months</header>
-                <report>Service_Dashboards_Reports/Top_10_Accounts_With_Cases_dbm</report>
+                <header>Top 10 Accounts by Complaint Cost</header>
+                <report>ServiceDashboardsReports/Top_10_Accounts_With_Cases_dbm</report>
             </dashboardComponent>
             <rowIndex>8</rowIndex>
             <rowSpan>8</rowSpan>
@@ -187,6 +641,18 @@
             <dashboardComponent>
                 <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
                 <componentType>FlexTable</componentType>
+                <dashboardFilterColumns>
+                    <column>Case.Case_Created_Year__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>Case.Case_Created_Month__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>Case.Industry_Segment__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>Case.Service_Team__c</column>
+                </dashboardFilterColumns>
                 <flexComponentProperties>
                     <decimalPrecision>-1</decimalPrecision>
                     <flexTableColumn>
@@ -213,8 +679,8 @@
                         <sortOrder>d</sortOrder>
                     </groupingSorts>
                 </groupingSortProperties>
-                <header>Top 10 Accounts with Most Cases - Last 12 Months</header>
-                <report>Service_Dashboards_Reports/Top_10_Accounts_With_Cases_dbm</report>
+                <header>Top 10 Accounts By # of Cases</header>
+                <report>ServiceDashboardsReports/Top_10_Accounts_With_Cases_dbm</report>
             </dashboardComponent>
             <rowIndex>8</rowIndex>
             <rowSpan>8</rowSpan>
@@ -230,6 +696,18 @@
                     <column>RowCount</column>
                 </chartSummary>
                 <componentType>Bar</componentType>
+                <dashboardFilterColumns>
+                    <column>Case.Case_Created_Year__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>Case.Case_Created_Month__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>Case.Industry_Segment__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>Case.Service_Team__c</column>
+                </dashboardFilterColumns>
                 <decimalPrecision>-1</decimalPrecision>
                 <displayUnits>Auto</displayUnits>
                 <drillEnabled>false</drillEnabled>
@@ -245,7 +723,7 @@
                 </groupingSortProperties>
                 <header>Open Cases By Status</header>
                 <legendPosition>Bottom</legendPosition>
-                <report>Service_Dashboards_Reports/Cases_Currently_Open</report>
+                <report>ServiceDashboardsReports/Cases_Currently_Open</report>
                 <showPercentage>false</showPercentage>
                 <showPicturesOnCharts>false</showPicturesOnCharts>
                 <showValues>true</showValues>
@@ -266,6 +744,18 @@
                     <column>RowCount</column>
                 </chartSummary>
                 <componentType>Column</componentType>
+                <dashboardFilterColumns>
+                    <column>Account.Cases$Case_Created_Year__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>Account.Cases$Case_Created_Month__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>Account.Cases$Industry_Segment__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>Account.Cases$Service_Team__c</column>
+                </dashboardFilterColumns>
                 <decimalPrecision>-1</decimalPrecision>
                 <displayUnits>Auto</displayUnits>
                 <drillEnabled>false</drillEnabled>
@@ -279,9 +769,9 @@
                         <sortOrder>a</sortOrder>
                     </groupingSorts>
                 </groupingSortProperties>
-                <header>Cases Count By Country - Last 12 Months</header>
+                <header>Cases By Country</header>
                 <legendPosition>Bottom</legendPosition>
-                <report>Service_Dashboards_Reports/Cases_and_Country_V0D</report>
+                <report>ServiceDashboardsReports/Cases_and_Country_V0D</report>
                 <showPercentage>false</showPercentage>
                 <showValues>true</showValues>
                 <sortBy>RowLabelAscending</sortBy>
@@ -290,15 +780,59 @@
             <rowIndex>16</rowIndex>
             <rowSpan>8</rowSpan>
         </dashboardGridComponents>
+        <dashboardGridComponents>
+            <colSpan>4</colSpan>
+            <columnIndex>0</columnIndex>
+            <dashboardComponent>
+                <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+                <chartSummary>
+                    <aggregate>Average</aggregate>
+                    <axisBinding>y</axisBinding>
+                    <column>AGE</column>
+                </chartSummary>
+                <componentType>Gauge</componentType>
+                <dashboardFilterColumns>
+                    <column>Case.Case_Created_Year__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>Case.Case_Created_Month__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>Case.Industry_Segment__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>Case.Service_Team__c</column>
+                </dashboardFilterColumns>
+                <decimalPrecision>-1</decimalPrecision>
+                <displayUnits>Auto</displayUnits>
+                <gaugeMax>100.0</gaugeMax>
+                <gaugeMin>0.0</gaugeMin>
+                <groupingSortProperties/>
+                <header>Complaint By Age</header>
+                <indicatorBreakpoint1>40.0</indicatorBreakpoint1>
+                <indicatorBreakpoint2>60.0</indicatorBreakpoint2>
+                <indicatorHighColor>#C23934</indicatorHighColor>
+                <indicatorLowColor>#00716B</indicatorLowColor>
+                <indicatorMiddleColor>#CA8501</indicatorMiddleColor>
+                <report>ServiceDashboardsReports/Complaint_By_Age_hv8</report>
+                <showPercentage>false</showPercentage>
+                <showRange>false</showRange>
+                <showTotal>true</showTotal>
+                <showValues>false</showValues>
+            </dashboardComponent>
+            <rowIndex>24</rowIndex>
+            <rowSpan>8</rowSpan>
+        </dashboardGridComponents>
         <numberOfColumns>12</numberOfColumns>
         <rowHeight>36</rowHeight>
     </dashboardGridLayout>
     <dashboardType>SpecifiedUser</dashboardType>
+    <description>Customer Complaints Dashboard</description>
     <isGridLayout>true</isGridLayout>
     <owner>boyai.pukhrambam@gauri.com.syn</owner>
-    <runningUser>support.gauri@gauri.com.syn</runningUser>
+    <runningUser>synthomer.admin@synthomer.com</runningUser>
     <textColor>#000000</textColor>
-    <title>Service Dashboard</title>
+    <title>ManEx - Manager&apos;s Dashboard</title>
     <titleColor>#000000</titleColor>
     <titleSize>12</titleSize>
 </Dashboard>

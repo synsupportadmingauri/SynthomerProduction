@@ -4,8 +4,21 @@
     <assignments>
         <name>Update_Unit_Price_from_Total_Price_Internal</name>
         <label>Update Unit Price from Total Price Internal</label>
-        <locationX>308</locationX>
-        <locationY>611</locationY>
+        <locationX>671</locationX>
+        <locationY>719</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.UnitPrice</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Evaluate_Unit_Price</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Update_Unit_Price_from_Total_Price_Internal_ZCRM</name>
+        <label>Update Unit Price from Total Price Internal</label>
+        <locationX>143</locationX>
+        <locationY>827</locationY>
         <assignmentItems>
             <assignToReference>$Record.UnitPrice</assignToReference>
             <operator>Assign</operator>
@@ -15,12 +28,37 @@
         </assignmentItems>
     </assignments>
     <decisions>
+        <name>Check_Order_type</name>
+        <label>Check Order type</label>
+        <locationX>473</locationX>
+        <locationY>611</locationY>
+        <defaultConnector>
+            <targetReference>Update_Unit_Price_from_Total_Price_Internal</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>ZCRM</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Order.Salesforce_Order_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>ZCRM</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Is_Unit_Price_Null</targetReference>
+            </connector>
+            <label>ZCRM?</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Check_User_for_flow_bypass</name>
         <label>Check User for flow bypass</label>
         <locationX>176</locationX>
         <locationY>503</locationY>
         <defaultConnector>
-            <targetReference>Update_Unit_Price_from_Total_Price_Internal</targetReference>
+            <targetReference>Check_Order_type</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>User can&apos;t bypass the Validation</defaultConnectorLabel>
         <rules>
@@ -34,6 +72,28 @@
                 </rightValue>
             </conditions>
             <label>User can bypass the Validation</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Is_Unit_Price_Null</name>
+        <label>Is Unit Price Null?</label>
+        <locationX>275</locationX>
+        <locationY>719</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Update_Unit_Price</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.UnitPrice</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Unit_Price_from_Total_Price_Internal_ZCRM</targetReference>
+            </connector>
+            <label>Update Unit Price</label>
         </rules>
     </decisions>
     <description>Update the Unit Price from Total Price Internal value

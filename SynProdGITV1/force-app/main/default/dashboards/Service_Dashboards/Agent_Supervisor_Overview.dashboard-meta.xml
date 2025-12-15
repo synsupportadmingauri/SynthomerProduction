@@ -18,7 +18,7 @@
             <indicatorLowColor>#54C254</indicatorLowColor>
             <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
             <metricLabel>Open Cases</metricLabel>
-            <report>Service_Dashboards_Reports/Cases_Currently_Open</report>
+            <report>ServiceDashboardsReports/Cases_Currently_Open</report>
             <showRange>false</showRange>
         </components>
         <components>
@@ -32,7 +32,7 @@
             <expandOthers>false</expandOthers>
             <groupingSortProperties/>
             <legendPosition>Bottom</legendPosition>
-            <report>Service_Dashboards_Reports/Cases_Currently_Open_by_Priority</report>
+            <report>SynthomerServiceReports/Cases_Currently_Open_by_Priority</report>
             <showPercentage>false</showPercentage>
             <showPicturesOnCharts>false</showPicturesOnCharts>
             <showValues>false</showValues>
@@ -53,7 +53,7 @@
             <indicatorLowColor>#54C254</indicatorLowColor>
             <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
             <maxValuesDisplayed>9</maxValuesDisplayed>
-            <report>Service_Dashboards_Reports/Top_10_Cases_by_Age</report>
+            <report>SynthomerServiceReports/Top_10_Cases_by_Age</report>
             <showPicturesOnTables>true</showPicturesOnTables>
             <sortBy>RowValueDescending</sortBy>
             <title>Top Open Cases by Age (Days)</title>
@@ -69,7 +69,7 @@
             <indicatorLowColor>#C25454</indicatorLowColor>
             <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
             <metricLabel>Cases Closed MTD</metricLabel>
-            <report>Service_Dashboards_Reports/Cases_Closed_MTD</report>
+            <report>SynthomerServiceReports/Cases_Closed_MTD</report>
             <showRange>false</showRange>
         </components>
         <components>
@@ -85,7 +85,7 @@
             <indicatorLowColor>#54C254</indicatorLowColor>
             <indicatorMiddleColor>#54C254</indicatorMiddleColor>
             <maxValuesDisplayed>6</maxValuesDisplayed>
-            <report>Service_Dashboards_Reports/Cases_Closed_MTD_by_Agent</report>
+            <report>SynthomerServiceReports/Cases_Closed_MTD_by_Agent</report>
             <showPicturesOnTables>true</showPicturesOnTables>
             <sortBy>RowValueDescending</sortBy>
             <title>Top Agents by Closed Cases MTD</title>
@@ -103,7 +103,7 @@
             <indicatorLowColor>#54C254</indicatorLowColor>
             <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
             <maxValuesDisplayed>7</maxValuesDisplayed>
-            <report>Service_Dashboards_Reports/Cases_Currently_Open_by_Account</report>
+            <report>SynthomerServiceReports/Cases_Currently_Open_by_Account</report>
             <showPicturesOnTables>true</showPicturesOnTables>
             <sortBy>RowValueDescending</sortBy>
             <title>Top Customers by Open Cases</title>
@@ -122,7 +122,7 @@
             <indicatorLowColor>#54C254</indicatorLowColor>
             <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
             <metricLabel>Average Age of Open Cases (Days)</metricLabel>
-            <report>Service_Dashboards_Reports/Age_of_Cases_Currently_Open_by_Type</report>
+            <report>SynthomerServiceReports/Age_of_Cases_Currently_Open_by_Type</report>
             <showRange>false</showRange>
         </components>
         <components>
@@ -136,7 +136,7 @@
             <expandOthers>false</expandOthers>
             <groupingSortProperties/>
             <legendPosition>Bottom</legendPosition>
-            <report>Service_Dashboards_Reports/Cases_Currently_Open</report>
+            <report>ServiceDashboardsReports/Cases_Currently_Open</report>
             <showPercentage>false</showPercentage>
             <showPicturesOnCharts>false</showPicturesOnCharts>
             <showValues>false</showValues>
@@ -156,7 +156,7 @@
             <groupingSortProperties/>
             <legendPosition>Bottom</legendPosition>
             <maxValuesDisplayed>6</maxValuesDisplayed>
-            <report>Service_Dashboards_Reports/Cases_Currently_Open_by_Agent</report>
+            <report>SynthomerServiceReports/Cases_Currently_Open_by_Agent</report>
             <showPercentage>false</showPercentage>
             <showValues>false</showValues>
             <sortBy>RowValueDescending</sortBy>
@@ -174,7 +174,7 @@
             <indicatorLowColor>#54C254</indicatorLowColor>
             <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
             <metricLabel>Case Resolution Time MTD (Days)</metricLabel>
-            <report>Service_Dashboards_Reports/Average_Case_Resolution_Time_MTD</report>
+            <report>SynthomerServiceReports/Average_Case_Resolution_Time_MTD</report>
             <showRange>false</showRange>
         </components>
         <components>
@@ -190,7 +190,7 @@
             <indicatorLowColor>#54C254</indicatorLowColor>
             <indicatorMiddleColor>#54C254</indicatorMiddleColor>
             <maxValuesDisplayed>6</maxValuesDisplayed>
-            <report>Service_Dashboards_Reports/Avg_Case_Resolution_Time_MTD_by_Agen</report>
+            <report>SynthomerServiceReports/Avg_Case_Resolution_Time_MTD_by_Agen</report>
             <showPicturesOnTables>true</showPicturesOnTables>
             <sortBy>RowValueAscending</sortBy>
             <title>Top Agents by Case Resolution Time MTD</title>
@@ -208,7 +208,7 @@
             <indicatorLowColor>#54C254</indicatorLowColor>
             <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
             <maxValuesDisplayed>7</maxValuesDisplayed>
-            <report>Service_Dashboards_Reports/Aged_Cases_by_Account</report>
+            <report>SynthomerServiceReports/Aged_Cases_by_Account</report>
             <showPicturesOnTables>true</showPicturesOnTables>
             <sortBy>RowValueDescending</sortBy>
             <title>Top Customers by Open Case Age (Days)</title>
@@ -228,7 +228,7 @@
             <indicatorLowColor>#54C254</indicatorLowColor>
             <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
             <metricLabel>Cases Created MTD</metricLabel>
-            <report>Service_Dashboards_Reports/Cases_Created_MTD</report>
+            <report>SynthomerServiceReports/Cases_Created_MTD</report>
             <showRange>false</showRange>
         </components>
         <components>
@@ -242,7 +242,7 @@
             <expandOthers>false</expandOthers>
             <groupingSortProperties/>
             <legendPosition>Bottom</legendPosition>
-            <report>Service_Dashboards_Reports/Cases_Currently_Open_by_Type</report>
+            <report>SynthomerServiceReports/Cases_Currently_Open_by_Type</report>
             <showPercentage>false</showPercentage>
             <showPicturesOnCharts>false</showPicturesOnCharts>
             <showValues>false</showValues>
@@ -263,7 +263,7 @@
             <indicatorLowColor>#54C254</indicatorLowColor>
             <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
             <maxValuesDisplayed>8</maxValuesDisplayed>
-            <report>Service_Dashboards_Reports/Aged_Cases_by_Agent</report>
+            <report>SynthomerServiceReports/Aged_Cases_by_Agent</report>
             <showPicturesOnTables>true</showPicturesOnTables>
             <sortBy>RowValueDescending</sortBy>
             <title>Top Agents by Open Case Age</title>
@@ -279,7 +279,7 @@
             <indicatorLowColor>#54C254</indicatorLowColor>
             <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
             <metricLabel>Historical Case Resolution Time (Days)</metricLabel>
-            <report>Service_Dashboards_Reports/Average_Case_Resolution_Time_1</report>
+            <report>SynthomerServiceReports/Average_Case_Resolution_Time_1</report>
             <showRange>false</showRange>
         </components>
         <components>
@@ -294,7 +294,7 @@
             <indicatorHighColor>#C25454</indicatorHighColor>
             <indicatorLowColor>#54C254</indicatorLowColor>
             <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
-            <report>Service_Dashboards_Reports/Average_Case_Resolution_Time_MTD</report>
+            <report>SynthomerServiceReports/Average_Case_Resolution_Time_MTD</report>
             <showPicturesOnTables>false</showPicturesOnTables>
             <sortBy>RowLabelAscending</sortBy>
             <title>Case Resolution Time MTD by Priority</title>
@@ -312,7 +312,7 @@
             <indicatorLowColor>#C25454</indicatorLowColor>
             <indicatorMiddleColor>#C25454</indicatorMiddleColor>
             <maxValuesDisplayed>7</maxValuesDisplayed>
-            <report>Service_Dashboards_Reports/High_Priority_Open_Cases_by_Account</report>
+            <report>SynthomerServiceReports/High_Priority_Open_Cases_by_Account</report>
             <showPicturesOnTables>true</showPicturesOnTables>
             <sortBy>RowValueDescending</sortBy>
             <title>Top Customers by Open Case Priority</title>
